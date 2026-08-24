@@ -64,10 +64,18 @@ elements with no accessible identity, and for the shared testids that e2e also d
 
 ### Coverage
 
-Thresholds are 70% for statements, branches, functions and lines. The build fails below any of them.
-Excluded from measurement: test files, stories, `index.ts` barrels, type declarations,
-`src/shared/test/**`, and the Next.js `layout`/`error`/`not-found`/`loading`/`global-error` files
-(framework shells with no logic of their own).
+Thresholds are 80% for statements, functions and lines, and 85% for branches. The build fails below
+any of them.
+
+**Coverage measures logic; composition is measured end to end.** The `app` and `views` layers are,
+by this project's own architecture, composition only — route wiring and layout, with no branching to
+get wrong. Asserting unit coverage over them would reward tests that mount a tree and assert
+nothing, so Playwright covers them instead and they are excluded from the denominator, along with
+`src/proxy.ts`, `src/instrumentation.ts`, the declarative `src/shared/i18n/**` configuration, test
+files, stories, `index.ts` barrels, type declarations and `src/shared/test/**`.
+
+Everything that can actually hold a bug stays in. Widening the exclude list to make a build pass is
+the same offence as lowering a threshold.
 
 **Raising the thresholds** is a deliberate, one-way ratchet:
 

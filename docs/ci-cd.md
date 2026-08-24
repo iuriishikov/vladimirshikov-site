@@ -37,7 +37,7 @@ Jobs, in dependency order:
 | `install`      | `pnpm install --frozen-lockfile`, warms the shared cache    | The lockfile is out of date with `package.json`                                                                      |
 | `lint`         | `pnpm format:check` and `pnpm lint`                         | Formatting drifted, or any ESLint error/warning (`--max-warnings=0`) — this is where FSD boundary violations surface |
 | `typecheck`    | `pnpm typecheck`                                            | Any type error under the project's strict settings                                                                   |
-| `test`         | `pnpm test:coverage`                                        | A unit test fails, or coverage drops below 70%                                                                       |
+| `test`         | `pnpm test:coverage`                                        | A unit test fails, or coverage drops below the thresholds                                                            |
 | `build`        | `pnpm build`                                                | The production build fails, or env validation rejects the environment                                                |
 | `e2e`          | `pnpm e2e --project=chromium` against the production server | A Playwright spec fails, including the axe accessibility sweep                                                       |
 | `knip`         | `pnpm knip`                                                 | Unused files, exports or dependencies appear                                                                         |
@@ -119,12 +119,17 @@ known to work. Use it when a deploy succeeded technically but the result is wron
 
 ## Security and quality workflows
 
+> While the repository is **private**, the three GitHub-Advanced-Security-dependent jobs below skip
+> instead of running — see [security.md](./security.md#static-analysis). They need no edit to come
+> back: they turn themselves on the moment the repository is public or GHAS is enabled.
+
 **`codeql.yml`** — CodeQL analysis for `javascript-typescript`, on pull requests, on pushes to the
 long-lived branches, and weekly. The weekly run matters because new queries find old bugs.
 
-**`dependency-review.yml`** — on every PR, compares the dependency manifests before and after and
-fails on newly introduced advisories or disallowed licences. This is the check that stops a
-vulnerable transitive dependency from arriving unnoticed in a `build(deps)` PR.
+**`dependency-review.yml`** — two jobs. `review` compares the dependency manifests before and after
+a PR and fails on newly introduced advisories or disallowed licences (GHAS-dependent). `audit` runs
+`pnpm audit --audit-level=high` on any repository and is intentionally not part of `ci-ok`, so a
+fresh advisory against an untouched dependency raises an alert rather than blocking every merge.
 
 **`scorecard.yml`** — OSSF Scorecard weekly, publishing results to the code-scanning dashboard. It
 grades things this repository already does (branch protection, pinned actions, signed releases,

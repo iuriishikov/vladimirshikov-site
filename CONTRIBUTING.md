@@ -144,7 +144,7 @@ A change is done when all of these are true:
 - [ ] Anything reachable from outside its slice is exported from that slice's `index.ts`.
 - [ ] New behaviour has a unit test; a bug fix has a test that fails without the fix.
 - [ ] A new or changed component has a Storybook story covering its non-trivial states.
-- [ ] Coverage has not dropped below the 70% thresholds.
+- [ ] Coverage has not dropped below the thresholds in `vitest.config.ts`.
 - [ ] It works with a keyboard, and the a11y addon and axe report no violations.
 - [ ] Both `ru` and `en` render correctly; no hard-coded user-facing strings.
 - [ ] `pnpm validate` is green locally, and `ci-ok` is green on the PR.

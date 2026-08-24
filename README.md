@@ -98,7 +98,7 @@ Two things that surprise people on a first install:
 | `pnpm format:check`    | Prettier, check mode — what CI runs                                        |
 | `pnpm test`            | Vitest, single run                                                         |
 | `pnpm test:watch`      | Vitest, watch mode                                                         |
-| `pnpm test:coverage`   | Vitest with v8 coverage and the 70% thresholds                             |
+| `pnpm test:coverage`   | Vitest with v8 coverage and the coverage thresholds                        |
 | `pnpm e2e`             | Playwright — chromium, plus firefox/webkit/mobile-safari once installed    |
 | `pnpm e2e:install:all` | Installs all four browsers for a full cross-browser run                    |
 | `pnpm e2e:ui`          | Playwright's interactive UI mode                                           |

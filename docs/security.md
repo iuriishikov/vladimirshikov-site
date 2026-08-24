@@ -123,13 +123,29 @@ image serves every environment.
 
 ## Static analysis
 
+> **This repository is private, so three of the controls below are dormant.** CodeQL, GitHub's
+> dependency review and OSSF Scorecard all depend on GitHub Advanced Security or on the repository
+> being public. Rather than failing every pull request with "Advanced Security must be enabled",
+> each of those jobs carries `if: github.event.repository.private == false` and skips. Make the
+> repository public, or enable GHAS for it, and all three start working with no further change.
+>
+> What still runs on a private repository: `pnpm audit`, gitleaks, secretlint, typed linting and
+> every gate in `ci.yml`.
+
 **CodeQL** (`codeql.yml`) runs the `javascript-typescript` query pack on pull requests, on pushes to
 the long-lived branches, and weekly. The weekly schedule exists because new queries find old bugs —
 code that was clean in January is not necessarily clean in June.
 
-**Dependency review** (`dependency-review.yml`) compares the manifests on both sides of a PR and
-fails when a new dependency carries a known advisory or an unacceptable licence. This is the check
-that catches a vulnerable _transitive_ dependency arriving inside an otherwise routine update.
+**Dependency review** (`dependency-review.yml`) has two jobs. The `review` job compares the manifests
+on both sides of a PR and fails when a new dependency carries a known advisory or an unacceptable
+licence — the check that catches a vulnerable _transitive_ dependency arriving inside a routine
+update. The `audit` job runs `pnpm audit --audit-level=high`, works on any repository, and is
+deliberately outside the `ci-ok` gate: a new advisory can land overnight against a dependency the
+pull request never touched, and that is worth an alert rather than a merge block.
+
+Advisories that cannot be fixed yet are listed, with a reason and an expiry condition, under
+`auditConfig.ignoreGhsas` in `pnpm-workspace.yaml`. An empty list is the goal; a silent
+`continue-on-error` is not an acceptable substitute.
 
 **OSSF Scorecard** (`scorecard.yml`) grades the repository's own practices weekly — branch
 protection, pinned action SHAs, signed releases, token permissions, dependency automation — and
