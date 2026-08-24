@@ -19,6 +19,10 @@ concurrency:
 jobs:
   analysis:
     name: analysis
+    # Scorecard scores open-source posture and publishes the result publicly.
+    # On a private repository it has nothing to measure and no way to publish,
+    # and the SARIF upload additionally requires Advanced Security.
+    if: ${{ github.event.repository.private == false }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:

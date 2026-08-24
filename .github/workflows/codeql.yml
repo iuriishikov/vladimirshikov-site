@@ -20,6 +20,12 @@ concurrency:
 jobs:
   analyze:
     name: analyze (javascript-typescript)
+    # Code scanning needs GitHub Advanced Security on a private repository.
+    # Without it the upload step fails with "Advanced Security must be enabled",
+    # which is noise rather than signal — so the job skips instead of going red.
+    # Delete this condition the day the repository becomes public, or GHAS is
+    # enabled for it. See docs/security.md.
+    if: ${{ github.event.repository.private == false }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:

@@ -28,6 +28,25 @@ minimumReleaseAgeExclude:
   - "@types/react-dom@19.2.5"
 
 # ---------------------------------------------------------------------------
+# Accepted advisories
+# ---------------------------------------------------------------------------
+# `pnpm audit` fails CI on anything high or above. These two are accepted
+# deliberately, and each entry must say what it is, why it is tolerable, and
+# what ends the exception. An empty list is the goal.
+auditConfig:
+  ignoreGhsas:
+    # image-size <= 2.0.2 — infinite loops in the ICNS, JXL and HEIF parsers.
+    #
+    # No fix exists yet: the advisory names 2.0.3 as patched, but 2.0.2 is the
+    # latest published version. It arrives only through
+    # @storybook/nextjs-vite -> vite-plugin-storybook-nextjs, so it runs while
+    # building Storybook, never in the deployed app, and it parses only images
+    # committed to this repository. Renovate will offer the bump the day 2.0.3
+    # ships; delete these two lines then.
+    - GHSA-w3rx-r6r6-pgpr
+    - GHSA-5p2g-fcmc-qvqq
+
+# ---------------------------------------------------------------------------
 # Resolution
 # ---------------------------------------------------------------------------
 # Strict, non-hoisted node_modules: a module may only import what it declares.
