@@ -1,0 +1,9 @@
+# The last gate before CI. Anything that fails here would fail in CI two
+# minutes later, so it is cheaper to catch it now.
+#
+# Skip deliberately with `git push --no-verify` when you are pushing a
+# work-in-progress branch on purpose.
+
+pnpm exec validate-branch-name
+pnpm typecheck
+pnpm test

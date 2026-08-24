@@ -1,0 +1,4 @@
+# The commit message drives the changelog and the released version, so it is
+# validated before it exists rather than fixed up afterwards.
+# Use `pnpm commit` for a guided prompt.
+pnpm exec commitlint --edit "$1"

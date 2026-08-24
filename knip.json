@@ -1,0 +1,30 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": [
+    "src/app/**/{page,layout,template,loading,error,global-error,not-found,route,default}.{ts,tsx}",
+    "src/app/**/{sitemap,robots,manifest,opengraph-image,twitter-image,icon,apple-icon}.{ts,tsx}",
+    "e2e/**/*.spec.ts",
+    ".storybook/{main,preview}.{ts,tsx}",
+    "src/{views,widgets,features,entities}/*/index.ts",
+    "src/shared/*/index.ts",
+    "src/shared/i18n/navigation.ts",
+    "src/shared/i18n/request.ts"
+  ],
+  "project": ["src/**/*.{ts,tsx}", "e2e/**/*.ts"],
+  "ignoreDependencies": [
+    "sharp",
+    "tailwindcss",
+    "@secretlint/secretlint-rule-preset-recommend",
+    "@semantic-release/github",
+    "conventional-changelog-conventionalcommits"
+  ],
+  "next": {
+    "entry": ["next.config.ts"]
+  },
+  "vitest": {
+    "config": ["vitest.config.ts"]
+  },
+  "playwright": {
+    "config": ["playwright.config.ts"]
+  }
+}
