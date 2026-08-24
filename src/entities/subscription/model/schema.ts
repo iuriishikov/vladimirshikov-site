@@ -1,5 +1,8 @@
 import { z } from 'zod'
 
+// Disables Zod's `new Function()` JIT, which the production CSP blocks.
+import '@/shared/config/zod'
+
 /**
  * Validation messages are *keys*, not sentences.
  *
