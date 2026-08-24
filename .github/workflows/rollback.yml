@@ -1,0 +1,153 @@
+name: Rollback
+
+# Manual only. Redeploys an image tag that GHCR already holds — it never builds
+# anything, so the artifact that goes back out is byte-identical to the one that
+# was known to work.
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Environment to roll back.
+        required: true
+        type: choice
+        options:
+          - staging
+          - production
+      image_tag:
+        description: >
+          Tag or digest already published to ghcr.io/iuriishikov/vladimirshikov-site,
+          e.g. `v1.3.0`, `sha-a1b2c3…` or `sha256:…`.
+        required: true
+        type: string
+      reason:
+        description: Why this rollback is happening. Recorded in the run summary.
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  # Shares nothing with deploy.yml's group on purpose: a rollback must be able
+  # to interrupt nothing and wait for nothing but another rollback.
+  group: rollback-${{ inputs.environment }}
+  cancel-in-progress: false
+
+jobs:
+  rollback:
+    name: roll back ${{ inputs.environment }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: ${{ inputs.environment }}
+      url: ${{ vars.SITE_URL }}
+    permissions:
+      contents: read
+      packages: read
+
+    env:
+      DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+      HEALTH_URL: ${{ vars.SITE_URL }}/api/health
+      IMAGE_NAME: ghcr.io/${{ github.repository }}
+
+    steps:
+      - name: Resolve the image reference
+        id: ref
+        env:
+          IMAGE_TAG: ${{ inputs.image_tag }}
+        run: |
+          set -euo pipefail
+          tag="$(printf '%s' "$IMAGE_TAG" | tr -d '[:space:]')"
+          if [ -z "$tag" ]; then
+            echo "::error::image_tag is empty."
+            exit 1
+          fi
+          # GHCR rejects an uppercase path; github.repository preserves the
+          # owner's casing.
+          image="${IMAGE_NAME,,}"
+          # A digest is joined with '@', a tag with ':'.
+          case "$tag" in
+            sha256:*) ref="${image}@${tag}" ;;
+            *)        ref="${image}:${tag}" ;;
+          esac
+          echo "Rolling back to ${ref}"
+          echo "image_ref=$ref" >> "$GITHUB_OUTPUT"
+
+      # Same host-key pinning as deploy.yml: StrictHostKeyChecking is never
+      # relaxed, not even in an incident.
+      - name: Pin the server host key
+        id: hostkey
+        env:
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          known_hosts="$RUNNER_TEMP/known_hosts"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$known_hosts"
+          fingerprint="$(ssh-keygen -l -E sha256 -f "$known_hosts" \
+            | awk '$4 == "(ED25519)" { print $2; exit }')"
+          if [ -z "$fingerprint" ]; then
+            fingerprint="$(ssh-keygen -l -E sha256 -f "$known_hosts" | awk 'NR == 1 { print $2 }')"
+          fi
+          if [ -z "$fingerprint" ]; then
+            echo "::error::SSH_KNOWN_HOSTS does not contain a usable host key."
+            exit 1
+          fi
+          echo "Pinned host key fingerprint: $fingerprint"
+          echo "fingerprint=$fingerprint" >> "$GITHUB_OUTPUT"
+
+      - name: Redeploy the requested image
+        uses: appleboy/ssh-action@v1
+        env:
+          IMAGE_REF: ${{ steps.ref.outputs.image_ref }}
+          IMAGE_TAG: ${{ inputs.image_tag }}
+          APP_ENV: ${{ inputs.environment }}
+          REGISTRY: ghcr.io
+          REGISTRY_USERNAME: ${{ github.actor }}
+          REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
+          command_timeout: 15m
+          envs: DEPLOY_PATH,IMAGE_REF,IMAGE_TAG,APP_ENV,REGISTRY,REGISTRY_USERNAME,REGISTRY_TOKEN
+          script: |
+            set -euo pipefail
+            cd "$DEPLOY_PATH"
+            ./scripts/deploy.sh "$IMAGE_REF"
+
+      - name: Health check
+        run: |
+          set -uo pipefail
+          for attempt in $(seq 1 20); do
+            body="$(curl -fsS --max-time 10 "$HEALTH_URL" 2>/dev/null || true)"
+            if [ -n "$body" ] && printf '%s' "$body" | jq -e '.status == "ok"' >/dev/null 2>&1; then
+              echo "Healthy after ${attempt} attempt(s):"
+              printf '%s\n' "$body" | jq .
+              exit 0
+            fi
+            echo "Attempt ${attempt}/20: not healthy yet."
+            sleep 6
+          done
+          echo "::error::$HEALTH_URL did not report status=ok after the rollback."
+          exit 1
+
+      - name: Summarise
+        if: ${{ always() }}
+        env:
+          IMAGE_REF: ${{ steps.ref.outputs.image_ref }}
+          TARGET_ENV: ${{ inputs.environment }}
+          REASON: ${{ inputs.reason }}
+        run: |
+          {
+            echo "### Rollback"
+            echo
+            echo "| | |"
+            echo "|---|---|"
+            echo "| Environment | \`${TARGET_ENV}\` |"
+            echo "| Image | \`${IMAGE_REF}\` |"
+            echo "| Triggered by | @${GITHUB_ACTOR} |"
+            echo "| Reason | ${REASON:-_not given_} |"
+          } >> "$GITHUB_STEP_SUMMARY"

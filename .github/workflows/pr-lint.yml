@@ -1,0 +1,99 @@
+name: PR lint
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize, ready_for_review]
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-lint-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # The pull-request title becomes the squash-merge commit message, so it has to
+  # satisfy exactly the rules commitlint.config.mjs enforces on commits.
+  title:
+    name: title
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: read
+
+    steps:
+      - uses: amannn/action-semantic-pull-request@v6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            feat
+            fix
+            perf
+            refactor
+            docs
+            test
+            build
+            ci
+            chore
+            style
+            revert
+          scopes: |
+            app
+            views
+            widgets
+            features
+            entities
+            shared
+            i18n
+            seo
+            a11y
+            ui
+            config
+            deps
+            ci
+            docker
+            docs
+            test
+            e2e
+            release
+            security
+          # commitlint sets `scope-empty` to warn, not error: a change that
+          # genuinely spans every layer may omit the scope.
+          requireScope: false
+          # Mirrors commitlint's `subject-case` (no Start-Case/PascalCase/UPPER)
+          # and `subject-full-stop`.
+          subjectPattern: ^(?![A-Z])(?!.*\.$).+$
+          subjectPatternError: |
+            The subject "{subject}" of pull request title "{title}" is invalid.
+            It must start with a lower-case letter and must not end with a period.
+          # A work-in-progress title is the author's own signal; blocking it adds
+          # noise without adding safety, because the merge is blocked anyway.
+          wip: true
+          validateSingleCommit: false
+
+  # Branch names feed the release channel and the deploy triggers, so a typo
+  # here is a deployment bug, not a style issue.
+  branch:
+    name: branch name
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Validate the branch name
+        env:
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          # Kept byte-for-byte in step with the validate-branch-name pattern in
+          # package.json, which enforces the same rule locally on push.
+          pattern='^(main|develop)$|^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert|hotfix|release)/[a-z0-9._-]+$'
+          echo "Branch: $BRANCH"
+          if ! printf '%s' "$BRANCH" | grep -Eq "$pattern"; then
+            echo "::error::Branch name '$BRANCH' does not match $pattern"
+            echo "Use <type>/<kebab-case>, for example: feat/contact-form or fix/locale-switcher-focus"
+            exit 1
+          fi
+          echo "Branch name is valid."

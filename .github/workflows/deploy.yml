@@ -1,0 +1,247 @@
+name: Deploy
+
+on:
+  push:
+    branches: [develop]
+    tags: ["v*"]
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+concurrency:
+  # One rollout at a time per environment, so the group has to key on the
+  # resolved target rather than on the ref: two `v*` tags pushed a minute apart
+  # are different refs but the same environment, and running them concurrently
+  # makes the second one die on scripts/deploy.sh's lock directory. `&&`/`||`
+  # bind like in shell, hence the parentheses around the tag-or-release test.
+  # Never cancel in progress: a killed deploy leaves the stack half-swapped.
+  group: deploy-${{ (github.ref_type == 'tag' || github.event_name == 'release') && 'production' || 'staging' }}
+  cancel-in-progress: false
+
+jobs:
+  # Decides *what* is being deployed *where*, in one place, so the jobs below
+  # contain no event-shape branching.
+  resolve:
+    name: resolve target
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      environment: ${{ steps.target.outputs.environment }}
+      image_tag: ${{ steps.target.outputs.image_tag }}
+    steps:
+      - name: Resolve environment and tag
+        id: target
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          REF_TYPE: ${{ github.ref_type }}
+          REF_NAME: ${{ github.ref_name }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "release" ]; then
+            environment=production
+            image_tag="$RELEASE_TAG"
+          elif [ "$REF_TYPE" = "tag" ]; then
+            environment=production
+            image_tag="$REF_NAME"
+          else
+            environment=staging
+            image_tag=staging
+          fi
+          echo "Deploying '$image_tag' to '$environment'."
+          echo "environment=$environment" >> "$GITHUB_OUTPUT"
+          echo "image_tag=$image_tag" >> "$GITHUB_OUTPUT"
+
+  image:
+    name: image
+    needs: resolve
+    uses: ./.github/workflows/docker.yml
+    with:
+      image_tag: ${{ needs.resolve.outputs.image_tag }}
+      environment: ${{ needs.resolve.outputs.environment }}
+      push: true
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+      attestations: write
+    secrets: inherit
+
+  deploy:
+    name: deploy to ${{ needs.resolve.outputs.environment }}
+    needs: [resolve, image]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: ${{ needs.resolve.outputs.environment }}
+      url: ${{ vars.SITE_URL }}
+    permissions:
+      contents: read
+      # The server logs in to GHCR with this run's GITHUB_TOKEN to pull the
+      # image; the token expires when the job ends.
+      packages: read
+
+    env:
+      DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+      IMAGE_REF: ${{ needs.image.outputs.image_ref }}
+      IMAGE_TAG: ${{ needs.resolve.outputs.image_tag }}
+      APP_ENV: ${{ needs.resolve.outputs.environment }}
+      HEALTH_URL: ${{ vars.SITE_URL }}/api/health
+
+    steps:
+      # StrictHostKeyChecking is never disabled. SSH_KNOWN_HOSTS holds the
+      # server's public host key; its SHA256 fingerprint is what the SSH client
+      # is pinned to, so a swapped or spoofed host aborts the deploy instead of
+      # silently accepting a new key.
+      - name: Pin the server host key
+        id: hostkey
+        env:
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          known_hosts="$RUNNER_TEMP/known_hosts"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$known_hosts"
+          # Prefer Ed25519; fall back to whatever key the file actually carries.
+          fingerprint="$(ssh-keygen -l -E sha256 -f "$known_hosts" \
+            | awk '$4 == "(ED25519)" { print $2; exit }')"
+          if [ -z "$fingerprint" ]; then
+            fingerprint="$(ssh-keygen -l -E sha256 -f "$known_hosts" | awk 'NR == 1 { print $2 }')"
+          fi
+          if [ -z "$fingerprint" ]; then
+            echo "::error::SSH_KNOWN_HOSTS does not contain a usable host key."
+            exit 1
+          fi
+          echo "Pinned host key fingerprint: $fingerprint"
+          echo "fingerprint=$fingerprint" >> "$GITHUB_OUTPUT"
+
+      # Read before anything changes, so a failed health check has somewhere to
+      # go back to. scripts/deploy.sh records the reference it activated in
+      # `.deployed-image` under DEPLOY_PATH.
+      - name: Capture the currently deployed image
+        id: previous
+        continue-on-error: true
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
+          envs: DEPLOY_PATH
+          capture_stdout: true
+          # Prefixed, and printed at column zero, because `capture_stdout` hands
+          # back the whole drone-ssh stdout — the echoed command block and the
+          # "Successfully executed commands" banner included — not just what the
+          # remote shell wrote.
+          script: |
+            printf 'DEPLOYED_IMAGE=%s\n' "$(cat "$DEPLOY_PATH/.deployed-image" 2>/dev/null || true)"
+
+      # Separates the one line that came from the server from the banner around
+      # it. Without this the raw capture is never empty, so a missing
+      # .deployed-image would look like a valid rollback target and the banner
+      # text itself would be passed to deploy.sh as an image reference.
+      - name: Resolve the rollback target
+        id: rollback_target
+        env:
+          RAW_CAPTURE: ${{ steps.previous.outputs.stdout }}
+        run: |
+          set -euo pipefail
+          ref="$(printf '%s\n' "$RAW_CAPTURE" \
+            | sed -n 's/^DEPLOYED_IMAGE=//p' \
+            | tail -n 1 \
+            | tr -d '[:space:]')"
+          if [ -n "$ref" ]; then
+            echo "Currently deployed image: $ref"
+          else
+            echo "No previously deployed image was recorded; rollback will not be possible."
+          fi
+          echo "image_ref=$ref" >> "$GITHUB_OUTPUT"
+
+      - name: Roll out
+        uses: appleboy/ssh-action@v1
+        env:
+          REGISTRY: ghcr.io
+          REGISTRY_USERNAME: ${{ github.actor }}
+          REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
+          command_timeout: 15m
+          envs: DEPLOY_PATH,IMAGE_REF,IMAGE_TAG,APP_ENV,REGISTRY,REGISTRY_USERNAME,REGISTRY_TOKEN
+          # scripts/deploy.sh owns the sequence on the server: registry login,
+          # `docker compose pull`, `docker compose up -d` for the `web` and
+          # `caddy` services, then it writes the activated reference to
+          # `.deployed-image`. It takes the image reference as its one argument.
+          script: |
+            set -euo pipefail
+            cd "$DEPLOY_PATH"
+            ./scripts/deploy.sh "$IMAGE_REF"
+
+      # Deploying is not the same as working. The site is only considered live
+      # once it answers on its public URL, through Caddy, with a healthy body.
+      - name: Health check
+        id: health
+        run: |
+          set -uo pipefail
+          for attempt in $(seq 1 20); do
+            body="$(curl -fsS --max-time 10 "$HEALTH_URL" 2>/dev/null || true)"
+            if [ -n "$body" ] && printf '%s' "$body" | jq -e '.status == "ok"' >/dev/null 2>&1; then
+              echo "Healthy after ${attempt} attempt(s):"
+              printf '%s\n' "$body" | jq .
+              exit 0
+            fi
+            echo "Attempt ${attempt}/20: not healthy yet."
+            sleep 6
+          done
+          echo "::error::$HEALTH_URL did not report status=ok within 2 minutes."
+          exit 1
+
+      # Automatic, because a two-minute outage while a human is paged is worse
+      # than reverting to the version that was demonstrably serving traffic.
+      - name: Roll back
+        if: ${{ failure() && steps.health.outcome == 'failure' && steps.rollback_target.outputs.image_ref != '' }}
+        uses: appleboy/ssh-action@v1
+        env:
+          PREVIOUS_IMAGE_REF: ${{ steps.rollback_target.outputs.image_ref }}
+          REGISTRY: ghcr.io
+          REGISTRY_USERNAME: ${{ github.actor }}
+          REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
+          command_timeout: 15m
+          envs: DEPLOY_PATH,PREVIOUS_IMAGE_REF,APP_ENV,REGISTRY,REGISTRY_USERNAME,REGISTRY_TOKEN
+          script: |
+            set -euo pipefail
+            cd "$DEPLOY_PATH"
+            echo "Rolling back to ${PREVIOUS_IMAGE_REF}"
+            ./scripts/deploy.sh "$PREVIOUS_IMAGE_REF"
+
+      - name: Report a rollback that could not run
+        if: ${{ failure() && steps.health.outcome == 'failure' && steps.rollback_target.outputs.image_ref == '' }}
+        run: |
+          echo "::error::Health check failed and no previous image was recorded at ${DEPLOY_PATH}/.deployed-image."
+          echo "::error::The server is running the new image. Roll back manually with the rollback workflow."
+          exit 1
+
+      - name: Summarise
+        if: ${{ always() }}
+        run: |
+          {
+            echo "### Deployment"
+            echo
+            echo "| | |"
+            echo "|---|---|"
+            echo "| Environment | \`${APP_ENV}\` |"
+            echo "| Tag | \`${IMAGE_TAG}\` |"
+            echo "| Image | \`${IMAGE_REF}\` |"
+            echo "| Health | \`${HEALTH_URL}\` |"
+          } >> "$GITHUB_STEP_SUMMARY"

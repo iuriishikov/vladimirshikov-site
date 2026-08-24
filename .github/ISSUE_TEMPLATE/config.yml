@@ -1,0 +1,11 @@
+# A blank issue carries no context and always costs a round trip to triage.
+blank_issues_enabled: false
+
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/iuriishikov/vladimirshikov-site/security/advisories/new
+    about: Please report vulnerabilities privately. Do not open a public issue.
+
+  - name: Ask a question or suggest an idea
+    url: https://github.com/iuriishikov/vladimirshikov-site/discussions
+    about: For anything that is not a concrete defect or a concrete proposal.

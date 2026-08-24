@@ -1,0 +1,426 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+  merge_group:
+
+# Least privilege by default; no job in this workflow writes to the repository.
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  # Superseded pull-request runs are wasted compute. Pushes to main/develop are
+  # kept so that every commit on a protected branch has its own verdict.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  # Every job installs from the same warm store; the key is the lockfile hash.
+  PNPM_CACHE_KEY_PREFIX: pnpm-store
+
+jobs:
+  # Warms the pnpm content-addressable store so the parallel jobs below install
+  # from cache instead of the network. Deliberately uploads nothing.
+  install:
+    name: install
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
+      - name: Locate the pnpm store
+        id: store
+        run: echo "path=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache@v6
+        with:
+          path: ${{ steps.store.outputs.path }}
+          key: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+  lint:
+    name: lint
+    needs: install
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
+      - name: Locate the pnpm store
+        id: store
+        run: echo "path=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      # Restore-only: a single writer (the `install` job) keeps concurrent cache
+      # saves from racing on the same key.
+      - uses: actions/cache/restore@v6
+        with:
+          path: ${{ steps.store.outputs.path }}
+          key: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Prettier
+        run: pnpm format:check
+
+      - name: ESLint
+        run: pnpm lint
+
+  typecheck:
+    name: typecheck
+    needs: install
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
+      - name: Locate the pnpm store
+        id: store
+        run: echo "path=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache/restore@v6
+        with:
+          path: ${{ steps.store.outputs.path }}
+          key: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: tsc --noEmit
+        run: pnpm typecheck
+
+  test:
+    name: test
+    needs: install
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      # Read once at job level so the upload step can branch on its presence: a
+      # fork pull request has no Codecov token and must still produce a green run.
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
+      - name: Locate the pnpm store
+        id: store
+        run: echo "path=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache/restore@v6
+        with:
+          path: ${{ steps.store.outputs.path }}
+          key: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # vitest.config.ts switches reporters on CI: JUnit plus GitHub annotations.
+      - name: Vitest with coverage
+        run: pnpm test:coverage
+
+      - name: Upload coverage to Codecov
+        if: ${{ !cancelled() && env.CODECOV_TOKEN != '' }}
+        uses: codecov/codecov-action@v7
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage/lcov.info
+          flags: unit
+          # Codecov being unreachable is not a reason to reject a correct commit.
+          fail_ci_if_error: false
+
+      - name: Publish the JUnit report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: vitest-junit
+          path: reports/vitest-junit.xml
+          retention-days: 7
+          if-no-files-found: error
+
+      - name: Publish the HTML coverage report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage
+          path: coverage
+          retention-days: 7
+          if-no-files-found: error
+
+  build:
+    name: build
+    needs: install
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      # The environment is fully specified, so SKIP_ENV_VALIDATION is *not* set:
+      # CI must prove that src/shared/config/env.ts accepts a real configuration.
+      # The loopback origin is deliberate — it is the origin the e2e job serves
+      # this exact artifact on, so canonical URLs match what Playwright sees.
+      SITE_URL: http://127.0.0.1:3000
+      APP_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
+      - name: Locate the pnpm store
+        id: store
+        run: echo "path=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache/restore@v6
+        with:
+          path: ${{ steps.store.outputs.path }}
+          key: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Next's own build cache, keyed on the inputs that actually change the
+      # compilation output.
+      - uses: actions/cache@v6
+        with:
+          path: .next/cache
+          key: next-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('src/**', 'next.config.ts', 'postcss.config.mjs') }}
+          restore-keys: next-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
+
+      - name: next build
+        run: pnpm build
+
+      # `.next` is a dotted directory, which upload-artifact skips unless hidden
+      # files are opted in. `.next/cache` is excluded: it is restored from the
+      # cache above, not shipped between jobs.
+      - name: Upload the build output
+        uses: actions/upload-artifact@v7
+        with:
+          name: next-build
+          path: |
+            .next
+            !.next/cache
+            public
+          include-hidden-files: true
+          retention-days: 1
+          if-no-files-found: error
+
+  e2e:
+    name: e2e
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      # playwright.config.ts starts `pnpm start` itself when CI is set, so the
+      # server under test is exactly the artifact the `build` job produced.
+      SITE_URL: http://127.0.0.1:3000
+      APP_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+      PLAYWRIGHT_BASE_URL: http://127.0.0.1:3000
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
+      - name: Locate the pnpm store
+        id: store
+        run: echo "path=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache/restore@v6
+        with:
+          path: ${{ steps.store.outputs.path }}
+          key: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download the build output
+        uses: actions/download-artifact@v8
+        with:
+          name: next-build
+
+      # Browser binaries are large and change only when @playwright/test does,
+      # which the lockfile hash tracks exactly.
+      - uses: actions/cache@v6
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+
+      # Chromium only, deliberately: it is the fast signal every PR needs.
+      # `pnpm e2e:install:all` provisions the other three for the local
+      # cross-browser run a developer does before a risky UI change.
+      - name: Install Playwright Chromium
+        run: pnpm e2e:install
+
+      - name: Run Playwright
+        run: pnpm e2e --project=chromium
+
+      - name: Upload the Playwright report
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-report
+          path: |
+            playwright-report
+            test-results
+          retention-days: 14
+          if-no-files-found: ignore
+
+  knip:
+    name: knip
+    needs: install
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
+      - name: Locate the pnpm store
+        id: store
+        run: echo "path=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache/restore@v6
+        with:
+          path: ${{ steps.store.outputs.path }}
+          key: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Unused files, exports and dependencies
+        run: pnpm knip
+
+  secrets-scan:
+    name: secrets-scan
+    needs: install
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # gitleaks scans history, not just the diff, so the shallow default clone
+      # is not enough.
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: gitleaks
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
+      - name: Locate the pnpm store
+        id: store
+        run: echo "path=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache/restore@v6
+        with:
+          path: ${{ steps.store.outputs.path }}
+          key: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: ${{ env.PNPM_CACHE_KEY_PREFIX }}-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # A second, independent net over the working tree, applying exactly the
+      # rules the pre-commit hook applies so CI and local agree.
+      - name: secretlint
+        run: pnpm exec secretlint --secretlintignore .gitignore "**/*"
+
+  # The single check branch protection requires. Everything above is an
+  # implementation detail that may be renamed or split without touching the
+  # ruleset. Intentionally has no display `name:`, so the status context stays
+  # exactly `ci-ok`.
+  ci-ok:
+    if: ${{ always() }}
+    needs: [install, lint, typecheck, test, build, e2e, knip, secrets-scan]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify that every job succeeded
+        env:
+          RESULTS: ${{ join(needs.*.result, ' ') }}
+        run: |
+          set -euo pipefail
+          echo "Job results: $RESULTS"
+          # A skipped job counts as a failure: it means a dependency never ran,
+          # so this commit was never actually verified.
+          for result in $RESULTS; do
+            if [ "$result" != "success" ]; then
+              echo "::error::CI is not green — at least one job reported '$result'."
+              exit 1
+            fi
+          done
+          echo "All CI jobs succeeded."

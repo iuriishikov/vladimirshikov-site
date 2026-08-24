@@ -1,0 +1,64 @@
+name: Stale
+
+on:
+  schedule:
+    # Daily at 03:23 UTC, before the working day in Europe/Moscow.
+    - cron: "23 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: stale
+  cancel-in-progress: false
+
+jobs:
+  stale:
+    name: stale
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/stale@v11
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          days-before-issue-stale: 60
+          days-before-issue-close: 14
+          stale-issue-label: stale
+          stale-issue-message: >
+            This issue has had no activity for 60 days. It will close in 14 days
+            unless something new is added. Reopening later is fine — the history
+            is not lost.
+          close-issue-message: >
+            Closing after 74 days without activity. Comment here to reopen if
+            this is still relevant.
+
+          # Pull requests rot faster than issues: an unmerged branch drifts from
+          # main every day it stays open.
+          days-before-pr-stale: 21
+          days-before-pr-close: 10
+          stale-pr-label: stale
+          stale-pr-message: >
+            This pull request has had no activity for 21 days and is drifting
+            from its base branch. It will close in 10 days unless it is updated.
+          close-pr-message: >
+            Closing after 31 days without activity. Rebase and reopen when work
+            resumes.
+
+          # Anything triaged into these buckets is a deliberate decision, not
+          # neglect.
+          exempt-issue-labels: "pinned,security,roadmap,blocked"
+          exempt-pr-labels: "pinned,security,dependencies,blocked"
+          exempt-all-milestones: true
+
+          # Any human comment resets the clock, including the bot's own removal
+          # of the label.
+          remove-stale-when-updated: true
+          delete-branch: false
+          ascending: true
+          operations-per-run: 100

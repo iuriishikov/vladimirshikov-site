@@ -1,0 +1,35 @@
+# Code owners are requested for review automatically, and the `main` ruleset
+# requires their approval before a merge. Later rules win, so the catch-all
+# comes first.
+#
+# https://docs.github.com/articles/about-code-owners
+
+* @iuriishikov
+
+# Infrastructure and release machinery: a mistake here breaks every future
+# change, not just this one.
+/.github/                   @iuriishikov
+/.github/workflows/         @iuriishikov
+/.github/rulesets/          @iuriishikov
+/Dockerfile                 @iuriishikov
+/.dockerignore              @iuriishikov
+/scripts/                   @iuriishikov
+
+# Toolchain and quality gates.
+/package.json               @iuriishikov
+/pnpm-lock.yaml             @iuriishikov
+/pnpm-workspace.yaml        @iuriishikov
+/tsconfig.json              @iuriishikov
+/eslint.config.mjs          @iuriishikov
+/prettier.config.mjs        @iuriishikov
+/commitlint.config.mjs      @iuriishikov
+/next.config.ts             @iuriishikov
+/vitest.config.ts           @iuriishikov
+/playwright.config.ts       @iuriishikov
+/lighthouserc.json          @iuriishikov
+/.releaserc.json            @iuriishikov
+/knip.json                  @iuriishikov
+/.secretlintrc.json         @iuriishikov
+
+# The lowest FSD layer: everything above it depends on these contracts.
+/src/shared/                @iuriishikov
