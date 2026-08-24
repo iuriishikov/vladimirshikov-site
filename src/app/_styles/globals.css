@@ -1,0 +1,169 @@
+@import 'tailwindcss';
+
+/*
+ * Tailwind CSS v4 is configured here, in CSS, rather than in a JS config file.
+ *
+ * Dark mode is class-driven (next-themes sets `class="dark"` on <html>) instead
+ * of relying on `prefers-color-scheme`, because the user's explicit choice has
+ * to win over the OS setting.
+ */
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design tokens. Colours are in oklch: it is perceptually uniform, so a
+ * lightness change reads as the same step across every hue — which is what
+ * makes a dark palette derivable from a light one instead of hand-tuned.
+ */
+:root {
+  --radius: 0.625rem;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.18 0.01 265);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.01 265);
+
+  --muted: oklch(0.968 0.005 265);
+  --muted-foreground: oklch(0.52 0.015 265);
+
+  --primary: oklch(0.48 0.16 265);
+  --primary-foreground: oklch(0.985 0.002 265);
+
+  --secondary: oklch(0.968 0.005 265);
+  --secondary-foreground: oklch(0.24 0.02 265);
+
+  --accent: oklch(0.95 0.02 265);
+  --accent-foreground: oklch(0.24 0.02 265);
+
+  --destructive: oklch(0.58 0.21 27);
+  --destructive-foreground: oklch(0.985 0.002 265);
+
+  --success: oklch(0.62 0.15 150);
+  --success-foreground: oklch(0.985 0.002 265);
+
+  --border: oklch(0.92 0.006 265);
+  --input: oklch(0.92 0.006 265);
+  --ring: oklch(0.48 0.16 265);
+}
+
+.dark {
+  --background: oklch(0.16 0.01 265);
+  --foreground: oklch(0.96 0.003 265);
+
+  --card: oklch(0.2 0.012 265);
+  --card-foreground: oklch(0.96 0.003 265);
+
+  --muted: oklch(0.26 0.012 265);
+  --muted-foreground: oklch(0.72 0.015 265);
+
+  --primary: oklch(0.72 0.14 265);
+  --primary-foreground: oklch(0.16 0.01 265);
+
+  --secondary: oklch(0.26 0.012 265);
+  --secondary-foreground: oklch(0.96 0.003 265);
+
+  --accent: oklch(0.3 0.02 265);
+  --accent-foreground: oklch(0.96 0.003 265);
+
+  --destructive: oklch(0.66 0.19 27);
+  --destructive-foreground: oklch(0.16 0.01 265);
+
+  --success: oklch(0.7 0.14 150);
+  --success-foreground: oklch(0.16 0.01 265);
+
+  --border: oklch(0.3 0.015 265);
+  --input: oklch(0.32 0.015 265);
+  --ring: oklch(0.72 0.14 265);
+}
+
+/*
+ * `@theme inline` maps the tokens above onto Tailwind's utility namespaces, so
+ * `bg-background`, `text-muted-foreground`, `ring-ring` and friends all exist
+ * and follow the active theme automatically.
+ */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /*
+   * A system font stack: zero network requests, zero layout shift, and no
+   * build-time dependency on a font CDN. Swap in `next/font` here when the
+   * design calls for a specific typeface.
+   */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Stop layout from shifting sideways when a page gains a scrollbar. */
+    scrollbar-gutter: stable;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /*
+   * A visible focus ring for keyboard users only. Removing focus styles is the
+   * single most common accessibility regression in a design system, so it is
+   * defined once, here, rather than per component.
+   */
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+
+  /* Respect the OS-level request to stop moving things. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
