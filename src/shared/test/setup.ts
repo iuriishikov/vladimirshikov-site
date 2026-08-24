@@ -37,17 +37,28 @@ function defineGlobal(name: string, value: unknown): void {
   Object.defineProperty(globalThis, name, { writable: true, configurable: true, value })
 }
 
+/**
+ * Server-only modules are tested with `@vitest-environment node`, where none of
+ * the DOM shims below exist to be patched — and where patching them would throw.
+ */
+// `'document' in globalThis` rather than a typeof check: the DOM lib types
+// `document` as always present, so TypeScript would narrow a typeof comparison
+// away as impossible — which it is not, in the node environment.
+const hasDom = 'document' in globalThis
+
 // jsdom has no media queries, and next-themes reads one during mount.
-defineGlobal('matchMedia', (query: string): MediaQueryList => ({
-  matches: false,
-  media: query,
-  onchange: null,
-  addEventListener: vi.fn(),
-  removeEventListener: vi.fn(),
-  addListener: vi.fn(),
-  removeListener: vi.fn(),
-  dispatchEvent: vi.fn(),
-}))
+if (hasDom) {
+  defineGlobal('matchMedia', (query: string): MediaQueryList => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+    addListener: vi.fn(),
+    removeListener: vi.fn(),
+    dispatchEvent: vi.fn(),
+  }))
+}
 
 class MockResizeObserver implements ResizeObserver {
   observe = vi.fn()
@@ -68,11 +79,15 @@ class MockIntersectionObserver implements IntersectionObserver {
   takeRecords = vi.fn(noEntries)
 }
 
-defineGlobal('ResizeObserver', MockResizeObserver)
-defineGlobal('IntersectionObserver', MockIntersectionObserver)
+if (hasDom) {
+  defineGlobal('ResizeObserver', MockResizeObserver)
+  defineGlobal('IntersectionObserver', MockIntersectionObserver)
+}
 
 // Radix relies on these for focus and pointer management inside overlays.
-Element.prototype.scrollIntoView = vi.fn()
-Element.prototype.hasPointerCapture = vi.fn(() => false)
-Element.prototype.setPointerCapture = vi.fn()
-Element.prototype.releasePointerCapture = vi.fn()
+if (hasDom) {
+  Element.prototype.scrollIntoView = vi.fn()
+  Element.prototype.hasPointerCapture = vi.fn(() => false)
+  Element.prototype.setPointerCapture = vi.fn()
+  Element.prototype.releasePointerCapture = vi.fn()
+}
