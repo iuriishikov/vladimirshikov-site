@@ -6,4 +6,6 @@
 
 pnpm exec validate-branch-name
 pnpm typecheck
-pnpm test
+# `test:coverage`, not `test`: CI enforces the coverage thresholds, so a hook
+# that runs the suite without them cannot catch what CI is about to reject.
+pnpm test:coverage

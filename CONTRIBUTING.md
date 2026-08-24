@@ -118,7 +118,7 @@ usually an unlisted type or scope, or a subject in the wrong mood — `add`, not
 
 ### `pre-push` — the expensive checks
 
-Validates the branch name, then runs `pnpm typecheck` and `pnpm test` — the slow half of
+Validates the branch name, then runs `pnpm typecheck` and `pnpm test:coverage` — the slow half of
 `pnpm validate`. `format:check` and `lint` are left out on purpose: pre-commit has already run
 Prettier and ESLint `--fix` over everything you staged, and repeating them on every push costs more
 than it catches.

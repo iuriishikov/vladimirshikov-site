@@ -147,7 +147,7 @@ You will hit the hooks along the way. Each one is doing something specific:
 | ------------ | --------------------------------------------------------------------- | ------------------------------------------- |
 | `pre-commit` | ESLint `--fix` + Prettier on staged files, `tsc --noEmit`, secretlint | Keeps the commit clean and secret-free      |
 | `commit-msg` | commitlint                                                            | The message becomes a changelog entry       |
-| `pre-push`   | branch-name check, then `pnpm typecheck` and `pnpm test`              | Fails in seconds locally, not minutes in CI |
+| `pre-push`   | branch-name check, then `pnpm typecheck` and `pnpm test:coverage`     | Fails in seconds locally, not minutes in CI |
 
 Open the PR **into `develop`** with a Conventional Commit title — squash-merge means the title
 becomes the commit message. Wait for `ci-ok`. When it is green and reviewed, squash-merge.

@@ -162,10 +162,11 @@ contact-form-error contact-form-success
 
 ### What belongs in e2e
 
-Only the flows whose breakage would matter to a real visitor: `/` redirecting to `/ru`, switching
-locale and staying on the same page, toggling the theme and having it survive a reload, submitting
-the contact form, and the health endpoint responding. Everything else is cheaper and more precise as
-a unit test.
+Only the flows whose breakage would matter to a real visitor: `/` redirecting to the locale the
+browser asked for (`localeDetection` is on, so the specs pin `test.use({ locale })` rather than
+assuming `/ru`), switching locale and staying on the same page, toggling the theme and having it
+survive a reload, submitting the contact form, and the health endpoint responding. Everything else
+is cheaper and more precise as a unit test.
 
 ---
 
@@ -219,7 +220,7 @@ The husky hooks run a subset of the above, chosen so that a commit stays fast an
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
 | `pre-commit` | lint-staged: ESLint `--fix` + Prettier on staged files, `tsc --noEmit` when TypeScript changed, secretlint on everything staged |
 | `commit-msg` | commitlint against the Conventional Commits rules                                                                               |
-| `pre-push`   | branch-name validation, then `pnpm typecheck` and `pnpm test` — the slow half of `pnpm validate`                                |
+| `pre-push`   | branch-name validation, then `pnpm typecheck` and `pnpm test:coverage` — the slow half of `pnpm validate`                       |
 
 Full details in [CONTRIBUTING.md](../CONTRIBUTING.md).
 
