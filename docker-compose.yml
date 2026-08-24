@@ -1,0 +1,155 @@
+# -----------------------------------------------------------------------------
+# Production stack for a single VPS.
+#
+#   caddy  the only service with published ports; terminates TLS, obtains and
+#          renews certificates, proxies everything to `web` over a private
+#          bridge network.
+#   web    the Next.js standalone image. It is never reachable from the host
+#          directly — no `ports:` on purpose.
+#
+# Usage on the server (scripts/deploy.sh wraps this):
+#   docker compose -f docker-compose.yml pull
+#   docker compose -f docker-compose.yml up -d --wait
+#
+# Always pass -f explicitly: that suppresses the automatic loading of
+# docker-compose.override.yml, which is a local-development file.
+# -----------------------------------------------------------------------------
+name: vladimirshikov-site
+
+services:
+  web:
+    image: ${IMAGE:-ghcr.io/iuriishikov/vladimirshikov-site:latest}
+    container_name: vladimirshikov-web
+    restart: unless-stopped
+    # Runtime configuration only. NEXT_PUBLIC_* variables are compiled into the
+    # bundle and cannot be changed here — they belong to the image build.
+    # Anything set under `environment:` below wins over a key of the same name
+    # in this file.
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      HOSTNAME: 0.0.0.0
+      # Read at request time by src/shared/config/env.ts — metadata, robots.txt
+      # and sitemap.xml all depend on them, which is what lets one image serve
+      # every tier. Both come from the .env file next to this one, and
+      # scripts/deploy.sh refuses to deploy without them: their zod fallbacks
+      # would publish http://localhost:3000 canonicals and a `Disallow: /`
+      # robots.txt on the live site.
+      SITE_URL: ${SITE_URL}
+      APP_ENV: ${APP_ENV:-production}
+    expose:
+      - "3000"
+    networks:
+      - edge
+    # The image already ships a HEALTHCHECK; it is repeated here so that
+    # `up -d --wait` and this file agree on what "healthy" means.
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    # The application never writes to its own filesystem apart from the Next.js
+    # cache, so the root filesystem can stay immutable.
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    volumes:
+      - next_cache:/app/.next/cache
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    # tini is PID 1 inside the image, so compose must not inject its own init.
+    init: false
+    stop_grace_period: 20s
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          cpus: "1.50"
+          memory: 1g
+        reservations:
+          memory: 256m
+
+  caddy:
+    image: caddy:2-alpine
+    container_name: vladimirshikov-caddy
+    restart: unless-stopped
+    depends_on:
+      web:
+        condition: service_healthy
+    environment:
+      # Both come from the .env file next to this one. They are deliberately not
+      # declared with `${VAR:?}`: compose interpolates every service in the file
+      # before profiles are applied, so a required-variable marker here would
+      # also break the local, proxy-less flow in docker-compose.override.yml.
+      # scripts/deploy.sh verifies they are set before it touches the stack.
+      SITE_DOMAIN: ${SITE_DOMAIN}
+      ACME_EMAIL: ${ACME_EMAIL}
+      X_ROBOTS_TAG: ${X_ROBOTS_TAG:-index, follow}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp" # HTTP/3
+    networks:
+      - edge
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      # Certificates and OCSP staples. Losing this volume means re-issuing every
+      # certificate, which is rate limited — back it up, do not prune it.
+      - caddy_data:/data
+      - caddy_config:/config
+    # Caddy's admin API listens on localhost:2019 inside the container and is
+    # not published; querying it proves the process is alive and serving its
+    # config, which `caddy validate` would not.
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1:2019/config/"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=32m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      # Dropping ALL also drops root's ability to bind ports below 1024.
+      - NET_BIND_SERVICE
+    stop_grace_period: 15s
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 256m
+
+networks:
+  edge:
+    name: vladimirshikov-edge
+    driver: bridge
+
+volumes:
+  caddy_data:
+  caddy_config:
+  next_cache:
