@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    /* Language & emit — Next.js compiles, tsc only type-checks. */
+    "target": "ES2022",
+    "lib": ["DOM", "DOM.Iterable", "ES2023"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./node_modules/.cache/tsconfig.tsbuildinfo",
+    /* Interop */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "allowJs": true,
+    "checkJs": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    /* Strictness — every flag on. Loosening one is an ADR-worthy decision. */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    // `noPropertyAccessFromIndexSignature` is deliberately off: Next.js only
+    // inlines `process.env.NEXT_PUBLIC_*` reliably via dot access.
+    "exactOptionalPropertyTypes": true,
+    "useUnknownInCatchVariables": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    // No `baseUrl`: it is deprecated in TypeScript 6 and removed in 7. `paths`
+    // resolves relative to this file on its own.
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mts",
+    "**/*.mjs",
+    // TypeScript's `**` skips dot-directories, so Storybook's config needs an
+    // explicit entry — without it, typed linting cannot parse those files.
+    ".storybook/**/*.ts",
+    ".storybook/**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": ["node_modules", ".next", "out", "coverage", "storybook-static", "playwright-report"]
+}

@@ -1,1 +1,63 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# next.js
+.next/
+out/
+next-env.d.ts
+
+# production
+build/
+dist/
+
+# testing & reports
+coverage/
+playwright-report/
+playwright/.cache/
+test-results/
+reports/
+storybook-static/
+.lighthouseci/
+
+# environment — only .env.example is committed
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.staging
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# os / editor
+.DS_Store
+Thumbs.db
+*.swp
 .idea/
+!.idea/.gitignore
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# caches
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+.turbo/
+.cache/
+
+# deployment secrets
+*.pem
+*.key
+!public/**/*.key
+
+# claude code worktrees
+.claude/worktrees/

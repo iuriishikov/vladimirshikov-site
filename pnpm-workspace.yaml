@@ -1,0 +1,48 @@
+# pnpm >= 10 reads shared project settings from this file.
+# Docs: https://pnpm.io/settings
+
+# ---------------------------------------------------------------------------
+# Supply-chain hardening
+# ---------------------------------------------------------------------------
+# Postinstall scripts are blocked by default. A package may only run them when
+# it is listed here — added consciously, with a reason.
+allowBuilds:
+  "@parcel/watcher": true # native file watching for vite/storybook dev servers
+  "@swc/core": true # SWC binary used by Storybook's Next.js builder
+  esbuild: true # vite/vitest dependency, needs its platform binary
+  unrs-resolver: true # native resolver behind eslint-plugin-import-x
+  msw: false # only its Node interceptor is used; no browser worker in ./public
+
+# A package version must have been on the registry for at least this many
+# minutes before it can be installed. This is the single cheapest defence
+# against a compromised release being pulled in minutes after publication.
+minimumReleaseAge: 1440 # 24 hours
+
+# Versions deliberately allowed through the quarantine above (pinned by us).
+minimumReleaseAgeExclude:
+  - "@tanstack/eslint-plugin-query@5.102.2"
+  - "@tanstack/query-core@5.102.2"
+  - "@tanstack/query-devtools@5.102.2"
+  - "@tanstack/react-query-devtools@5.102.2"
+  - "@tanstack/react-query@5.102.2"
+  - "@types/react-dom@19.2.5"
+
+# ---------------------------------------------------------------------------
+# Resolution
+# ---------------------------------------------------------------------------
+# Strict, non-hoisted node_modules: a module may only import what it declares.
+nodeLinker: isolated
+shamefullyHoist: false
+autoInstallPeers: true
+# A genuine peer conflict warns rather than blocking a developer's install; CI
+# surfaces the same warnings in its log.
+strictPeerDependencies: false
+savePrefix: ^
+preferFrozenLockfile: true
+
+# ---------------------------------------------------------------------------
+# Developer ergonomics
+# ---------------------------------------------------------------------------
+# Warn when node_modules is stale relative to the lockfile before running a
+# script — catches the classic "works on my machine after a rebase" bug.
+verifyDepsBeforeRun: warn
