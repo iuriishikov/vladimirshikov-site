@@ -7,6 +7,10 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('src', import.meta.url)),
+      // The real package throws unless it is imported from a Server Component.
+      'server-only': fileURLToPath(
+        new URL('src/shared/test/stubs/server-only.ts', import.meta.url),
+      ),
     },
   },
   test: {
@@ -27,20 +31,40 @@ export default defineConfig({
       reporter: ['text', 'lcov', 'json-summary', 'html'],
       reportsDirectory: './coverage',
       include: ['src/**/*.{ts,tsx}'],
+      /*
+       * Coverage measures logic; composition is measured end to end.
+       *
+       * The `app` and `views` layers are, by this project's own architecture,
+       * composition only — route wiring and layout with no branching to get
+       * wrong. Asserting unit coverage over them would only reward tests that
+       * mount a tree and assert nothing, so Playwright covers them instead.
+       * Everything that can actually hold a bug stays in the denominator.
+       */
       exclude: [
         'src/**/*.{test,spec}.{ts,tsx}',
         'src/**/*.stories.{ts,tsx}',
         'src/**/index.ts',
         'src/**/*.d.ts',
         'src/shared/test/**',
-        'src/app/**/{layout,error,not-found,loading,global-error}.tsx',
+        'src/app/**',
+        'src/views/**',
+        // Framework entrypoints: exercised by the e2e suite against a real server.
+        'src/proxy.ts',
+        'src/instrumentation.ts',
+        // Declarative i18n configuration and a re-export of next-intl's
+        // navigation helpers — no logic of our own.
+        'src/shared/i18n/**',
       ],
-      // Ratchet these upwards; never downwards without an ADR.
+      /*
+       * Set just below what the suite actually achieves, so an unrelated change
+       * does not fail on rounding. Ratchet upwards as coverage grows; lowering
+       * one is an ADR-worthy decision, not a quick unblock.
+       */
       thresholds: {
-        statements: 70,
-        branches: 70,
-        functions: 70,
-        lines: 70,
+        statements: 80,
+        branches: 85,
+        functions: 80,
+        lines: 80,
       },
     },
   },
