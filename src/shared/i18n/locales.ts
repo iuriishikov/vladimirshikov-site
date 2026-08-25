@@ -19,12 +19,23 @@ export interface LocaleEntry {
   endonym: string
   script: 'latin' | 'cyrillic'
   /**
-   * The `hreflang` tag. The first two editions were published with a region and
-   * keep it; the rest have no regional variant to tell apart, so they carry the
-   * bare language subtag — which is what a crawler prefers when there is only
-   * one edition of a language.
+   * The `hreflang` tag: a bare language subtag.
+   *
+   * There is exactly one edition per language, so there is nothing for a region
+   * to distinguish. `en-US` would have told a crawler to serve the English
+   * edition to American readers specifically and leave a British or Australian
+   * one unmatched — for a site written in Almaty, an odd thing to say. Serbian
+   * is the one exception: it is published here in Cyrillic and widely written
+   * in Latin elsewhere, so its script subtag is load-bearing.
    */
   hreflang: string
+  /**
+   * `og:locale`, which is not a BCP 47 tag however much it looks like one.
+   * Open Graph wants `language_TERRITORY` with an underscore, and rejects both
+   * `en-US` and a bare `en` — so it cannot share a field with `hreflang`, which
+   * wants the opposite of each.
+   */
+  ogLocale: string
 }
 
 /**
@@ -32,46 +43,46 @@ export interface LocaleEntry {
  * entry is the default locale.
  */
 export const LOCALE_CATALOGUE = {
-  en: { endonym: 'English', script: 'latin', hreflang: 'en-US' },
-  de: { endonym: 'Deutsch', script: 'latin', hreflang: 'de' },
-  fr: { endonym: 'Français', script: 'latin', hreflang: 'fr' },
-  es: { endonym: 'Español', script: 'latin', hreflang: 'es' },
-  pt: { endonym: 'Português', script: 'latin', hreflang: 'pt' },
-  it: { endonym: 'Italiano', script: 'latin', hreflang: 'it' },
-  nl: { endonym: 'Nederlands', script: 'latin', hreflang: 'nl' },
-  pl: { endonym: 'Polski', script: 'latin', hreflang: 'pl' },
-  cs: { endonym: 'Čeština', script: 'latin', hreflang: 'cs' },
-  sk: { endonym: 'Slovenčina', script: 'latin', hreflang: 'sk' },
-  hu: { endonym: 'Magyar', script: 'latin', hreflang: 'hu' },
-  ro: { endonym: 'Română', script: 'latin', hreflang: 'ro' },
-  hr: { endonym: 'Hrvatski', script: 'latin', hreflang: 'hr' },
-  sl: { endonym: 'Slovenščina', script: 'latin', hreflang: 'sl' },
-  lt: { endonym: 'Lietuvių', script: 'latin', hreflang: 'lt' },
-  lv: { endonym: 'Latviešu', script: 'latin', hreflang: 'lv' },
-  et: { endonym: 'Eesti', script: 'latin', hreflang: 'et' },
-  fi: { endonym: 'Suomi', script: 'latin', hreflang: 'fi' },
-  sv: { endonym: 'Svenska', script: 'latin', hreflang: 'sv' },
-  da: { endonym: 'Dansk', script: 'latin', hreflang: 'da' },
-  nb: { endonym: 'Norsk', script: 'latin', hreflang: 'nb' },
-  is: { endonym: 'Íslenska', script: 'latin', hreflang: 'is' },
-  tr: { endonym: 'Türkçe', script: 'latin', hreflang: 'tr' },
-  sq: { endonym: 'Shqip', script: 'latin', hreflang: 'sq' },
-  ca: { endonym: 'Català', script: 'latin', hreflang: 'ca' },
-  id: { endonym: 'Bahasa Indonesia', script: 'latin', hreflang: 'id' },
-  ms: { endonym: 'Bahasa Melayu', script: 'latin', hreflang: 'ms' },
-  fil: { endonym: 'Filipino', script: 'latin', hreflang: 'fil' },
-  sw: { endonym: 'Kiswahili', script: 'latin', hreflang: 'sw' },
-  vi: { endonym: 'Tiếng Việt', script: 'latin', hreflang: 'vi' },
-  ru: { endonym: 'Русский', script: 'cyrillic', hreflang: 'ru-RU' },
-  uk: { endonym: 'Українська', script: 'cyrillic', hreflang: 'uk' },
-  be: { endonym: 'Беларуская', script: 'cyrillic', hreflang: 'be' },
-  bg: { endonym: 'Български', script: 'cyrillic', hreflang: 'bg' },
-  sr: { endonym: 'Српски', script: 'cyrillic', hreflang: 'sr-Cyrl' },
-  mk: { endonym: 'Македонски', script: 'cyrillic', hreflang: 'mk' },
-  kk: { endonym: 'Қазақша', script: 'cyrillic', hreflang: 'kk' },
-  ky: { endonym: 'Кыргызча', script: 'cyrillic', hreflang: 'ky' },
-  mn: { endonym: 'Монгол', script: 'cyrillic', hreflang: 'mn' },
-  tg: { endonym: 'Тоҷикӣ', script: 'cyrillic', hreflang: 'tg' },
+  en: { endonym: 'English', script: 'latin', hreflang: 'en', ogLocale: 'en_US' },
+  de: { endonym: 'Deutsch', script: 'latin', hreflang: 'de', ogLocale: 'de_DE' },
+  fr: { endonym: 'Français', script: 'latin', hreflang: 'fr', ogLocale: 'fr_FR' },
+  es: { endonym: 'Español', script: 'latin', hreflang: 'es', ogLocale: 'es_ES' },
+  pt: { endonym: 'Português', script: 'latin', hreflang: 'pt', ogLocale: 'pt_PT' },
+  it: { endonym: 'Italiano', script: 'latin', hreflang: 'it', ogLocale: 'it_IT' },
+  nl: { endonym: 'Nederlands', script: 'latin', hreflang: 'nl', ogLocale: 'nl_NL' },
+  pl: { endonym: 'Polski', script: 'latin', hreflang: 'pl', ogLocale: 'pl_PL' },
+  cs: { endonym: 'Čeština', script: 'latin', hreflang: 'cs', ogLocale: 'cs_CZ' },
+  sk: { endonym: 'Slovenčina', script: 'latin', hreflang: 'sk', ogLocale: 'sk_SK' },
+  hu: { endonym: 'Magyar', script: 'latin', hreflang: 'hu', ogLocale: 'hu_HU' },
+  ro: { endonym: 'Română', script: 'latin', hreflang: 'ro', ogLocale: 'ro_RO' },
+  hr: { endonym: 'Hrvatski', script: 'latin', hreflang: 'hr', ogLocale: 'hr_HR' },
+  sl: { endonym: 'Slovenščina', script: 'latin', hreflang: 'sl', ogLocale: 'sl_SI' },
+  lt: { endonym: 'Lietuvių', script: 'latin', hreflang: 'lt', ogLocale: 'lt_LT' },
+  lv: { endonym: 'Latviešu', script: 'latin', hreflang: 'lv', ogLocale: 'lv_LV' },
+  et: { endonym: 'Eesti', script: 'latin', hreflang: 'et', ogLocale: 'et_EE' },
+  fi: { endonym: 'Suomi', script: 'latin', hreflang: 'fi', ogLocale: 'fi_FI' },
+  sv: { endonym: 'Svenska', script: 'latin', hreflang: 'sv', ogLocale: 'sv_SE' },
+  da: { endonym: 'Dansk', script: 'latin', hreflang: 'da', ogLocale: 'da_DK' },
+  nb: { endonym: 'Norsk', script: 'latin', hreflang: 'nb', ogLocale: 'nb_NO' },
+  is: { endonym: 'Íslenska', script: 'latin', hreflang: 'is', ogLocale: 'is_IS' },
+  tr: { endonym: 'Türkçe', script: 'latin', hreflang: 'tr', ogLocale: 'tr_TR' },
+  sq: { endonym: 'Shqip', script: 'latin', hreflang: 'sq', ogLocale: 'sq_AL' },
+  ca: { endonym: 'Català', script: 'latin', hreflang: 'ca', ogLocale: 'ca_ES' },
+  id: { endonym: 'Bahasa Indonesia', script: 'latin', hreflang: 'id', ogLocale: 'id_ID' },
+  ms: { endonym: 'Bahasa Melayu', script: 'latin', hreflang: 'ms', ogLocale: 'ms_MY' },
+  fil: { endonym: 'Filipino', script: 'latin', hreflang: 'fil', ogLocale: 'fil_PH' },
+  sw: { endonym: 'Kiswahili', script: 'latin', hreflang: 'sw', ogLocale: 'sw_KE' },
+  vi: { endonym: 'Tiếng Việt', script: 'latin', hreflang: 'vi', ogLocale: 'vi_VN' },
+  ru: { endonym: 'Русский', script: 'cyrillic', hreflang: 'ru', ogLocale: 'ru_RU' },
+  uk: { endonym: 'Українська', script: 'cyrillic', hreflang: 'uk', ogLocale: 'uk_UA' },
+  be: { endonym: 'Беларуская', script: 'cyrillic', hreflang: 'be', ogLocale: 'be_BY' },
+  bg: { endonym: 'Български', script: 'cyrillic', hreflang: 'bg', ogLocale: 'bg_BG' },
+  sr: { endonym: 'Српски', script: 'cyrillic', hreflang: 'sr-Cyrl', ogLocale: 'sr_RS' },
+  mk: { endonym: 'Македонски', script: 'cyrillic', hreflang: 'mk', ogLocale: 'mk_MK' },
+  kk: { endonym: 'Қазақша', script: 'cyrillic', hreflang: 'kk', ogLocale: 'kk_KZ' },
+  ky: { endonym: 'Кыргызча', script: 'cyrillic', hreflang: 'ky', ogLocale: 'ky_KG' },
+  mn: { endonym: 'Монгол', script: 'cyrillic', hreflang: 'mn', ogLocale: 'mn_MN' },
+  tg: { endonym: 'Тоҷикӣ', script: 'cyrillic', hreflang: 'tg', ogLocale: 'tg_TJ' },
 } as const satisfies Record<string, LocaleEntry>
 
 export type Locale = keyof typeof LOCALE_CATALOGUE
@@ -98,9 +109,14 @@ export const localeLabels: Record<Locale, string> = Object.fromEntries(
   Object.entries(LOCALE_CATALOGUE).map(([code, entry]) => [code, entry.endonym]),
 ) as Record<Locale, string>
 
-/** BCP 47 tags for `hreflang` alternates. */
+/** BCP 47 tags for `hreflang` alternates and `inLanguage`. */
 export const localeHreflang: Record<Locale, string> = Object.fromEntries(
   Object.entries(LOCALE_CATALOGUE).map(([code, entry]) => [code, entry.hreflang]),
+) as Record<Locale, string>
+
+/** `language_TERRITORY` tags, which only Open Graph asks for. */
+export const localeOpenGraph: Record<Locale, string> = Object.fromEntries(
+  Object.entries(LOCALE_CATALOGUE).map(([code, entry]) => [code, entry.ogLocale]),
 ) as Record<Locale, string>
 
 /** The index groups itself by writing system, in catalogue order within each. */

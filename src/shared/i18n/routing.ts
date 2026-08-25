@@ -26,6 +26,7 @@ export {
   LOCALE_CATALOGUE,
   localeCodes,
   localeHreflang,
+  localeOpenGraph,
   localeLabels,
   localesByScript,
   PRIMARY_LOCALES,

@@ -38,22 +38,34 @@ const ROUTES = [
 // rather than from whatever was set on the build machine.
 export const dynamic = 'force-dynamic'
 
+/*
+ * No `lastModified`. It used to be `new Date()`, which told a crawler that
+ * every one of these URLs had changed in the second it asked — every time it
+ * asked. A field that always says "just now" is indistinguishable from noise,
+ * and Google's documented response to a sitemap whose dates it cannot trust is
+ * to stop reading them at all. There is no real per-page modification date to
+ * put here yet, and an absent field costs nothing; a false one costs the
+ * credibility of the whole file.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date()
-
   return routing.locales.flatMap((locale) =>
     ROUTES.map((route) => ({
       url: `${env.SITE_URL}/${locale}${route.path}`,
-      lastModified,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
       alternates: {
-        languages: Object.fromEntries(
-          routing.locales.map((alternate) => [
-            localeHreflang[alternate],
-            `${env.SITE_URL}/${alternate}${route.path}`,
-          ]),
-        ),
+        languages: {
+          ...Object.fromEntries(
+            routing.locales.map((alternate) => [
+              localeHreflang[alternate],
+              `${env.SITE_URL}/${alternate}${route.path}`,
+            ]),
+          ),
+          // The same `x-default` the page's own head carries. A crawler may
+          // read either source; the two disagreeing about which edition an
+          // unmatched visitor gets is worse than only one of them saying so.
+          'x-default': `${env.SITE_URL}/${routing.defaultLocale}${route.path}`,
+        },
       },
     })),
   )

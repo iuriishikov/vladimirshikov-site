@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 
 import { env } from '../config/env'
 import { siteConfig } from '../config/site'
-import { localeHreflang, routing, type Locale } from '../i18n/routing'
+import { localeHreflang, localeOpenGraph, routing, type Locale } from '../i18n/routing'
 
 interface PageMetadataOptions {
   locale: Locale
@@ -61,10 +61,12 @@ export function buildPageMetadata({
     openGraph: {
       type: 'website',
       siteName: siteConfig.name,
-      locale: localeHreflang[locale],
+      // `language_TERRITORY`, not the `hreflang` tag: Open Graph is the one
+      // consumer here that does not speak BCP 47.
+      locale: localeOpenGraph[locale],
       alternateLocale: routing.locales
         .filter((candidate) => candidate !== locale)
-        .map((candidate) => localeHreflang[candidate]),
+        .map((candidate) => localeOpenGraph[candidate]),
       url: canonical,
       title,
       description,

@@ -7,6 +7,8 @@ import { CaseStudyView } from '@/views/case-study'
 import { CASE_STUDIES } from '@/entities/case-study'
 import { routing } from '@/shared/i18n/routing'
 import { buildPageMetadata } from '@/shared/lib/seo'
+import { buildBreadcrumbs, buildProject } from '@/shared/lib/structured-data'
+import { StructuredData } from '@/shared/ui/structured-data/structured-data'
 
 interface CasePageProps {
   params: Promise<{ locale: string; slug: string }>
@@ -41,5 +43,40 @@ export default async function CasePage({ params }: CasePageProps) {
   const caseStudy = findCase(slug)
   if (!caseStudy) notFound()
 
-  return <CaseStudyView caseStudy={caseStudy} />
+  const [works, hero, header] = await Promise.all([
+    getTranslations({ locale, namespace: 'Works' }),
+    getTranslations({ locale, namespace: 'Hero' }),
+    getTranslations({ locale, namespace: 'Header' }),
+  ])
+
+  const path = `/cases/${caseStudy.slug}`
+  const name = works(`items.${caseStudy.slug}.name`)
+
+  return (
+    <>
+      <StructuredData
+        data={buildProject({
+          locale,
+          path,
+          name,
+          description: works(`items.${caseStudy.slug}.summary`),
+          personName: hero('name'),
+          // Only where the source material named a client. The third project
+          // names a horizon instead, and inventing an organisation for it
+          // would be the one thing structured data must never do.
+          ...(caseStudy.company !== undefined && { client: caseStudy.wordmark }),
+        })}
+      />
+      <StructuredData
+        data={buildBreadcrumbs({
+          locale,
+          trail: [
+            { name: header('nav.home'), path: '' },
+            { name, path },
+          ],
+        })}
+      />
+      <CaseStudyView caseStudy={caseStudy} />
+    </>
+  )
 }

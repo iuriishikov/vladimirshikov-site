@@ -80,13 +80,15 @@ describe('LocaleSwitcher', () => {
     expect(name).toHaveAttribute('lang', 'ru')
   })
 
-  it('advertises each destination with a full BCP 47 tag', () => {
+  it('advertises each destination with the same tag the alternates use', () => {
     renderWithProviders(<LocaleSwitcher />)
 
     // It has to agree with the alternates the sitemap and the page metadata
-    // emit for these very URLs, rather than offer a looser second spelling.
-    expect(screen.getByTestId('locale-option-ru')).toHaveAttribute('hreflang', 'ru-RU')
-    expect(screen.getByTestId('locale-option-en')).toHaveAttribute('hreflang', 'en-US')
+    // emit for these very URLs, rather than offer a second spelling of them.
+    // Bare subtags: there is one edition per language, so a region would be
+    // telling a crawler to narrow the audience for no reason.
+    expect(screen.getByTestId('locale-option-ru')).toHaveAttribute('hreflang', 'ru')
+    expect(screen.getByTestId('locale-option-en')).toHaveAttribute('hreflang', 'en')
   })
 
   it('keeps only the two primary editions in the bar', () => {
