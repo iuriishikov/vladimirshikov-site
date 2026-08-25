@@ -75,6 +75,22 @@ const nextConfig: NextConfig = {
         source: '/:path*',
         headers: [...securityHeaders],
       },
+      /*
+       * `public/` is served with `public, max-age=0` by default, and rightly so
+       * in general: a file there can be replaced under the same URL, unlike the
+       * hashed names under `/_next/static`. The client marks are the exception —
+       * 175 KB of them, revalidated on every navigation, for drawings that are
+       * flattened to a silhouette 30px tall.
+       *
+       * The price of this line: a mark committed under a name that has already
+       * been served is cached for a year. A redrawn logo therefore has to be
+       * committed under a NEW filename and pointed at from
+       * `shared/config/company-logos`, never overwritten in place.
+       */
+      {
+        source: '/logos/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
     ])
   },
 }

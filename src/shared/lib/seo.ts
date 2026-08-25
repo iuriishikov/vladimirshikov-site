@@ -15,6 +15,15 @@ interface PageMetadataOptions {
   description: string
   /** Locale-less path, e.g. `''` for the home page or `'/about'`. */
   path?: string
+  /**
+   * Whether this page may be indexed where indexing is allowed at all.
+   *
+   * Folded into the tier check rather than overridden at the call site: Next
+   * emits `robots` and `googlebot` as two separate tags, and Google reads the
+   * crawler-specific one in preference to the generic one — so a `noindex` that
+   * flips only the first binds every crawler except the one that matters.
+   */
+  indexable?: boolean
 }
 
 /** `https://example.com/en/about` */
@@ -35,6 +44,7 @@ export function buildPageMetadata({
   title,
   description,
   path = '',
+  indexable = true,
 }: PageMetadataOptions): Metadata {
   const canonical = absoluteUrl(locale, path)
 
@@ -42,7 +52,7 @@ export function buildPageMetadata({
     routing.locales.map((candidate) => [localeHreflang[candidate], absoluteUrl(candidate, path)]),
   )
 
-  const isIndexable = env.APP_ENV === 'production'
+  const isIndexable = env.APP_ENV === 'production' && indexable
 
   return {
     metadataBase: new URL(env.SITE_URL),

@@ -22,6 +22,13 @@ export async function generateMetadata({ params }: AboutPageProps): Promise<Meta
     title: t('title'),
     description: t('description'),
     path: '/about',
+    /*
+     * Still the scaffold placeholder its own copy admits to being — "Real
+     * content will follow". Offering that to a crawler in forty editions is
+     * forty thin, orphaned URLs competing with the page that says something.
+     * Remove this the day the page has content.
+     */
+    indexable: false,
   })
 }
 

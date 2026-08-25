@@ -61,7 +61,7 @@ export default async function HomePage({ params }: HomePageProps) {
           title: meta('title'),
           description: meta('description'),
           person,
-          website: buildWebsite(locale),
+          website: buildWebsite(),
         })}
       />
       <HomeView />

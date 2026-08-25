@@ -17,6 +17,10 @@ const currentPathname = vi.fn(() => '/')
 
 vi.mock('@/shared/i18n/navigation', () => ({
   usePathname: () => currentPathname(),
+  // The real one prefixes the locale; the stub reproduces exactly that, which
+  // is the only thing the header asks of it.
+  getPathname: ({ locale, href }: { locale: string; href: string }) =>
+    href === '/' ? `/${locale}` : `/${locale}${href}`,
   Link: ({ href, children, ...rest }: ComponentProps<'a'> & { href: string }) => (
     <a href={href} {...rest}>
       {children}
@@ -47,7 +51,9 @@ describe('SiteHeader', () => {
     renderWithProviders(<SiteHeader />)
 
     expect(screen.getByTestId('site-header')).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Шиков.В' })).toHaveAttribute('href', '#top')
+    // The canonical home URL: this link is on every page, and pointing it at a
+    // scroll position would waste the strongest internal link the site has.
+    expect(screen.getByRole('link', { name: 'Шиков.В' })).toHaveAttribute('href', '/ru')
     expect(screen.getByRole('link', { name: 'Связаться →' })).toHaveAttribute('href', '#contact')
   })
 
@@ -56,16 +62,17 @@ describe('SiteHeader', () => {
 
     const nav = screen.getByRole('navigation', { name: 'Основная навигация' })
     const entries = [
-      { label: 'Главная', href: '#top' },
-      { label: 'Обо мне', href: '#about' },
-      { label: 'Что я делаю', href: '#services' },
-      { label: 'Проекты', href: '#cases' },
-      { label: 'Статьи', href: '#blog' },
+      { label: 'Главная', href: '/ru#top' },
+      { label: 'Обо мне', href: '/ru#about' },
+      { label: 'Что я делаю', href: '/ru#services' },
+      { label: 'Проекты', href: '/ru#cases' },
+      { label: 'Статьи', href: '/ru#blog' },
     ]
 
     for (const entry of entries) {
-      // A locale-prefixed href would mean the i18n `Link` had crept back in and
-      // turned an in-page scroll into a full navigation.
+      // The home document in front of every fragment. A bare `#cases` means
+      // something only on the home page: from a project page or the essay the
+      // whole navigation would point at sections that are not there.
       expect(within(nav).getByRole('link', { name: entry.label })).toHaveAttribute(
         'href',
         entry.href,

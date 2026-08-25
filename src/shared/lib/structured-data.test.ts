@@ -13,6 +13,7 @@ import {
   buildProfilePage,
   buildProject,
   buildWebsite,
+  buildWorkPage,
 } from './structured-data'
 
 const person = buildPerson({
@@ -29,7 +30,7 @@ describe('structured data', () => {
     // Three pages describing "Vladimir Shikov" are three views of one subject,
     // not three people who happen to share a name. The shared `@id` is what
     // says so.
-    const website = buildWebsite('ru')
+    const website = buildWebsite()
     const article = buildArticle({
       locale: 'ru',
       path: '/notes/growth',
@@ -49,7 +50,7 @@ describe('structured data', () => {
       title: 'Владимир Шиков',
       description: 'Описание',
       person,
-      website: buildWebsite('ru'),
+      website: buildWebsite(),
     })
 
     const nodes = graph['@graph'] as Record<string, unknown>[]
@@ -127,10 +128,79 @@ describe('structured data', () => {
     ])
   })
 
-  it('declares the language of the edition it was built for', () => {
-    // One graph per edition, each saying which one it is — otherwise forty
-    // translations look like forty copies.
-    expect(buildWebsite('kk').inLanguage).toBe('kk')
-    expect(buildWebsite('en').inLanguage).toBe('en')
+  it('declares the language on the page, never on the site', () => {
+    // One `@id` for the WebSite across all forty editions, so a language on it
+    // would be forty contradicting claims about one node. The page node's id is
+    // per-URL, which is where a language can be true.
+    expect(buildWebsite()).not.toHaveProperty('inLanguage')
+
+    const kazakh = buildProfilePage({
+      locale: 'kk',
+      title: 'Владимир Шиков',
+      description: 'Сипаттама',
+      person,
+      website: buildWebsite(),
+    })
+    const nodes = kazakh['@graph'] as Record<string, unknown>[]
+
+    expect(nodes[0]?.inLanguage).toBe('kk')
+  })
+
+  it('binds a work to the page that presents it', () => {
+    // Without the WebPage node the Article floats free: `isPartOf` points at a
+    // WebSite the page never defines, and the crawler is handed a reference to
+    // an identity nothing on that URL establishes.
+    const graph = buildWorkPage({
+      locale: 'en',
+      path: '/notes/growth',
+      name: 'From small to mid-size',
+      work: buildArticle({
+        locale: 'en',
+        path: '/notes/growth',
+        headline: 'From small to mid-size',
+        description: 'An essay',
+        personName: 'Vladimir Shikov',
+      }),
+      crumbs: buildBreadcrumbs({
+        locale: 'en',
+        trail: [{ name: 'Home', path: '' }],
+      }),
+    })
+
+    const nodes = graph['@graph'] as Record<string, unknown>[]
+    expect(nodes.map((node) => node['@type'])).toStrictEqual([
+      'WebPage',
+      'Article',
+      'BreadcrumbList',
+      'WebSite',
+    ])
+
+    // Every reference in the graph has to resolve inside it.
+    const page = nodes[0]
+    const article = nodes[1]
+    expect(page?.mainEntity).toStrictEqual({ '@id': article?.['@id'] })
+    expect(article?.mainEntityOfPage).toStrictEqual({ '@id': page?.['@id'] })
+    expect(page?.breadcrumb).toStrictEqual({ '@id': nodes[2]?.['@id'] })
+  })
+
+  it('states the context once per document, not once per node', () => {
+    // A node nested inside a `@graph` restating `@context` is noise at best and
+    // a second, competing document at worst.
+    const nested = buildArticle({
+      locale: 'en',
+      path: '/notes/growth',
+      headline: 'From small to mid-size',
+      description: 'An essay',
+      personName: 'Vladimir Shikov',
+    })
+
+    expect(nested).not.toHaveProperty('@context')
+    expect(buildBreadcrumbs({ locale: 'en', trail: [] })).not.toHaveProperty('@context')
+  })
+
+  it('points the person at a photograph that is really there', () => {
+    // `public/` is served at the root, so a rename is a 404 in the graph and
+    // nowhere else — silent, and only to machines.
+    expect(person.image).toBe('http://localhost:3000/vladimir-shikov.jpg')
   })
 })

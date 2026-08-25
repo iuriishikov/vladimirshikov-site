@@ -20,6 +20,18 @@ export const routing = defineRouting({
   defaultLocale: 'en',
   localePrefix: 'always',
   localeDetection: true,
+  /*
+   * next-intl otherwise stamps a `Link:` header of forty-one hreflang
+   * alternates onto every response, including the PNG at
+   * `/[locale]/opengraph-image`. The head already carries that set, built from
+   * this catalogue in `shared/lib/seo`, and the two do not agree: the header
+   * labels Serbian `sr` where the catalogue says `sr-Cyrl`, and it points
+   * `x-default` at the locale-less `/about`, which is not a page but a redirect
+   * to `/en/about` — and an hreflang alternate has to be a canonical URL that
+   * does not redirect. Two annotation surfaces that disagree are worse than
+   * either alone, so there is one, and it is the head.
+   */
+  alternateLinks: false,
 })
 
 export {

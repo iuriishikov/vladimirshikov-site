@@ -1,6 +1,7 @@
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { LocaleSwitcher } from '@/features/locale-switch'
+import { getPathname } from '@/shared/i18n/navigation'
 import { Container } from '@/shared/ui'
 
 import { DesktopNav } from './desktop-nav'
@@ -15,6 +16,7 @@ import { MobileNavToggle } from './mobile-nav-toggle'
  */
 export function SiteHeader() {
   const t = useTranslations('Header')
+  const locale = useLocale()
 
   return (
     <>
@@ -23,9 +25,14 @@ export function SiteHeader() {
         className="bg-header-bg border-header-border fixed inset-x-0 top-0 z-90 border-b backdrop-blur-[18px] backdrop-saturate-[1.4]"
       >
         <Container className="flex h-[68px] items-center justify-between gap-4">
-          {/* An in-page anchor, so a plain <a>: the i18n Link would prefix the
-              fragment with the locale and turn it into a navigation. */}
-          <a href="#top" className="rounded-sm text-[20px] font-extrabold tracking-[-0.02em]">
+          {/* The canonical home URL, not `#top`. This is the strongest internal
+              link on the site — every page carries it — and it should point at
+              a page rather than at a scroll position on whatever page the
+              reader happens to be on. */}
+          <a
+            href={getPathname({ locale, href: '/' })}
+            className="rounded-sm text-[20px] font-extrabold tracking-[-0.02em]"
+          >
             {t('brand')}
           </a>
 

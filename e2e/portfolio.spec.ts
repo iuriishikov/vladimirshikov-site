@@ -55,6 +55,30 @@ test.describe('portfolio page', () => {
   })
 })
 
+test.describe('navigation from a page that is not the home page', () => {
+  test('still points at sections that exist', async ({ page }) => {
+    await page.goto(routes.caseStudy)
+
+    // A bare `#cases` means something only on the home document. From here it
+    // pointed at a section that is not on the page, so the whole navigation —
+    // and every internal link a crawler could follow back out — was dead.
+    const nav = page.getByTestId('site-header').getByRole('navigation')
+    await expect(nav.getByRole('link', { name: 'Проекты' })).toHaveAttribute('href', '/ru#cases')
+
+    await nav.getByRole('link', { name: 'Проекты' }).click()
+
+    await expect(page).toHaveURL(/\/ru#cases$/)
+    await expect(page.locator('#cases')).toBeInViewport()
+  })
+
+  test('sends the wordmark to the canonical home URL', async ({ page }) => {
+    await page.goto(routes.note)
+
+    const brand = page.getByTestId('site-header').getByRole('link', { name: 'Шиков.В' })
+    await expect(brand).toHaveAttribute('href', '/ru')
+  })
+})
+
 test.describe('the questions section', () => {
   test('states every question in full, with nothing to expand', async ({ page }) => {
     await page.goto(routes.home.ru)

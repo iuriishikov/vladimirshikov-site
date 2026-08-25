@@ -12,28 +12,38 @@ import { Archivo, Golos_Text } from 'next/font/google'
  * link would cause.
  */
 /*
- * The subsets are the site's language list. Between them these two cover the
- * Latin and Cyrillic writing systems, which is exactly the set of editions
- * `shared/i18n/locales` publishes — nothing there can be added that the type
- * cannot draw.
+ * `subsets` is next/font's *preload* list, not its download list.
  *
- * Each subset is a separate file served under its own `unicode-range`, so a
- * visitor reading the English edition never downloads the Cyrillic or the
- * Vietnamese one. Widening the list costs the pages that do not need it
- * nothing.
+ * Every subset the family publishes is self-hosted either way and served under
+ * its own `unicode-range`, so Ukrainian's ї, Kazakh's ә ғ қ ң ө ұ ү і, Tajik's
+ * ҷ ӣ ӯ and Vietnamese's diacritics are all still there for the editions that
+ * ask for them. What naming a subset here adds is a `<link rel=preload>`, which
+ * is unconditional: it fires on every page in every edition whether or not a
+ * glyph from that file is ever drawn.
+ *
+ * Declaring all six cost 158 KB of preloads on every request — three and a half
+ * times the portrait that is the measured LCP element, and fonts outrank images
+ * in the browser's priority queue. On the English page five of the six could
+ * not have painted anything. Naming only the two that set text above the fold
+ * takes that to 57 KB and leaves the rest to be discovered from the stylesheet
+ * by the pages that need them, one extra round trip covered by `display: swap`.
  */
 const archivo = Archivo({
-  subsets: ['latin', 'latin-ext', 'vietnamese'],
+  subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
   variable: '--font-archivo',
   display: 'swap',
 })
 
 const golosText = Golos_Text({
-  // `cyrillic-ext` is not optional decoration: Ukrainian's ї and є, Kazakh's ә,
-  // ғ, қ, ң, ө, ұ, ү, і and Tajik's ҷ, ӣ, ӯ all live there. Without it those
-  // editions would be set in a system fallback, one letter at a time.
-  subsets: ['latin', 'cyrillic', 'cyrillic-ext'],
+  /*
+   * Preloaded, not merely served — and on every edition, not only the Cyrillic
+   * ten: the locale switcher names each language in its own script, and the
+   * screen-reader half of the edition mark carries `Русский` in an `sr-only`
+   * span on every page. `sr-only` clips, it does not hide, so the browser lays
+   * that text out and draws it.
+   */
+  subsets: ['cyrillic'],
   weight: ['400', '500', '600', '700', '800'],
   variable: '--font-golos',
   display: 'swap',

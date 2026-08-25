@@ -92,11 +92,20 @@ test.describe('structured data', () => {
   test('describes the essay and where it sits', async ({ page }) => {
     await page.goto(routes.note)
 
-    const found = await graphs(page)
-    expect(found.map((graph) => graph['@type'])).toStrictEqual(['Article', 'BreadcrumbList'])
+    const [graph] = await graphs(page)
+    const nodes = graph?.['@graph'] as Record<string, unknown>[] | undefined
+
+    // One graph, and every reference in it resolves inside it — the page, the
+    // work it presents, the trail to it, and the site it belongs to.
+    expect(nodes?.map((node) => node['@type'])).toStrictEqual([
+      'WebPage',
+      'Article',
+      'BreadcrumbList',
+      'WebSite',
+    ])
 
     // Nobody knows when the essay was written, so nothing may claim to.
-    expect(found[0]).not.toHaveProperty('datePublished')
+    expect(nodes?.[1]).not.toHaveProperty('datePublished')
   })
 
   test('survives the nonce policy that governs every other script', async ({ page, request }) => {

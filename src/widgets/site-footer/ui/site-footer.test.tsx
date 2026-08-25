@@ -7,6 +7,8 @@ import { SiteFooter } from './site-footer'
 
 vi.mock('@/shared/i18n/navigation', () => ({
   usePathname: () => '/',
+  getPathname: ({ locale, href }: { locale: string; href: string }) =>
+    href === '/' ? `/${locale}` : `/${locale}${href}`,
   Link: ({ href, children, ...rest }: ComponentProps<'a'> & { href: string }) => (
     <a href={href} {...rest}>
       {children}
@@ -47,7 +49,7 @@ describe('SiteFooter', () => {
     expect(within(menu).getAllByRole('listitem')).toHaveLength(5)
     expect(within(menu).getByRole('link', { name: 'Что я делаю' })).toHaveAttribute(
       'href',
-      '#services',
+      '/ru#services',
     )
     expect(screen.getByRole('navigation', { name: 'Проекты' })).toBeInTheDocument()
     expect(screen.getByRole('navigation', { name: 'Статьи' })).toBeInTheDocument()

@@ -16,7 +16,11 @@ const NOTE_IDS = ['growth']
  */
 const ROUTES = [
   { path: '', priority: 1, changeFrequency: 'monthly' as const },
-  { path: '/about', priority: 0.5, changeFrequency: 'yearly' as const },
+  /*
+   * `/about` is deliberately absent. It carries `noindex` until it has content
+   * of its own, and submitting a URL you have asked a crawler not to index is
+   * a contradiction it has to spend budget resolving — forty times over.
+   */
   ...CASE_STUDIES.map((study) => ({
     path: `/cases/${study.slug}`,
     priority: 0.8,

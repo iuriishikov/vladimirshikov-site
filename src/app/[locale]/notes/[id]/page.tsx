@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation'
 import { NoteView } from '@/views/note'
 import { routing } from '@/shared/i18n/routing'
 import { buildPageMetadata } from '@/shared/lib/seo'
-import { buildArticle, buildBreadcrumbs } from '@/shared/lib/structured-data'
+import { buildArticle, buildBreadcrumbs, buildWorkPage } from '@/shared/lib/structured-data'
 import { StructuredData } from '@/shared/ui/structured-data/structured-data'
 
 /** The notes that exist in the dictionary. Anything else is a 404. */
@@ -47,30 +47,35 @@ export default async function NotePage({ params }: NotePageProps) {
 
   const path = `/notes/${id}`
 
+  const title = blog(`items.${id}.title`)
+
   return (
     <>
       <StructuredData
-        data={buildArticle({
+        data={buildWorkPage({
           locale,
           path,
-          headline: blog(`items.${id}.title`),
-          description: blog(`items.${id}.excerpt`),
-          personName: hero('name'),
-        })}
-      />
-      {/*
-       * The writing section is an anchor on the home page rather than a route
-       * of its own, so the trail is two steps: the site, then the essay. A
-       * crumb pointing at a page that does not exist is worse than a short
-       * trail.
-       */}
-      <StructuredData
-        data={buildBreadcrumbs({
-          locale,
-          trail: [
-            { name: header('nav.home'), path: '' },
-            { name: blog(`items.${id}.title`), path },
-          ],
+          name: title,
+          work: buildArticle({
+            locale,
+            path,
+            headline: title,
+            description: blog(`items.${id}.excerpt`),
+            personName: hero('name'),
+          }),
+          /*
+           * The writing section is an anchor on the home page rather than a
+           * route of its own, so the trail is two steps: the site, then the
+           * essay. A crumb pointing at a page that does not exist would be
+           * worse than a short trail.
+           */
+          crumbs: buildBreadcrumbs({
+            locale,
+            trail: [
+              { name: header('nav.home'), path: '' },
+              { name: title, path },
+            ],
+          }),
         })}
       />
       <NoteView />

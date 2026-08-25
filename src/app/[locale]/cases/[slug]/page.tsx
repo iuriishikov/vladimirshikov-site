@@ -7,7 +7,7 @@ import { CaseStudyView } from '@/views/case-study'
 import { CASE_STUDIES } from '@/entities/case-study'
 import { routing } from '@/shared/i18n/routing'
 import { buildPageMetadata } from '@/shared/lib/seo'
-import { buildBreadcrumbs, buildProject } from '@/shared/lib/structured-data'
+import { buildBreadcrumbs, buildProject, buildWorkPage } from '@/shared/lib/structured-data'
 import { StructuredData } from '@/shared/ui/structured-data/structured-data'
 
 interface CasePageProps {
@@ -55,25 +55,28 @@ export default async function CasePage({ params }: CasePageProps) {
   return (
     <>
       <StructuredData
-        data={buildProject({
+        data={buildWorkPage({
           locale,
           path,
           name,
-          description: works(`items.${caseStudy.slug}.summary`),
-          personName: hero('name'),
-          // Only where the source material named a client. The third project
-          // names a horizon instead, and inventing an organisation for it
-          // would be the one thing structured data must never do.
-          ...(caseStudy.company !== undefined && { client: caseStudy.wordmark }),
-        })}
-      />
-      <StructuredData
-        data={buildBreadcrumbs({
-          locale,
-          trail: [
-            { name: header('nav.home'), path: '' },
-            { name, path },
-          ],
+          work: buildProject({
+            locale,
+            path,
+            name,
+            description: works(`items.${caseStudy.slug}.summary`),
+            personName: hero('name'),
+            // Only where the source material named a client. The third project
+            // names a horizon instead, and inventing an organisation for it
+            // would be the one thing structured data must never do.
+            ...(caseStudy.company !== undefined && { client: caseStudy.wordmark }),
+          }),
+          crumbs: buildBreadcrumbs({
+            locale,
+            trail: [
+              { name: header('nav.home'), path: '' },
+              { name, path },
+            ],
+          }),
         })}
       />
       <CaseStudyView caseStudy={caseStudy} />

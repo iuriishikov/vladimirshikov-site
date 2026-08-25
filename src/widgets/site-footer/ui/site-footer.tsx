@@ -1,9 +1,9 @@
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { ThemeToggle } from '@/features/theme-switch'
 import { CASE_STUDIES } from '@/entities/case-study'
 import { NAV_SECTIONS, siteConfig } from '@/shared/config/site'
-import { Link } from '@/shared/i18n/navigation'
+import { getPathname, Link } from '@/shared/i18n/navigation'
 import { Container } from '@/shared/ui'
 
 /** Keep in sync with `Blog.items` and with `src/app/sitemap.ts`. */
@@ -32,6 +32,10 @@ export function SiteFooter() {
   const tHero = useTranslations('Hero')
 
   const mailto = `mailto:${siteConfig.email}`
+  // The menu column's entries are sections of the home document. A bare
+  // fragment resolves to nothing from a project page or the essay, which is
+  // where a footer is most likely to be read.
+  const home = getPathname({ locale: useLocale(), href: '/' })
 
   return (
     <footer id="contact" data-testid="site-footer" className="bg-footer-bg text-footer-foreground">
@@ -68,7 +72,7 @@ export function SiteFooter() {
             <ul className={COLUMN_CLASSNAME}>
               {NAV_SECTIONS.map((section) => (
                 <li key={section.id}>
-                  <a href={`#${section.id}`} className={FOOTER_LINK_CLASSNAME}>
+                  <a href={`${home}#${section.id}`} className={FOOTER_LINK_CLASSNAME}>
                     {tNav(section.labelKey)}
                   </a>
                 </li>

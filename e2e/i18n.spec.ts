@@ -102,6 +102,16 @@ test.describe('localised routing', () => {
     await expect(page.getByTestId('locale-index').getByRole('link')).toHaveCount(0)
   })
 
+  test('answers an unknown case or note with a 404, not a soft one', async ({ request }) => {
+    // A streaming fallback above these routes used to make every unknown slug
+    // answer 200 with a skeleton, which is exactly what Google files as a soft
+    // 404 and then indexes anyway.
+    for (const path of ['/en/cases/bogus', '/en/notes/bogus', '/en/nope']) {
+      const response = await request.get(path)
+      expect(response.status(), path).toBe(404)
+    }
+  })
+
   test('answers an unsupported locale with a 404', async ({ page }) => {
     const response = await page.goto(UNSUPPORTED_LOCALE_PATH)
 

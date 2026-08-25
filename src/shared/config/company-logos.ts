@@ -6,6 +6,12 @@
  *
  * Referenced by public URL rather than imported as a module: half the set is
  * SVG, and a static SVG import would need a loader this app does not carry.
+ *
+ * These files are served `immutable` for a year (see `next.config.ts`), which
+ * buys the caching that hashed filenames would otherwise give — at the price of
+ * one rule: a redrawn mark must be committed under a NEW filename and pointed
+ * at from here. Overwriting one in place leaves a year of browsers showing the
+ * old drawing.
  * The dimensions are read off the files themselves, so a mark reserves its own
  * space and the row does not reflow as the logos arrive.
  */

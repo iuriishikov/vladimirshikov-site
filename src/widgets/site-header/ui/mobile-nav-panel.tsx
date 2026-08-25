@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { useEffect } from 'react'
 
 import { NAV_SECTIONS } from '@/shared/config/site'
-import { usePathname } from '@/shared/i18n/navigation'
+import { getPathname, usePathname } from '@/shared/i18n/navigation'
 import { Container } from '@/shared/ui'
 
 import { useMobileNavStore } from '../model/mobile-nav-store'
@@ -21,6 +21,10 @@ export function MobileNavPanel() {
   const pathname = usePathname()
   const isOpen = useMobileNavStore((state) => state.isOpen)
   const close = useMobileNavStore((state) => state.close)
+  // Every entry is a section of the home document, so the fragment needs that
+  // document in front of it or the panel is a list of dead links everywhere
+  // except the home page.
+  const home = getPathname({ locale, href: '/' })
 
   // Switching locale is a real navigation; arriving on the next document behind
   // an open overlay would strand the visitor. next-intl's `usePathname` reports
@@ -43,7 +47,7 @@ export function MobileNavPanel() {
         <ul>
           {NAV_SECTIONS.map((section) => (
             <li key={section.id} className="border-border border-b">
-              <MobileNavLink href={`#${section.id}`} onSelect={close}>
+              <MobileNavLink href={`${home}#${section.id}`} onSelect={close}>
                 {t(section.labelKey)}
               </MobileNavLink>
             </li>

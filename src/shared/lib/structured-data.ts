@@ -65,6 +65,14 @@ export function buildPerson({
     jobTitle,
     url: absoluteUrl(locale),
     email: `mailto:${siteConfig.email}`,
+    /*
+     * The one photograph of the subject this site ships, uncropped, because
+     * that is what the file actually is. The page shows a crop of it — he sits
+     * right of centre in the frame — so a consumer that centre-crops this to a
+     * square gets the stage wall rather than his face. Honest and imperfect
+     * beats absent; replace it the day a purpose-made headshot exists.
+     */
+    image: `${env.SITE_URL}/vladimir-shikov.jpg`,
     knowsAbout: [...knowsAbout],
     alumniOf: { '@type': 'CollegeOrUniversity', name: alumniOf },
     address: {
@@ -75,13 +83,17 @@ export function buildPerson({
   }
 }
 
-export function buildWebsite(locale: Locale): JsonLd {
+/**
+ * The site itself. No `inLanguage`: `websiteId` is one IRI shared by all forty
+ * editions, so a language on it would be forty contradicting claims about a
+ * single node. Language belongs on the page, whose `@id` is per-URL.
+ */
+export function buildWebsite(): JsonLd {
   return {
     '@type': 'WebSite',
     '@id': websiteId,
     url: env.SITE_URL,
     name: siteConfig.name,
-    inLanguage: localeHreflang[locale],
     publisher: { '@id': personId },
   }
 }
@@ -134,7 +146,6 @@ interface CrumbsOptions {
 
 export function buildBreadcrumbs({ locale, trail }: CrumbsOptions): JsonLd {
   return {
-    '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: trail.map((step, index) => ({
       '@type': 'ListItem',
@@ -166,7 +177,6 @@ export function buildArticle({
   personName,
 }: ArticleOptions): JsonLd {
   return {
-    '@context': 'https://schema.org',
     '@type': 'Article',
     '@id': `${absoluteUrl(locale, path)}#article`,
     url: absoluteUrl(locale, path),
@@ -202,7 +212,6 @@ export function buildProject({
   client,
 }: ProjectOptions): JsonLd {
   return {
-    '@context': 'https://schema.org',
     '@type': 'CreativeWork',
     '@id': `${absoluteUrl(locale, path)}#project`,
     url: absoluteUrl(locale, path),
@@ -212,5 +221,53 @@ export function buildProject({
     creator: { '@type': 'Person', '@id': personId, name: personName },
     isPartOf: { '@id': websiteId },
     ...(client !== undefined && { about: { '@type': 'Organization', name: client } }),
+  }
+}
+
+interface WorkPageOptions {
+  locale: Locale
+  path: string
+  /** The page's own title — the same string its `<h1>` renders. */
+  name: string
+  /** The Article or CreativeWork this URL exists to present. */
+  work: JsonLd
+  crumbs: JsonLd
+}
+
+/**
+ * A URL that presents one work.
+ *
+ * The `WebPage` node is what says "this address is the document that carries
+ * that Article". Without it the work floats free: `isPartOf` points at a
+ * `WebSite` node the page never defines, and the crawler is handed two graphs
+ * that reference an identity nothing on the page establishes.
+ *
+ * The Person is deliberately not a node here. `buildArticle` and `buildProject`
+ * already inline `{ '@type': 'Person', '@id': personId, name }`, which resolves
+ * within this graph and shares the home page's identity — and these pages
+ * render none of the strings a full Person node would have to claim.
+ */
+export function buildWorkPage({ locale, path, name, work, crumbs }: WorkPageOptions): JsonLd {
+  const url = absoluteUrl(locale, path)
+  const pageId = `${url}#page`
+  const crumbId = `${url}#breadcrumb`
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': pageId,
+        url,
+        name,
+        inLanguage: localeHreflang[locale],
+        isPartOf: { '@id': websiteId },
+        breadcrumb: { '@id': crumbId },
+        mainEntity: { '@id': work['@id'] },
+      },
+      { ...work, mainEntityOfPage: { '@id': pageId } },
+      { ...crumbs, '@id': crumbId },
+      buildWebsite(),
+    ],
   }
 }
