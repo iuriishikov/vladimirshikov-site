@@ -131,8 +131,26 @@
     "headingLine2": "and institutions",
     "lead": "Over the years the work has run through international corporations, large privately held businesses and state institutions.",
     "marqueeLabel": "Companies and institutions",
-    "rowA": "Philip Morris | Pfizer | Microsoft | Nestlé | RUSNANO | Alfa-Bank | ROLF | British American Tobacco | BI Group | Caterpillar | Air Astana",
-    "rowB": "Samruk-Kazyna | KMG | Kazatomprom | KEGOC | KTZ | Samruk-Energy | Supreme Court of Kazakhstan"
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Supreme Court of Kazakhstan"
+    }
   },
   "Education": {
     "heading": "Education",
@@ -143,7 +161,7 @@
         "degree": "Faculty of Psychology"
       },
       "e2": {
-        "school": "ВПВПООРКУ КГБ СССР",
+        "school": "Higher Border Guard Military-Political School of the KGB of the USSR",
         "degree": ""
       }
     }

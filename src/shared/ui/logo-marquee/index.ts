@@ -1,1 +1,1 @@
-export { LogoMarquee } from './logo-marquee'
+export { LogoMarquee, type MarqueeItem } from './logo-marquee'

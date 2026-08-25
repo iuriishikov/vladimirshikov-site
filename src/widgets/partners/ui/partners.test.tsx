@@ -22,18 +22,35 @@ describe('Partners', () => {
     expect(screen.getByRole('group', { name: BAND_NAME })).toBeInTheDocument()
   })
 
-  it('splits each row into trimmed items', () => {
+  it('draws a company with a mark as a logo named after it', () => {
     renderWithProviders(<Partners />)
 
     const band = screen.getByRole('group', { name: BAND_NAME })
 
-    // The `|`-separated string must never reach the page as-is…
-    expect(within(band).queryByText(/\|/)).not.toBeInTheDocument()
-    // …and `textContent`, unlike the query matcher, does not forgive the
-    // whitespace `split('|')` leaves around every item.
-    const [firstOfRowA] = within(band).getAllByText('Philip Morris')
-    const [firstOfRowB] = within(band).getAllByText('Казатомпром')
-    expect(firstOfRowA).toHaveProperty('textContent', 'Philip Morris')
-    expect(firstOfRowB).toHaveProperty('textContent', 'Казатомпром')
+    // The track repeats itself to loop seamlessly, and the copies are
+    // aria-hidden — so exactly one of each may reach the accessibility tree.
+    expect(within(band).getAllByRole('img', { name: 'Philip Morris' })).toHaveLength(1)
+    expect(within(band).getAllByRole('img', { name: 'Самрук-Казына' })).toHaveLength(1)
+  })
+
+  it('sets a company with no mark as a wordmark rather than dropping it', () => {
+    renderWithProviders(<Partners />)
+
+    const band = screen.getByRole('group', { name: BAND_NAME })
+
+    // No usable logo file could be sourced for these. Falling back to the name
+    // is the point: a silent gap in the row would be the real defect.
+    expect(within(band).queryByRole('img', { name: 'Nestlé' })).not.toBeInTheDocument()
+    expect(within(band).getAllByText('Nestlé')).toHaveLength(3)
+    expect(within(band).getAllByText('КТЖ')).toHaveLength(3)
+  })
+
+  it('translates the names for the other locale', () => {
+    renderWithProviders(<Partners />, { locale: 'en' })
+
+    const band = screen.getByRole('group', { name: 'Companies and institutions' })
+
+    expect(within(band).getAllByRole('img', { name: 'Samruk-Kazyna' })).toHaveLength(1)
+    expect(within(band).getAllByText('Samruk-Energy')).toHaveLength(3)
   })
 })

@@ -131,8 +131,26 @@
     "headingLine2": "и организации",
     "lead": "В разные годы работал с международными корпорациями, крупным частным бизнесом и государственными институтами.",
     "marqueeLabel": "Компании и организации",
-    "rowA": "Philip Morris | Pfizer | Microsoft | Nestlé | РОСНАНО | Альфа-Банк | ROLF | British American Tobacco | BI Group | Caterpillar | Air Astana",
-    "rowB": "Самрук-Казына | КМГ | Казатомпром | KEGOC | КТЖ | Самрук-Энерго | Верховный Суд РК"
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "РОСНАНО",
+      "alfabank": "Альфа-Банк",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Самрук-Казына",
+      "kmg": "КазМунайГаз",
+      "kazatomprom": "Казатомпром",
+      "kegoc": "KEGOC",
+      "ktz": "КТЖ",
+      "samrukenergy": "Самрук-Энерго",
+      "supremecourt": "Верховный Суд РК"
+    }
   },
   "Education": {
     "heading": "Образование",

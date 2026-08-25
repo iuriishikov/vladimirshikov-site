@@ -7,6 +7,8 @@
  * dictionary.
  */
 
+import type { CompanySlug } from '@/shared/config/company-logos'
+
 export type CaseSlug = 'samruk' | 'philipmorris' | 'atom'
 
 /** Where the brandmark sits on the cover. */
@@ -17,6 +19,12 @@ export type CoverDecoration = 'ring' | 'outline-number-right' | 'outline-number-
 
 export interface CaseStudy {
   slug: CaseSlug
+  /**
+   * The client whose mark the cover carries, when there is one. The third
+   * project names a forty-year horizon rather than a client — none was named in
+   * the source material — so it keeps its typographic mark.
+   */
+  company?: CompanySlug
   /** `[01]` — the index printed on the cover. */
   index: string
   /**
@@ -47,6 +55,7 @@ export interface CaseStudy {
 export const CASE_STUDIES: readonly CaseStudy[] = [
   {
     slug: 'samruk',
+    company: 'samruk',
     index: '[01]',
     wordmark: 'Samruk-Kazyna',
     background: '#2b4bff',
@@ -57,6 +66,7 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
   },
   {
     slug: 'philipmorris',
+    company: 'philipmorris',
     index: '[02]',
     // A shade darker than the canvas's #e23a20 so white labels clear WCAG AA.
     // Kept in step with `--brand-red` in globals.css.

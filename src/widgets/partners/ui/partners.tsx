@@ -1,23 +1,58 @@
 import { useTranslations } from 'next-intl'
 
-import { Container, LogoMarquee } from '@/shared/ui'
+import type { CompanySlug } from '@/shared/config/company-logos'
+import { CompanyMark, Container, LogoMarquee, type MarqueeItem } from '@/shared/ui'
 
 /**
- * Each marquee row arrives from the dictionary as one `|`-separated string, so
- * a translator can rename or reorder a partner without touching code.
+ * The two rows, by slug. Order and membership are the site's, not a
+ * translator's — a logo belongs to a company, not to a language — while the
+ * names themselves still come from the dictionary, because five of these are
+ * set as words rather than as marks.
  */
-function toItems(row: string): readonly string[] {
-  return row.split('|').map((item) => item.trim())
-}
+const ROW_A: readonly CompanySlug[] = [
+  'philipmorris',
+  'pfizer',
+  'microsoft',
+  'nestle',
+  'rosnano',
+  'alfabank',
+  'rolf',
+  'bat',
+  'bigroup',
+  'caterpillar',
+  'airastana',
+]
 
-const ROW_TYPE = 'text-[clamp(22px,2.4vw,30px)] font-semibold tracking-[-0.02em]'
+const ROW_B: readonly CompanySlug[] = [
+  'samruk',
+  'kmg',
+  'kazatomprom',
+  'kegoc',
+  'ktz',
+  'samrukenergy',
+  'supremecourt',
+]
 
 /**
- * The partner band: a two-line title beside its lead, then the names scrolling
- * past in opposite directions.
+ * The second row is a little smaller: it is the state-sector row, it sits
+ * behind the first in the hierarchy, and its marks are stacked lockups that
+ * would otherwise tower over the wordmarks in the row above.
+ */
+const ROW_A_HEIGHT = 30
+const ROW_B_HEIGHT = 29
+
+/**
+ * The partner band: a two-line title beside its lead, then the client marks
+ * scrolling past in opposite directions.
  */
 export function Partners() {
   const t = useTranslations('Partners')
+
+  const toItems = (slugs: readonly CompanySlug[], height: number): MarqueeItem[] =>
+    slugs.map((slug) => ({
+      key: slug,
+      content: <CompanyMark slug={slug} name={t(`names.${slug}`)} height={height} />,
+    }))
 
   return (
     <section id="partners" className="pb-[clamp(80px,9vw,130px)]">
@@ -42,14 +77,14 @@ export function Partners() {
       <div
         role="group"
         aria-label={t('marqueeLabel')}
-        className="border-border mt-14 border-t border-b [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)] py-[30px] [-webkit-mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]"
+        className="border-border mt-14 border-t border-b [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)] py-[34px] [-webkit-mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]"
       >
-        <LogoMarquee items={toItems(t('rowA'))} speed={55} direction="left" className={ROW_TYPE} />
+        <LogoMarquee items={toItems(ROW_A, ROW_A_HEIGHT)} speed={55} direction="left" />
         <LogoMarquee
-          items={toItems(t('rowB'))}
+          items={toItems(ROW_B, ROW_B_HEIGHT)}
           speed={44}
           direction="right"
-          className={`text-faint mt-6 ${ROW_TYPE}`}
+          className="text-faint mt-8"
         />
       </div>
     </section>

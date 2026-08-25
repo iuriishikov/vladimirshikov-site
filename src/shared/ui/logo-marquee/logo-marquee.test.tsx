@@ -3,7 +3,9 @@ import { describe, expect, it } from 'vitest'
 import { renderWithProviders, screen } from '../../test/render'
 import { LogoMarquee } from './logo-marquee'
 
-const ITEMS = ['Loremova', 'Ipsumo', 'Dolorix'] as const
+const NAMES = ['Loremova', 'Ipsumo', 'Dolorix'] as const
+
+const ITEMS = NAMES.map((name) => ({ key: name, content: <span>{name}</span> }))
 
 describe('LogoMarquee', () => {
   it('exposes each name once and hides the rest of the copies', () => {
@@ -12,8 +14,8 @@ describe('LogoMarquee', () => {
     // list three times over.
     renderWithProviders(<LogoMarquee items={ITEMS} />)
 
-    for (const item of ITEMS) {
-      const copies = screen.getAllByText(item)
+    for (const name of NAMES) {
+      const copies = screen.getAllByText(name)
       expect(copies).toHaveLength(3)
 
       const exposed = copies.filter((node) => node.closest('[aria-hidden="true"]') === null)

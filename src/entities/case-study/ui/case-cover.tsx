@@ -1,4 +1,5 @@
 import { cn } from '@/shared/lib/cn'
+import { CompanyMark } from '@/shared/ui'
 
 import type { CaseStudy } from '../model/case-studies'
 
@@ -20,6 +21,7 @@ interface CaseCoverProps {
  */
 export function CaseCover({ caseStudy, caption }: CaseCoverProps) {
   const {
+    company,
     index,
     wordmark,
     background,
@@ -70,7 +72,19 @@ export function CaseCover({ caseStudy, caption }: CaseCoverProps) {
           wordmarkTone === 'lime' ? 'text-brand-lime' : inkClass,
         )}
       >
-        <span className="max-w-full truncate">{wordmark}</span>
+        {/* The client's own mark when there is one; the wordmark names the
+            company either way, so it carries over as the alternative text. */}
+        {company ? (
+          <CompanyMark
+            slug={company}
+            name={wordmark}
+            height={78}
+            tone={isLightInk ? 'light' : 'ink'}
+            className="max-w-full"
+          />
+        ) : (
+          <span className="max-w-full truncate">{wordmark}</span>
+        )}
       </div>
 
       <div className={cn('absolute top-5 left-6 text-[13px] font-medium', inkClass)}>{index}</div>

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, type ReactNode } from 'react'
 
 import { cn } from '../../lib/cn'
 
@@ -14,8 +14,14 @@ import { cn } from '../../lib/cn'
  */
 const COPIES = 3
 
+export interface MarqueeItem {
+  /** Stable identity for the item, repeated across every copy of the track. */
+  key: string
+  content: ReactNode
+}
+
 interface LogoMarqueeProps {
-  items: readonly string[]
+  items: readonly MarqueeItem[]
   /** Pixels per second. */
   speed?: number
   direction?: 'left' | 'right'
@@ -80,8 +86,8 @@ export function LogoMarquee({
             aria-hidden={copy > 0 ? 'true' : undefined}
           >
             {items.map((item) => (
-              <div key={item} className="flex flex-none items-center">
-                <span className="flex-none whitespace-nowrap">{item}</span>
+              <div key={item.key} className="flex flex-none items-center">
+                <div className="flex flex-none items-center">{item.content}</div>
                 <span
                   aria-hidden="true"
                   className="size-[7px] flex-none rotate-45 bg-current opacity-80"

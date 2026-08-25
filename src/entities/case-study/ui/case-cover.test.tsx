@@ -8,13 +8,24 @@ import { CaseCover } from './case-cover'
 const [samruk, philipMorris, atom] = CASE_STUDIES
 
 describe('CaseCover', () => {
-  it('shows the wordmark, the index and the caption', () => {
+  it('shows the client mark, the index and the caption', () => {
     if (!samruk) throw new Error('expected a first case study')
     renderWithProviders(<CaseCover caseStudy={samruk} caption="Трансформация культуры" />)
 
-    expect(screen.getByText('Samruk-Kazyna')).toBeInTheDocument()
+    // The cover carries the client's own logo; the wordmark names it, so it
+    // carries over as the image's alternative text.
+    expect(screen.getByRole('img', { name: 'Samruk-Kazyna' })).toBeInTheDocument()
     expect(screen.getByText('[01]')).toBeInTheDocument()
     expect(screen.getByText('Трансформация культуры')).toBeInTheDocument()
+  })
+
+  it('sets the wordmark as type for a case with no client mark', () => {
+    if (!atom) throw new Error('expected a third case study')
+    // No client was named for this project, so there is no logo to draw.
+    renderWithProviders(<CaseCover caseStudy={atom} caption="c" />)
+
+    expect(screen.getByText('40 Years')).toBeInTheDocument()
+    expect(screen.queryByRole('img')).not.toBeInTheDocument()
   })
 
   it('renders the badge only when the case has one', () => {
@@ -51,7 +62,10 @@ describe('CaseCover', () => {
   it('covers every case in the catalogue without throwing', () => {
     for (const caseStudy of CASE_STUDIES) {
       const view = renderWithProviders(<CaseCover caseStudy={caseStudy} caption="caption" />)
-      expect(screen.getByText(caseStudy.wordmark)).toBeInTheDocument()
+      const mark = caseStudy.company
+        ? screen.getByRole('img', { name: caseStudy.wordmark })
+        : screen.getByText(caseStudy.wordmark)
+      expect(mark).toBeInTheDocument()
       view.unmount()
     }
   })
