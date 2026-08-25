@@ -1,8 +1,8 @@
 {
   "Metadata": {
     "home": {
-      "title": "Vladimir Shikov",
-      "description": "The personal site of Vladimir Shikov."
+      "title": "Vladimir Shikov — Portfolio",
+      "description": "Digital designer and art director. Selected works, services and notes."
     },
     "about": {
       "title": "About",
@@ -20,18 +20,243 @@
     "close": "Close"
   },
   "Header": {
-    "brand": "Vladimir Shikov",
+    "brand": "Shikov.V",
     "navigationLabel": "Main navigation",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
+    "contact": "Contact →",
     "nav": {
       "home": "Home",
-      "about": "About"
+      "about": "About",
+      "education": "Education",
+      "cases": "Cases",
+      "blog": "Blog"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Digital Designer",
+    "roleB": "& Art Director",
+    "placeA": "Based in",
+    "placeB": "Lorem, Ipsum",
+    "scopeA": "Working",
+    "scopeB": "Globally",
+    "statement": "[Vladimir Shikov — lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore]"
+  },
+  "Profile": {
+    "tag": "[ About ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Digital Designer & Art Director",
+    "placeLine": "Lorem, Ipsum — Working Globally",
+    "lead": "[Lorem ipsum dolor sit amet, consectetur adipiscing elit — sed do eiusmod tempor incididunt ut labore et dolore magna aliqua veniam]",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "statValue1": "14+",
+    "statLabel1": "Lorem ipsum years",
+    "statValue2": "87",
+    "statLabel2": "Dolor sit projects",
+    "statValue3": "26",
+    "statLabel3": "Amet et awards"
+  },
+  "Education": {
+    "heading": "Education",
+    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "items": {
+      "e1": {
+        "school": "Lorem Ipsum University",
+        "note": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.",
+        "degree": "Bachelor of Dolor Sit Amet",
+        "years": "2010 — 2014"
+      },
+      "e2": {
+        "school": "Consectetur Institute",
+        "note": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+        "degree": "Master of Adipiscing Elit",
+        "years": "2014 — 2016"
+      },
+      "e3": {
+        "school": "Tempor Academy",
+        "note": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.",
+        "degree": "Eiusmod Certificate",
+        "years": "2018"
+      },
+      "e4": {
+        "school": "Magna Aliqua Courses",
+        "note": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.",
+        "degree": "Incididunt Program",
+        "years": "2021"
+      }
+    }
+  },
+  "Works": {
+    "heading": "Selected Works",
+    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris.",
+    "viewCase": "View the {name} case",
+    "items": {
+      "loremova": {
+        "name": "Loremova",
+        "caption": "Lorem ipsum dolor sit amet",
+        "tag": "Branding | Website"
+      },
+      "ipsumo": {
+        "name": "Ipsumo",
+        "caption": "Lorem ipsum product",
+        "tag": "Product Design | Development"
+      },
+      "dolorix": {
+        "name": "Dolorix",
+        "caption": "Lorem ipsum studio",
+        "tag": "Branding | Digital Marketing"
+      },
+      "ametra": {
+        "name": "Ametra",
+        "caption": "Lorem ipsum digital",
+        "tag": "Website | Development"
+      },
+      "consecta": {
+        "name": "Consecta",
+        "caption": "Lorem ipsum brand",
+        "tag": "Product Design | Branding"
+      },
+      "elitra": {
+        "name": "Elitra",
+        "caption": "Lorem ipsum agency",
+        "tag": "Branding | Website | Development"
+      }
+    }
+  },
+  "Services": {
+    "heading": "Best Services",
+    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "items": {
+      "s1": {
+        "title": "Branding Identity",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+      },
+      "s2": {
+        "title": "Product Design",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis."
+      },
+      "s3": {
+        "title": "Website Development",
+        "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur."
+      },
+      "s4": {
+        "title": "Digital Marketing",
+        "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "120+ Trusted",
+    "headingLine2": "Partners",
+    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.",
+    "marqueeLabel": "Partner names",
+    "rowA": "Loremova® | Ipsumo™ | Dolorix | Ametra Studio | Consecta© | Elitra | Vestibulum Co | Sagittis",
+    "rowB": "Pulvinar | Faucibus Lab | Sodales® | Rhoncus | Viverra Group | Cursus™ | Aliquam | Fermentum"
+  },
+  "Reviews": {
+    "heading": "Clients Reviews",
+    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
+    "regionLabel": "Client reviews",
+    "previous": "Previous reviews",
+    "next": "Next reviews",
+    "items": {
+      "r1": {
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "author": "Dolor Sitamet",
+        "role": "CEO, Loremova"
+      },
+      "r2": {
+        "quote": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute.",
+        "author": "Magna Aliqua",
+        "role": "CMO, Ipsumo"
+      },
+      "r3": {
+        "quote": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.",
+        "author": "Amet Consecte",
+        "role": "Founder, Dolorix"
+      },
+      "r4": {
+        "quote": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut.",
+        "author": "Tempor Incidid",
+        "role": "Product Lead, Ametra"
+      },
+      "r5": {
+        "quote": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.",
+        "author": "Quis Nostrud",
+        "role": "Director, Consecta"
+      }
+    }
+  },
+  "Faq": {
+    "heading": "FAQ",
+    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "items": {
+      "q1": {
+        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+        "answer": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      },
+      "q2": {
+        "question": "Sed do eiusmod tempor incididunt ut labore et dolore?",
+        "answer": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt, neque porro quisquam est qui dolorem."
+      },
+      "q3": {
+        "question": "Ut enim ad minim veniam, quis nostrud exercitation ullamco?",
+        "answer": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur, quis autem vel eum iure reprehenderit qui in ea voluptate."
+      },
+      "q4": {
+        "question": "Duis aute irure dolor in reprehenderit in voluptate velit?",
+        "answer": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate."
+      },
+      "q5": {
+        "question": "Excepteur sint occaecat cupidatat non proident, sunt in culpa?",
+        "answer": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae, itaque earum rerum hic tenetur."
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Blog & Articles",
+    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.",
+    "items": {
+      "n1": {
+        "label": "[Note 01]",
+        "meta": "October 9, 2026 · 8 min read",
+        "title": "Lorem ipsum dolor sit amet consectetur",
+        "excerpt": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim."
+      },
+      "n2": {
+        "label": "[Note 02]",
+        "meta": "March 24, 2026 · 6 min read",
+        "title": "Sed do eiusmod tempor incididunt labore",
+        "excerpt": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+      },
+      "n3": {
+        "label": "[Note 03]",
+        "meta": "January 8, 2026 · 8 min read",
+        "title": "Ut enim ad minim veniam quis nostrud",
+        "excerpt": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+      }
     }
   },
   "Footer": {
-    "rights": "© {year} Vladimir Shikov",
-    "builtWith": "Built with Next.js"
+    "cta": "Have any project idea in your mind!",
+    "ctaButton": "Book a free strategy call →",
+    "colMenu": "Menu",
+    "colCases": "Cases",
+    "colBlog": "Blog",
+    "colContact": "Contact",
+    "appearance": "Appearance",
+    "designBy": "Design by Lorem Ipsum",
+    "copyright": "© {year} Vladimir Shikov. All Rights Reserved.",
+    "poweredBy": "Powered by Next.js"
+  },
+  "ComingSoon": {
+    "eyebrow": "In progress",
+    "body": "This page is not written yet. The portfolio it belongs to is live — the individual write-up is still being put together.",
+    "back": "Back to the portfolio",
+    "caseMeta": "Case study",
+    "noteMeta": "Note"
   },
   "ThemeSwitch": {
     "label": "Colour theme",
@@ -41,13 +266,6 @@
   },
   "LocaleSwitch": {
     "label": "Language"
-  },
-  "Hero": {
-    "eyebrow": "Project scaffold",
-    "title": "The foundation is ready",
-    "subtitle": "Architecture, quality gates and deployment are already in place. All that is missing is the content.",
-    "cta": "About me",
-    "secondaryCta": "Source code"
   },
   "AuthorCard": {
     "role": "Software engineer",
