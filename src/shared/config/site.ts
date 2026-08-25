@@ -14,11 +14,13 @@ export const siteConfig = {
   author: {
     name: 'Vladimir Shikov',
   },
+  /**
+   * No social profiles are listed yet. A placeholder link to a bare domain is
+   * worse than no link at all — it reads as a working profile until it is
+   * pressed — so the footer prints the address alone until real ones exist.
+   */
   links: {
     github: 'https://github.com/iuriishikov',
-    telegram: 'https://t.me/',
-    linkedin: 'https://www.linkedin.com/',
-    behance: 'https://www.behance.net/',
   },
   /** Keep in sync with `src/app/manifest.ts`. */
   themeColor: {
@@ -34,7 +36,7 @@ export const siteConfig = {
 export const NAV_SECTIONS = [
   { id: 'top', labelKey: 'nav.home' },
   { id: 'about', labelKey: 'nav.about' },
-  { id: 'education', labelKey: 'nav.education' },
+  { id: 'services', labelKey: 'nav.services' },
   { id: 'cases', labelKey: 'nav.cases' },
   { id: 'blog', labelKey: 'nav.blog' },
 ] as const

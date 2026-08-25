@@ -29,6 +29,7 @@ export function CaseCover({ caseStudy, caption }: CaseCoverProps) {
     decorationText,
     badge,
     captionSide,
+    wordmarkTone,
   } = caseStudy
 
   const isLightInk = ink === 'light'
@@ -66,7 +67,7 @@ export function CaseCover({ caseStudy, caption }: CaseCoverProps) {
         className={cn(
           'absolute inset-0 flex px-6 text-[clamp(38px,4.4vw,60px)] font-extrabold tracking-[-0.03em]',
           layout === 'center' ? 'items-center justify-center' : 'items-end justify-start pb-14',
-          caseStudy.slug === 'elitra' ? 'text-brand-lime' : inkClass,
+          wordmarkTone === 'lime' ? 'text-brand-lime' : inkClass,
         )}
       >
         <span className="max-w-full truncate">{wordmark}</span>

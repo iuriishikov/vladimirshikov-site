@@ -8,11 +8,7 @@ import { Container, PencilSketch, SectionHeading } from '@/shared/ui'
  * fixes its sketch — a note has to look the same on every render, so the seed
  * is data, not `Math.random()`.
  */
-const NOTES = [
-  { id: 'n1', seed: 21 },
-  { id: 'n2', seed: 22 },
-  { id: 'n3', seed: 23 },
-] as const
+const NOTES = [{ id: 'growth', seed: 21 }] as const
 
 export function Blog() {
   const t = useTranslations('Blog')
@@ -21,7 +17,10 @@ export function Blog() {
     <Container as="section" id="blog" className="pb-[clamp(90px,10vw,150px)]">
       <SectionHeading title={t('heading')} lead={t('lead')} />
 
-      <ul className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] gap-x-7 gap-y-10">
+      {/* One essay so far. The grid still takes a row of cards, but it is
+          capped at a single column's width — a lone card stretched across the
+          page would read as a hero rather than as the first of a series. */}
+      <ul className="grid max-w-[520px] grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] gap-x-7 gap-y-10">
         {NOTES.map(({ id, seed }) => (
           <li key={id}>
             <Link

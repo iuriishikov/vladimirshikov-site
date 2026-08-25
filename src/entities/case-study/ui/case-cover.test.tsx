@@ -5,41 +5,45 @@ import { renderWithProviders, screen } from '@/shared/test/render'
 import { CASE_STUDIES } from '../model/case-studies'
 import { CaseCover } from './case-cover'
 
-const [loremova, ipsumo, dolorix] = CASE_STUDIES
+const [samruk, philipMorris, atom] = CASE_STUDIES
 
 describe('CaseCover', () => {
   it('shows the wordmark, the index and the caption', () => {
-    if (!loremova) throw new Error('expected a first case study')
-    renderWithProviders(<CaseCover caseStudy={loremova} caption="Lorem ipsum dolor sit amet" />)
+    if (!samruk) throw new Error('expected a first case study')
+    renderWithProviders(<CaseCover caseStudy={samruk} caption="Трансформация культуры" />)
 
-    expect(screen.getByText('Loremova®')).toBeInTheDocument()
+    expect(screen.getByText('Samruk-Kazyna')).toBeInTheDocument()
     expect(screen.getByText('[01]')).toBeInTheDocument()
-    expect(screen.getByText('Lorem ipsum dolor sit amet')).toBeInTheDocument()
+    expect(screen.getByText('Трансформация культуры')).toBeInTheDocument()
   })
 
   it('renders the badge only when the case has one', () => {
-    if (!loremova || !dolorix) throw new Error('expected three case studies')
+    if (!samruk || !atom) throw new Error('expected three case studies')
 
-    const view = renderWithProviders(<CaseCover caseStudy={loremova} caption="c" />)
-    expect(screen.getByText('® 2025')).toBeInTheDocument()
+    // `\s` rather than a literal space: the thousands separator is a
+    // non-breaking space, so that the number never splits across two lines.
+    const badge = /12 \/ 320\s000\+/
+
+    const view = renderWithProviders(<CaseCover caseStudy={samruk} caption="c" />)
+    expect(screen.getByText(badge)).toBeInTheDocument()
     view.unmount()
 
-    renderWithProviders(<CaseCover caseStudy={dolorix} caption="c" />)
-    expect(screen.queryByText('® 2025')).not.toBeInTheDocument()
+    renderWithProviders(<CaseCover caseStudy={atom} caption="c" />)
+    expect(screen.queryByText(badge)).not.toBeInTheDocument()
   })
 
   it('keeps the outline digits out of the accessibility tree', () => {
-    if (!ipsumo) throw new Error('expected a second case study')
+    if (!philipMorris) throw new Error('expected a second case study')
     // They repeat the index that is already announced beside them.
-    renderWithProviders(<CaseCover caseStudy={ipsumo} caption="c" />)
+    renderWithProviders(<CaseCover caseStudy={philipMorris} caption="c" />)
 
     const decoration = screen.getByTestId('case-cover').querySelector('[aria-hidden="true"]')
     expect(decoration).toHaveTextContent('02')
   })
 
   it('paints the cover in the case colour', () => {
-    if (!loremova) throw new Error('expected a first case study')
-    renderWithProviders(<CaseCover caseStudy={loremova} caption="c" />)
+    if (!samruk) throw new Error('expected a first case study')
+    renderWithProviders(<CaseCover caseStudy={samruk} caption="c" />)
 
     expect(screen.getByTestId('case-cover')).toHaveStyle({ backgroundColor: '#2b4bff' })
   })

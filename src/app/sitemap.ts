@@ -5,7 +5,7 @@ import { env } from '@/shared/config/env'
 import { localeHreflang, routing } from '@/shared/i18n/routing'
 
 /** The notes the blog section links to. Keep in sync with `Blog.items`. */
-const NOTE_IDS = ['n1', 'n2', 'n3']
+const NOTE_IDS = ['growth']
 
 /**
  * Locale-less paths that should appear in the sitemap, with their priority.

@@ -3,7 +3,7 @@ import { hasLocale } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 
-import { ComingSoonView } from '@/views/coming-soon'
+import { CaseStudyView } from '@/views/case-study'
 import { CASE_STUDIES } from '@/entities/case-study'
 import { routing } from '@/shared/i18n/routing'
 import { buildPageMetadata } from '@/shared/lib/seo'
@@ -24,12 +24,12 @@ export async function generateMetadata({ params }: CasePageProps): Promise<Metad
   const caseStudy = findCase(slug)
   if (!caseStudy) notFound()
 
-  const t = await getTranslations({ locale, namespace: 'ComingSoon' })
+  const t = await getTranslations({ locale, namespace: 'Works' })
 
   return buildPageMetadata({
     locale,
-    title: caseStudy.wordmark,
-    description: t('body'),
+    title: t(`items.${caseStudy.slug}.name`),
+    description: t(`items.${caseStudy.slug}.summary`),
     path: `/cases/${caseStudy.slug}`,
   })
 }
@@ -41,7 +41,5 @@ export default async function CasePage({ params }: CasePageProps) {
   const caseStudy = findCase(slug)
   if (!caseStudy) notFound()
 
-  const t = await getTranslations({ locale, namespace: 'ComingSoon' })
-
-  return <ComingSoonView title={caseStudy.wordmark} kind={t('caseMeta')} />
+  return <CaseStudyView caseStudy={caseStudy} />
 }

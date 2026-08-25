@@ -45,19 +45,31 @@ export function Profile() {
           <p className="text-muted-foreground mt-[26px] text-[15.5px] leading-[1.72]">
             {t('body')}
           </p>
-
-          <ul className="border-border mt-[52px] grid grid-cols-3 gap-6 border-t pt-7">
-            {STAT_IDS.map((id) => (
-              <li key={id}>
-                <p className="text-[clamp(34px,3.8vw,54px)] font-bold tracking-[-0.03em]">
-                  {t(`statValue${id}`)}
-                </p>
-                <p className="text-faint mt-1.5 text-[13.5px]">{t(`statLabel${id}`)}</p>
-              </li>
-            ))}
-          </ul>
+          <p className="text-muted-foreground mt-[18px] text-[15.5px] leading-[1.72]">
+            {t('experience')}
+          </p>
         </div>
       </div>
+
+      {/*
+       * The numbers span both columns rather than sitting under the prose.
+       * "320 000+" is set at display size and does not fit a third of half the
+       * page — it collided with the stat beside it — and it carries a
+       * non-breaking space precisely so it can never wrap out of the collision.
+       * Full width also fills the space the short left column leaves behind.
+       */}
+      <ul className="border-border mt-[clamp(48px,6vw,76px)] grid grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))] gap-x-10 gap-y-8 border-t pt-9">
+        {STAT_IDS.map((id) => (
+          <li key={id}>
+            <p className="text-[clamp(34px,3.8vw,54px)] font-bold tracking-[-0.03em]">
+              {t(`statValue${id}`)}
+            </p>
+            <p className="text-faint mt-2 max-w-[34ch] text-[13.5px] leading-[1.5]">
+              {t(`statLabel${id}`)}
+            </p>
+          </li>
+        ))}
+      </ul>
     </Container>
   )
 }

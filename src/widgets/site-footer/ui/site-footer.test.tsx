@@ -19,9 +19,9 @@ describe('SiteFooter', () => {
     renderWithProviders(<SiteFooter />)
 
     expect(
-      screen.getByRole('heading', { name: 'Есть идея проекта — расскажите!' }),
+      screen.getByRole('heading', { name: /Иногда собственнику нужен не проект/ }),
     ).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Записаться на созвон →' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'Написать →' })).toHaveAttribute(
       'href',
       'mailto:hello@vladimirshikov.com',
     )
@@ -45,40 +45,40 @@ describe('SiteFooter', () => {
     const menu = screen.getByRole('navigation', { name: 'Меню' })
 
     expect(within(menu).getAllByRole('listitem')).toHaveLength(5)
-    expect(within(menu).getByRole('link', { name: 'Образование' })).toHaveAttribute(
+    expect(within(menu).getByRole('link', { name: 'Что я делаю' })).toHaveAttribute(
       'href',
-      '#education',
+      '#services',
     )
-    expect(screen.getByRole('navigation', { name: 'Кейсы' })).toBeInTheDocument()
-    expect(screen.getByRole('navigation', { name: 'Блог' })).toBeInTheDocument()
+    expect(screen.getByRole('navigation', { name: 'Проекты' })).toBeInTheDocument()
+    expect(screen.getByRole('navigation', { name: 'Статьи' })).toBeInTheDocument()
   })
 
-  it('lists four cases and three notes at their own routes', () => {
+  it('lists every project and every note at its own route', () => {
     renderWithProviders(<SiteFooter />)
 
-    const cases = screen.getByRole('navigation', { name: 'Кейсы' })
-    const blog = screen.getByRole('navigation', { name: 'Блог' })
+    const cases = screen.getByRole('navigation', { name: 'Проекты' })
+    const blog = screen.getByRole('navigation', { name: 'Статьи' })
 
-    expect(within(cases).getAllByRole('link')).toHaveLength(4)
-    expect(within(cases).getByRole('link', { name: 'Loremova' })).toHaveAttribute(
+    expect(within(cases).getAllByRole('link')).toHaveLength(3)
+    expect(within(cases).getByRole('link', { name: 'Самрук-Казына' })).toHaveAttribute(
       'href',
-      '/cases/loremova',
+      '/cases/samruk',
     )
 
-    expect(within(blog).getAllByRole('link')).toHaveLength(3)
+    expect(within(blog).getAllByRole('link')).toHaveLength(1)
     expect(
-      within(blog).getByRole('link', { name: 'Lorem ipsum dolor sit amet consectetur' }),
-    ).toHaveAttribute('href', '/notes/n1')
+      within(blog).getByRole('link', { name: 'Из малого — в средний. Из среднего — в большой' }),
+    ).toHaveAttribute('href', '/notes/growth')
   })
 
-  it('opens the social profiles in a new tab without leaking the referrer', () => {
+  it('lists no social profile until a real one exists', () => {
     renderWithProviders(<SiteFooter />)
 
-    const telegram = screen.getByRole('link', { name: 'Telegram' })
-
-    expect(telegram).toHaveAttribute('href', 'https://t.me/')
-    expect(telegram).toHaveAttribute('target', '_blank')
-    expect(telegram).toHaveAttribute('rel', 'noreferrer')
+    // A link to a bare t.me domain reads as a working profile right up until
+    // it is pressed, which is worse than showing nothing.
+    const contact = screen.getByRole('heading', { name: 'Контакты' }).parentElement
+    expect(contact).not.toBeNull()
+    expect(within(contact!).getAllByRole('link')).toHaveLength(1)
   })
 
   it('prints the year as a plain number, not a formatted one', () => {

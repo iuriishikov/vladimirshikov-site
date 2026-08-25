@@ -20,12 +20,11 @@ describe('Hero', () => {
     // three of them rather than reading six disconnected lines.
     const columns = screen.getAllByRole('listitem')
     expect(columns).toHaveLength(3)
-    expect(columns[0]).toHaveTextContent('Digital Designer')
-    expect(columns[0]).toHaveTextContent('& Art Director')
-    expect(columns[1]).toHaveTextContent('Based in')
-    expect(columns[2]).toHaveTextContent('Working')
+    expect(columns[0]).toHaveTextContent('TEAM LEAD')
+    expect(columns[1]).toHaveTextContent('Almaty, Kazakhstan')
+    expect(columns[2]).toHaveTextContent('owners and CEOs')
 
-    expect(screen.getByText(/lorem ipsum dolor sit amet/i)).toBeInTheDocument()
+    expect(screen.getByText(/next stage of growth/i)).toBeInTheDocument()
   })
 
   it('anchors the section so the navigation can jump back to it', () => {

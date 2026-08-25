@@ -10,17 +10,25 @@ describe('Services', () => {
 
     // A renamed or missing message key is the likeliest regression here: the
     // section would still render, just with the key echoed back as its title.
-    expect(screen.getByRole('heading', { level: 2, name: 'Услуги' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 2, name: 'Что я делаю' })).toBeInTheDocument()
   })
 
   it('lists every service with its title and description', () => {
     renderWithProviders(<Services />)
 
     expect(screen.getAllByRole('listitem')).toHaveLength(4)
+    expect(screen.getByRole('heading', { level: 3, name: 'Стратегия' })).toBeInTheDocument()
     expect(
-      screen.getByRole('heading', { level: 3, name: 'Брендинг и айдентика' }),
+      screen.getByRole('heading', { level: 3, name: 'Команда и преемственность' }),
     ).toBeInTheDocument()
-    expect(screen.getByRole('heading', { level: 3, name: 'Разработка сайтов' })).toBeInTheDocument()
+  })
+
+  it('anchors the section so the navigation can jump to it', () => {
+    renderWithProviders(<Services />)
+
+    // The header's "what I do" link is a fragment link; losing the id turns it
+    // into a no-op that no type check would catch.
+    expect(document.querySelector('section#services')).toBeInTheDocument()
   })
 
   it('hides the decorative tile pairs from assistive technology', () => {

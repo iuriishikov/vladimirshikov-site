@@ -16,7 +16,7 @@ export function Services() {
   const t = useTranslations('Services')
 
   return (
-    <Container as="section" className="pb-[clamp(80px,9vw,130px)]">
+    <Container as="section" id="services" className="pb-[clamp(80px,9vw,130px)]">
       <SectionHeading title={t('heading')} lead={t('lead')} />
 
       <ol className="border-border border-t">

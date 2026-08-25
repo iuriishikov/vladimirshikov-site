@@ -7,20 +7,10 @@ import { Link } from '@/shared/i18n/navigation'
 import { Container } from '@/shared/ui'
 
 /** Keep in sync with `Blog.items` and with `src/app/sitemap.ts`. */
-const NOTE_IDS = ['n1', 'n2', 'n3'] as const
+const NOTE_IDS = ['growth'] as const
 
 /** The footer lists the first four cases; the section above shows all of them. */
 const FOOTER_CASES = CASE_STUDIES.slice(0, 4)
-
-/**
- * Platform names, not copy: "Telegram" reads the same in every language, which
- * is why these labels live here rather than in `messages/`.
- */
-const SOCIAL_LINKS = [
-  { label: 'Telegram', href: siteConfig.links.telegram },
-  { label: 'LinkedIn', href: siteConfig.links.linkedin },
-  { label: 'Behance', href: siteConfig.links.behance },
-] as const
 
 const COLUMN_CLASSNAME = 'flex flex-col gap-3'
 const COLUMN_HEADING_CLASSNAME = 'mb-1.5 text-sm font-bold'
@@ -124,18 +114,6 @@ export function SiteFooter() {
                   {siteConfig.email}
                 </a>
               </li>
-              {SOCIAL_LINKS.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={FOOTER_LINK_CLASSNAME}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
             </ul>
           </div>
 

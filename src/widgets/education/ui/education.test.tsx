@@ -13,15 +13,20 @@ describe('Education', () => {
     expect(screen.getByRole('heading', { level: 2, name: 'Образование' })).toBeInTheDocument()
   })
 
-  it('lists every entry with its school, degree and years', () => {
+  it('lists every entry with its school and faculty', () => {
     renderWithProviders(<Education />)
 
-    expect(screen.getAllByRole('listitem')).toHaveLength(4)
+    expect(screen.getAllByRole('listitem')).toHaveLength(2)
     expect(
-      screen.getByRole('heading', { level: 3, name: 'Lorem Ipsum University' }),
+      screen.getByRole('heading', {
+        level: 3,
+        name: 'Московский государственный университет им. М. В. Ломоносова',
+      }),
     ).toBeInTheDocument()
-    expect(screen.getByText('Магистр Adipiscing Elit')).toBeInTheDocument()
-    expect(screen.getByText('2010 — 2014')).toBeInTheDocument()
+    expect(screen.getByText('Факультет психологии')).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { level: 3, name: 'ВПВПООРКУ КГБ СССР' }),
+    ).toBeInTheDocument()
   })
 
   it('keeps the anchor the navigation links to', () => {

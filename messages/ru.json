@@ -1,8 +1,8 @@
 {
   "Metadata": {
     "home": {
-      "title": "Владимир Шиков — Портфолио",
-      "description": "Диджитал-дизайнер и арт-директор. Избранные работы, услуги и заметки."
+      "title": "Владимир Шиков — стратегия, трансформация, люди",
+      "description": "Работаю с собственниками, CEO и управленческими командами в ситуациях, когда бизнесу предстоит следующий этап развития."
     },
     "about": {
       "title": "Обо мне",
@@ -28,20 +28,20 @@
     "nav": {
       "home": "Главная",
       "about": "Обо мне",
-      "education": "Образование",
-      "cases": "Кейсы",
-      "blog": "Блог"
+      "services": "Что я делаю",
+      "cases": "Проекты",
+      "blog": "Статьи"
     }
   },
   "Hero": {
     "name": "Владимир Шиков",
-    "roleA": "Диджитал-дизайнер",
-    "roleB": "и арт-директор",
+    "roleA": "Партнёр",
+    "roleB": "TEAM LEAD",
     "placeA": "Живёт в",
     "placeB": "Алматы, Казахстан",
-    "scopeA": "Работает",
-    "scopeB": "по всему миру",
-    "statement": "[Владимир Шиков — lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore]"
+    "scopeA": "Работает с",
+    "scopeB": "собственниками и CEO",
+    "statement": "Работаю с собственниками, CEO и управленческими командами в ситуациях, когда бизнесу предстоит следующий этап развития."
   },
   "Portrait": {
     "alt": "Владимир Шиков"
@@ -50,212 +50,165 @@
     "tag": "[ Обо мне ]",
     "nameLine1": "Владимир",
     "nameLine2": "Шиков",
-    "roleLine": "Диджитал-дизайнер и арт-директор",
-    "placeLine": "Алматы, Казахстан — работает по всему миру",
-    "lead": "[Lorem ipsum dolor sit amet, consectetur adipiscing elit — sed do eiusmod tempor incididunt ut labore et dolore magna aliqua veniam]",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "statValue1": "14+",
-    "statLabel1": "Lorem ipsum лет опыта",
-    "statValue2": "87",
-    "statLabel2": "Dolor sit проектов",
-    "statValue3": "26",
-    "statLabel3": "Amet et наград"
+    "roleLine": "Партнёр TEAM LEAD",
+    "placeLine": "Стратегия • Трансформация • Люди",
+    "lead": "Помогаю увидеть то, что изнутри компании увидеть сложно. За стратегическими вопросами редко стоит только стратегия.",
+    "body": "Рост компании меняет требования к бизнес-модели. Новая бизнес-модель — к команде. Новая команда — к роли собственника. Поэтому я смотрю на бизнес одновременно через три оптики: стратегия — организация — люди. И помогаю собственнику определить, какие решения действительно способны изменить траекторию компании.",
+    "experience": "Мой профессиональный путь прошёл через три разные среды: международный консалтинг, крупный бизнес и государственные институты. Я руководил российским подразделением международной компании в области оценки руководителей, более 12 лет возглавлял PDP Group CIS в Москве, а затем отвечал за одно из ключевых направлений трансформации группы «Самрук-Казына». Сегодня — партнёр TEAM LEAD, где занимаюсь стратегией, развитием бизнеса, трансформацией управленческих команд и индивидуальной работой с первыми лицами. Также являюсь членом квалификационной комиссии Высшего Судебного Совета Республики Казахстан и участвую в экспертной оценке кандидатов на судебные должности.",
+    "statValue1": "25+",
+    "statLabel1": "лет работы с бизнесом и руководителями",
+    "statValue2": "320 000+",
+    "statLabel2": "сотрудников в крупнейшем проекте трансформации",
+    "statValue3": "C-level",
+    "statLabel3": "оценка, развитие и сопровождение первых лиц"
   },
-  "Education": {
-    "heading": "Образование",
-    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "Questions": {
+    "heading": "Когда я наиболее полезен",
+    "lead": "Не тогда, когда компании нужен ещё один консультант. А когда перед собственником или первым лицом возникает вопрос, на который внутри бизнеса уже нет очевидного ответа.",
+    "closing": "В таких ситуациях моя задача — создать пространство для трезвого анализа и помочь превратить сложность в несколько ясных управленческих решений.",
     "items": {
-      "e1": {
-        "school": "Lorem Ipsum University",
-        "note": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.",
-        "degree": "Бакалавр Dolor Sit Amet",
-        "years": "2010 — 2014"
+      "q1": "Куда двигаться дальше?",
+      "q2": "Какая бизнес-модель обеспечит следующий этап роста?",
+      "q3": "Способна ли нынешняя команда реализовать новую стратегию?",
+      "q4": "Кто может стать следующим первым лицом?",
+      "q5": "Что необходимо изменить в компании — и что собственнику необходимо изменить в собственной роли?"
+    }
+  },
+  "Services": {
+    "heading": "Что я делаю",
+    "lead": "Четыре направления, которые на практике почти всегда оказываются одной задачей, рассмотренной с разных сторон.",
+    "items": {
+      "s1": {
+        "title": "Стратегия",
+        "description": "Стратегические сессии и разработка стратегии развития. Начинаю не с инструментов и шаблонов, а с рынка, экономики бизнеса, амбиций собственника, ограничений и возможностей. Стратегия начинается не со списка инициатив, а с ответа на вопрос: от чего мы готовы отказаться ради того, что действительно важно?"
       },
-      "e2": {
-        "school": "Consectetur Institute",
-        "note": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-        "degree": "Магистр Adipiscing Elit",
-        "years": "2014 — 2016"
+      "s2": {
+        "title": "Трансформация",
+        "description": "Путь от сегодняшней модели управления к той, которая потребуется завтра: структура, корпоративная культура, система управления, роли руководителей, механизмы принятия решений, люди. Опыт включает проекты как для частного бизнеса, так и для крупнейших корпоративных и государственных структур."
       },
-      "e3": {
-        "school": "Tempor Academy",
-        "note": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.",
-        "degree": "Сертификат Eiusmod",
-        "years": "2018"
+      "s3": {
+        "title": "Собственник и CEO",
+        "description": "У первого лица всегда есть вопросы, которые невозможно полностью делегировать: стратегия, команда, преемник, кризис, новый бизнес, собственная роль в компании. Я не заменяю собственника в принятии решения — помогаю увидеть ситуацию с той высоты, с которой решение становится очевиднее."
       },
-      "e4": {
-        "school": "Magna Aliqua Courses",
-        "note": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.",
-        "degree": "Программа Incididunt",
-        "years": "2021"
+      "s4": {
+        "title": "Команда и преемственность",
+        "description": "Стратегия определяет, какой должна стать компания, но реализуют её конкретные люди. Помогаю понять, кто способен вести компанию дальше, где находится реальный потенциал руководителей, кому можно передавать большую ответственность и кто однажды способен заменить первое лицо."
       }
     }
   },
   "Works": {
-    "heading": "Избранные работы",
-    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris.",
-    "viewCase": "Открыть кейс {name}",
+    "heading": "Масштаб имеет значение",
+    "lead": "Три проекта, по которым видно, с каким размером задач мне приходилось работать.",
+    "viewCase": "Открыть проект: {name}",
+    "meta": "Проект",
+    "back": "На главную",
     "items": {
-      "loremova": {
-        "name": "Loremova",
-        "caption": "Lorem ipsum dolor sit amet",
-        "tag": "Брендинг | Сайт"
+      "samruk": {
+        "name": "Самрук-Казына",
+        "caption": "Трансформация корпоративной культуры",
+        "tag": "12 компаний · 320 000+ сотрудников",
+        "summary": "Трансформация корпоративной культуры группы «Самрук-Казына» — 12 национальных компаний и более 320 000 сотрудников.",
+        "detail": "Была создана единая методология диагностики и управления корпоративной культурой, определены целевые модели поведения и разработаны дорожные карты трансформации."
       },
-      "ipsumo": {
-        "name": "Ipsumo",
-        "caption": "Lorem ipsum product",
-        "tag": "Продукт | Разработка"
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Развитие производственных руководителей",
+        "tag": "Признан лучшей практикой",
+        "summary": "Программа развития производственных руководителей Philip Morris Ukraine.",
+        "detail": "За три года компетенции руководителей достигли целевого уровня, после чего бюджет на дальнейшее обучение был сведён к нулю. Проект был признан лучшей практикой и рекомендован другим офисам компании."
       },
-      "dolorix": {
-        "name": "Dolorix",
-        "caption": "Lorem ipsum studio",
-        "tag": "Брендинг | Маркетинг"
-      },
-      "ametra": { "name": "Ametra", "caption": "Lorem ipsum digital", "tag": "Сайт | Разработка" },
-      "consecta": {
-        "name": "Consecta",
-        "caption": "Lorem ipsum brand",
-        "tag": "Продукт | Брендинг"
-      },
-      "elitra": {
-        "name": "Elitra",
-        "caption": "Lorem ipsum agency",
-        "tag": "Брендинг | Сайт | Разработка"
-      }
-    }
-  },
-  "Services": {
-    "heading": "Услуги",
-    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "items": {
-      "s1": {
-        "title": "Брендинг и айдентика",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-      },
-      "s2": {
-        "title": "Продуктовый дизайн",
-        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis."
-      },
-      "s3": {
-        "title": "Разработка сайтов",
-        "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur."
-      },
-      "s4": {
-        "title": "Диджитал-маркетинг",
-        "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed."
+      "atom": {
+        "name": "Атомная отрасль",
+        "caption": "Сорокалетняя стратегия новой отрасли",
+        "tag": "Россия",
+        "summary": "Разработка 40-летней стратегии развития новой отрасли в России на базе мощностей атомной энергетики.",
+        "detail": "Участие в разработке стратегии развития новой отрасли на горизонте сорока лет — на базе существующих мощностей атомной энергетики."
       }
     }
   },
   "Partners": {
-    "headingLine1": "120+ доверенных",
-    "headingLine2": "партнёров",
-    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.",
-    "marqueeLabel": "Названия партнёров",
-    "rowA": "Loremova® | Ipsumo™ | Dolorix | Ametra Studio | Consecta© | Elitra | Vestibulum Co | Sagittis",
-    "rowB": "Pulvinar | Faucibus Lab | Sodales® | Rhoncus | Viverra Group | Cursus™ | Aliquam | Fermentum"
+    "headingLine1": "Компании",
+    "headingLine2": "и организации",
+    "lead": "В разные годы работал с международными корпорациями, крупным частным бизнесом и государственными институтами.",
+    "marqueeLabel": "Компании и организации",
+    "rowA": "Philip Morris | Pfizer | Microsoft | Nestlé | РОСНАНО | Альфа-Банк | ROLF | British American Tobacco | BI Group | Caterpillar | Air Astana",
+    "rowB": "Самрук-Казына | КМГ | Казатомпром | KEGOC | КТЖ | Самрук-Энерго | Верховный Суд РК"
   },
-  "Reviews": {
-    "heading": "Отзывы клиентов",
-    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
-    "regionLabel": "Отзывы клиентов",
-    "previous": "Предыдущие отзывы",
-    "next": "Следующие отзывы",
+  "Education": {
+    "heading": "Образование",
+    "lead": "",
     "items": {
-      "r1": {
-        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit — sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "author": "Dolor Sitamet",
-        "role": "CEO, Loremova"
+      "e1": {
+        "school": "Московский государственный университет им. М. В. Ломоносова",
+        "degree": "Факультет психологии"
       },
-      "r2": {
-        "quote": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute.",
-        "author": "Magna Aliqua",
-        "role": "CMO, Ipsumo"
-      },
-      "r3": {
-        "quote": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.",
-        "author": "Amet Consecte",
-        "role": "Основатель, Dolorix"
-      },
-      "r4": {
-        "quote": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut.",
-        "author": "Tempor Incidid",
-        "role": "Продакт-лид, Ametra"
-      },
-      "r5": {
-        "quote": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.",
-        "author": "Quis Nostrud",
-        "role": "Директор, Consecta"
-      }
-    }
-  },
-  "Faq": {
-    "heading": "FAQ",
-    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-    "items": {
-      "q1": {
-        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-        "answer": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-      },
-      "q2": {
-        "question": "Sed do eiusmod tempor incididunt ut labore et dolore?",
-        "answer": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt, neque porro quisquam est qui dolorem."
-      },
-      "q3": {
-        "question": "Ut enim ad minim veniam, quis nostrud exercitation ullamco?",
-        "answer": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur, quis autem vel eum iure reprehenderit qui in ea voluptate."
-      },
-      "q4": {
-        "question": "Duis aute irure dolor in reprehenderit in voluptate velit?",
-        "answer": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate."
-      },
-      "q5": {
-        "question": "Excepteur sint occaecat cupidatat non proident, sunt in culpa?",
-        "answer": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae, itaque earum rerum hic tenetur."
+      "e2": {
+        "school": "ВПВПООРКУ КГБ СССР",
+        "degree": ""
       }
     }
   },
   "Blog": {
-    "heading": "Блог и статьи",
-    "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.",
+    "heading": "Статьи",
+    "lead": "",
     "items": {
-      "n1": {
-        "label": "[Заметка 01]",
-        "meta": "9 октября 2026 · 8 мин чтения",
-        "title": "Lorem ipsum dolor sit amet consectetur",
-        "excerpt": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim."
-      },
-      "n2": {
-        "label": "[Заметка 02]",
-        "meta": "24 марта 2026 · 6 мин чтения",
-        "title": "Sed do eiusmod tempor incididunt labore",
-        "excerpt": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
-      },
-      "n3": {
-        "label": "[Заметка 03]",
-        "meta": "8 января 2026 · 8 мин чтения",
-        "title": "Ut enim ad minim veniam quis nostrud",
-        "excerpt": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+      "growth": {
+        "label": "[Эссе]",
+        "meta": "Рост компании",
+        "title": "Из малого — в средний. Из среднего — в большой",
+        "excerpt": "Главным ограничением компании в определённый момент становится способ, которым ею управляют."
       }
     }
   },
+  "Note": {
+    "meta": "Эссе",
+    "back": "На главную",
+    "growth": {
+      "title": "Из малого — в средний. Из среднего — в большой",
+      "lead": "Я много лет наблюдаю компании на совершенно разных стадиях развития — от предпринимательского бизнеса до крупнейших корпораций. И чем больше я их вижу, тем чаще думаю об одной довольно простой вещи.",
+      "p1": "В принципе, нет ничего невероятно сложного в том, чтобы из малого бизнеса сделать средний. А из среднего — большой. Конечно, нужны продукт, рынок, деньги, люди, немного удачи.",
+      "p2": "Но главный барьер роста чаще находится не там. Главным ограничением компании в определённый момент становится способ, которым ею управляют.",
+      "h1": "Малый бизнес растёт благодаря своему владельцу",
+      "p3": "Он знает клиентов. Сам принимает ключевые решения. Знает, кому можно доверять. Чувствует деньги. Лично контролирует качество. Может за несколько минут изменить решение, на которое большой компании потребовались бы недели.",
+      "p4": "И именно поэтому бизнес растёт. Но наступает момент, когда то, что когда-то было его главным преимуществом, начинает ограничивать дальнейший рост.",
+      "p5": "Компания становится слишком большой, чтобы продолжать помещаться в голове одного человека. И это, на мой взгляд, первая настоящая развилка.",
+      "h2": "Чтобы стать средним, владельцу приходится отпустить часть бизнеса",
+      "p6": "Это значительно сложнее, чем кажется. Нужно перестать лично принимать сотни решений. Найти людей, которые в каких-то вопросах будут разбираться лучше тебя. Передать им не только задачи, но и право ошибаться.",
+      "p7": "Появляются структура, ответственность, показатели, правила, регулярный менеджмент. И здесь возникает парадокс: чтобы сохранить контроль над растущим бизнесом, владельцу приходится отказаться от части непосредственного контроля.",
+      "p8": "Те, кто этого не делают, часто годами остаются очень хорошим малым бизнесом. Те, кто смог, — становятся средними.",
+      "h3": "Переход от среднего к большому устроен иначе",
+      "p9": "Здесь уже недостаточно просто нанять хороших руководителей и делегировать им операционную работу. Компания должна научиться работать как система.",
+      "p10": "Стратегия перестаёт находиться только в голове собственника. Решения начинают приниматься не только благодаря личным отношениям. Компания должна уметь находить, выращивать и удерживать сильных руководителей. Возникает корпоративная культура — независимо от того, занимались вы ею специально или нет.",
+      "p11": "Появляется необходимость думать не только о том, как заработать больше завтра, но и о том, какой компанией необходимо стать через пять или десять лет.",
+      "h4": "И здесь снова приходится меняться владельцу",
+      "p12": "Мне вообще кажется, что история роста бизнеса — это во многом история изменения роли его собственника. Сначала он предприниматель. Потом становится руководителем. Затем должен стать архитектором организации. А в какой-то момент — человеком, который определяет направление движения, формирует команду и принимает несколько действительно важных решений вместо сотен ежедневных.",
+      "p13": "Не каждый предприниматель хочет пройти весь этот путь. И это нормально. Но невозможно построить большой бизнес, продолжая управлять им как маленьким.",
+      "h5": "С каких вопросов я начинаю",
+      "p14": "Поэтому рост компании для меня начинается не с вопроса «как увеличить продажи?». Я бы сначала задал другие вопросы.",
+      "q1": "Какой компанией вы хотите стать?",
+      "q2": "Что сегодня мешает вам вырасти в два или три раза?",
+      "q3": "Что произойдёт с компанией, если завтра вас не будет в офисе три месяца?",
+      "q4": "Какие решения всё ещё невозможно принять без вас?",
+      "q5": "Есть ли рядом люди, которым вы действительно готовы доверить бизнес?",
+      "q6": "Способна ли сегодняшняя команда управлять компанией в два раза больше нынешней?",
+      "q7": "Готовы ли вы сами управлять компанией иначе, чем управляете ею сегодня?",
+      "p15": "Ответы на эти вопросы иногда рассказывают о перспективах бизнеса значительно больше, чем финансовая модель.",
+      "p16": "Я не думаю, что большой бизнес строится по какому-то секретному рецепту. На определённом этапе просто приходится последовательно менять: стратегию → бизнес-модель → систему управления → команду → роль собственника. И каждый следующий уровень компании требует другого качества каждого из этих элементов.",
+      "p17": "Поэтому мне интереснее всего работать с бизнесом именно в момент перехода. Когда старый способ управления ещё приносит деньги, но уже начинает ограничивать будущее. Когда собственник понимает, что компания способна на большее, но пока не совсем понятно — что именно должно измениться, чтобы сделать следующий шаг.",
+      "p18": "Мне кажется, именно с этого вопроса и начинается настоящий рост."
+    }
+  },
   "Footer": {
-    "cta": "Есть идея проекта — расскажите!",
-    "ctaButton": "Записаться на созвон →",
+    "cta": "Иногда собственнику нужен не проект. Ему нужен человек, с которым можно разобрать ситуацию и принять решение.",
+    "ctaButton": "Написать →",
     "colMenu": "Меню",
-    "colCases": "Кейсы",
-    "colBlog": "Блог",
+    "colCases": "Проекты",
+    "colBlog": "Статьи",
     "colContact": "Контакты",
     "appearance": "Оформление",
-    "designBy": "Дизайн — Lorem Ipsum",
-    "copyright": "© {year} Владимир Шиков. Все права защищены.",
-    "poweredBy": "Сделано на Next.js"
-  },
-  "ComingSoon": {
-    "eyebrow": "В работе",
-    "body": "Эта страница ещё не написана. Портфолио, к которому она относится, уже открыто — сам разбор пока готовится.",
-    "back": "Вернуться в портфолио",
-    "caseMeta": "Кейс",
-    "noteMeta": "Заметка"
+    "designBy": "Не каждая задача требует консультанта",
+    "copyright": "© {year} Владимир Шиков",
+    "poweredBy": "Алматы, Казахстан"
   },
   "ThemeSwitch": {
     "label": "Тема оформления",
@@ -267,9 +220,9 @@
     "label": "Язык"
   },
   "AuthorCard": {
-    "role": "Инженер-разработчик",
-    "location": "Россия",
-    "bio": "Делаю продукты, за которые не стыдно: от архитектуры до продакшена.",
+    "role": "Стратегия • Трансформация • Люди",
+    "location": "Алматы, Казахстан",
+    "bio": "Работаю с собственниками, CEO и управленческими командами в момент перехода компании на следующий этап развития.",
     "sinceLabel": "В профессии с"
   },
   "ContactForm": {

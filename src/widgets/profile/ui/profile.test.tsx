@@ -20,9 +20,12 @@ describe('Profile', () => {
     renderWithProviders(<Profile />, { locale: 'en' })
 
     expect(screen.getByText('[ About ]')).toBeInTheDocument()
-    expect(screen.getByText(/Digital Designer & Art Director/)).toBeInTheDocument()
-    expect(screen.getByText(/Working Globally/)).toBeInTheDocument()
-    expect(screen.getByText(/Ut enim ad minim veniam/)).toBeInTheDocument()
+    expect(screen.getByText(/Partner at TEAM LEAD/)).toBeInTheDocument()
+    expect(screen.getByText(/Strategy • Transformation • People/)).toBeInTheDocument()
+    expect(screen.getByText(/three lenses at once/)).toBeInTheDocument()
+    // The career paragraph is the one that arrived last; a section that renders
+    // the lead and the body but silently drops it would otherwise look fine.
+    expect(screen.getByText(/PDP Group CIS/)).toBeInTheDocument()
   })
 
   it('lists all three statistics with their labels', () => {
@@ -30,10 +33,10 @@ describe('Profile', () => {
 
     const stats = screen.getAllByRole('listitem')
     expect(stats).toHaveLength(3)
-    expect(stats[0]).toHaveTextContent('14+')
-    expect(stats[0]).toHaveTextContent('Lorem ipsum years')
-    expect(stats[1]).toHaveTextContent('87')
-    expect(stats[2]).toHaveTextContent('26')
+    expect(stats[0]).toHaveTextContent('25+')
+    expect(stats[0]).toHaveTextContent('years working with businesses')
+    expect(stats[1]).toHaveTextContent(/320,000\+/)
+    expect(stats[2]).toHaveTextContent('C-level')
   })
 
   it('anchors the section so the navigation can jump to it', () => {

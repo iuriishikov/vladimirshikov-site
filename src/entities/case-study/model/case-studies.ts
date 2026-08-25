@@ -7,7 +7,7 @@
  * dictionary.
  */
 
-export type CaseSlug = 'loremova' | 'ipsumo' | 'dolorix' | 'ametra' | 'consecta' | 'elitra'
+export type CaseSlug = 'samruk' | 'philipmorris' | 'atom'
 
 /** Where the brandmark sits on the cover. */
 export type CoverLayout = 'center' | 'bottom-left'
@@ -19,7 +19,12 @@ export interface CaseStudy {
   slug: CaseSlug
   /** `[01]` — the index printed on the cover. */
   index: string
-  /** The brandmark as drawn, including its ® or ™. Not translated. */
+  /**
+   * The mark as drawn on the cover. Not translated: two of the three are
+   * proper names that read the same in either language, and the third names
+   * the horizon of the work rather than a client, because the client was
+   * never named in the source material.
+   */
   wordmark: string
   /** Cover background. A raw hex, because a brand colour is not a theme token. */
   background: string
@@ -32,69 +37,46 @@ export interface CaseStudy {
   /** Small print in the opposite corner from the index. */
   badge?: string
   captionSide: 'left' | 'right'
+  /**
+   * Lifts the wordmark off the cover in the accent colour instead of the ink.
+   * Only legible on the dark cover, which is the one the canvas drew it on.
+   */
+  wordmarkTone?: 'lime'
 }
 
 export const CASE_STUDIES: readonly CaseStudy[] = [
   {
-    slug: 'loremova',
+    slug: 'samruk',
     index: '[01]',
-    wordmark: 'Loremova®',
+    wordmark: 'Samruk-Kazyna',
     background: '#2b4bff',
     ink: 'light',
     layout: 'center',
-    badge: '® 2025',
+    badge: '12 / 320 000+',
     captionSide: 'left',
   },
   {
-    slug: 'ipsumo',
+    slug: 'philipmorris',
     index: '[02]',
-    wordmark: 'Ipsumo™',
-    background: '#e9ff2f',
-    ink: 'dark',
+    // A shade darker than the canvas's #e23a20 so white labels clear WCAG AA.
+    // Kept in step with `--brand-red` in globals.css.
+    background: '#c62f16',
+    wordmark: 'Philip Morris',
+    ink: 'light',
     layout: 'bottom-left',
     decoration: 'outline-number-right',
     decorationText: '02',
     captionSide: 'right',
   },
   {
-    slug: 'dolorix',
+    slug: 'atom',
     index: '[03]',
-    wordmark: 'Dolorix',
-    // A shade darker than the canvas's #e23a20 so white labels clear WCAG AA.
-    // Kept in step with `--brand-red` in globals.css.
-    background: '#c62f16',
+    wordmark: '40 Years',
+    background: '#141414',
     ink: 'light',
     layout: 'center',
     decoration: 'ring',
     captionSide: 'right',
-  },
-  {
-    slug: 'ametra',
-    index: '[04]',
-    wordmark: 'ametra™',
-    background: '#cbbcf6',
-    ink: 'dark',
-    layout: 'center',
-    captionSide: 'left',
-  },
-  {
-    slug: 'consecta',
-    index: '[05]',
-    wordmark: 'Consecta©',
-    background: '#5ed13d',
-    ink: 'dark',
-    layout: 'bottom-left',
-    decoration: 'outline-number-left',
-    decorationText: '05',
-    captionSide: 'right',
-  },
-  {
-    slug: 'elitra',
-    index: '[06]',
-    wordmark: 'Elitra®',
-    background: '#141414',
-    ink: 'light',
-    layout: 'center',
-    captionSide: 'left',
+    wordmarkTone: 'lime',
   },
 ]

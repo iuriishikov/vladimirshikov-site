@@ -4,29 +4,28 @@ import Image from 'next/image'
 import portrait from '../../../../public/vladimir-shikov.jpg'
 
 /**
- * The full-bleed band between the hero and the profile, holding the portrait.
+ * The full-bleed portrait band.
  *
- * It steps outside the page measure on purpose: the panel runs edge to edge
- * while the portrait stays centred on it.
+ * Desaturated on purpose. The photograph was taken against a stage wall of
+ * saturated colour that fights every other surface on the page; in black and
+ * white the same wall reads as texture, and the page keeps its one accent.
  *
- * The canvas drew a generated bust here at up to 760px wide. The real
- * photograph is 600x600, so it is shown at 380px at most — beyond that a
- * high-density screen would be upscaling it and the softness would show. The
- * band is shorter to match, keeping the proportion the canvas set between the
- * figure and the space around it. A larger original would lift both numbers;
- * they are the only reason the section is not full height.
+ * The crop sits right of centre and high, because that is where the subject is
+ * in the frame — a centred crop would put him off to one side and fill the
+ * middle with the back of the audience's heads.
  */
 export function Portrait() {
   const t = useTranslations('Portrait')
 
   return (
-    <section className="bg-panel flex h-[clamp(420px,62vh,660px)] items-center justify-center overflow-hidden px-[clamp(20px,4vw,48px)]">
+    <section className="bg-panel relative h-[clamp(300px,54vh,580px)] w-full overflow-hidden">
       <Image
         src={portrait}
         alt={t('alt')}
-        // Square source, square box: no cropping, and the circle does the framing.
-        className="aspect-square w-[clamp(200px,42vw,380px)] rounded-full object-cover"
-        sizes="(max-width: 480px) 42vw, 380px"
+        fill
+        // Full-bleed at every width, so the browser may pick the largest source.
+        sizes="100vw"
+        className="object-cover object-[57%_26%] grayscale"
         placeholder="blur"
         priority
       />

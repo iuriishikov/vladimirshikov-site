@@ -50,8 +50,8 @@ export const routes = {
    * contact call-to-action is a mailto link, not a form.
    */
   contact: '/ru/about',
-  caseStudy: '/ru/cases/loremova',
-  note: '/ru/notes/n1',
+  caseStudy: '/ru/cases/samruk',
+  note: '/ru/notes/growth',
   health: '/api/health',
   robots: '/robots.txt',
   sitemap: '/sitemap.xml',

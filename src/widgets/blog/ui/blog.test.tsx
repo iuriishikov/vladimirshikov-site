@@ -22,20 +22,16 @@ describe('Blog', () => {
   it('renders the section heading from the dictionary', () => {
     renderWithProviders(<Blog />)
 
-    expect(screen.getByRole('heading', { level: 2, name: 'Блог и статьи' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 2, name: 'Статьи' })).toBeInTheDocument()
   })
 
-  it('renders the three notes, each linking to its own page', () => {
+  it('renders every note, each linking to its own page', () => {
     renderWithProviders(<Blog />)
 
     const cards = screen.getAllByTestId('note-card')
 
-    expect(cards).toHaveLength(3)
-    expect(cards.map((card) => card.getAttribute('href'))).toEqual([
-      '/notes/n1',
-      '/notes/n2',
-      '/notes/n3',
-    ])
+    expect(cards).toHaveLength(1)
+    expect(cards.map((card) => card.getAttribute('href'))).toEqual(['/notes/growth'])
   })
 
   it('titles every note with an h3 taken from the dictionary', () => {
@@ -44,23 +40,21 @@ describe('Blog', () => {
     const titles = screen.getAllByRole('heading', { level: 3 })
 
     expect(titles.map((title) => title.textContent)).toEqual([
-      'Lorem ipsum dolor sit amet consectetur',
-      'Sed do eiusmod tempor incididunt labore',
-      'Ut enim ad minim veniam quis nostrud',
+      'Из малого — в средний. Из среднего — в большой',
     ])
   })
 
   it('shows the label and the meta line of each note', () => {
     renderWithProviders(<Blog />)
 
-    expect(screen.getByText('[Заметка 01]')).toBeInTheDocument()
-    expect(screen.getByText('9 октября 2026 · 8 мин чтения')).toBeInTheDocument()
+    expect(screen.getByText('[Эссе]')).toBeInTheDocument()
+    expect(screen.getByText('Рост компании')).toBeInTheDocument()
   })
 
   it('translates the section for the other locale', () => {
     renderWithProviders(<Blog />, { locale: 'en' })
 
-    expect(screen.getByRole('heading', { level: 2, name: 'Blog & Articles' })).toBeInTheDocument()
-    expect(screen.getByText('[Note 03]')).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 2, name: 'Writing' })).toBeInTheDocument()
+    expect(screen.getByText('[Essay]')).toBeInTheDocument()
   })
 })

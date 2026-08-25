@@ -58,9 +58,9 @@ describe('SiteHeader', () => {
     const entries = [
       { label: 'Главная', href: '#top' },
       { label: 'Обо мне', href: '#about' },
-      { label: 'Образование', href: '#education' },
-      { label: 'Кейсы', href: '#cases' },
-      { label: 'Блог', href: '#blog' },
+      { label: 'Что я делаю', href: '#services' },
+      { label: 'Проекты', href: '#cases' },
+      { label: 'Статьи', href: '#blog' },
     ]
 
     for (const entry of entries) {
@@ -120,7 +120,7 @@ describe('SiteHeader', () => {
 
     await user.click(screen.getByTestId('mobile-nav-toggle'))
     const panel = within(screen.getByTestId('mobile-nav-panel'))
-    await user.click(panel.getByRole('link', { name: 'Кейсы' }))
+    await user.click(panel.getByRole('link', { name: 'Проекты' }))
 
     // Leaving it open would cover the section the visitor just jumped to.
     expect(useMobileNavStore.getState().isOpen).toBe(false)
