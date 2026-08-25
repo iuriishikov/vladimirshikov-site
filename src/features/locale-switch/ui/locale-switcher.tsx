@@ -3,21 +3,34 @@
 import { useLocale, useTranslations } from 'next-intl'
 
 import { Link, usePathname } from '@/shared/i18n/navigation'
-import { localeLabels, type Locale } from '@/shared/i18n/routing'
+import { localeHreflang, localeLabels, routing } from '@/shared/i18n/routing'
 import { cn } from '@/shared/lib/cn'
 
 /**
- * The canvas puts English on the left of the pill, which is the opposite of the
- * routing order (Russian is the default locale and therefore listed first).
- */
-const PILL_ORDER: readonly Locale[] = ['en', 'ru']
-
-/**
- * Plain links, not a JavaScript-driven menu.
+ * The edition mark: `[ru] en` — two codes set as type rather than built as a
+ * control, with the site's own bracket around the one you are reading.
  *
- * Each locale gets a real, crawlable URL for the *current* page, which is what
- * search engines follow from the `hreflang` alternates — and it keeps working
- * if the JavaScript never arrives.
+ * Plain links, not a JavaScript-driven menu. Each locale gets a real, crawlable
+ * URL for the *current* page, which is what a crawler follows from the
+ * `hreflang` alternates, and it keeps working if the JavaScript never arrives.
+ * `useLocale()` is known on the server, so unlike the theme toggle this needs no
+ * mounted guard: the first HTML already marks the right edition.
+ *
+ * Nothing here is filled, bordered or rounded, and that is the point. The bar is
+ * glass, so an opaque track paints a flat hole in it; the previous pill also put
+ * a second black shape a few pixels from the black Contact button and repeated
+ * the sliding thumb the theme toggle already uses. Dropping the box leaves the
+ * button as the bar's one filled element.
+ *
+ * The brackets are the house ornament doing the job it already does elsewhere:
+ * the services and education rows number themselves `[01]` in `text-faint
+ * text-[14px] font-medium`, which is the register used here — and the same 14px
+ * as the navigation on the other side of the bar.
+ *
+ * Which edition is current is said by the markup, not by the stylesheet: only
+ * the active option renders brackets at all, so with CSS stripped the text is
+ * still `[ru] en`. Exactly one term is bracketed either way, so the pair keeps
+ * its width across `/ru` and `/en` without reserving anything.
  */
 export function LocaleSwitcher() {
   const t = useTranslations('LocaleSwitch')
@@ -30,20 +43,11 @@ export function LocaleSwitcher() {
     <nav
       data-testid="locale-switcher"
       aria-label={t('label')}
-      className="border-control-border bg-background relative flex items-center rounded-full border p-[3px]"
+      className="flex items-center text-[14px] leading-none"
     >
-      {/* The moving half of the track. Purely decorative: which locale is
-          current is announced by `aria-current`, not by the highlight. */}
-      <span
-        aria-hidden="true"
-        className={cn(
-          'bg-foreground absolute top-[3px] bottom-[3px] left-[3px] w-[calc(50%_-_3px)] rounded-full',
-          'transition-transform duration-[450ms] ease-[cubic-bezier(.3,1.35,.4,1)]',
-          activeLocale === PILL_ORDER[0] ? 'translate-x-0' : 'translate-x-full',
-        )}
-      />
-
-      {PILL_ORDER.map((locale) => {
+      {/* Routing order, so the default locale reads first and a third one would
+          simply add a third term — none of this is arithmetic on "half". */}
+      {routing.locales.map((locale) => {
         const isActive = locale === activeLocale
 
         return (
@@ -52,18 +56,48 @@ export function LocaleSwitcher() {
             href={pathname}
             locale={locale}
             data-testid={`locale-option-${locale}`}
-            hrefLang={locale}
+            // The full BCP 47 tag, so the anchor agrees with the alternates
+            // `shared/lib/seo` and the sitemap already emit for these URLs
+            // rather than offering a second, looser spelling of them.
+            hrefLang={localeHreflang[locale]}
             aria-current={isActive ? 'true' : undefined}
             className={cn(
-              'relative w-[38px] rounded-full py-2 text-center',
-              'text-[11.5px] font-extrabold tracking-[0.06em] uppercase transition-colors',
-              // The active label sits on the thumb, so it takes the background
-              // colour and the thumb supplies its contrast.
-              isActive ? 'text-background' : 'text-muted-foreground hover:text-foreground',
+              // The box is invisible but generous: this is the one control that
+              // never leaves the bar, down to 320px, and it has no border to
+              // enlarge. `rounded-sm` paints nothing — it is the radius the
+              // global focus ring traces.
+              'flex h-11 min-w-[36px] items-center justify-center rounded-sm px-1',
+              isActive
+                ? // No hover response on the current edition: it links to the
+                  // page already on screen.
+                  'text-foreground font-bold'
+                : // Hover stops one step short of full ink, so the term under
+                  // the pointer never ends up looking like the current one.
+                  'text-muted-foreground hover:text-foreground-soft font-medium',
             )}
           >
+            {/* Decoration, so `aria-current` keeps the announcing to itself and
+                the accessible name stays "ru — Русский". A weight below the code
+                it encloses: the bracket marks the term, it does not compete. */}
+            {isActive && (
+              <span aria-hidden="true" className="text-faint font-medium">
+                [
+              </span>
+            )}
             {locale}
-            <span className="sr-only"> — {localeLabels[locale]}</span>
+            {isActive && (
+              <span aria-hidden="true" className="text-faint font-medium">
+                ]
+              </span>
+            )}
+            {/* Two letters are ambiguous read aloud; the name a language gives
+                itself is not. `lang` is what stops an English voice reading
+                "Русский" — `hrefLang` describes the destination, not this
+                text. */}
+            <span lang={locale} className="sr-only">
+              {' '}
+              — {localeLabels[locale]}
+            </span>
           </Link>
         )
       })}

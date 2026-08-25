@@ -10,7 +10,7 @@ import { MobileNavToggle } from './mobile-nav-toggle'
 /**
  * The fixed glass bar at the top of the document.
  *
- * A Server Component: only the locale pill and the two mobile-navigation leaves
+ * A Server Component: only the edition mark and the two mobile-navigation leaves
  * ship JavaScript, and the bar itself renders as static markup.
  */
 export function SiteHeader() {

@@ -146,8 +146,8 @@ describe('SiteHeader', () => {
       useMobileNavStore.setState({ isOpen: true })
     })
 
-    // The pill stays in the bar below 761px, so a visitor can switch language
-    // with the panel open — and `usePathname` does not move when they do.
+    // The edition mark stays in the bar below 761px, so a visitor can switch
+    // language with the panel open — and `usePathname` does not move when they do.
     currentLocale.mockReturnValue('en')
     rerender(<SiteHeader />)
 
