@@ -35,8 +35,10 @@ test.describe('content negotiation at the root', () => {
     test.use({ locale: 'ja-JP' })
 
     test('falls back to the default locale', async ({ page }) => {
+      // English is the default: it is what an unmatched visitor gets, and what
+      // `x-default` points a crawler at.
       await page.goto(routes.root)
-      await expect(page).toHaveURL(/\/ru\/?$/)
+      await expect(page).toHaveURL(/\/en\/?$/)
     })
   })
 })

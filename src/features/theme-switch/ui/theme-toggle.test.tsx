@@ -13,44 +13,64 @@ describe('ThemeToggle', () => {
     expect(screen.getByTestId('theme-toggle')).toHaveAccessibleName('Тема оформления')
   })
 
-  it('labels both halves of the pill from the dictionary', () => {
+  it('offers all three states the provider has', () => {
     renderWithProviders(<ThemeToggle />)
 
     const toggle = screen.getByTestId('theme-toggle')
 
     expect(toggle).toHaveTextContent('Свет')
+    expect(toggle).toHaveTextContent('Авто')
     expect(toggle).toHaveTextContent('Тьма')
   })
 
-  it('advertises the theme it will switch to, not the current one', async () => {
+  it('starts on the provider default before the stored choice is known', () => {
+    // The server cannot resolve the theme, so the first paint shows what the
+    // provider is configured with rather than guessing at a colour.
     renderWithProviders(<ThemeToggle />)
 
-    await waitFor(() => {
-      expect(screen.getByTestId('theme-toggle')).toHaveAttribute('title', 'Тьма')
-    })
+    expect(screen.getByTestId('theme-option-system')).toHaveAttribute('aria-pressed', 'true')
+    expect(screen.getByTestId('theme-option-light')).toHaveAttribute('aria-pressed', 'false')
   })
 
-  it('switches the document to dark and back', async () => {
+  it('switches the document to dark and back to light', async () => {
     const { user } = renderWithProviders(<ThemeToggle />)
-    const toggle = screen.getByTestId('theme-toggle')
 
-    await user.click(toggle)
+    await user.click(screen.getByTestId('theme-option-dark'))
     await waitFor(() => {
       expect(document.documentElement).toHaveClass('dark')
     })
-    expect(toggle).toHaveAttribute('title', 'Свет')
+    expect(screen.getByTestId('theme-option-dark')).toHaveAttribute('aria-pressed', 'true')
 
-    await user.click(toggle)
+    await user.click(screen.getByTestId('theme-option-light'))
     await waitFor(() => {
       expect(document.documentElement).not.toHaveClass('dark')
     })
   })
 
-  it('renders a button even before the theme is known', () => {
-    // The server cannot resolve the theme, so the first paint must still be a
-    // usable control rather than an empty slot that shifts the layout.
+  it('lets a visitor hand the theme back to the operating system', async () => {
+    // The reason this control has three segments. With two, the first press is
+    // a one-way door and the site can never follow the OS again.
+    const { user } = renderWithProviders(<ThemeToggle />)
+
+    await user.click(screen.getByTestId('theme-option-dark'))
+    await waitFor(() => {
+      expect(screen.getByTestId('theme-option-dark')).toHaveAttribute('aria-pressed', 'true')
+    })
+
+    await user.click(screen.getByTestId('theme-option-system'))
+    await waitFor(() => {
+      expect(screen.getByTestId('theme-option-system')).toHaveAttribute('aria-pressed', 'true')
+    })
+    expect(screen.getByTestId('theme-option-dark')).toHaveAttribute('aria-pressed', 'false')
+  })
+
+  it('renders usable buttons even before the theme is known', () => {
     renderWithProviders(<ThemeToggle />)
 
-    expect(screen.getByRole('button')).toBeEnabled()
+    const buttons = screen.getAllByRole('button')
+    expect(buttons).toHaveLength(3)
+    for (const button of buttons) {
+      expect(button).toBeEnabled()
+    }
   })
 })

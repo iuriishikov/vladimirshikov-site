@@ -30,15 +30,17 @@ describe('buildPageMetadata', () => {
 
   it('advertises every locale as an alternate, plus x-default', () => {
     expect(about.alternates?.languages).toStrictEqual({
-      'ru-RU': 'http://localhost:3000/ru/about',
       'en-US': 'http://localhost:3000/en/about',
-      'x-default': 'http://localhost:3000/ru/about',
+      'ru-RU': 'http://localhost:3000/ru/about',
+      'x-default': 'http://localhost:3000/en/about',
     })
   })
 
   it('sends x-default to the default locale, not to the current one', () => {
+    // English is the default, so it is what a crawler serves a visitor whose
+    // language the site does not match.
     const languages = about.alternates?.languages
-    expect(languages?.['x-default']).toBe(languages?.['ru-RU'])
+    expect(languages?.['x-default']).toBe(languages?.['en-US'])
   })
 
   it('mirrors the title and description into the OpenGraph and Twitter cards', () => {

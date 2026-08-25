@@ -232,7 +232,7 @@
     "label": "Appearance",
     "light": "Light",
     "dark": "Dark",
-    "system": "System"
+    "system": "Auto"
   },
   "LocaleSwitch": {
     "label": "Language"

@@ -4,25 +4,36 @@ test.describe('theme switching', () => {
   test('flips the document theme and remembers the choice across a reload', async ({ page }) => {
     await page.goto(routes.home.ru)
 
-    const initial = await documentTheme(page)
-    await page.getByTestId('theme-toggle').click()
-
-    // Asserting "not the previous value" rather than a literal keeps the test
-    // honest whichever theme the visitor's OS preference started us on.
-    await expect.poll(() => documentTheme(page)).not.toBe(initial)
-    const chosen = await documentTheme(page)
+    await page.getByTestId('theme-option-dark').click()
+    await expect.poll(() => documentTheme(page)).toBe('dark')
 
     await page.reload()
-    await expect.poll(() => documentTheme(page)).toBe(chosen)
+    await expect.poll(() => documentTheme(page)).toBe('dark')
+  })
+
+  test('hands the theme back to the operating system', async ({ page }) => {
+    // The whole point of the third segment: without it the first press pins the
+    // site to a colour for good, and `system` — the default — is unreachable.
+    await page.emulateMedia({ colorScheme: 'light' })
+    await page.goto(routes.home.ru)
+
+    await page.getByTestId('theme-option-dark').click()
+    await expect.poll(() => documentTheme(page)).toBe('dark')
+
+    await page.getByTestId('theme-option-system').click()
+    await expect.poll(() => documentTheme(page)).toBe('light')
+
+    // And it follows the OS from then on, rather than freezing on whatever it
+    // resolved to at the moment of the press.
+    await page.emulateMedia({ colorScheme: 'dark' })
+    await expect.poll(() => documentTheme(page)).toBe('dark')
   })
 
   test('paints the persisted theme before the page becomes interactive', async ({ page }) => {
     await page.goto(routes.home.ru)
 
-    const initial = await documentTheme(page)
-    await page.getByTestId('theme-toggle').click()
-    await expect.poll(() => documentTheme(page)).not.toBe(initial)
-    const chosen = await documentTheme(page)
+    await page.getByTestId('theme-option-dark').click()
+    await expect.poll(() => documentTheme(page)).toBe('dark')
 
     // next-themes writes the theme from a blocking inline script, so a fresh
     // navigation already has it on <html> by the time DOMContentLoaded fires.
@@ -33,6 +44,6 @@ test.describe('theme switching', () => {
     // fails while the test above passes, the nonce is missing and real visitors
     // see the flash.
     await page.goto(routes.about.ru, { waitUntil: 'domcontentloaded' })
-    expect(await documentTheme(page)).toBe(chosen)
+    expect(await documentTheme(page)).toBe('dark')
   })
 })

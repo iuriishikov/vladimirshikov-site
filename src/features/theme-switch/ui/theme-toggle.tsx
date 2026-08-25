@@ -6,59 +6,109 @@ import { useTheme } from 'next-themes'
 import { cn } from '@/shared/lib/cn'
 import { useIsMounted } from '@/shared/lib/use-is-mounted'
 
-const LABEL_CLASSNAME =
-  'relative flex w-[76px] items-center justify-center gap-[7px] py-2 text-[11px] font-extrabold tracking-[0.09em] transition-colors duration-300'
+/**
+ * The three states the provider actually has, in the order they run from
+ * lightest to darkest — so the thumb travels the way the theme does.
+ */
+const OPTIONS = ['light', 'system', 'dark'] as const
+
+type ThemeOption = (typeof OPTIONS)[number]
+
+function isThemeOption(value: string | undefined): value is ThemeOption {
+  return OPTIONS.includes(value as ThemeOption)
+}
+
+const OPTION_CLASSNAME =
+  'relative flex w-[58px] cursor-pointer items-center justify-center gap-[6px] py-2 text-[11px] font-extrabold tracking-[0.09em] transition-colors duration-300'
 
 const DOT_CLASSNAME = 'box-border size-[9px] rounded-full'
 
 /**
- * The Light/Dark pill: a lime thumb that slides under whichever half is active.
+ * The Light / Auto / Dark control: a lime thumb that slides under the active
+ * segment.
  *
- * The `mounted` guard is not ceremony: the server cannot know the resolved
- * theme, so committing to a thumb position immediately would guarantee a
- * hydration mismatch. Until mount the pill renders the light state — exactly
- * what the server produced — and slides into place once the theme is known.
+ * Three segments rather than two because `system` is the provider's default and
+ * has to be reachable. A two-state toggle makes the first press a one-way door:
+ * the site is pinned to a colour for good and can never follow the operating
+ * system again, which is exactly the state most visitors arrive in.
+ *
+ * The `mounted` guard is not ceremony: the server cannot know the stored
+ * preference, so committing to a thumb position immediately would guarantee a
+ * hydration mismatch. Until mount the control shows `system` — the default the
+ * provider is configured with, and therefore what the server's HTML implies.
+ *
+ * Buttons with `aria-pressed`, not a radio group: these are Tab-reachable one
+ * by one, which is what a group of buttons promises. A radio group would owe
+ * the visitor arrow-key navigation and a roving tabindex that this does not
+ * implement.
  */
 export function ThemeToggle() {
   const t = useTranslations('ThemeSwitch')
-  const { resolvedTheme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
   const isMounted = useIsMounted()
 
-  const isDark = isMounted && resolvedTheme === 'dark'
-  const nextTheme = isDark ? 'light' : 'dark'
+  const active: ThemeOption = isMounted && isThemeOption(theme) ? theme : 'system'
 
   return (
-    <button
-      type="button"
+    <div
+      role="group"
       data-testid="theme-toggle"
-      // The name stays the same in both states: a control whose accessible name
+      // The name stays the same in every state: a control whose accessible name
       // flips is announced as a different control every time it is used.
       aria-label={t('label')}
-      // Announces what the control switches *to*, which is what someone needs
-      // before activating it.
-      title={t(isMounted ? nextTheme : 'label')}
-      onClick={() => {
-        setTheme(nextTheme)
-      }}
-      className="relative flex cursor-pointer items-center rounded-full border border-white/20 bg-white/5 p-1"
+      className="relative flex items-center rounded-full border border-white/20 bg-white/5 p-1"
     >
       <span
         aria-hidden="true"
         className={cn(
-          'bg-brand-lime absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] rounded-full transition-transform duration-[450ms] ease-[cubic-bezier(.3,1.35,.4,1)]',
-          isDark ? 'translate-x-full' : 'translate-x-0',
+          'bg-brand-lime absolute top-1 bottom-1 left-1 w-[calc((100%-8px)/3)] rounded-full',
+          'transition-transform duration-[450ms] ease-[cubic-bezier(.3,1.35,.4,1)]',
+          active === 'system' && 'translate-x-full',
+          active === 'dark' && 'translate-x-[200%]',
         )}
       />
 
-      <span className={cn(LABEL_CLASSNAME, isDark ? 'text-footer-muted' : 'text-[#111110]')}>
-        <span aria-hidden="true" className={cn(DOT_CLASSNAME, 'border-2 border-current')} />
-        {t('light')}
-      </span>
+      {OPTIONS.map((option) => {
+        const isActive = option === active
 
-      <span className={cn(LABEL_CLASSNAME, isDark ? 'text-[#111110]' : 'text-footer-muted')}>
-        <span aria-hidden="true" className={cn(DOT_CLASSNAME, 'bg-current')} />
-        {t('dark')}
-      </span>
-    </button>
+        return (
+          <button
+            key={option}
+            type="button"
+            data-testid={`theme-option-${option}`}
+            aria-pressed={isActive}
+            onClick={() => {
+              setTheme(option)
+            }}
+            className={cn(
+              OPTION_CLASSNAME,
+              // The active label sits on the thumb, so it takes the dark ink
+              // and the thumb supplies its contrast.
+              isActive ? 'text-[#111110]' : 'text-footer-muted hover:text-footer-foreground',
+            )}
+          >
+            {/* Outline, half, solid: the dot says the same thing as the label
+                and the thumb, for anyone reading the shapes rather than the
+                words. Decoration — `aria-pressed` does the announcing. */}
+            {option === 'light' && (
+              <span aria-hidden="true" className={cn(DOT_CLASSNAME, 'border-2 border-current')} />
+            )}
+            {option === 'system' && (
+              <span
+                aria-hidden="true"
+                className={cn(DOT_CLASSNAME, 'relative overflow-hidden border-2 border-current')}
+              >
+                <span className="absolute inset-y-0 left-0 w-1/2 bg-current" />
+              </span>
+            )}
+            {option === 'dark' && (
+              <span aria-hidden="true" className={cn(DOT_CLASSNAME, 'bg-current')} />
+            )}
+
+            {t(option)}
+          </button>
+        )
+      })}
+    </div>
   )
 }

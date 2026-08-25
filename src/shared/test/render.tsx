@@ -50,7 +50,11 @@ export function renderWithProviders(
     return (
       <NextIntlClientProvider locale={locale} messages={messagesByLocale[locale]} timeZone="UTC">
         <QueryClientProvider client={queryClient}>
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          {/* The same configuration the app ships, so a test cannot pass
+              against a provider the visitor never meets. `matchMedia` is
+              stubbed to report "not dark" in setup.ts, which is what makes
+              `system` resolve to light deterministically here. */}
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             {children}
           </ThemeProvider>
         </QueryClientProvider>
