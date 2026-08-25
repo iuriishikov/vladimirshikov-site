@@ -5,7 +5,13 @@ import { expect, routes, test } from './fixtures/test'
  * in text direction-independent ways (link text, abbreviations, form labels),
  * plus one inner page to cover the shared layout in a non-root context.
  */
-const SCANNED_ROUTES = [routes.home.ru, routes.home.en, routes.about.ru]
+const SCANNED_ROUTES = [
+  routes.home.ru,
+  routes.home.en,
+  routes.about.ru,
+  routes.caseStudy,
+  routes.note,
+]
 
 test.describe('accessibility', () => {
   for (const route of SCANNED_ROUTES) {

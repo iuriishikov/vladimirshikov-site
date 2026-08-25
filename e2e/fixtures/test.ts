@@ -45,8 +45,13 @@ export const routes = {
   root: '/',
   home: { ru: '/ru', en: '/en' },
   about: { ru: '/ru/about', en: '/en/about' },
-  /** The page that renders the contact form. */
-  contact: '/ru',
+  /**
+   * The contact form lives on the secondary About page: the portfolio's own
+   * contact call-to-action is a mailto link, not a form.
+   */
+  contact: '/ru/about',
+  caseStudy: '/ru/cases/loremova',
+  note: '/ru/notes/n1',
   health: '/api/health',
   robots: '/robots.txt',
   sitemap: '/sitemap.xml',
