@@ -1,12 +1,32 @@
 import type { MetadataRoute } from 'next'
 
+import { CASE_STUDIES } from '@/entities/case-study'
 import { env } from '@/shared/config/env'
 import { localeHreflang, routing } from '@/shared/i18n/routing'
 
-/** Locale-less paths that should appear in the sitemap, with their priority. */
+/** The notes the blog section links to. Keep in sync with `Blog.items`. */
+const NOTE_IDS = ['n1', 'n2', 'n3']
+
+/**
+ * Locale-less paths that should appear in the sitemap, with their priority.
+ *
+ * The portfolio is one page, so its sections are anchors rather than entries —
+ * a crawler that follows `#cases` would only find the page it is already on.
+ * The case and note pages are real routes and do belong here.
+ */
 const ROUTES = [
   { path: '', priority: 1, changeFrequency: 'monthly' as const },
-  { path: '/about', priority: 0.8, changeFrequency: 'yearly' as const },
+  { path: '/about', priority: 0.5, changeFrequency: 'yearly' as const },
+  ...CASE_STUDIES.map((study) => ({
+    path: `/cases/${study.slug}`,
+    priority: 0.8,
+    changeFrequency: 'monthly' as const,
+  })),
+  ...NOTE_IDS.map((id) => ({
+    path: `/notes/${id}`,
+    priority: 0.6,
+    changeFrequency: 'monthly' as const,
+  })),
 ]
 
 /**
