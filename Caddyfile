@@ -1,0 +1,96 @@
+# -----------------------------------------------------------------------------
+# Edge configuration. Mounted read-only into the caddy container by
+# docker-compose.yml; SITE_DOMAIN, ACME_EMAIL and X_ROBOTS_TAG come from the
+# .env file beside that compose file.
+#
+# Caddy obtains and renews certificates itself. Everything it needs to remember
+# lives in the caddy_data volume — treat that volume as state, not cache.
+#
+# After editing: docker compose -f docker-compose.yml exec caddy \
+#                  caddy reload --config /etc/caddy/Caddyfile
+# -----------------------------------------------------------------------------
+
+{
+	email {$ACME_EMAIL}
+
+	# The admin API stays on its default localhost:2019 *inside* the container.
+	# It is not published, so it is only reachable via `docker compose exec`,
+	# which is exactly what `caddy reload` needs.
+	#
+	# No `trusted_proxies` is configured on purpose: Caddy is the outermost hop,
+	# so it must keep ignoring inbound X-Forwarded-* headers. Add the upstream
+	# CIDR here — and only then — if a CDN is ever put in front of it.
+}
+
+# Response headers added at the edge. The application sets its own security
+# headers in next.config.ts and a nonce-bearing CSP in middleware, so this
+# snippet only fills gaps: `?` writes a header solely when the upstream did not
+# send one, which keeps the app authoritative and this file a safety net.
+(edge-headers) {
+	header {
+		-Server
+		?Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+		?X-Content-Type-Options "nosniff"
+		?Referrer-Policy "strict-origin-when-cross-origin"
+		?Cross-Origin-Opener-Policy "same-origin"
+		# Not something Next.js emits. On staging this is set to
+		# "noindex, nofollow, noarchive" by docker-compose.staging.yml.
+		X-Robots-Tag "{$X_ROBOTS_TAG:index, follow}"
+	}
+}
+
+(app-proxy) {
+	reverse_proxy web:3000 {
+		# X-Forwarded-For/Proto/Host are set by Caddy already; the app reads
+		# X-Real-IP for rate limiting and logging.
+		header_up X-Real-IP {remote_host}
+
+		# Give the origin a moment on a cold start rather than turning a slow
+		# first render into a 502.
+		transport http {
+			dial_timeout 5s
+			response_header_timeout 30s
+		}
+	}
+}
+
+https://{$SITE_DOMAIN} {
+	import edge-headers
+
+	encode zstd gzip
+
+	# The health endpoint is polled every few seconds by deploy scripts and
+	# uptime monitors. Logging it buries everything that matters.
+	@health path /api/health
+	log_skip @health
+
+	import app-proxy
+
+	log {
+		# stdout, so `docker compose logs` and the json-file driver's rotation
+		# limits are the single place log volume is controlled.
+		output stdout
+		format json
+		level INFO
+	}
+}
+
+# Declaring the plaintext site replaces Caddy's implicit HTTP→HTTPS redirect,
+# which is fine because the redirect is reinstated below. The point is to let an
+# internal monitor reach /api/health over plain HTTP without a certificate.
+http://{$SITE_DOMAIN} {
+	@health path /api/health
+	handle @health {
+		import app-proxy
+	}
+
+	handle {
+		redir https://{host}{uri} permanent
+	}
+
+	log {
+		output stdout
+		format json
+		level WARN
+	}
+}

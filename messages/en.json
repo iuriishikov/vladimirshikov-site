@@ -1,0 +1,96 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov",
+      "description": "The personal site of Vladimir Shikov."
+    },
+    "about": {
+      "title": "About",
+      "description": "A short introduction to Vladimir Shikov and his work."
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "There is nothing at this address."
+    }
+  },
+  "Common": {
+    "skipToContent": "Skip to main content",
+    "loading": "Loading…",
+    "retry": "Try again",
+    "close": "Close"
+  },
+  "Header": {
+    "brand": "Vladimir Shikov",
+    "navigationLabel": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "nav": {
+      "home": "Home",
+      "about": "About"
+    }
+  },
+  "Footer": {
+    "rights": "© {year} Vladimir Shikov",
+    "builtWith": "Built with Next.js"
+  },
+  "ThemeSwitch": {
+    "label": "Colour theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "LocaleSwitch": {
+    "label": "Language"
+  },
+  "Hero": {
+    "eyebrow": "Project scaffold",
+    "title": "The foundation is ready",
+    "subtitle": "Architecture, quality gates and deployment are already in place. All that is missing is the content.",
+    "cta": "About me",
+    "secondaryCta": "Source code"
+  },
+  "AuthorCard": {
+    "role": "Software engineer",
+    "location": "Russia",
+    "bio": "I build products worth shipping — from the architecture down to production.",
+    "sinceLabel": "Working since"
+  },
+  "ContactForm": {
+    "title": "Stay in touch",
+    "description": "Leave your address and I will write when there is something worth reading here.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Subscribe",
+    "submitting": "Sending…",
+    "success": "Done. Check your inbox.",
+    "unexpectedError": "Something went wrong. Please try again.",
+    "validation": {
+      "emailRequired": "Enter an email address",
+      "emailInvalid": "That does not look like an email address",
+      "emailTooLong": "That address is too long"
+    }
+  },
+  "StatusBadge": {
+    "label": "Service status",
+    "healthy": "Operational",
+    "unhealthy": "Unavailable",
+    "checking": "Checking…",
+    "uptime": "Up {value}"
+  },
+  "About": {
+    "title": "About",
+    "lead": "This page exists to exercise the second localised branch of the router.",
+    "body": "The content will follow. Everything around it already works: locale routing, metadata, theming and accessibility."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The link may be out of date, or the address may have a typo.",
+    "backHome": "Back to the home page"
+  },
+  "ErrorBoundary": {
+    "title": "Something broke",
+    "description": "The error has been logged. You can try again.",
+    "retry": "Try again",
+    "digest": "Error reference: {digest}"
+  }
+}

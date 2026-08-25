@@ -1,0 +1,89 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  "editor.rulers": [100],
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.bracketPairColorization.enabled": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "files.trimTrailingWhitespace": false
+  },
+  "[yaml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  "prettier.requireConfig": true,
+  "prettier.configPath": "prettier.config.mjs",
+
+  "eslint.useFlatConfig": true,
+  "eslint.runtime": "node",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+
+  "tailwindCSS.experimental.configFile": "src/app/_styles/globals.css",
+  "tailwindCSS.classFunctions": ["cn", "cva", "clsx", "twMerge", "tv"],
+  "tailwindCSS.includeLanguages": { "typescriptreact": "javascript" },
+  "css.lint.unknownAtRules": "ignore",
+
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "package.json": ".npmrc, pnpm-lock.yaml, pnpm-workspace.yaml, .nvmrc, .node-version, knip.json, commitlint.config.mjs, lint-staged.config.mjs, .releaserc.json, CHANGELOG.md",
+    "tsconfig.json": "next-env.d.ts, tsconfig.*.json",
+    "next.config.ts": "postcss.config.mjs, lighthouserc.json",
+    "eslint.config.mjs": "prettier.config.mjs, .prettierignore, .editorconfig, .secretlintrc.json",
+    "vitest.config.ts": "playwright.config.ts",
+    "README.md": "CONTRIBUTING.md, CODE_OF_CONDUCT.md, SECURITY.md, LICENSE, CLAUDE.md",
+    ".env.example": ".env, .env.local, .env.*.local",
+    "*.tsx": "$(capture).test.tsx, $(capture).stories.tsx, $(capture).module.css",
+    "*.ts": "$(capture).test.ts"
+  },
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/.pnpm-store": true,
+    "**/coverage": true,
+    "**/playwright-report": true,
+    "**/test-results": true,
+    "**/storybook-static": true,
+    "**/reports": true,
+    "**/pnpm-lock.yaml": true,
+    "**/CHANGELOG.md": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.next/**": true,
+    "**/coverage/**": true,
+    "**/playwright-report/**": true,
+    "**/test-results/**": true,
+    "**/storybook-static/**": true
+  },
+
+  "npm.packageManager": "pnpm",
+  "git.branchProtection": ["main", "develop"],
+  "git.inputValidationLength": 100,
+  "git.inputValidationSubjectLength": 100
+}

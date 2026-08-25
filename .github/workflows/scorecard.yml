@@ -1,0 +1,64 @@
+name: OSSF Scorecard
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Saturday 05:41 UTC — weekly is the finest granularity Scorecard's
+    # published results support.
+    - cron: "41 5 * * 6"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scorecard-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  analysis:
+    name: analysis
+    # Scorecard scores open-source posture and publishes the result publicly.
+    # On a private repository it has nothing to measure and no way to publish,
+    # and the SARIF upload additionally requires Advanced Security.
+    if: ${{ github.event.repository.private == false }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      # Publishing the result to the OpenSSF API is done with a Sigstore-signed
+      # OIDC token rather than a long-lived credential.
+      id-token: write
+      # Scorecard's findings are surfaced as code-scanning alerts.
+      security-events: write
+      # The Branch-Protection and Token-Permissions checks read workflow metadata.
+      actions: read
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Run analysis
+        uses: ossf/scorecard-action@v2
+        with:
+          results_file: results.sarif
+          results_format: sarif
+          # Publishing makes the score visible on deps.dev and the OpenSSF
+          # dashboard, which is the point of running it at all.
+          publish_results: true
+
+      - name: Upload the raw SARIF
+        uses: actions/upload-artifact@v7
+        with:
+          name: scorecard-results
+          path: results.sarif
+          retention-days: 5
+          if-no-files-found: error
+
+      - name: Upload to code scanning
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: results.sarif
+          category: ossf-scorecard

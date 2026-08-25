@@ -1,0 +1,77 @@
+name: Feature request
+description: Propose something the site should be able to do.
+title: "feat: "
+labels:
+  - enhancement
+  - triage
+assignees:
+  - iuriishikov
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem before the solution. A proposal that starts from a
+        real need is easier to accept, refine, or decline for a stated reason.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: Who is inconvenienced today, and how? Avoid naming an implementation here.
+      placeholder: Visitors arriving from a Russian search result land on /en because the browser language wins over the search locale.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+      description: What the site should do instead, described from the visitor's side.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Where this most likely belongs
+      description: The FSD layer you expect to hold the change. A guess is fine — it helps sizing, it is not binding.
+      options:
+        - app (routing, layouts, providers)
+        - views (a page composition)
+        - widgets (a self-contained block of a page)
+        - features (a user action)
+        - entities (a domain object)
+        - shared (ui kit, config, utilities)
+        - not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+      description: Including doing nothing. Say why each one is worse.
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: How we would know it works
+      description: Observable criteria, ideally ones a test could assert.
+      value: |
+        - [ ] …
+        - [ ] …
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched the existing issues and this is not a duplicate.
+          required: true
+        - label: This affects both locales, or I have said which one it applies to.
+          required: true

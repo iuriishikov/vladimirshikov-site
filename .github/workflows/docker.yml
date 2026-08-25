@@ -1,0 +1,178 @@
+name: Docker image
+
+# Reusable: this workflow has no triggers of its own. deploy.yml calls it.
+on:
+  workflow_call:
+    inputs:
+      image_tag:
+        description: >
+          Additional, human-meaningful tag for the image, e.g. `staging` or
+          `v1.4.0`. Digest- and ref-derived tags are always applied on top.
+        required: true
+        type: string
+      environment:
+        description: >
+          Target environment (`staging` or `production`). It selects the GitHub
+          Environment to read variables from and scopes the build cache. It does
+          NOT change the image contents: the origin and the tier are read at
+          runtime (SITE_URL, APP_ENV), so the same artefact is valid everywhere.
+        required: true
+        type: string
+      push:
+        description: Push to GHCR. Set false to build-only, e.g. to validate a Dockerfile change.
+        required: false
+        type: boolean
+        default: true
+    outputs:
+      image:
+        description: Image repository without a tag, e.g. ghcr.io/iuriishikov/vladimirshikov-site.
+        value: ${{ jobs.build.outputs.image }}
+      digest:
+        description: Immutable digest of the pushed multi-arch image index.
+        value: ${{ jobs.build.outputs.digest }}
+      version:
+        description: Primary tag chosen by docker/metadata-action.
+        value: ${{ jobs.build.outputs.version }}
+      image_ref:
+        description: Fully qualified, digest-pinned reference to deploy.
+        value: ${{ jobs.build.outputs.image_ref }}
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: build and push
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    # NEXT_PUBLIC_* values are inlined into the client bundle by `next build`,
+    # so the image is environment-specific and the build must be able to read
+    # that environment's variables. On `production` this means the reviewer
+    # approves the build and, separately, the rollout in deploy.yml — the two
+    # are independently revocable.
+    environment: ${{ inputs.environment }}
+    permissions:
+      contents: read
+      # Push to GHCR.
+      packages: write
+      # Sigstore keyless signing for the build provenance attestation.
+      id-token: write
+      attestations: write
+
+    outputs:
+      image: ${{ steps.names.outputs.image }}
+      digest: ${{ steps.build.outputs.digest }}
+      version: ${{ steps.meta.outputs.version }}
+      image_ref: ${{ steps.ref.outputs.image_ref }}
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      # GHCR rejects an uppercase path, and github.repository preserves the
+      # owner's casing, so the name is lowercased once here and reused.
+      - name: Derive the image name
+        id: names
+        run: echo "image=ghcr.io/${GITHUB_REPOSITORY,,}" >> "$GITHUB_OUTPUT"
+
+      # linux/arm64 is emulated on the amd64 runner; without QEMU the arm64 leg
+      # cannot execute the build stage at all.
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v4
+        with:
+          platforms: arm64
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Log in to GHCR
+        if: ${{ inputs.push }}
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Derive tags and labels
+        id: meta
+        uses: docker/metadata-action@v6
+        with:
+          images: ${{ steps.names.outputs.image }}
+          tags: |
+            type=sha,format=long,prefix=sha-
+            type=ref,event=branch
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=${{ inputs.image_tag }}
+            type=raw,value=latest,enable={{is_default_branch}}
+          labels: |
+            org.opencontainers.image.title=vladimirshikov-site
+            org.opencontainers.image.description=Personal site of Vladimir Shikov
+            org.opencontainers.image.vendor=Vladimir Shikov
+            org.opencontainers.image.licenses=MIT
+
+      - name: Build and push
+        id: build
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: ${{ inputs.push }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          annotations: ${{ steps.meta.outputs.annotations }}
+          # Scoped per environment so a staging build cannot poison the
+          # production cache, and vice versa.
+          cache-from: type=gha,scope=${{ inputs.environment }}
+          cache-to: type=gha,mode=max,scope=${{ inputs.environment }}
+          # In-toto provenance and an SPDX SBOM, both attached to the image
+          # index in the registry.
+          provenance: mode=max
+          sbom: true
+          # Only genuinely build-time values belong here. Anything that differs
+          # between staging and production is read from the environment at
+          # runtime instead, which is what keeps one image valid for both.
+          build-args: |
+            NEXT_PUBLIC_ANALYTICS_DOMAIN=${{ vars.NEXT_PUBLIC_ANALYTICS_DOMAIN }}
+            SKIP_ENV_VALIDATION=1
+
+      # A digest-pinned reference is what deploy.yml ships: a tag can be moved,
+      # a digest cannot.
+      - name: Compose the digest-pinned reference
+        id: ref
+        env:
+          IMAGE: ${{ steps.names.outputs.image }}
+          DIGEST: ${{ steps.build.outputs.digest }}
+        run: echo "image_ref=${IMAGE}@${DIGEST}" >> "$GITHUB_OUTPUT"
+
+      # Signed with a short-lived OIDC identity and pushed to the registry
+      # alongside the image, so `gh attestation verify` works against the digest
+      # without needing this repository's workflow run to still exist.
+      - name: Attest build provenance
+        if: ${{ inputs.push }}
+        uses: actions/attest-build-provenance@v4
+        with:
+          subject-name: ${{ steps.names.outputs.image }}
+          subject-digest: ${{ steps.build.outputs.digest }}
+          push-to-registry: true
+
+      - name: Summarise
+        env:
+          IMAGE_REF: ${{ steps.ref.outputs.image_ref }}
+          TAGS: ${{ steps.meta.outputs.tags }}
+        run: |
+          set -euo pipefail
+          {
+            echo "### Image"
+            echo
+            echo '```'
+            echo "$IMAGE_REF"
+            echo '```'
+            echo
+            echo "**Tags**"
+            echo
+            echo '```'
+            echo "$TAGS"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

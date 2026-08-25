@@ -1,0 +1,49 @@
+# -----------------------------------------------------------------------------
+# Staging overrides. Layered on top of docker-compose.yml, never used alone:
+#
+#   docker compose -f docker-compose.yml -f docker-compose.staging.yml up -d --wait
+#
+# Two things differ from production and both matter:
+#
+#  1. The tier. The origin and the deployment tier are read at runtime, so the
+#     same image serves both environments and staging only has to be told which
+#     one it is. The default image tag below simply points at the build CI
+#     publishes from `develop`.
+#  2. Indexing. Staging serves the same content as production; without an
+#     explicit X-Robots-Tag it competes with the real site in search results.
+# -----------------------------------------------------------------------------
+services:
+  web:
+    image: ${IMAGE:-ghcr.io/iuriishikov/vladimirshikov-site:develop}
+    container_name: vladimirshikov-web-staging
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      HOSTNAME: 0.0.0.0
+      # Pinned here rather than trusted to the host's .env: a staging box that
+      # inherits the production default serves an indexable robots.txt and
+      # production's canonical URLs.
+      APP_ENV: staging
+    # A staging box is small and shared. Half the production budget is enough
+    # for smoke tests and keeps the host responsive when a build runs beside it.
+    deploy:
+      resources:
+        limits:
+          cpus: "0.75"
+          memory: 512m
+        reservations:
+          memory: 128m
+
+  caddy:
+    container_name: vladimirshikov-caddy-staging
+    environment:
+      SITE_DOMAIN: ${SITE_DOMAIN}
+      ACME_EMAIL: ${ACME_EMAIL}
+      # Applied by the Caddyfile to every response, including ones the app
+      # itself does not annotate (static assets, error pages).
+      X_ROBOTS_TAG: "noindex, nofollow, noarchive"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: 128m

@@ -1,0 +1,91 @@
+# -----------------------------------------------------------------------------
+# Everything here is excluded from the build context. Smaller context = faster
+# uploads and, more importantly, fewer accidental cache invalidations: a change
+# to a test file must not rebuild the image.
+#
+# This is a denylist. Anything the build genuinely needs (package.json,
+# pnpm-lock.yaml, pnpm-workspace.yaml, .npmrc, tsconfig.json, next.config.ts,
+# postcss.config.mjs, src/, public/) is therefore kept by omission.
+# -----------------------------------------------------------------------------
+
+# --- Dependencies & build output ---------------------------------------------
+node_modules
+**/node_modules
+.pnpm-store
+.next
+out
+build
+dist
+*.tsbuildinfo
+
+# --- Version control & CI ----------------------------------------------------
+.git
+.gitignore
+.gitattributes
+.github
+.husky
+.claude
+
+# --- Secrets: never let a local env file reach the build context -------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Tests, fixtures and their reports ---------------------------------------
+e2e
+tests
+__tests__
+__mocks__
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+coverage
+playwright-report
+playwright/.cache
+test-results
+reports
+.lighthouseci
+playwright.config.ts
+vitest.config.ts
+vitest.setup.ts
+
+# --- Storybook ---------------------------------------------------------------
+.storybook
+storybook-static
+**/*.stories.ts
+**/*.stories.tsx
+**/*.mdx
+
+# --- Tooling configs not read by `next build` --------------------------------
+eslint.config.mjs
+prettier.config.mjs
+.prettierignore
+commitlint.config.mjs
+lint-staged.config.mjs
+knip.json
+lighthouserc.json
+.releaserc.json
+.secretlintrc.json
+.editorconfig
+
+# --- Docs & operations -------------------------------------------------------
+docs
+*.md
+LICENSE
+Makefile
+Dockerfile
+.dockerignore
+docker-compose*.yml
+Caddyfile
+scripts
+
+# --- Editor / OS noise -------------------------------------------------------
+.idea
+.vscode
+.DS_Store
+Thumbs.db
+*.swp
+*.log

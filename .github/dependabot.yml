@@ -1,0 +1,41 @@
+# Dependabot covers the GitHub Actions ecosystem only. npm and Docker belong to
+# Renovate (.github/renovate.json5), which understands pnpm's lockfile, can group
+# related packages and honours the repository's minimum release age.
+#
+# Actions are listed here as well as in Renovate deliberately: Renovate needs its
+# GitHub App installed on the repository, Dependabot does not. If the app is ever
+# uninstalled, action versions keep moving instead of quietly freezing. Whichever
+# bot opens the pull request first, the other closes its duplicate on the next run.
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "05:00"
+      timezone: Europe/Moscow
+    open-pull-requests-limit: 5
+    commit-message:
+      # `include: scope` is what makes Dependabot write `build(deps): bump …`
+      # rather than a bare `build:`. Without it the scope is absent and
+      # .releaserc.json's `{ type: build, scope: deps } -> patch` rule never
+      # matches, so action bumps would silently produce no release.
+      # `prefix-development` is deliberately unset: the Actions ecosystem has no
+      # development dependencies, and its `(deps-dev)` scope is not in the
+      # commitlint scope enum.
+      prefix: build
+      include: scope
+    labels:
+      - dependencies
+      - "area: ci"
+    groups:
+      # One pull request for the routine bumps; a major version arrives on its
+      # own, because it is the one that needs reading.
+      actions-minor:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch

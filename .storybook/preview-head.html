@@ -1,0 +1,35 @@
+<style>
+  /*
+    The preview iframe paints its own canvas. Storybook's default is white, so a
+    story rendered with the dark theme selected would put light text on a white
+    sheet and read as broken. The `var(..., fallback)` form takes the app's own
+    token once globals.css has loaded, and still paints something sane on the
+    very first frame before it has.
+  */
+  html {
+    background-color: var(--color-background, #ffffff);
+    color: var(--color-foreground, #0a0a0a);
+    color-scheme: light;
+  }
+
+  /* next-themes writes `class="dark"`, matching globals.css's dark variant. */
+  html.dark {
+    background-color: var(--color-background, #0a0a0a);
+    color: var(--color-foreground, #fafafa);
+    color-scheme: dark;
+  }
+
+  /* Let the html background show through instead of Storybook's own white. */
+  body {
+    background-color: transparent;
+  }
+
+  /*
+    `layout: 'centered'` collapses the canvas onto the component, which makes a
+    focus ring or a drop shadow clip at the edge. A little room avoids judging a
+    component by a cropped screenshot.
+  */
+  .sb-main-centered #storybook-root {
+    padding: 1.5rem;
+  }
+</style>

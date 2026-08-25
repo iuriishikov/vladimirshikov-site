@@ -1,0 +1,112 @@
+name: Bug report
+description: Something on the site behaves incorrectly.
+title: "fix: "
+labels:
+  - bug
+  - triage
+assignees:
+  - iuriishikov
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report this.
+
+        If the problem is a security vulnerability, do **not** open an issue —
+        report it privately through the repository's security advisories.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened
+      description: Describe the incorrect behaviour in one or two sentences.
+      placeholder: The locale switcher on /ru/about navigates to /en instead of /en/about.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+      placeholder: Switching to English on /ru/about should land on /en/about.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered, starting from a URL. A reproduction that fails on the first try is more useful than a long description.
+      value: |
+        1. Open https://…
+        2. …
+        3. …
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Page
+      description: The exact URL where this happens, including the locale prefix.
+      placeholder: https://…/ru/about
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - production
+        - staging
+        - local development
+    validations:
+      required: true
+
+  - type: dropdown
+    id: locale
+    attributes:
+      label: Locale
+      options:
+        - ru
+        - en
+        - both
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and operating system
+      placeholder: Safari 18.3 on iOS 18.3 / Firefox 135 on Windows 11
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console or network errors
+      description: Paste anything the browser's developer tools reported. This is rendered as a code block, so no backticks are needed.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description: Screenshots, a recording, or the conditions under which it does *not* happen.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched the existing issues and this is not a duplicate.
+          required: true
+        - label: I can reproduce this on a fresh page load with extensions disabled.
+          required: true

@@ -1,0 +1,128 @@
+# Path-based labels for pull requests, applied by .github/workflows/labeler.yml.
+# The FSD layer labels mirror the layers enforced by eslint-plugin-boundaries, so
+# a reviewer can see from the label list alone how far up the dependency graph a
+# change reaches.
+
+"layer: app":
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/app/**
+          - src/proxy.ts
+          - src/instrumentation.ts
+
+"layer: views":
+  - changed-files:
+      - any-glob-to-any-file: src/views/**
+
+"layer: widgets":
+  - changed-files:
+      - any-glob-to-any-file: src/widgets/**
+
+"layer: features":
+  - changed-files:
+      - any-glob-to-any-file: src/features/**
+
+"layer: entities":
+  - changed-files:
+      - any-glob-to-any-file: src/entities/**
+
+"layer: shared":
+  - changed-files:
+      - any-glob-to-any-file: src/shared/**
+
+"area: i18n":
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/shared/i18n/**
+          - messages/**
+          - "**/*.messages.json"
+
+"area: seo":
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/app/**/sitemap.ts
+          - src/app/**/robots.ts
+          - src/app/**/manifest.ts
+          - src/app/**/opengraph-image.tsx
+          - src/app/**/twitter-image.tsx
+          - src/shared/seo/**
+
+"area: ci":
+  - changed-files:
+      - any-glob-to-any-file:
+          - .github/workflows/**
+          - .github/labeler.yml
+          - .github/dependabot.yml
+          - .github/renovate.json5
+          - lighthouserc.json
+          - .releaserc.json
+
+"area: docker":
+  - changed-files:
+      - any-glob-to-any-file:
+          - Dockerfile
+          - .dockerignore
+          - compose*.y*ml
+          - docker-compose*.y*ml
+          - deploy/**
+          - Caddyfile
+
+"area: config":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "*.config.*"
+          - tsconfig*.json
+          - package.json
+          - pnpm-workspace.yaml
+          - .npmrc
+          - .nvmrc
+          - .node-version
+          - .editorconfig
+
+"area: test":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.test.ts"
+          - "**/*.test.tsx"
+          - "**/*.spec.ts"
+          - "**/*.spec.tsx"
+          - src/shared/test/**
+          - vitest.config.ts
+
+"area: e2e":
+  - changed-files:
+      - any-glob-to-any-file:
+          - e2e/**
+          - playwright.config.ts
+
+"area: ui":
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/shared/ui/**
+          - "**/*.stories.tsx"
+          - .storybook/**
+          - src/app/**/*.css
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.md"
+          - "**/*.mdx"
+          - docs/**
+          - LICENSE
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - package.json
+          - pnpm-lock.yaml
+
+security:
+  - changed-files:
+      - any-glob-to-any-file:
+          - .secretlintrc.json
+          - .github/workflows/codeql.yml
+          - .github/workflows/scorecard.yml
+          - .github/workflows/dependency-review.yml
+          - SECURITY.md
+          - .github/rulesets/**

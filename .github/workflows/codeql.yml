@@ -1,0 +1,55 @@
+name: CodeQL
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+  schedule:
+    # Monday 04:17 UTC. Off the hour, because thousands of repositories schedule
+    # on :00 and GitHub delays over-subscribed slots.
+    - cron: "17 4 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: codeql-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  analyze:
+    name: analyze (javascript-typescript)
+    # Code scanning needs GitHub Advanced Security on a private repository.
+    # Without it the upload step fails with "Advanced Security must be enabled",
+    # which is noise rather than signal — so the job skips instead of going red.
+    # Delete this condition the day the repository becomes public, or GHAS is
+    # enabled for it. See docs/security.md.
+    if: ${{ github.event.repository.private == false }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      # Required to upload the SARIF results to the code-scanning API.
+      security-events: write
+      # CodeQL reads workflow run metadata to attribute alerts to a run.
+      actions: read
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: javascript-typescript
+          # JavaScript and TypeScript need no compilation, so CodeQL extracts
+          # straight from source — no dependency install, no build step.
+          build-mode: none
+          queries: security-and-quality
+
+      - name: Analyze
+        uses: github/codeql-action/analyze@v4
+        with:
+          category: /language:javascript-typescript

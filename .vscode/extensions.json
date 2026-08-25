@@ -1,0 +1,25 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "editorconfig.editorconfig",
+    "ms-playwright.playwright",
+    "vitest.explorer",
+    "yoavbls.pretty-ts-errors",
+    "unifiedjs.vscode-mdx",
+    "redhat.vscode-yaml",
+    "github.vscode-github-actions",
+    "eamodio.gitlens",
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-russian",
+    "usernamehw.errorlens",
+    "ms-azuretools.vscode-docker",
+    "bierner.markdown-mermaid"
+  ],
+  "unwantedRecommendations": [
+    "hookyqr.beautify",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "biomejs.biome"
+  ]
+}

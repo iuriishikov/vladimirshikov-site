@@ -1,0 +1,143 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+
+  extends: [
+    "config:recommended",
+    ":dependencyDashboard",
+    // `config:recommended` would otherwise label dependency updates `fix(deps)`
+    // and everything else `chore(deps)`. This project files them under `build`,
+    // which .releaserc.json maps to a patch release for `build(deps)`.
+    ":semanticCommitTypeAll(build)",
+    "security:openssf-scorecard",
+    // Rewrites `uses: owner/action@v1` to `owner/action@<sha> # v1`, which is
+    // the only form that actually pins what a workflow executes.
+    "helpers:pinGitHubActionDigests"
+  ],
+
+  enabledManagers: ["npm", "dockerfile", "docker-compose", "github-actions"],
+
+  timezone: "Europe/Moscow",
+  // Outside working hours: weekday evenings and nights, plus the whole weekend.
+  // A dependency pull request should never land in the middle of a work session.
+  schedule: ["after 20:00 every weekday", "before 07:00 every weekday", "every weekend"],
+
+  // Conventional Commits, matching commitlint.config.mjs: `build(deps): …`.
+  semanticCommits: "enabled",
+  semanticCommitType: "build",
+  semanticCommitScope: "deps",
+  commitBodyTable: true,
+
+  // A release has to survive three days in public before this repository will
+  // install it. This is the cheapest defence against a compromised publish, and
+  // it complements `minimumReleaseAge: 1440` in pnpm-workspace.yaml, which
+  // enforces the same idea at install time.
+  minimumReleaseAge: "3 days",
+  // Hold updates back until every other check (age, merge confidence) is
+  // satisfied, rather than opening a pull request that then sits pending.
+  internalChecksFilter: "strict",
+
+  rangeStrategy: "bump",
+  // Digests are pinned everywhere they mean something: base images and actions.
+  pinDigests: true,
+  postUpdateOptions: ["pnpmDedupe"],
+
+  labels: ["dependencies"],
+  prConcurrentLimit: 5,
+  prHourlyLimit: 2,
+  rebaseWhen: "conflicted",
+
+  lockFileMaintenance: {
+    enabled: true,
+    schedule: ["before 07:00 on monday"],
+    commitMessageAction: "refresh"
+  },
+
+  // A known vulnerability outranks the quarantine and the schedule.
+  vulnerabilityAlerts: {
+    enabled: true,
+    minimumReleaseAge: null,
+    schedule: ["at any time"],
+    labels: ["dependencies", "security"],
+    prPriority: 10
+  },
+
+  packageRules: [
+    {
+      description: "Next.js, React and their type packages ship as one unit — never split them across pull requests.",
+      groupName: "next and react",
+      matchPackageNames: [
+        "next",
+        "@next/**",
+        "eslint-config-next",
+        "react",
+        "react-dom",
+        "@types/react",
+        "@types/react-dom",
+        "babel-plugin-react-compiler",
+        "eslint-plugin-react-hooks",
+        "next-intl"
+      ],
+      // A framework major is a project decision, not a bot's.
+      automerge: false,
+      addLabels: ["area: config"],
+      schedule: ["before 07:00 on monday"]
+    },
+    {
+      description: "Development dependencies: batch minor and patch updates and let a green CI merge them.",
+      groupName: "dev dependencies",
+      matchManagers: ["npm"],
+      matchDepTypes: ["devDependencies"],
+      matchUpdateTypes: ["minor", "patch"],
+      automerge: true,
+      automergeType: "pr",
+      automergeStrategy: "squash"
+    },
+    {
+      description: "Runtime dependencies always get a human review: they ship to visitors.",
+      matchManagers: ["npm"],
+      matchDepTypes: ["dependencies"],
+      automerge: false
+    },
+    {
+      description: "Every major update is reviewed by a person, whatever it is.",
+      matchUpdateTypes: ["major"],
+      automerge: false,
+      addLabels: ["major"],
+      minimumReleaseAge: "14 days"
+    },
+    {
+      description: "TypeScript 7 is blocked: typescript-eslint 8 only supports <6.1.0. Lift this together with the linter.",
+      matchManagers: ["npm"],
+      matchPackageNames: ["typescript"],
+      allowedVersions: "<6.1.0"
+    },
+    {
+      description: "Node stays on the 24 LTS line across .nvmrc, the Dockerfile and the engines field.",
+      matchPackageNames: ["node", "nodejs/node"],
+      allowedVersions: "<25.0.0"
+    },
+    {
+      description: "The pinned toolchain in `packageManager` and `engines` is changed deliberately, with the lockfile regenerated.",
+      matchDepTypes: ["packageManager", "engines"],
+      automerge: false,
+      addLabels: ["area: config"]
+    },
+    {
+      description: "Container base images: grouped, digest-pinned, and never merged unattended.",
+      matchManagers: ["dockerfile", "docker-compose"],
+      groupName: "container images",
+      automerge: false,
+      addLabels: ["area: docker"]
+    },
+    {
+      description: "GitHub Actions: batch the routine bumps, keep the digests pinned.",
+      matchManagers: ["github-actions"],
+      groupName: "github actions",
+      matchUpdateTypes: ["minor", "patch", "digest"],
+      automerge: true,
+      automergeType: "pr",
+      automergeStrategy: "squash",
+      addLabels: ["area: ci"]
+    }
+  ]
+}

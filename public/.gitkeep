@@ -1,0 +1,3 @@
+# Static assets served from the site root: favicon, images, fonts, /well-known.
+# Kept in git while empty so `next build` and Storybook's staticDirs both have a
+# directory to point at.

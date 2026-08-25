@@ -1,0 +1,71 @@
+name: Lighthouse
+
+on:
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lighthouse-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lighthouse:
+    name: budgets
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      # lighthouserc.json collects http://localhost:3000/ru and /en, so the
+      # build must be told the same origin or the canonical tags will not match
+      # the pages Lighthouse actually loads.
+      SITE_URL: http://localhost:3000
+      APP_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
+      - name: Locate the pnpm store
+        id: store
+        run: echo "path=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache/restore@v6
+        with:
+          path: ${{ steps.store.outputs.path }}
+          key: pnpm-store-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: pnpm-store-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Lighthouse must measure the production bundle. lighthouserc.json starts
+      # the server itself via `startServerCommand`, so this job only has to make
+      # `.next` exist first.
+      - name: next build
+        run: pnpm build
+
+      - name: Collect and assert
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./lighthouserc.json
+          # Reports are uploaded to temporary public storage per lighthouserc.json;
+          # keeping them as an artifact too makes a failed budget diagnosable
+          # after the temporary link expires.
+          uploadArtifacts: true
+          artifactName: lighthouse-report
+        env:
+          # Optional. When the Lighthouse CI GitHub App is installed, this posts
+          # per-category status checks on the pull request; absent, the run still
+          # asserts the budgets and fails the job on its own.
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

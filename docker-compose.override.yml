@@ -1,0 +1,52 @@
+# -----------------------------------------------------------------------------
+# Local development convenience. Docker Compose loads this file automatically
+# whenever you run a bare `docker compose ...` from the repository root, and
+# does NOT load it when files are named explicitly with -f. That is why every
+# server-side command (and scripts/deploy.sh) always passes -f: production is
+# never influenced by this file.
+#
+# What it does: run the production image on http://localhost:3000 with no TLS
+# and no reverse proxy, so you can verify the container itself — standalone
+# output, non-root user, health endpoint — without owning a domain.
+#
+#   make docker-build          # or: pnpm docker:build
+#   IMAGE=vladimirshikov-site:local docker compose up -d --wait
+#   curl -fsS http://localhost:3000/api/health
+#   docker compose down
+#
+# Caddy is parked behind a profile instead of being deleted, because compose
+# has no syntax for removing a service in an override. Start it when you
+# actually want to exercise the proxy: `docker compose --profile proxy up -d`
+# (that path needs SITE_DOMAIN and ACME_EMAIL, and a domain resolving here).
+# -----------------------------------------------------------------------------
+services:
+  web:
+    image: ${IMAGE:-vladimirshikov-site:local}
+    container_name: vladimirshikov-web-local
+    # Bound to the loopback interface only: a laptop on a café network should
+    # not be publishing this.
+    ports:
+      - "127.0.0.1:3000:3000"
+    env_file:
+      - path: .env.local
+        required: false
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      HOSTNAME: 0.0.0.0
+      # docker-compose.yml sets these too, and `environment:` outranks
+      # `env_file:`, so they have to be restated here or the local run would
+      # inherit the production tier instead of the values below. Export them in
+      # the shell to point a local container at another origin.
+      SITE_URL: ${SITE_URL:-http://localhost:3000}
+      APP_ENV: ${APP_ENV:-development}
+    # A laptop has more headroom than the VPS; let the container use it.
+    deploy:
+      resources:
+        limits:
+          cpus: "2.00"
+          memory: 2g
+
+  caddy:
+    profiles:
+      - proxy
