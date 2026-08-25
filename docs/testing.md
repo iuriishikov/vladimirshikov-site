@@ -153,12 +153,24 @@ These exist in the DOM and are the contract between the app and the e2e suite. C
 breaking change to the tests; removing one without updating `e2e/` will fail CI.
 
 ```text
-site-header        site-footer        skip-to-content
-theme-toggle       locale-switcher    status-badge
-hero-title         hero-cta           author-card
-contact-form       contact-form-email      contact-form-submit
-contact-form-error contact-form-success
+Chrome, on every page
+  site-header  site-footer  skip-to-content
+  mobile-nav-toggle  mobile-nav-panel
+  locale-switcher  locale-option-ru  locale-option-en  theme-toggle
+
+Portfolio (the home page)
+  case-card  case-cover  note-card
+  faq-item   reviews-track  reviews-prev  reviews-next
+
+About (the secondary page)
+  author-card  status-badge
+  contact-form  contact-form-email  contact-form-submit
+  contact-form-error  contact-form-success
 ```
+
+The hero name has no test id on purpose: it is the page's `<h1>`, so
+`getByRole('heading', { level: 1 })` says what the assertion actually means and
+fails if the document outline breaks.
 
 ### What belongs in e2e
 
