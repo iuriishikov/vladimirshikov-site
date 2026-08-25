@@ -38,17 +38,20 @@
     "roleA": "Диджитал-дизайнер",
     "roleB": "и арт-директор",
     "placeA": "Живёт в",
-    "placeB": "Лорем, Ипсум",
+    "placeB": "Алматы, Казахстан",
     "scopeA": "Работает",
     "scopeB": "по всему миру",
     "statement": "[Владимир Шиков — lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore]"
+  },
+  "Portrait": {
+    "alt": "Владимир Шиков"
   },
   "Profile": {
     "tag": "[ Обо мне ]",
     "nameLine1": "Владимир",
     "nameLine2": "Шиков",
     "roleLine": "Диджитал-дизайнер и арт-директор",
-    "placeLine": "Лорем, Ипсум — работает по всему миру",
+    "placeLine": "Алматы, Казахстан — работает по всему миру",
     "lead": "[Lorem ipsum dolor sit amet, consectetur adipiscing elit — sed do eiusmod tempor incididunt ut labore et dolore magna aliqua veniam]",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "statValue1": "14+",

@@ -1,9 +1,32 @@
+import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vitest/config'
+import { defineConfig, type Plugin } from 'vitest/config'
+
+/**
+ * Next.js turns a static image import into an object carrying the file's real
+ * width, height and blur placeholder. Vite hands back a bare URL string, and
+ * `next/image` then throws "missing required width property" — so a component
+ * that imports its own artwork could not be rendered in a test at all.
+ *
+ * The dimensions below are arbitrary on purpose: no test asserts them, and
+ * pretending to measure the file would only invite someone to trust the number.
+ */
+const nextStaticImages: Plugin = {
+  name: 'next-static-images',
+  enforce: 'pre',
+  load(id) {
+    if (!/\.(?:avif|gif|jpe?g|png|webp)$/i.test(id)) return null
+
+    const src = `/${path.basename(id.split('?', 1)[0] ?? id)}`
+    const asset = { src, height: 1000, width: 1000, blurDataURL: src, blurHeight: 8, blurWidth: 8 }
+
+    return `export default ${JSON.stringify(asset)}`
+  },
+}
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [nextStaticImages, react()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('src', import.meta.url)),

@@ -1,23 +1,22 @@
 import { describe, expect, it } from 'vitest'
 
-import { renderWithProviders } from '@/shared/test/render'
+import { renderWithProviders, screen } from '@/shared/test/render'
 
 import { Portrait } from './portrait'
 
 describe('Portrait', () => {
-  it('draws the bust on a full-bleed panel', () => {
+  it('shows the portrait on a full-bleed panel', () => {
     renderWithProviders(<Portrait />)
 
-    expect(document.querySelector('canvas')).toBeInTheDocument()
+    expect(screen.getByRole('img', { name: 'Владимир Шиков' })).toBeInTheDocument()
     expect(document.querySelector('section')).toHaveClass('bg-panel')
   })
 
-  it('keeps the sketch out of the accessibility tree', () => {
+  it('names the person in the alternative text', () => {
+    // The band carries no text of its own, so this alt is the only thing a
+    // screen reader has to go on — and an empty one would be an axe violation.
     renderWithProviders(<Portrait />)
 
-    // The band carries no text, so a bare "canvas" would be the only thing a
-    // screen reader could announce here — noise, and an axe violation in the
-    // e2e sweep.
-    expect(document.querySelector('canvas')).toHaveAttribute('aria-hidden', 'true')
+    expect(screen.getByRole('img')).toHaveAccessibleName('Владимир Шиков')
   })
 })

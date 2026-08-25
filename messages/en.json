@@ -38,17 +38,20 @@
     "roleA": "Digital Designer",
     "roleB": "& Art Director",
     "placeA": "Based in",
-    "placeB": "Lorem, Ipsum",
+    "placeB": "Almaty, Kazakhstan",
     "scopeA": "Working",
     "scopeB": "Globally",
     "statement": "[Vladimir Shikov — lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore]"
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
   },
   "Profile": {
     "tag": "[ About ]",
     "nameLine1": "Vladimir",
     "nameLine2": "Shikov",
     "roleLine": "Digital Designer & Art Director",
-    "placeLine": "Lorem, Ipsum — Working Globally",
+    "placeLine": "Almaty, Kazakhstan — Working Globally",
     "lead": "[Lorem ipsum dolor sit amet, consectetur adipiscing elit — sed do eiusmod tempor incididunt ut labore et dolore magna aliqua veniam]",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "statValue1": "14+",
