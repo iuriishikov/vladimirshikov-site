@@ -1,0 +1,285 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov — estratègia, transformació, persones",
+      "description": "Treballo amb propietaris, CEO i equips directius en situacions en què l'empresa afronta la seva següent etapa de creixement."
+    },
+    "about": {
+      "title": "Sobre mi",
+      "description": "Breument, sobre Vladimir Shikov i sobre allò a què es dedica."
+    },
+    "notFound": {
+      "title": "Pàgina no trobada",
+      "description": "Aquí no hi ha cap pàgina com aquesta."
+    }
+  },
+  "Common": {
+    "skipToContent": "Vés al contingut principal",
+    "loading": "S'està carregant…",
+    "retry": "Torna-ho a provar",
+    "close": "Tanca"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Navegació principal",
+    "openMenu": "Obre el menú",
+    "closeMenu": "Tanca el menú",
+    "contact": "Contactar →",
+    "nav": {
+      "home": "Inici",
+      "about": "Sobre mi",
+      "services": "Què faig",
+      "cases": "Projectes",
+      "blog": "Articles"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Soci de",
+    "roleB": "TEAM LEAD",
+    "placeA": "Viu a",
+    "placeB": "Almaty, Kazakhstan",
+    "scopeA": "Treballa amb",
+    "scopeB": "propietaris i CEO",
+    "statement": "Treballo amb propietaris, CEO i equips directius en situacions en què l'empresa afronta la seva següent etapa de creixement."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Sobre mi ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Soci de TEAM LEAD",
+    "placeLine": "Estratègia • Transformació • Persones",
+    "lead": "Ajudo a veure allò que des de dins de l'empresa costa de veure. Darrere d'una qüestió estratègica poques vegades hi ha només estratègia.",
+    "body": "El creixement canvia el que s'exigeix al model de negoci. Un model de negoci nou canvia el que s'exigeix a l'equip. Un equip nou canvia el paper del propietari. Per això miro el negoci alhora a través de tres òptiques: estratègia, organització, persones. I ajudo el propietari a determinar quines decisions poden canviar de debò la trajectòria de l'empresa.",
+    "experience": "La meva trajectòria professional ha passat per tres entorns molt diferents: la consultoria internacional, la gran empresa i les institucions públiques. Vaig dirigir la filial russa d'una companyia internacional d'avaluació de directius, durant més de 12 anys vaig encapçalar PDP Group CIS a Moscou i després vaig assumir una de les línies clau de la transformació del grup Samruk-Kazyna. Avui soc soci de TEAM LEAD, on treballo en estratègia, desenvolupament de negoci, transformació d'equips directius i acompanyament individual de primers executius. També soc membre de la comissió de qualificació del Consell Judicial Suprem de la República del Kazakhstan, on participo en l'avaluació de candidats a càrrecs judicials.",
+    "statValue1": "25+",
+    "statLabel1": "anys de treball amb empreses i els seus directius",
+    "statValue2": "320.000+",
+    "statLabel2": "empleats en el projecte de transformació més gran",
+    "statValue3": "C-level",
+    "statLabel3": "avaluació, desenvolupament i acompanyament de primers executius"
+  },
+  "Questions": {
+    "heading": "Quan soc més útil",
+    "lead": "No quan una empresa necessita un consultor més. Sinó quan davant del propietari o del primer executiu apareix una pregunta que dins del negoci ja no té una resposta evident.",
+    "closing": "En aquestes situacions la meva tasca és crear espai per a una anàlisi serena i ajudar a convertir la complexitat en unes quantes decisions clares.",
+    "items": {
+      "q1": "Cap on hem d'anar a partir d'ara?",
+      "q2": "Quin model de negoci sostindrà la següent etapa de creixement?",
+      "q3": "És capaç l'equip actual d'executar la nova estratègia?",
+      "q4": "Qui pot ser el pròxim primer executiu?",
+      "q5": "Què cal canviar a l'empresa — i què cal que el propietari canviï en el seu propi paper?"
+    }
+  },
+  "Services": {
+    "heading": "Què faig",
+    "lead": "Quatre àmbits que, a la pràctica, gairebé sempre resulten ser un mateix problema mirat des de costats diferents.",
+    "items": {
+      "s1": {
+        "title": "Estratègia",
+        "description": "Sessions estratègiques i elaboració de l'estratègia de creixement. No començo per les eines i les plantilles, sinó pel mercat, l'economia del negoci, l'ambició del propietari, les restriccions i les oportunitats. L'estratègia no comença amb una llista d'iniciatives, sinó amb la resposta a una pregunta: a què estem disposats a renunciar per allò que de debò importa?"
+      },
+      "s2": {
+        "title": "Transformació",
+        "description": "El camí del model de gestió d'avui cap al que caldrà demà: l'estructura, la cultura corporativa, el sistema de gestió, els papers dels directius, els mecanismes de decisió, les persones. Aquesta experiència inclou tant empreses privades com les estructures corporatives i estatals més grans."
+      },
+      "s3": {
+        "title": "Propietari i CEO",
+        "description": "Un primer executiu sempre té preguntes que no es poden delegar del tot: l'estratègia, l'equip, el successor, una crisi, un negoci nou, el seu propi paper a l'empresa. No prenc la decisió en lloc del propietari — l'ajudo a veure la situació des de l'altura en què la decisió es torna evident."
+      },
+      "s4": {
+        "title": "Equip i successió",
+        "description": "L'estratègia defineix què ha d'arribar a ser l'empresa, però qui la duu a terme són persones concretes. Ajudo a entendre qui és capaç de portar l'empresa endavant, on hi ha el potencial real dels directius, a qui es pot confiar més responsabilitat i qui algun dia pot ocupar el primer lloc."
+      }
+    }
+  },
+  "Works": {
+    "heading": "L'escala importa",
+    "lead": "Tres projectes que mostren la mida dels problemes amb què m'ha tocat treballar.",
+    "viewCase": "Obre el projecte: {name}",
+    "meta": "Projecte",
+    "back": "Torna a l'inici",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformació de la cultura corporativa",
+        "tag": "12 empreses · 320.000+ empleats",
+        "summary": "Transformació de la cultura corporativa del grup Samruk-Kazyna — 12 companyies nacionals i més de 320.000 empleats.",
+        "detail": "Es va crear una metodologia única de diagnòstic i gestió de la cultura corporativa, es van definir els comportaments objectiu i es van elaborar els fulls de ruta de la transformació per a cada companyia."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Desenvolupament de directius de producció",
+        "tag": "Reconegut com a millor pràctica",
+        "summary": "Programa de desenvolupament de directius de producció de Philip Morris Ukraine.",
+        "detail": "En tres anys les competències dels directius van assolir el nivell objectiu i, després d'això, el pressupost de formació addicional es va reduir a zero. El projecte va ser reconegut com a millor pràctica i recomanat a les altres oficines de la companyia."
+      },
+      "atom": {
+        "name": "Indústria nuclear",
+        "caption": "Una estratègia a quaranta anys per a un sector nou",
+        "tag": "Rússia",
+        "summary": "Elaboració d'una estratègia de creixement a quaranta anys per a un sector nou a Rússia, sobre la base de la capacitat instal·lada d'energia nuclear.",
+        "detail": "Participació en l'elaboració de l'estratègia d'un sector nou en un horitzó de quaranta anys, sobre la base de la capacitat d'energia nuclear ja existent."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Empreses",
+    "headingLine2": "i institucions",
+    "lead": "Al llarg dels anys la feina ha passat per corporacions internacionals, grans empreses privades i institucions públiques.",
+    "marqueeLabel": "Empreses i institucions",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Tribunal Suprem del Kazakhstan"
+    }
+  },
+  "Education": {
+    "heading": "Formació",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Universitat Estatal de Moscou Lomonóssov",
+        "degree": "Facultat de Psicologia"
+      },
+      "e2": {
+        "school": "Escola Superior Politicomilitar de Tropes de Frontera del KGB de l'URSS",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Articles",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Assaig]",
+        "meta": "Creixement de l'empresa",
+        "title": "De petita a mitjana. De mitjana a gran",
+        "excerpt": "En un moment determinat, allò que més limita una empresa és la manera com es dirigeix."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Assaig",
+    "back": "Torna a l'inici",
+    "growth": {
+      "title": "De petita a mitjana. De mitjana a gran",
+      "lead": "Fa molts anys que observo empreses en etapes de desenvolupament ben diferents, des de negocis dirigits pel fundador fins a les corporacions més grans. I com més en veig, més sovint torno a una idea força senzilla.",
+      "p1": "En principi, no hi ha res impossiblement difícil a convertir un negoci petit en un de mitjà, ni un de mitjà en un de gran. Calen, és clar, producte, mercat, diners, persones i una mica de sort.",
+      "p2": "Però la barrera principal del creixement sol ser en un altre lloc. En un moment determinat, allò que més limita una empresa és la manera com es dirigeix.",
+      "h1": "El negoci petit creix gràcies al seu propietari",
+      "p3": "Coneix els clients. Pren ell mateix les decisions clau. Sap de qui es pot fiar. Té olfacte per als diners. Controla la qualitat personalment. En pocs minuts pot canviar una decisió que a una empresa gran li costaria setmanes.",
+      "p4": "I precisament per això el negoci creix. Però arriba un moment en què allò que havia estat el seu avantatge principal comença a limitar qualsevol creixement posterior.",
+      "p5": "L'empresa es fa massa gran per continuar cabent al cap d'una sola persona. I aquesta, al meu entendre, és la primera bifurcació de debò.",
+      "h2": "Per esdevenir mitjana, el propietari ha de deixar anar una part del negoci",
+      "p6": "Això és molt més difícil del que sembla. Cal deixar de prendre personalment centenars de decisions. Trobar persones que en algunes coses hi entendran més que tu. Donar-los no només les tasques, sinó també el dret a equivocar-se.",
+      "p7": "Apareixen l'estructura, la responsabilitat, els indicadors, les regles, la gestió regular. I aquí sorgeix una paradoxa: per mantenir el control d'un negoci que creix, el propietari ha de renunciar a una part del control directe.",
+      "p8": "Els qui no ho fan sovint es queden durant anys en un negoci petit molt bo. Els qui se'n surten es converteixen en empreses mitjanes.",
+      "h3": "El pas de mitjana a gran funciona d'una altra manera",
+      "p9": "Aquí ja no n'hi ha prou de contractar bons directius i delegar-los la feina operativa. L'empresa ha d'aprendre a funcionar com un sistema.",
+      "p10": "L'estratègia deixa de viure només al cap del propietari. Les decisions deixen de dependre només de les relacions personals. L'empresa ha de saber trobar, fer créixer i retenir directius forts. Apareix una cultura corporativa, tant si algú s'hi ha dedicat expressament com si no.",
+      "p11": "I apareix la necessitat de pensar no només en com guanyar més demà, sinó en quina empresa cal arribar a ser d'aquí a cinc o deu anys.",
+      "h4": "I aquí li torna a tocar canviar al propietari",
+      "p12": "A mi em sembla que la història del creixement d'un negoci és, en bona part, la història del canvi de paper del seu propietari. Primer és emprenedor. Després esdevé directiu. Llavors ha d'esdevenir l'arquitecte d'una organització. I en algun moment, la persona que marca la direcció, forma l'equip i pren unes quantes decisions realment importants en lloc de centenars de decisions diàries.",
+      "p13": "No tots els emprenedors volen recórrer tot aquest camí. I això és normal. Però no es pot construir un negoci gran continuant dirigint-lo com si fos petit.",
+      "h5": "Les preguntes amb què començo",
+      "p14": "Per això, per a mi el creixement d'una empresa no comença amb la pregunta «com augmentem les vendes?». Jo primer faria unes altres preguntes.",
+      "q1": "Quina empresa vol arribar a ser?",
+      "q2": "Què li impedeix avui créixer dues o tres vegades?",
+      "q3": "Què li passaria a l'empresa si a partir de demà vostè fos tres mesos fora de l'oficina?",
+      "q4": "Quines decisions encara no es poden prendre sense vostè?",
+      "q5": "Hi ha al seu voltant persones a qui de debò confiaria el negoci?",
+      "q6": "Podria l'equip d'avui dirigir una empresa el doble de gran que aquesta?",
+      "q7": "I, sobretot: està vostè mateix disposat a dirigir l'empresa d'una manera diferent de com la dirigeix avui?",
+      "p15": "Les respostes a aquestes preguntes de vegades diuen molt més sobre les perspectives d'un negoci que no pas el seu model financer.",
+      "p16": "No crec que els negocis grans es construeixin segons cap recepta secreta. En un moment determinat simplement cal anar canviant, per ordre: l'estratègia → el model de negoci → el sistema de gestió → l'equip → el paper del propietari. I cada nivell següent de l'empresa exigeix una qualitat diferent de cadascun d'aquests elements.",
+      "p17": "Per això la feina que em resulta més interessant és la que es fa amb un negoci justament en el moment de la transició. Quan la manera antiga de dirigir encara dona diners, però ja comença a limitar el futur. Quan el propietari veu que l'empresa és capaç de més, però encara no queda clar què ha de canviar exactament per fer el pas següent.",
+      "p18": "Em sembla que el creixement de debò comença precisament amb aquesta pregunta."
+    }
+  },
+  "Footer": {
+    "cta": "De vegades un propietari no necessita un projecte. Necessita algú amb qui analitzar la situació i arribar a una decisió.",
+    "ctaButton": "Escriure'm →",
+    "colMenu": "Menú",
+    "colCases": "Projectes",
+    "colBlog": "Articles",
+    "colContact": "Contacte",
+    "appearance": "Aparença",
+    "designBy": "No tots els problemes necessiten un consultor",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazakhstan"
+  },
+  "ThemeSwitch": {
+    "label": "Aparença",
+    "light": "Clar",
+    "dark": "Fosc",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Idioma",
+    "more": "Totes les edicions"
+  },
+  "AuthorCard": {
+    "role": "Estratègia • Transformació • Persones",
+    "location": "Almaty, Kazakhstan",
+    "bio": "Treballo amb propietaris, CEO i equips directius en el moment en què l'empresa passa a la seva següent etapa de creixement.",
+    "sinceLabel": "En la professió des de"
+  },
+  "ContactForm": {
+    "title": "Mantinguem el contacte",
+    "description": "Deixi la seva adreça i li escriuré quan aquí hi hagi alguna cosa que valgui la pena llegir.",
+    "emailLabel": "Correu electrònic",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Subscriure's",
+    "submitting": "S'està enviant…",
+    "success": "Fet. Revisi el seu correu.",
+    "unexpectedError": "Alguna cosa ha anat malament. Torni-ho a provar.",
+    "validation": {
+      "emailRequired": "Indiqui una adreça de correu electrònic",
+      "emailInvalid": "Això no sembla una adreça de correu",
+      "emailTooLong": "Aquesta adreça és massa llarga"
+    }
+  },
+  "StatusBadge": {
+    "label": "Estat del servei",
+    "healthy": "Operatiu",
+    "unhealthy": "No disponible",
+    "checking": "S'està comprovant…",
+    "uptime": "Disponibilitat {value}"
+  },
+  "About": {
+    "title": "Sobre mi",
+    "lead": "Aquesta pàgina existeix per exercitar la segona branca localitzada de l'encaminament.",
+    "body": "El contingut real arribarà més endavant. Tota la resta ja funciona: l'encaminament per idioma, les metadades, el tema i l'accessibilitat."
+  },
+  "NotFound": {
+    "title": "Pàgina no trobada",
+    "description": "Pot ser que l'enllaç hagi quedat obsolet o que l'adreça tingui una errada.",
+    "backHome": "Torna a l'inici"
+  },
+  "ErrorBoundary": {
+    "title": "Alguna cosa s'ha trencat",
+    "description": "L'error ha quedat registrat. Podeu tornar-ho a provar.",
+    "retry": "Torna-ho a provar",
+    "digest": "Codi d'error: {digest}"
+  }
+}

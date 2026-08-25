@@ -1,0 +1,285 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov – strategija, transformacija, ljudje",
+      "description": "Delam z lastniki, izvršnimi direktorji in vodstvenimi ekipami takrat, ko podjetje čaka naslednja stopnja rasti."
+    },
+    "about": {
+      "title": "O meni",
+      "description": "Na kratko o Vladimirju Shikovu in o tem, s čim se ukvarja."
+    },
+    "notFound": {
+      "title": "Strani ni mogoče najti",
+      "description": "Take strani tukaj ni."
+    }
+  },
+  "Common": {
+    "skipToContent": "Preskoči na glavno vsebino",
+    "loading": "Nalaganje…",
+    "retry": "Poskusite znova",
+    "close": "Zapri"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Glavna navigacija",
+    "openMenu": "Odpri meni",
+    "closeMenu": "Zapri meni",
+    "contact": "Stopite v stik →",
+    "nav": {
+      "home": "Domov",
+      "about": "O meni",
+      "services": "Kaj počnem",
+      "cases": "Projekti",
+      "blog": "Zapisi"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner pri",
+    "roleB": "TEAM LEAD",
+    "placeA": "Živi v",
+    "placeB": "Almati, Kazahstan",
+    "scopeA": "Dela z",
+    "scopeB": "lastniki in CEO",
+    "statement": "Delam z lastniki, izvršnimi direktorji in vodstvenimi ekipami takrat, ko podjetje čaka naslednja stopnja rasti."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ O meni ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partner pri TEAM LEAD",
+    "placeLine": "Strategija • Transformacija • Ljudje",
+    "lead": "Pomagam videti tisto, kar je od znotraj podjetja težko videti. Za strateškim vprašanjem redko stoji samo strategija.",
+    "body": "Rast spremeni zahteve do poslovnega modela. Nov poslovni model spremeni zahteve do ekipe. Nova ekipa spremeni vlogo samega lastnika. Zato podjetje gledam skozi tri optike hkrati – strategija, organizacija, ljudje – in lastniku pomagam razbrati, katere odločitve lahko dejansko spremenijo pot podjetja.",
+    "experience": "Moja poklicna pot je šla skozi tri zelo različna okolja: mednarodno svetovanje, velika podjetja in državne institucije. Vodil sem rusko podružnico mednarodnega podjetja za ocenjevanje vodilnih kadrov, več kot 12 let vodil PDP Group CIS v Moskvi, nato pa prevzel eno ključnih smeri transformacije skupine Samruk-Kazyna. Danes sem partner pri TEAM LEAD, kjer se ukvarjam s strategijo, razvojem poslovanja, transformacijo vodstvenih ekip in individualnim delom s prvimi možmi podjetij. Sem tudi član kvalifikacijske komisije Vrhovnega sodnega sveta Republike Kazahstan, kjer ocenjujem kandidate za sodniške funkcije.",
+    "statValue1": "25+",
+    "statLabel1": "let dela s podjetji in njihovimi vodstvi",
+    "statValue2": "320.000+",
+    "statLabel2": "zaposlenih v največjem programu transformacije",
+    "statValue3": "C-level",
+    "statLabel3": "ocenjevanje, razvoj in spremljanje prvih mož podjetij"
+  },
+  "Questions": {
+    "heading": "Kdaj sem najbolj koristen",
+    "lead": "Ne takrat, ko podjetje potrebuje še enega svetovalca. Takrat, ko se pred lastnikom ali izvršnim direktorjem pojavi vprašanje, na katerega podjetje nima več očitnega odgovora.",
+    "closing": "V takih položajih je moja naloga, da ustvarim prostor za trezen pogled na dejstva in pomagam zapletenost prevesti v nekaj odločitev, ki jih je res mogoče sprejeti.",
+    "items": {
+      "q1": "Kam se premakniti naprej?",
+      "q2": "Kateri poslovni model bo nosil naslednjo stopnjo rasti?",
+      "q3": "Ali lahko sedanja ekipa uresniči novo strategijo?",
+      "q4": "Kdo lahko postane naslednji prvi mož podjetja?",
+      "q5": "Kaj se mora spremeniti v podjetju – in kaj se mora spremeniti v lastnikovi lastni vlogi?"
+    }
+  },
+  "Services": {
+    "heading": "Kaj počnem",
+    "lead": "Štiri področja, ki se v praksi skoraj vedno izkažejo za eno samo nalogo, videno z različnih strani.",
+    "items": {
+      "s1": {
+        "title": "Strategija",
+        "description": "Strateške seje in oblikovanje strategije rasti. Ne začnem pri orodjih in predlogah, ampak pri trgu, ekonomiki podjetja, ambiciji lastnika, omejitvah in priložnostih. Strategija se ne začne s seznamom pobud, ampak z odgovorom na eno vprašanje: čemu smo se pripravljeni odpovedati zaradi tistega, kar je res pomembno?"
+      },
+      "s2": {
+        "title": "Transformacija",
+        "description": "Pot od današnjega modela upravljanja do tistega, ki bo potreben jutri: struktura, kultura, sistem vodenja, vloge vodilnih, način sprejemanja odločitev, ljudje. Te izkušnje zajemajo tako zasebna podjetja kot največje korporativne in državne strukture."
+      },
+      "s3": {
+        "title": "Lastnik in CEO",
+        "description": "Prvi mož podjetja ima vedno vprašanja, ki jih ni mogoče v celoti prenesti na druge: strategija, ekipa, naslednik, kriza, nov posel, lastna vloga v podjetju. Odločitve ne sprejmem namesto lastnika – pomagam mu videti položaj z višine, s katere odločitev postane očitna."
+      },
+      "s4": {
+        "title": "Ekipa in nasledstvo",
+        "description": "Strategija določa, kaj mora podjetje postati, uresničijo pa jo konkretni ljudje. Pomagam razbrati, kdo je sposoben voditi podjetje naprej, kje je resnični potencial vodilnih, komu je mogoče zaupati več in kdo bi nekoč lahko prevzel mesto prvega moža."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Obseg šteje",
+    "lead": "Trije programi, po katerih se vidi, kako velike naloge je moralo to delo nositi.",
+    "viewCase": "Odpri projekt: {name}",
+    "meta": "Projekt",
+    "back": "Nazaj na domačo stran",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformacija korporativne kulture",
+        "tag": "12 podjetij · 320.000+ zaposlenih",
+        "summary": "Transformacija korporativne kulture v skupini Samruk-Kazyna – 12 nacionalnih podjetij in več kot 320.000 zaposlenih.",
+        "detail": "Nastala je enotna metodologija za diagnostiko in vodenje korporativne kulture, opredeljena so bila ciljna vedenja, za vsako podjetje pa so bili pripravljeni načrti transformacije."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Razvoj proizvodnih vodij",
+        "tag": "Priznano kot najboljša praksa",
+        "summary": "Program razvoja proizvodnih vodij v Philip Morris Ukraine.",
+        "detail": "V treh letih so kompetence vodij dosegle ciljno raven, nato pa je bil proračun za nadaljnje usposabljanje zmanjšan na nič. Program je bil priznan kot najboljša praksa in priporočen drugim pisarnam podjetja."
+      },
+      "atom": {
+        "name": "Jedrska industrija",
+        "caption": "Štiridesetletna strategija nove panoge",
+        "tag": "Rusija",
+        "summary": "Štiridesetletna strategija rasti nove panoge v Rusiji, zgrajena na obstoječih zmogljivostih jedrske energetike.",
+        "detail": "Delo na strategiji nove panoge na štiridesetletnem obzorju, na podlagi že obstoječih zmogljivosti jedrske energetike."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Podjetja",
+    "headingLine2": "in institucije",
+    "lead": "V teh letih je delo potekalo z mednarodnimi korporacijami, velikimi zasebnimi podjetji in državnimi institucijami.",
+    "marqueeLabel": "Podjetja in institucije",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Vrhovno sodišče Kazahstana"
+    }
+  },
+  "Education": {
+    "heading": "Izobrazba",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Moskovska državna univerza M. V. Lomonosova",
+        "degree": "Fakulteta za psihologijo"
+      },
+      "e2": {
+        "school": "Višja vojaško-politična šola obmejnih enot KGB ZSSR",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Zapisi",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Esej]",
+        "meta": "Rast podjetja",
+        "title": "Iz majhnega v srednje. Iz srednjega v veliko",
+        "excerpt": "Na neki točki podjetje najbolj omejuje prav način, kako je vodeno."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Esej",
+    "back": "Nazaj na domačo stran",
+    "growth": {
+      "title": "Iz majhnega v srednje. Iz srednjega v veliko",
+      "lead": "Vrsto let opazujem podjetja na vseh stopnjah razvoja, od podjetij, ki jih vodi ustanovitelj, do največjih korporacij. In več ko jih vidim, pogosteje se vračam k eni dokaj preprosti misli.",
+      "p1": "Načeloma ni nič nepredstavljivo težkega v tem, da iz majhnega podjetja nastane srednje, iz srednjega pa veliko. Seveda potrebujete izdelek, trg, denar, ljudi in nekaj sreče.",
+      "p2": "Toda glavna ovira za rast je običajno drugje. Na neki točki podjetje najbolj omejuje prav način, kako je vodeno.",
+      "h1": "Majhno podjetje raste zaradi svojega lastnika",
+      "p3": "Pozna stranke. Ključne odločitve sprejema sam. Ve, komu je mogoče zaupati. Ima občutek za denar. Kakovost preverja osebno. V nekaj minutah lahko spremeni odločitev, za katero bi veliko podjetje potrebovalo tedne.",
+      "p4": "In prav zato podjetje raste. Toda pride trenutek, ko tisto, kar je bilo nekoč njegova največja prednost, začne omejevati nadaljnjo rast.",
+      "p5": "Podjetje postane preveliko, da bi ga en sam človek še lahko imel ves v glavi. To je po mojem mnenju prvo resnično razpotje.",
+      "h2": "Da bi postalo srednje, mora lastnik del podjetja izpustiti iz rok",
+      "p6": "To je precej težje, kot se sliši. Nehati morate sami sprejemati stotine odločitev. Najti morate ljudi, ki bodo nekatere stvari razumeli bolje od vas. Predati jim morate ne le naloge, ampak tudi pravico do napake.",
+      "p7": "Pojavijo se struktura, odgovornost, kazalniki, pravila, redno vodenje. In tu se pokaže paradoks: da bi lastnik ohranil nadzor nad rastočim podjetjem, se mora odpovedati delu neposrednega nadzora.",
+      "p8": "Tisti, ki tega nikoli ne storijo, pogosto leta in leta ostanejo zelo dobro majhno podjetje. Tisti, ki jim uspe, postanejo srednji.",
+      "h3": "Prehod od srednjega k velikemu je urejen drugače",
+      "p9": "Tu ni več dovolj zaposliti dobre vodje in nanje prenesti operativno delo. Podjetje se mora naučiti delovati kot sistem.",
+      "p10": "Strategija preneha živeti samo v lastnikovi glavi. Odločitve ne slonijo več le na osebnih odnosih. Podjetje mora znati najti, razviti in zadržati močne vodje. Nastane korporativna kultura – ne glede na to, ali jo je kdo namerno gradil ali ne.",
+      "p11": "In pojavi se potreba, da ne razmišljate le o tem, kako jutri zaslužiti več, ampak tudi o tem, kakšno podjetje mora to postati čez pet ali deset let.",
+      "h4": "In tu se mora lastnik znova spremeniti",
+      "p12": "Zdi se mi, da je zgodba o rasti podjetja v veliki meri zgodba o tem, kako se spreminja vloga njegovega lastnika. Najprej je podjetnik. Nato postane vodja. Potem mora postati arhitekt organizacije. In na neki točki postane človek, ki določa smer, sestavlja ekipo in namesto stotin vsakodnevnih odločitev sprejme nekaj resnično pomembnih.",
+      "p13": "Ni vsak podjetnik pripravljen prehoditi vso to pot. In to je v redu. Toda velikega podjetja ni mogoče zgraditi, če ga še naprej vodite kot majhnega.",
+      "h5": "Vprašanja, s katerimi začnem",
+      "p14": "Zato se rast podjetja zame ne začne z vprašanjem »kako povečati prodajo?«. Najprej bi postavil druga vprašanja.",
+      "q1": "Kakšno podjetje želite postati?",
+      "q2": "Kaj vam danes preprečuje, da bi zrasli dva- ali trikrat?",
+      "q3": "Kaj bi se zgodilo s podjetjem, če vas od jutri tri mesece ne bi bilo v pisarni?",
+      "q4": "Katerih odločitev še vedno ni mogoče sprejeti brez vas?",
+      "q5": "Ali so okoli vas ljudje, ki bi jim res zaupali podjetje?",
+      "q6": "Ali bi današnja ekipa lahko vodila podjetje, dvakrat večje od tega?",
+      "q7": "In predvsem: ste sami pripravljeni voditi podjetje drugače, kot ga vodite danes?",
+      "p15": "Odgovori na ta vprašanja včasih povedo o možnostih podjetja veliko več kot njegov finančni model.",
+      "p16": "Ne mislim, da se veliko podjetje gradi po kakšnem skrivnem receptu. Na neki točki je treba preprosto po vrsti spremeniti: strategijo → poslovni model → sistem vodenja → ekipo → vlogo lastnika. In vsaka naslednja raven podjetja zahteva od vsakega od teh elementov drugačno kakovost.",
+      "p17": "Zato je delo, ki se mi zdi najbolj zanimivo, delo s podjetjem prav v trenutku prehoda. Ko stari način vodenja še prinaša denar, a je začel omejevati prihodnost. Ko lastnik vidi, da je podjetje sposobno več, a še ni jasno, kaj natanko se mora spremeniti, da bo naredilo naslednji korak.",
+      "p18": "Zdi se mi, da se prav s tem vprašanjem začne resnična rast."
+    }
+  },
+  "Footer": {
+    "cta": "Včasih lastnik ne potrebuje projekta. Potrebuje človeka, s katerim lahko razdela položaj in pride do odločitve.",
+    "ctaButton": "Pišite mi →",
+    "colMenu": "Meni",
+    "colCases": "Projekti",
+    "colBlog": "Zapisi",
+    "colContact": "Kontakt",
+    "appearance": "Videz",
+    "designBy": "Ni vsaka naloga za svetovalca",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almati, Kazahstan"
+  },
+  "ThemeSwitch": {
+    "label": "Videz",
+    "light": "Svetlo",
+    "dark": "Temno",
+    "system": "Sistem"
+  },
+  "LocaleSwitch": {
+    "label": "Jezik",
+    "more": "Vse izdaje"
+  },
+  "AuthorCard": {
+    "role": "Strategija • Transformacija • Ljudje",
+    "location": "Almati, Kazahstan",
+    "bio": "Delam z lastniki, izvršnimi direktorji in vodstvenimi ekipami v trenutku, ko podjetje prehaja na naslednjo stopnjo rasti.",
+    "sinceLabel": "V poklicu od"
+  },
+  "ContactForm": {
+    "title": "Ostanimo v stiku",
+    "description": "Pustite naslov in pisal vam bom, ko bo tu kaj vrednega branja.",
+    "emailLabel": "Elektronski naslov",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Naročite se",
+    "submitting": "Pošiljanje…",
+    "success": "Opravljeno. Preverite pošto.",
+    "unexpectedError": "Nekaj je šlo narobe. Poskusite znova.",
+    "validation": {
+      "emailRequired": "Vnesite elektronski naslov",
+      "emailInvalid": "To ni videti kot elektronski naslov",
+      "emailTooLong": "Ta naslov je predolg"
+    }
+  },
+  "StatusBadge": {
+    "label": "Stanje storitve",
+    "healthy": "Deluje",
+    "unhealthy": "Nedosegljivo",
+    "checking": "Preverjanje…",
+    "uptime": "Razpoložljivost {value}"
+  },
+  "About": {
+    "title": "O meni",
+    "lead": "Ta stran obstaja zato, da preizkusi drugo lokalizirano vejo usmerjanja.",
+    "body": "Prava vsebina bo sledila. Vse drugo tukaj že deluje: usmerjanje po jezikih, metapodatki, tema in dostopnost."
+  },
+  "NotFound": {
+    "title": "Strani ni mogoče najti",
+    "description": "Povezava je morda zastarela ali pa je v naslovu tipkarska napaka.",
+    "backHome": "Nazaj na domačo stran"
+  },
+  "ErrorBoundary": {
+    "title": "Nekaj se je pokvarilo",
+    "description": "Napaka je zabeležena. Lahko poskusite znova.",
+    "retry": "Poskusite znova",
+    "digest": "Koda napake: {digest}"
+  }
+}

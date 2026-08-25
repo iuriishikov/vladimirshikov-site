@@ -1,0 +1,285 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov — estrategia, transformación, personas",
+      "description": "Trabajo con propietarios, CEO y equipos directivos en el momento en que la empresa se enfrenta a su siguiente etapa de crecimiento."
+    },
+    "about": {
+      "title": "Sobre mí",
+      "description": "Brevemente sobre Vladimir Shikov y sobre el trabajo que hace."
+    },
+    "notFound": {
+      "title": "Página no encontrada",
+      "description": "Aquí no existe esa página."
+    }
+  },
+  "Common": {
+    "skipToContent": "Ir al contenido principal",
+    "loading": "Cargando…",
+    "retry": "Reintentar",
+    "close": "Cerrar"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Navegación principal",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "contact": "Contactar →",
+    "nav": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "services": "Qué hago",
+      "cases": "Proyectos",
+      "blog": "Artículos"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Socio de",
+    "roleB": "TEAM LEAD",
+    "placeA": "Vive en",
+    "placeB": "Almaty, Kazajistán",
+    "scopeA": "Trabaja con",
+    "scopeB": "propietarios y CEO",
+    "statement": "Trabajo con propietarios, CEO y equipos directivos en el momento en que la empresa se enfrenta a su siguiente etapa de crecimiento."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Sobre mí ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Socio de TEAM LEAD",
+    "placeLine": "Estrategia • Transformación • Personas",
+    "lead": "Ayudo a ver lo que resulta difícil ver desde dentro de la empresa. Detrás de una pregunta estratégica rara vez hay solo estrategia.",
+    "body": "El crecimiento cambia lo que se le exige al modelo de negocio. Un modelo de negocio nuevo cambia lo que se le exige al equipo. Un equipo nuevo cambia el papel del propietario. Por eso miro el negocio a través de tres ópticas a la vez —estrategia, organización, personas— y ayudo al propietario a determinar qué decisiones pueden cambiar de verdad la trayectoria de la empresa.",
+    "experience": "Mi trayectoria profesional ha pasado por tres entornos muy distintos: la consultoría internacional, la gran empresa y las instituciones del Estado. Dirigí la filial rusa de una compañía internacional de evaluación de directivos, estuve más de 12 años al frente de PDP Group CIS en Moscú y después me hice cargo de una de las líneas clave de transformación del grupo Samruk-Kazyna. Hoy soy socio de TEAM LEAD, donde me ocupo de estrategia, desarrollo de negocio, transformación de equipos directivos y trabajo individual con primeros ejecutivos. También soy miembro de la comisión de cualificación del Consejo Judicial Supremo de la República de Kazajistán, donde evalúo a los candidatos a cargos judiciales.",
+    "statValue1": "25+",
+    "statLabel1": "años de trabajo con empresas y con sus directivos",
+    "statValue2": "320.000+",
+    "statLabel2": "empleados en el mayor programa de transformación",
+    "statValue3": "C-level",
+    "statLabel3": "evaluación, desarrollo y acompañamiento de primeros ejecutivos"
+  },
+  "Questions": {
+    "heading": "Cuándo soy más útil",
+    "lead": "No cuando la empresa necesita un consultor más. Cuando el propietario o el primer ejecutivo se enfrenta a una pregunta para la que el negocio ya no tiene una respuesta evidente.",
+    "closing": "En esas situaciones mi trabajo consiste en crear espacio para un análisis sereno de los hechos y ayudar a convertir la complejidad en unas pocas decisiones que realmente se puedan tomar.",
+    "items": {
+      "q1": "¿Hacia dónde avanzamos ahora?",
+      "q2": "¿Qué modelo de negocio sostendrá la siguiente etapa de crecimiento?",
+      "q3": "¿Es capaz el equipo actual de ejecutar la nueva estrategia?",
+      "q4": "¿Quién podría ser el próximo primer ejecutivo?",
+      "q5": "¿Qué tiene que cambiar en la empresa y qué tiene que cambiar en el papel del propio propietario?"
+    }
+  },
+  "Services": {
+    "heading": "Qué hago",
+    "lead": "Cuatro áreas que, en la práctica, casi siempre resultan ser un mismo problema visto desde distintos lados.",
+    "items": {
+      "s1": {
+        "title": "Estrategia",
+        "description": "Sesiones estratégicas y diseño de la estrategia de crecimiento. No empiezo por las herramientas y las plantillas, sino por el mercado, la economía del negocio, la ambición del propietario, las restricciones y las oportunidades. La estrategia no empieza con una lista de iniciativas, sino con la respuesta a una pregunta: ¿a qué estamos dispuestos a renunciar por aquello que de verdad importa?"
+      },
+      "s2": {
+        "title": "Transformación",
+        "description": "El camino desde el modelo de gestión de hoy hasta el que hará falta mañana: estructura, cultura corporativa, sistema de gestión, papel de los directivos, mecanismos de toma de decisiones, personas. Esa experiencia abarca tanto los negocios privados como las mayores estructuras corporativas y estatales."
+      },
+      "s3": {
+        "title": "Propietario y CEO",
+        "description": "El primer ejecutivo carga siempre con preguntas que no se pueden delegar del todo: la estrategia, el equipo, el sucesor, una crisis, un negocio nuevo, su propio papel en la empresa. No tomo la decisión en lugar del propietario: le ayudo a ver la situación desde la altura a la que la decisión se vuelve evidente."
+      },
+      "s4": {
+        "title": "Equipo y sucesión",
+        "description": "La estrategia define en qué debe convertirse la empresa, pero quienes la ejecutan son personas concretas. Ayudo a entender quién es capaz de llevar la empresa más lejos, dónde está el potencial real de cada directivo, a quién se le puede confiar más responsabilidad y quién podría algún día ocupar el puesto de primer ejecutivo."
+      }
+    }
+  },
+  "Works": {
+    "heading": "La escala importa",
+    "lead": "Tres programas que muestran el tamaño de los problemas con los que ha habido que trabajar.",
+    "viewCase": "Abrir el proyecto: {name}",
+    "meta": "Proyecto",
+    "back": "Volver al inicio",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformación de la cultura corporativa",
+        "tag": "12 empresas · 320.000+ empleados",
+        "summary": "Transformación de la cultura corporativa del grupo Samruk-Kazyna: 12 compañías nacionales y más de 320.000 empleados.",
+        "detail": "Se creó una metodología única de diagnóstico y gestión de la cultura corporativa, se definieron los comportamientos objetivo y se elaboraron hojas de ruta de transformación para cada compañía."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Desarrollo de los directivos de producción",
+        "tag": "Reconocido como mejor práctica",
+        "summary": "Programa de desarrollo para los directivos de producción de Philip Morris Ukraine.",
+        "detail": "En tres años las competencias de los directivos alcanzaron el nivel objetivo, tras lo cual el presupuesto de formación adicional se redujo a cero. El programa fue reconocido como mejor práctica y recomendado a las demás oficinas de la compañía."
+      },
+      "atom": {
+        "name": "Industria nuclear",
+        "caption": "Una estrategia a cuarenta años para una industria nueva",
+        "tag": "Rusia",
+        "summary": "Estrategia de crecimiento a cuarenta años para una industria nueva en Rusia, apoyada en la capacidad instalada de la energía nuclear.",
+        "detail": "Trabajo sobre la estrategia de una industria nueva en un horizonte de cuarenta años, a partir de la capacidad de energía nuclear ya existente."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Empresas",
+    "headingLine2": "e instituciones",
+    "lead": "A lo largo de los años el trabajo ha pasado por corporaciones internacionales, grandes negocios privados e instituciones del Estado.",
+    "marqueeLabel": "Empresas e instituciones",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Corte Suprema de Kazajistán"
+    }
+  },
+  "Education": {
+    "heading": "Formación",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Universidad Estatal de Moscú Lomonósov",
+        "degree": "Facultad de Psicología"
+      },
+      "e2": {
+        "school": "Escuela Superior Político-Militar de Tropas Fronterizas del KGB de la URSS",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Artículos",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Ensayo]",
+        "meta": "Crecimiento de la empresa",
+        "title": "De pequeña a mediana. De mediana a grande",
+        "excerpt": "En cierto momento, lo que más limita a una empresa es la forma en que se la dirige."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Ensayo",
+    "back": "Volver al inicio",
+    "growth": {
+      "title": "De pequeña a mediana. De mediana a grande",
+      "lead": "Llevo muchos años observando empresas en fases de desarrollo muy distintas, desde negocios dirigidos por su fundador hasta las mayores corporaciones. Y cuantas más veo, más a menudo vuelvo a una idea bastante sencilla.",
+      "p1": "En principio, no hay nada imposiblemente difícil en convertir un negocio pequeño en uno mediano, ni uno mediano en uno grande. Hacen falta, claro, producto, mercado, dinero, personas y algo de suerte.",
+      "p2": "Pero la barrera principal del crecimiento suele estar en otro sitio. En cierto momento, lo que más limita a una empresa es la forma en que se la dirige.",
+      "h1": "El negocio pequeño crece gracias a su dueño",
+      "p3": "Conoce a los clientes. Toma él mismo las decisiones clave. Sabe en quién se puede confiar. Tiene olfato para el dinero. Controla la calidad en persona. En unos minutos puede cambiar una decisión que a una gran compañía le llevaría semanas.",
+      "p4": "Y precisamente por eso el negocio crece. Pero llega un momento en que lo que fue su mayor ventaja empieza a limitar cualquier crecimiento posterior.",
+      "p5": "La empresa se vuelve demasiado grande para seguir cabiendo en la cabeza de una sola persona. Esa es, a mi juicio, la primera bifurcación real.",
+      "h2": "Para llegar a mediana, el dueño tiene que soltar una parte del negocio",
+      "p6": "Esto es bastante más difícil de lo que parece. Hay que dejar de tomar personalmente cientos de decisiones. Encontrar personas que en algunos asuntos entiendan más que uno mismo. Entregarles no solo las tareas, sino también el derecho a equivocarse.",
+      "p7": "Aparecen la estructura, la responsabilidad, los indicadores, las reglas, la gestión regular. Y aquí surge una paradoja: para conservar el control de un negocio que crece, el dueño tiene que renunciar a una parte de su control directo.",
+      "p8": "Quienes nunca lo hacen se quedan a menudo, durante años, como un negocio pequeño muy bueno. Quienes lo consiguen se convierten en medianos.",
+      "h3": "El paso de mediana a grande funciona de otra manera",
+      "p9": "Aquí ya no basta con contratar buenos directivos y delegarles la operación. La empresa tiene que aprender a funcionar como un sistema.",
+      "p10": "La estrategia deja de vivir solo en la cabeza del propietario. Las decisiones dejan de apoyarse solo en las relaciones personales. La empresa tiene que saber encontrar, formar y retener a directivos fuertes. Surge una cultura corporativa, se haya trabajado en ella a propósito o no.",
+      "p11": "Y aparece la necesidad de pensar no solo en cómo ganar más mañana, sino en qué clase de empresa hay que llegar a ser dentro de cinco o diez años.",
+      "h4": "Y aquí el dueño tiene que volver a cambiar",
+      "p12": "Me parece que la historia del crecimiento de una empresa es, en buena medida, la historia de cómo cambia el papel de su propietario. Primero es un emprendedor. Luego se convierte en directivo. Después tiene que convertirse en el arquitecto de una organización. Y en algún momento, en la persona que marca la dirección, forma el equipo y toma unas pocas decisiones realmente importantes en lugar de cientos de decisiones diarias.",
+      "p13": "No todos los emprendedores quieren recorrer ese camino entero. Y está bien. Pero no se puede construir un negocio grande si se sigue dirigiendo como si fuera pequeño.",
+      "h5": "Las preguntas por las que empiezo",
+      "p14": "Por eso, para mí el crecimiento de una empresa no empieza con «¿cómo aumentamos las ventas?». Yo empezaría por otras preguntas.",
+      "q1": "¿En qué clase de empresa quiere convertirse?",
+      "q2": "¿Qué le impide hoy crecer dos o tres veces?",
+      "q3": "¿Qué le pasaría a la empresa si a partir de mañana usted estuviera tres meses fuera de la oficina?",
+      "q4": "¿Qué decisiones siguen sin poder tomarse sin usted?",
+      "q5": "¿Hay a su alrededor personas a las que de verdad confiaría el negocio?",
+      "q6": "¿Podría el equipo de hoy dirigir una empresa el doble de grande que esta?",
+      "q7": "Y, sobre todo: ¿está usted mismo dispuesto a dirigir la empresa de una manera distinta a como la dirige hoy?",
+      "p15": "Las respuestas a esas preguntas dicen a veces mucho más sobre las perspectivas de un negocio que su modelo financiero.",
+      "p16": "No creo que los negocios grandes se construyan según una receta secreta. En cierto momento simplemente hay que cambiar, por este orden: la estrategia → el modelo de negocio → el sistema de gestión → el equipo → el papel del propietario. Y cada nuevo nivel de la empresa exige otra calidad en cada uno de esos elementos.",
+      "p17": "Por eso el trabajo que más me interesa es el que se hace con un negocio justo en el momento de la transición. Cuando la vieja manera de dirigir todavía da dinero, pero ya ha empezado a limitar el futuro. Cuando el propietario ve que la empresa es capaz de más, pero aún no está claro qué tiene que cambiar exactamente para dar el siguiente paso.",
+      "p18": "Me parece que el crecimiento de verdad empieza precisamente con esa pregunta."
+    }
+  },
+  "Footer": {
+    "cta": "A veces un propietario no necesita un proyecto. Necesita a alguien con quien analizar la situación y llegar a una decisión.",
+    "ctaButton": "Escribirme →",
+    "colMenu": "Menú",
+    "colCases": "Proyectos",
+    "colBlog": "Artículos",
+    "colContact": "Contacto",
+    "appearance": "Apariencia",
+    "designBy": "No todo problema necesita un consultor",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazajistán"
+  },
+  "ThemeSwitch": {
+    "label": "Apariencia",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Idioma",
+    "more": "Todas las ediciones"
+  },
+  "AuthorCard": {
+    "role": "Estrategia • Transformación • Personas",
+    "location": "Almaty, Kazajistán",
+    "bio": "Trabajo con propietarios, CEO y equipos directivos en el momento en que una empresa pasa a su siguiente etapa de crecimiento.",
+    "sinceLabel": "En la profesión desde"
+  },
+  "ContactForm": {
+    "title": "Sigamos en contacto",
+    "description": "Deje su dirección y le escribiré cuando aquí haya algo que merezca la pena leer.",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Suscribirse",
+    "submitting": "Enviando…",
+    "success": "Listo. Revise su correo.",
+    "unexpectedError": "Algo ha salido mal. Inténtelo de nuevo.",
+    "validation": {
+      "emailRequired": "Indique una dirección de correo electrónico",
+      "emailInvalid": "Esto no parece una dirección de correo",
+      "emailTooLong": "Esa dirección es demasiado larga"
+    }
+  },
+  "StatusBadge": {
+    "label": "Estado del servicio",
+    "healthy": "Operativo",
+    "unhealthy": "No disponible",
+    "checking": "Comprobando…",
+    "uptime": "Disponibilidad {value}"
+  },
+  "About": {
+    "title": "Sobre mí",
+    "lead": "Esta página existe para ejercitar la segunda rama localizada del enrutado.",
+    "body": "El contenido real llegará más adelante. Todo lo demás ya funciona aquí: el enrutado por idioma, los metadatos, el tema y la accesibilidad."
+  },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "description": "Puede que el enlace esté obsoleto o que la dirección tenga una errata.",
+    "backHome": "Volver al inicio"
+  },
+  "ErrorBoundary": {
+    "title": "Algo se ha roto",
+    "description": "El error ha quedado registrado. Puede intentarlo de nuevo.",
+    "retry": "Reintentar",
+    "digest": "Código de error: {digest}"
+  }
+}

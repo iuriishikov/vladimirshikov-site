@@ -1,0 +1,285 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov – stratégia, transzformáció, emberek",
+      "description": "Tulajdonosokkal, CEO-kkal és vezetői csapatokkal dolgozom, amikor a vállalkozás előtt a következő fejlődési szakasz áll."
+    },
+    "about": {
+      "title": "Rólam",
+      "description": "Röviden Vladimir Shikovról és arról, amivel foglalkozik."
+    },
+    "notFound": {
+      "title": "Az oldal nem található",
+      "description": "Ilyen oldal itt nincs."
+    }
+  },
+  "Common": {
+    "skipToContent": "Ugrás a fő tartalomra",
+    "loading": "Betöltés…",
+    "retry": "Újra",
+    "close": "Bezárás"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Fő navigáció",
+    "openMenu": "Menü megnyitása",
+    "closeMenu": "Menü bezárása",
+    "contact": "Kapcsolat →",
+    "nav": {
+      "home": "Főoldal",
+      "about": "Rólam",
+      "services": "Amit csinálok",
+      "cases": "Projektek",
+      "blog": "Írások"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner",
+    "roleB": "TEAM LEAD",
+    "placeA": "Lakhelye",
+    "placeB": "Almaty, Kazahsztán",
+    "scopeA": "Ügyfelei",
+    "scopeB": "tulajdonosok és CEO-k",
+    "statement": "Tulajdonosokkal, CEO-kkal és vezetői csapatokkal dolgozom, amikor a vállalkozás előtt a következő fejlődési szakasz áll."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Rólam ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "A TEAM LEAD partnere",
+    "placeLine": "Stratégia • Transzformáció • Emberek",
+    "lead": "Segítek meglátni azt, amit a cégen belülről nehéz észrevenni. A stratégiai kérdések mögött ritkán áll csak stratégia.",
+    "body": "A növekedés megváltoztatja, mit kell tudnia az üzleti modellnek. Az új üzleti modell megváltoztatja, milyennek kell lennie a csapatnak. Az új csapat megváltoztatja a tulajdonos saját szerepét. Ezért a vállalkozást egyszerre három nézőpontból nézem – stratégia, szervezet, emberek –, és segítek a tulajdonosnak eldönteni, mely döntések képesek valóban megváltoztatni a cég pályáját.",
+    "experience": "A pályám három egészen különböző közegen vezetett át: nemzetközi tanácsadás, nagyvállalati világ és állami intézmények. Vezettem egy nemzetközi vezetőértékelő cég oroszországi szervezetét, több mint 12 éven át irányítottam a PDP Group CIS-t Moszkvában, majd a Samruk-Kazyna csoport egyik kulcsfontosságú transzformációs irányáért feleltem. Ma a TEAM LEAD partnereként stratégiával, üzletfejlesztéssel, vezetői csapatok átalakításával és első számú vezetők egyéni támogatásával foglalkozom. Emellett tagja vagyok a Kazah Köztársaság Legfelsőbb Bírói Tanácsa minősítő bizottságának, ahol bírói tisztségre pályázó jelölteket értékelünk.",
+    "statValue1": "25+",
+    "statLabel1": "év munka vállalkozásokkal és vezetőikkel",
+    "statValue2": "320 000+",
+    "statLabel2": "munkatárs a legnagyobb transzformációs programban",
+    "statValue3": "C-level",
+    "statLabel3": "első számú vezetők értékelése, fejlesztése és támogatása"
+  },
+  "Questions": {
+    "heading": "Amikor a leginkább hasznos vagyok",
+    "lead": "Nem akkor, amikor a cégnek még egy tanácsadóra van szüksége. Hanem akkor, amikor a tulajdonos vagy az első számú vezető előtt olyan kérdés áll, amelyre a vállalkozáson belül már nincs kézenfekvő válasz.",
+    "closing": "Ilyen helyzetekben az a dolgom, hogy teret adjak a tények józan mérlegelésének, és segítsek a bonyolultságot néhány valóban meghozható döntéssé alakítani.",
+    "items": {
+      "q1": "Merre tovább?",
+      "q2": "Melyik üzleti modell viszi el a következő növekedési szakaszt?",
+      "q3": "Képes-e a mostani csapat végrehajtani az új stratégiát?",
+      "q4": "Ki lehet a következő első számú vezető?",
+      "q5": "Mit kell megváltoztatni a cégben – és mit kell megváltoztatnia a tulajdonosnak a saját szerepében?"
+    }
+  },
+  "Services": {
+    "heading": "Amit csinálok",
+    "lead": "Négy terület, amely a gyakorlatban szinte mindig ugyanannak a feladatnak a különböző oldala.",
+    "items": {
+      "s1": {
+        "title": "Stratégia",
+        "description": "Stratégiai ülések és a növekedési stratégia kidolgozása. Nem eszközökből és sablonokból indulok ki, hanem a piacból, a vállalkozás gazdaságtanából, a tulajdonos ambíciójából, a korlátokból és a lehetőségekből. A stratégia nem a kezdeményezések listájával kezdődik, hanem egyetlen kérdés megválaszolásával: miről vagyunk hajlandók lemondani azért, ami valóban fontos?"
+      },
+      "s2": {
+        "title": "Transzformáció",
+        "description": "Az út a mai működési modelltől ahhoz, amelyre holnap szükség lesz: struktúra, kultúra, irányítási rendszer, a vezetők szerepei, a döntéshozatal módja, emberek. Ez a tapasztalat magánkézben lévő vállalkozásokra és a legnagyobb vállalati és állami szervezetekre egyaránt kiterjed."
+      },
+      "s3": {
+        "title": "Tulajdonos és CEO",
+        "description": "Az első számú vezetőnél mindig maradnak kérdések, amelyeket nem lehet teljesen delegálni: stratégia, csapat, utód, válság, új üzletág, a saját szerepe a cégben. Nem a tulajdonos helyett hozom meg a döntést – abban segítek, hogy olyan magasságból lássa a helyzetet, ahonnan a döntés már magától értetődő."
+      },
+      "s4": {
+        "title": "Csapat és utódlás",
+        "description": "A stratégia meghatározza, mivé kell válnia a cégnek, de konkrét emberek valósítják meg. Segítek kideríteni, ki képes tovább vinni a céget, hol van a vezetők valódi potenciálja, kire lehet nagyobb felelősséget bízni, és ki az, aki egyszer az első számú vezető helyébe léphet."
+      }
+    }
+  },
+  "Works": {
+    "heading": "A lépték számít",
+    "lead": "Három projekt, amelyen látszik, mekkora méretű feladatokkal kellett dolgoznom.",
+    "viewCase": "Projekt megnyitása: {name}",
+    "meta": "Projekt",
+    "back": "Vissza a főoldalra",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "A vállalati kultúra átalakítása",
+        "tag": "12 cég · 320 000+ munkatárs",
+        "summary": "A Samruk-Kazyna csoport vállalati kultúrájának átalakítása – 12 nemzeti vállalat és több mint 320 000 munkatárs.",
+        "detail": "Egységes módszertan készült a vállalati kultúra felmérésére és irányítására, meghatároztuk a célként kitűzött magatartásmintákat, és minden vállalatra elkészült a transzformáció ütemterve."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Termelési vezetők fejlesztése",
+        "tag": "Legjobb gyakorlatként elismerve",
+        "summary": "Fejlesztési program a Philip Morris Ukraine termelési vezetői számára.",
+        "detail": "Három év alatt a vezetők kompetenciái elérték a célszintet, ezután a további képzés költségvetése nullára csökkent. A programot legjobb gyakorlatként ismerték el, és a vállalat többi irodájának is ajánlották."
+      },
+      "atom": {
+        "name": "Atomipar",
+        "caption": "Negyvenéves stratégia egy új iparág számára",
+        "tag": "Oroszország",
+        "summary": "Negyvenéves fejlesztési stratégia egy új oroszországi iparág számára, a meglévő atomenergetikai kapacitásokra építve.",
+        "detail": "Munka egy új iparág negyvenéves távlatú stratégiáján, a már meglévő atomenergetikai kapacitások alapján."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Cégek",
+    "headingLine2": "és intézmények",
+    "lead": "Az évek során nemzetközi vállalatokkal, nagy magánvállalkozásokkal és állami intézményekkel dolgoztam.",
+    "marqueeLabel": "Cégek és intézmények",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Kazahsztán Legfelsőbb Bírósága"
+    }
+  },
+  "Education": {
+    "heading": "Tanulmányok",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Lomonoszov Moszkvai Állami Egyetem",
+        "degree": "Pszichológiai Kar"
+      },
+      "e2": {
+        "school": "A Szovjetunió KGB Határőrségének Katonai-Politikai Főiskolája",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Írások",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Esszé]",
+        "meta": "A cég növekedése",
+        "title": "A kicsiből közepes. A közepesből nagy",
+        "excerpt": "Egy adott ponton az szab határt a cégnek leginkább, ahogyan irányítják."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Esszé",
+    "back": "Vissza a főoldalra",
+    "growth": {
+      "title": "A kicsiből közepes. A közepesből nagy",
+      "lead": "Sok éve figyelem a cégeket a fejlődés legkülönbözőbb szakaszaiban – a tulajdonos vezette vállalkozásoktól a legnagyobb vállalatcsoportokig. És minél többet látok belőlük, annál gyakrabban jut eszembe egy meglehetősen egyszerű gondolat.",
+      "p1": "Elvben nincs semmi elképzelhetetlenül nehéz abban, hogy egy kis vállalkozásból közepes legyen. Vagy a közepesből nagy. Persze kell hozzá termék, piac, pénz, emberek és egy kis szerencse.",
+      "p2": "De a növekedés fő akadálya többnyire máshol van. Egy adott ponton az szab határt a cégnek leginkább, ahogyan irányítják.",
+      "h1": "A kis cég a tulajdonosának köszönhetően nő",
+      "p3": "Ismeri az ügyfeleket. Maga hozza meg a kulcsdöntéseket. Tudja, kiben lehet megbízni. Érzi a pénzt. Személyesen ellenőrzi a minőséget. Néhány perc alatt meg tud változtatni egy döntést, amihez egy nagy cégnek hetekre lenne szüksége.",
+      "p4": "És éppen ezért nő a vállalkozás. De eljön a pillanat, amikor az, ami egykor a legnagyobb előnye volt, korlátozni kezdi a további növekedést.",
+      "p5": "A cég túl nagy lesz ahhoz, hogy továbbra is elférjen egyetlen ember fejében. És ez, szerintem, az első igazi elágazás.",
+      "h2": "Hogy közepes legyen, a tulajdonosnak el kell engednie a vállalkozás egy részét",
+      "p6": "Ez sokkal nehezebb, mint amilyennek látszik. Abba kell hagyni, hogy több száz döntést személyesen hozzon meg az ember. Olyanokat kell találni, akik bizonyos kérdésekben jobban értenek hozzá, mint ő. Nemcsak a feladatokat kell átadni nekik, hanem a tévedés jogát is.",
+      "p7": "Megjelenik a struktúra, a felelősség, a mutatószámok, a szabályok, a rendszeres vezetés. És itt támad egy paradoxon: ahhoz, hogy a tulajdonos megtartsa az ellenőrzést a növekvő vállalkozás felett, le kell mondania a közvetlen kontroll egy részéről.",
+      "p8": "Akik ezt soha nem teszik meg, gyakran évekig nagyon jó kis vállalkozás maradnak. Akiknek sikerül, közepessé válnak.",
+      "h3": "A közepesből nagyba vezető átmenet másképp működik",
+      "p9": "Itt már nem elég jó vezetőket felvenni és rájuk bízni az operatív munkát. A cégnek meg kell tanulnia rendszerként működni.",
+      "p10": "A stratégia megszűnik pusztán a tulajdonos fejében élni. A döntések nem csak személyes kapcsolatokon nyugszanak. A cégnek képesnek kell lennie erős vezetőket találni, kinevelni és megtartani. Kialakul egy vállalati kultúra – függetlenül attól, hogy foglalkozott-e vele valaki szándékosan.",
+      "p11": "És megjelenik az igény, hogy ne csak arról gondolkodjunk, hogyan keressünk többet holnap, hanem arról is, milyen céggé kell válni öt vagy tíz év alatt.",
+      "h4": "És itt megint a tulajdonosnak kell változnia",
+      "p12": "Nekem egyébként úgy tűnik, hogy egy cég növekedésének története nagyrészt a tulajdonosa szerepváltozásának a története. Először vállalkozó. Aztán vezetővé válik. Majd a szervezet építészévé kell válnia. Egy ponton pedig azzá az emberré, aki kijelöli az irányt, felépíti a csapatot, és a napi több száz döntés helyett néhány valóban fontosat hoz meg.",
+      "p13": "Nem minden vállalkozó akarja végigjárni ezt az egész utat. És ez rendben van. De nem lehet nagy vállalkozást építeni úgy, hogy közben kicsiként irányítjuk.",
+      "h5": "Milyen kérdésekkel kezdem",
+      "p14": "Ezért nálam egy cég növekedése nem azzal a kérdéssel kezdődik, hogy „hogyan növeljük az eladásokat?”. Először más kérdéseket tennék fel.",
+      "q1": "Milyen céggé akar válni?",
+      "q2": "Mi akadályozza ma abban, hogy két- vagy háromszorosára nőjön?",
+      "q3": "Mi történne a céggel, ha holnaptól három hónapig nem lenne bent az irodában?",
+      "q4": "Mely döntéseket még mindig nem lehet meghozni Ön nélkül?",
+      "q5": "Vannak Ön mellett olyan emberek, akikre valóban rábízná a vállalkozást?",
+      "q6": "Képes lenne a mai csapat egy kétszer ekkora céget irányítani?",
+      "q7": "És mindenekelőtt: Ön maga készen áll arra, hogy másképp vezesse a céget, mint ahogyan ma vezeti?",
+      "p15": "Az ezekre a kérdésekre adott válaszok néha sokkal többet mondanak egy vállalkozás kilátásairól, mint a pénzügyi modellje.",
+      "p16": "Nem hiszem, hogy a nagy vállalkozások valamilyen titkos recept szerint épülnének. Egy adott ponton egyszerűen sorban meg kell változtatni: a stratégiát → az üzleti modellt → az irányítási rendszert → a csapatot → a tulajdonos szerepét. És a cég minden következő szintje mindegyiktől más minőséget követel.",
+      "p17": "Ezért a számomra legérdekesebb munka az, amikor egy vállalkozás éppen az átmenet pillanatában van. Amikor a régi irányítási mód még hoz pénzt, de már korlátozni kezdi a jövőt. Amikor a tulajdonos látja, hogy a cég többre képes, de még nem világos, pontosan minek kell megváltoznia a következő lépéshez.",
+      "p18": "Nekem úgy tűnik, az igazi növekedés éppen ezzel a kérdéssel kezdődik."
+    }
+  },
+  "Footer": {
+    "cta": "Néha a tulajdonosnak nem projektre van szüksége. Hanem valakire, akivel végig lehet gondolni egy helyzetet, és döntésre lehet jutni.",
+    "ctaButton": "Írjon nekem →",
+    "colMenu": "Menü",
+    "colCases": "Projektek",
+    "colBlog": "Írások",
+    "colContact": "Kapcsolat",
+    "appearance": "Megjelenés",
+    "designBy": "Nem minden feladathoz kell tanácsadó",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazahsztán"
+  },
+  "ThemeSwitch": {
+    "label": "Megjelenés",
+    "light": "Világos",
+    "dark": "Sötét",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Nyelv",
+    "more": "Összes kiadás"
+  },
+  "AuthorCard": {
+    "role": "Stratégia • Transzformáció • Emberek",
+    "location": "Almaty, Kazahsztán",
+    "bio": "Tulajdonosokkal, CEO-kkal és vezetői csapatokkal dolgozom abban a pillanatban, amikor a cég a következő fejlődési szakaszba lép.",
+    "sinceLabel": "Pályakezdés"
+  },
+  "ContactForm": {
+    "title": "Maradjunk kapcsolatban",
+    "description": "Hagyjon egy címet, és írok, amikor lesz itt valami olvasnivaló.",
+    "emailLabel": "E-mail-cím",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Feliratkozás",
+    "submitting": "Küldés…",
+    "success": "Kész. Nézze meg a postafiókját.",
+    "unexpectedError": "Valami hiba történt. Próbálja újra.",
+    "validation": {
+      "emailRequired": "Adjon meg egy e-mail-címet",
+      "emailInvalid": "Ez nem tűnik e-mail-címnek",
+      "emailTooLong": "Ez a cím túl hosszú"
+    }
+  },
+  "StatusBadge": {
+    "label": "A szolgáltatás állapota",
+    "healthy": "Működik",
+    "unhealthy": "Nem elérhető",
+    "checking": "Ellenőrzés…",
+    "uptime": "Rendelkezésre állás {value}"
+  },
+  "About": {
+    "title": "Rólam",
+    "lead": "Ez az oldal azért létezik, hogy a lokalizált útválasztás második ága is működjön.",
+    "body": "A valódi tartalom később következik. Minden más már működik: a nyelvi útválasztás, a metaadatok, a téma és az akadálymentesség."
+  },
+  "NotFound": {
+    "title": "Az oldal nem található",
+    "description": "Lehet, hogy a hivatkozás elavult, vagy elgépelés van a címben.",
+    "backHome": "Vissza a főoldalra"
+  },
+  "ErrorBoundary": {
+    "title": "Valami elromlott",
+    "description": "A hibát naplóztuk. Megpróbálhatja újra.",
+    "retry": "Próbálja újra",
+    "digest": "Hibakód: {digest}"
+  }
+}

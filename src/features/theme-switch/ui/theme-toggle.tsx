@@ -18,8 +18,13 @@ function isThemeOption(value: string | undefined): value is ThemeOption {
   return OPTIONS.includes(value as ThemeOption)
 }
 
+/**
+ * `flex-1` rather than a fixed width: the three labels are translated into forty
+ * languages, and equal flexible thirds keep the thumb's arithmetic true whatever
+ * the longest word turns out to be. The minimum is what the Russian set needs.
+ */
 const OPTION_CLASSNAME =
-  'relative flex w-[58px] cursor-pointer items-center justify-center gap-[6px] py-2 text-[11px] font-extrabold tracking-[0.09em] transition-colors duration-300'
+  'relative flex min-w-[58px] flex-1 cursor-pointer items-center justify-center gap-[6px] px-2 py-2 text-[11px] font-extrabold tracking-[0.09em] transition-colors duration-300'
 
 const DOT_CLASSNAME = 'box-border size-[9px] rounded-full'
 

@@ -1,0 +1,285 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov — stratēģija, transformācija, cilvēki",
+      "description": "Strādāju ar īpašniekiem, CEO un vadības komandām brīdī, kad uzņēmumam priekšā ir nākamais attīstības posms."
+    },
+    "about": {
+      "title": "Par mani",
+      "description": "Īsi par to, kas ir Vladimir Shikov un ar ko viņš nodarbojas."
+    },
+    "notFound": {
+      "title": "Lapa nav atrasta",
+      "description": "Šādas lapas šeit nav."
+    }
+  },
+  "Common": {
+    "skipToContent": "Pāriet uz galveno saturu",
+    "loading": "Ielādē…",
+    "retry": "Mēģināt vēlreiz",
+    "close": "Aizvērt"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Galvenā navigācija",
+    "openMenu": "Atvērt izvēlni",
+    "closeMenu": "Aizvērt izvēlni",
+    "contact": "Sazināties →",
+    "nav": {
+      "home": "Sākums",
+      "about": "Par mani",
+      "services": "Ko es daru",
+      "cases": "Projekti",
+      "blog": "Raksti"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partneris",
+    "roleB": "TEAM LEAD",
+    "placeA": "Dzīvesvieta",
+    "placeB": "Almati, Kazahstāna",
+    "scopeA": "Strādā ar",
+    "scopeB": "īpašniekiem un CEO",
+    "statement": "Strādāju ar īpašniekiem, CEO un vadības komandām brīdī, kad uzņēmumam priekšā ir nākamais attīstības posms."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Par mani ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "TEAM LEAD partneris",
+    "placeLine": "Stratēģija • Transformācija • Cilvēki",
+    "lead": "Palīdzu ieraudzīt to, ko no uzņēmuma iekšienes ieraudzīt ir grūti. Aiz stratēģiskiem jautājumiem reti stāv tikai stratēģija.",
+    "body": "Uzņēmuma izaugsme maina prasības pret biznesa modeli. Jauns biznesa modelis – pret komandu. Jauna komanda – pret īpašnieka lomu. Tāpēc es raugos uz uzņēmumu vienlaikus caur trim optikām: stratēģija – organizācija – cilvēki. Un palīdzu īpašniekam noteikt, kuri lēmumi patiešām spēj mainīt uzņēmuma trajektoriju.",
+    "experience": "Mans profesionālais ceļš ir gājis caur trim ļoti atšķirīgām vidēm: starptautisko konsultāciju, lielo biznesu un valsts institūcijām. Es vadīju starptautiska vadītāju novērtēšanas uzņēmuma Krievijas struktūrvienību, vairāk nekā 12 gadus vadīju PDP Group CIS Maskavā, pēc tam atbildēju par vienu no galvenajiem Samruk-Kazyna grupas transformācijas virzieniem. Šodien esmu TEAM LEAD partneris, kur nodarbojos ar stratēģiju, biznesa attīstību, vadības komandu transformāciju un individuālu darbu ar uzņēmumu pirmajām personām. Esmu arī Kazahstānas Republikas Augstākās tiesu padomes kvalifikācijas komisijas loceklis un piedalos tiesneša amata kandidātu ekspertu vērtēšanā.",
+    "statValue1": "25+",
+    "statLabel1": "gadu darbs ar uzņēmumiem un to vadītājiem",
+    "statValue2": "320 000+",
+    "statLabel2": "darbinieku lielākajā transformācijas projektā",
+    "statValue3": "C-level",
+    "statLabel3": "pirmo personu novērtēšana, attīstība un atbalsts"
+  },
+  "Questions": {
+    "heading": "Kad esmu visnoderīgākais",
+    "lead": "Ne tad, kad uzņēmumam vajadzīgs vēl viens konsultants. Bet tad, kad īpašnieka vai pirmās personas priekšā rodas jautājums, uz kuru uzņēmuma iekšienē vairs nav acīmredzamas atbildes.",
+    "closing": "Šādās situācijās mans uzdevums ir radīt telpu vēsam faktu izvērtējumam un palīdzēt pārvērst sarežģītību dažos skaidros vadības lēmumos.",
+    "items": {
+      "q1": "Kurp virzīties tālāk?",
+      "q2": "Kurš biznesa modelis nodrošinās nākamo izaugsmes posmu?",
+      "q3": "Vai pašreizējā komanda spēj īstenot jauno stratēģiju?",
+      "q4": "Kurš var kļūt par nākamo pirmo personu?",
+      "q5": "Kas jāmaina uzņēmumā – un kas īpašniekam jāmaina savā paša lomā?"
+    }
+  },
+  "Services": {
+    "heading": "Ko es daru",
+    "lead": "Četri virzieni, kas praksē gandrīz vienmēr izrādās viens un tas pats uzdevums, aplūkots no dažādām pusēm.",
+    "items": {
+      "s1": {
+        "title": "Stratēģija",
+        "description": "Stratēģiskās sesijas un attīstības stratēģijas izstrāde. Sāku nevis ar instrumentiem un veidnēm, bet ar tirgu, biznesa ekonomiku, īpašnieka ambīcijām, ierobežojumiem un iespējām. Stratēģija sākas nevis ar iniciatīvu sarakstu, bet ar atbildi uz jautājumu: no kā esam gatavi atteikties tā labā, kas patiešām ir svarīgi?"
+      },
+      "s2": {
+        "title": "Transformācija",
+        "description": "Ceļš no šodienas vadības modeļa uz to, kas būs vajadzīgs rīt: struktūra, korporatīvā kultūra, vadības sistēma, vadītāju lomas, lēmumu pieņemšanas mehānismi, cilvēki. Pieredze aptver gan privātā biznesa, gan lielāko korporatīvo un valsts struktūru projektus."
+      },
+      "s3": {
+        "title": "Īpašnieks un CEO",
+        "description": "Pirmajai personai vienmēr ir jautājumi, kurus nav iespējams pilnībā deleģēt: stratēģija, komanda, pēctecis, krīze, jauns bizness, sava loma uzņēmumā. Es neaizstāju īpašnieku lēmuma pieņemšanā – palīdzu ieraudzīt situāciju no tā augstuma, no kura lēmums kļūst acīmredzamāks."
+      },
+      "s4": {
+        "title": "Komanda un pēctecība",
+        "description": "Stratēģija nosaka, kādam uzņēmumam jākļūst, bet īsteno to konkrēti cilvēki. Palīdzu saprast, kurš spēj vest uzņēmumu tālāk, kur atrodas vadītāju patiesais potenciāls, kam var uzticēt lielāku atbildību un kurš kādu dienu spēj aizstāt pirmo personu."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Mērogam ir nozīme",
+    "lead": "Trīs projekti, pēc kuriem redzams, ar cik liela mēroga uzdevumiem man ir nācies strādāt.",
+    "viewCase": "Atvērt projektu: {name}",
+    "meta": "Projekts",
+    "back": "Uz sākumlapu",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Korporatīvās kultūras transformācija",
+        "tag": "12 uzņēmumi · 320 000+ darbinieku",
+        "summary": "Samruk-Kazyna grupas korporatīvās kultūras transformācija – 12 nacionālie uzņēmumi un vairāk nekā 320 000 darbinieku.",
+        "detail": "Tika izveidota vienota korporatīvās kultūras diagnostikas un vadīšanas metodoloģija, noteikti mērķa uzvedības modeļi un izstrādātas transformācijas ceļa kartes."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Ražošanas vadītāju attīstība",
+        "tag": "Atzīts par labāko praksi",
+        "summary": "Philip Morris Ukraine ražošanas vadītāju attīstības programma.",
+        "detail": "Trīs gados vadītāju kompetences sasniedza mērķa līmeni, pēc tam turpmākās apmācības budžets tika samazināts līdz nullei. Projekts tika atzīts par labāko praksi un ieteikts citiem uzņēmuma birojiem."
+      },
+      "atom": {
+        "name": "Kodolenerģētikas nozare",
+        "caption": "Četrdesmit gadu stratēģija jaunai nozarei",
+        "tag": "Krievija",
+        "summary": "40 gadu attīstības stratēģijas izstrāde jaunai nozarei Krievijā, balstoties uz esošajām kodolenerģētikas jaudām.",
+        "detail": "Dalība jaunas nozares attīstības stratēģijas izstrādē četrdesmit gadu horizontā – uz esošo kodolenerģētikas jaudu bāzes."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Uzņēmumi",
+    "headingLine2": "un institūcijas",
+    "lead": "Dažādos gados esmu strādājis ar starptautiskām korporācijām, lielu privāto biznesu un valsts institūcijām.",
+    "marqueeLabel": "Uzņēmumi un institūcijas",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Supreme Court of Kazakhstan"
+    }
+  },
+  "Education": {
+    "heading": "Izglītība",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Lomonosova Maskavas Valsts universitāte",
+        "degree": "Psiholoģijas fakultāte"
+      },
+      "e2": {
+        "school": "PSRS VDK Robežsargu karaspēka Augstākā militāri politiskā skola",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Raksti",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Eseja]",
+        "meta": "Uzņēmuma izaugsme",
+        "title": "No maza – uz vidēju. No vidēja – uz lielu",
+        "excerpt": "Noteiktā brīdī uzņēmuma galvenais ierobežojums kļūst veids, kādā to vada."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Eseja",
+    "back": "Uz sākumlapu",
+    "growth": {
+      "title": "No maza – uz vidēju. No vidēja – uz lielu",
+      "lead": "Daudzus gadus vēroju uzņēmumus pavisam dažādās attīstības stadijās – no uzņēmēja vadīta biznesa līdz lielākajām korporācijām. Un jo vairāk to redzu, jo biežāk domāju par vienu diezgan vienkāršu lietu.",
+      "p1": "Principā nav nekā neiedomājami sarežģīta tajā, lai no maza biznesa izveidotu vidēju. Bet no vidēja – lielu. Protams, vajadzīgs produkts, tirgus, nauda, cilvēki un mazliet veiksmes.",
+      "p2": "Bet galvenais izaugsmes šķērslis biežāk atrodas citur. Noteiktā brīdī uzņēmuma galvenais ierobežojums kļūst veids, kādā to vada.",
+      "h1": "Mazais bizness aug, pateicoties savam īpašniekam",
+      "p3": "Viņš pazīst klientus. Pats pieņem galvenos lēmumus. Zina, kam var uzticēties. Jūt naudu. Personīgi kontrolē kvalitāti. Dažās minūtēs var mainīt lēmumu, kuram lielam uzņēmumam būtu vajadzīgas nedēļas.",
+      "p4": "Un tieši tāpēc bizness aug. Bet pienāk brīdis, kad tas, kas kādreiz bija tā galvenā priekšrocība, sāk ierobežot turpmāko izaugsmi.",
+      "p5": "Uzņēmums kļūst pārāk liels, lai turpinātu ietilpt viena cilvēka galvā. Un tā, manuprāt, ir pirmā īstā krustcele.",
+      "h2": "Lai kļūtu par vidēju, īpašniekam nākas atlaist daļu biznesa",
+      "p6": "Tas ir ievērojami grūtāk, nekā šķiet. Jāpārstāj personīgi pieņemt simtiem lēmumu. Jāatrod cilvēki, kuri atsevišķos jautājumos sapratīs labāk par tevi. Jānodod viņiem ne tikai uzdevumi, bet arī tiesības kļūdīties.",
+      "p7": "Parādās struktūra, atbildība, rādītāji, noteikumi, regulāra vadība. Un te rodas paradokss: lai saglabātu kontroli pār augošu biznesu, īpašniekam nākas atteikties no daļas tiešās kontroles.",
+      "p8": "Tie, kas to neizdara, bieži gadiem paliek ļoti labs mazais bizness. Tie, kas to spēja, – kļūst par vidējiem.",
+      "h3": "Pāreja no vidēja uz lielu ir iekārtota citādi",
+      "p9": "Šeit vairs nepietiek vienkārši nolīgt labus vadītājus un deleģēt viņiem operatīvo darbu. Uzņēmumam jāiemācās strādāt kā sistēmai.",
+      "p10": "Stratēģija pārstāj atrasties tikai īpašnieka galvā. Lēmumi sāk tikt pieņemti ne tikai personisku attiecību dēļ. Uzņēmumam jāprot atrast, izaudzēt un noturēt spēcīgus vadītājus. Rodas korporatīvā kultūra – neatkarīgi no tā, vai ar to esat īpaši nodarbojies.",
+      "p11": "Parādās nepieciešamība domāt ne tikai par to, kā rīt nopelnīt vairāk, bet arī par to, kādam uzņēmumam jākļūst pēc pieciem vai desmit gadiem.",
+      "h4": "Un te atkal nākas mainīties īpašniekam",
+      "p12": "Man vispār šķiet, ka biznesa izaugsmes stāsts lielā mērā ir stāsts par tā īpašnieka lomas maiņu. Sākumā viņš ir uzņēmējs. Tad kļūst par vadītāju. Pēc tam viņam jākļūst par organizācijas arhitektu. Un kādā brīdī – par cilvēku, kurš nosaka kustības virzienu, veido komandu un pieņem dažus patiešām svarīgus lēmumus simtu ikdienišķu lēmumu vietā.",
+      "p13": "Ne katrs uzņēmējs vēlas noiet visu šo ceļu. Un tas ir normāli. Bet nav iespējams uzbūvēt lielu biznesu, turpinot to vadīt kā mazu.",
+      "h5": "Ar kādiem jautājumiem es sāku",
+      "p14": "Tāpēc uzņēmuma izaugsme man sākas nevis ar jautājumu „kā palielināt pārdošanas apjomus?“. Es vispirms uzdotu citus jautājumus.",
+      "q1": "Par kādu uzņēmumu jūs vēlaties kļūt?",
+      "q2": "Kas šodien traucē jums izaugt divas vai trīs reizes?",
+      "q3": "Kas notiks ar uzņēmumu, ja rīt jūs trīs mēnešus nebūsiet birojā?",
+      "q4": "Kurus lēmumus joprojām nav iespējams pieņemt bez jums?",
+      "q5": "Vai blakus ir cilvēki, kuriem jūs patiešām esat gatavs uzticēt biznesu?",
+      "q6": "Vai šodienas komanda spēj vadīt uzņēmumu, kas ir divreiz lielāks par pašreizējo?",
+      "q7": "Un galvenais: vai jūs pats esat gatavs vadīt uzņēmumu citādi, nekā vadāt to šodien?",
+      "p15": "Atbildes uz šiem jautājumiem dažkārt pastāsta par biznesa perspektīvām ievērojami vairāk nekā finanšu modelis.",
+      "p16": "Es nedomāju, ka lielais bizness tiek būvēts pēc kādas slepenas receptes. Noteiktā posmā vienkārši nākas secīgi mainīt: stratēģiju → biznesa modeli → vadības sistēmu → komandu → īpašnieka lomu. Un katrs nākamais uzņēmuma līmenis prasa citu kvalitāti no katra šī elementa.",
+      "p17": "Tāpēc man visinteresantāk ir strādāt ar biznesu tieši pārejas brīdī. Kad vecais vadīšanas veids vēl nes naudu, bet jau sāk ierobežot nākotni. Kad īpašnieks saprot, ka uzņēmums spēj vairāk, bet pagaidām nav līdz galam skaidrs, kam tieši jāmainās, lai spertu nākamo soli.",
+      "p18": "Man šķiet, tieši ar šo jautājumu arī sākas īstā izaugsme."
+    }
+  },
+  "Footer": {
+    "cta": "Dažkārt īpašniekam vajadzīgs nevis projekts. Viņam vajadzīgs cilvēks, ar kuru var izanalizēt situāciju un pieņemt lēmumu.",
+    "ctaButton": "Uzrakstīt →",
+    "colMenu": "Izvēlne",
+    "colCases": "Projekti",
+    "colBlog": "Raksti",
+    "colContact": "Kontakti",
+    "appearance": "Noformējums",
+    "designBy": "Ne katrs uzdevums prasa konsultantu",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almati, Kazahstāna"
+  },
+  "ThemeSwitch": {
+    "label": "Noformējums",
+    "light": "Gaišs",
+    "dark": "Tumšs",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Valoda",
+    "more": "Visi izdevumi"
+  },
+  "AuthorCard": {
+    "role": "Stratēģija • Transformācija • Cilvēki",
+    "location": "Almati, Kazahstāna",
+    "bio": "Strādāju ar īpašniekiem, CEO un vadības komandām brīdī, kad uzņēmums pāriet uz nākamo attīstības posmu.",
+    "sinceLabel": "Profesijā kopš"
+  },
+  "ContactForm": {
+    "title": "Palieciet saziņā",
+    "description": "Atstājiet adresi, un es uzrakstīšu, kad vietnē parādīsies kaut kas vērtīgs.",
+    "emailLabel": "E-pasta adrese",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Abonēt",
+    "submitting": "Nosūtām…",
+    "success": "Gatavs. Pārbaudiet pastu.",
+    "unexpectedError": "Kaut kas nogāja greizi. Mēģiniet vēlreiz.",
+    "validation": {
+      "emailRequired": "Norādiet e-pasta adresi",
+      "emailInvalid": "Šķiet, ka tā nav e-pasta adrese",
+      "emailTooLong": "Adrese ir pārāk gara"
+    }
+  },
+  "StatusBadge": {
+    "label": "Pakalpojuma stāvoklis",
+    "healthy": "Darbojas",
+    "unhealthy": "Nav pieejams",
+    "checking": "Pārbaudām…",
+    "uptime": "Darbspējas laiks {value}"
+  },
+  "About": {
+    "title": "Par mani",
+    "lead": "Šī lapa pastāv, lai parādītu otro lokalizēto maršrutēšanas zaru.",
+    "body": "Saturs parādīsies vēlāk. Pagaidām šeit strādā viss pārējais: maršrutēšana pa lokalēm, metadati, noformējuma tēma un piekļūstamība."
+  },
+  "NotFound": {
+    "title": "Lapa nav atrasta",
+    "description": "Iespējams, saite ir novecojusi vai adresē ir drukas kļūda.",
+    "backHome": "Uz sākumlapu"
+  },
+  "ErrorBoundary": {
+    "title": "Kaut kas saplīsa",
+    "description": "Kļūda ir ierakstīta žurnālā. Var mēģināt vēlreiz.",
+    "retry": "Mēģināt vēlreiz",
+    "digest": "Kļūdas kods: {digest}"
+  }
+}

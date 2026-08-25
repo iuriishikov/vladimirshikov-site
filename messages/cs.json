@@ -1,0 +1,285 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov – strategie, transformace, lidé",
+      "description": "Pracuji s majiteli, generálními řediteli a manažerskými týmy ve chvíli, kdy firmu čeká další fáze růstu."
+    },
+    "about": {
+      "title": "O mně",
+      "description": "Krátce o Vladimiru Shikovovi a o tom, čím se zabývá."
+    },
+    "notFound": {
+      "title": "Stránka nenalezena",
+      "description": "Taková stránka tu není."
+    }
+  },
+  "Common": {
+    "skipToContent": "Přejít k hlavnímu obsahu",
+    "loading": "Načítání…",
+    "retry": "Zkusit znovu",
+    "close": "Zavřít"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Hlavní navigace",
+    "openMenu": "Otevřít menu",
+    "closeMenu": "Zavřít menu",
+    "contact": "Spojit se →",
+    "nav": {
+      "home": "Domů",
+      "about": "O mně",
+      "services": "Co dělám",
+      "cases": "Projekty",
+      "blog": "Články"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner",
+    "roleB": "TEAM LEAD",
+    "placeA": "Žije v",
+    "placeB": "Almaty, Kazachstán",
+    "scopeA": "Pracuje s",
+    "scopeB": "majiteli a CEO",
+    "statement": "Pracuji s majiteli, generálními řediteli a manažerskými týmy ve chvíli, kdy firmu čeká další fáze růstu."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ O mně ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partner TEAM LEAD",
+    "placeLine": "Strategie • Transformace • Lidé",
+    "lead": "Pomáhám vidět to, co je zevnitř firmy vidět těžko. Za strategickou otázkou zřídka stojí jen strategie.",
+    "body": "Růst mění to, co musí zvládnout obchodní model. Nový obchodní model mění to, čím musí být tým. Nový tým mění roli samotného majitele. Proto se na firmu dívám současně třemi optikami – strategie, organizace, lidé – a pomáhám majiteli určit, která rozhodnutí dokážou skutečně změnit trajektorii firmy.",
+    "experience": "Moje profesní dráha vedla třemi velmi odlišnými prostředími: mezinárodní poradenství, velký byznys a státní instituce. Vedl jsem ruskou pobočku mezinárodní společnosti zabývající se hodnocením manažerů, více než 12 let jsem řídil PDP Group CIS v Moskvě a poté jsem odpovídal za jeden z klíčových směrů transformace skupiny Samruk-Kazyna. Dnes jsem partnerem TEAM LEAD, kde se věnuji strategii, rozvoji byznysu, transformaci manažerských týmů a individuální práci s generálními řediteli. Jsem také členem kvalifikační komise Nejvyšší soudní rady Republiky Kazachstán a podílím se na posuzování kandidátů na soudcovské funkce.",
+    "statValue1": "25+",
+    "statLabel1": "let práce s firmami a jejich vedením",
+    "statValue2": "320 000+",
+    "statLabel2": "zaměstnanců v největším transformačním programu",
+    "statValue3": "C-level",
+    "statLabel3": "hodnocení, rozvoj a podpora generálních ředitelů"
+  },
+  "Questions": {
+    "heading": "Kdy jsem nejužitečnější",
+    "lead": "Ne tehdy, když firma potřebuje dalšího konzultanta. Ale tehdy, když před majitelem nebo generálním ředitelem stojí otázka, na kterou už uvnitř firmy není zřejmá odpověď.",
+    "closing": "V takových situacích je mým úkolem vytvořit prostor pro střízlivý pohled na fakta a pomoci proměnit složitost v několik rozhodnutí, která se dají skutečně učinit.",
+    "items": {
+      "q1": "Kam se posunout dál?",
+      "q2": "Který obchodní model unese další fázi růstu?",
+      "q3": "Zvládne současný tým naplnit novou strategii?",
+      "q4": "Kdo by se mohl stát dalším generálním ředitelem?",
+      "q5": "Co se musí změnit ve firmě – a co se musí změnit v roli samotného majitele?"
+    }
+  },
+  "Services": {
+    "heading": "Co dělám",
+    "lead": "Čtyři oblasti, které se v praxi téměř vždy ukážou být jednou úlohou nahlíženou z různých stran.",
+    "items": {
+      "s1": {
+        "title": "Strategie",
+        "description": "Strategické workshopy a tvorba růstové strategie. Nezačínám nástroji a šablonami, ale trhem, ekonomikou firmy, ambicí majitele, omezeními a příležitostmi. Strategie nezačíná seznamem iniciativ; začíná odpovědí na jednu otázku – čeho jsme ochotni se vzdát kvůli tomu, na čem opravdu záleží?"
+      },
+      "s2": {
+        "title": "Transformace",
+        "description": "Cesta od dnešního modelu řízení k tomu, který si vyžádá zítřek: struktura, kultura, systém řízení, role vedoucích, způsob, jakým se přijímají rozhodnutí, lidé. Tato zkušenost zahrnuje soukromé firmy i největší korporátní a státní struktury."
+      },
+      "s3": {
+        "title": "Majitel a CEO",
+        "description": "Generální ředitel s sebou vždy nese otázky, které nelze plně delegovat: strategie, tým, nástupce, krize, nový byznys, vlastní role ve firmě. Nerozhoduji za majitele – pomáhám mu vidět situaci z výšky, ze které se rozhodnutí stává zřejmým."
+      },
+      "s4": {
+        "title": "Tým a nástupnictví",
+        "description": "Strategie určuje, čím se firma má stát, ale naplňují ji konkrétní lidé. Pomáhám zjistit, kdo dokáže vést firmu dál, kde leží skutečný potenciál vedoucích, komu lze svěřit větší odpovědnost a kdo jednou může převzít nejvyšší pozici."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Na měřítku záleží",
+    "lead": "Tři programy, na kterých je vidět, jak velké úlohy tato práce musela unést.",
+    "viewCase": "Otevřít projekt: {name}",
+    "meta": "Projekt",
+    "back": "Zpět na úvod",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformace firemní kultury",
+        "tag": "12 společností · 320 000+ zaměstnanců",
+        "summary": "Transformace firemní kultury ve skupině Samruk-Kazyna – 12 národních společností a více než 320 000 zaměstnanců.",
+        "detail": "Vznikla jednotná metodika diagnostiky a řízení firemní kultury, byly definovány cílové vzorce chování a pro každou společnost byly zpracovány transformační plány."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Rozvoj výrobních manažerů",
+        "tag": "Uznáno jako nejlepší praxe",
+        "summary": "Program rozvoje výrobních manažerů ve Philip Morris Ukraine.",
+        "detail": "Během tří let dosáhly kompetence manažerů cílové úrovně, načež byl rozpočet na další školení snížen na nulu. Program byl uznán jako nejlepší praxe a doporučen dalším pobočkám společnosti."
+      },
+      "atom": {
+        "name": "Jaderný průmysl",
+        "caption": "Čtyřicetiletá strategie nového odvětví",
+        "tag": "Rusko",
+        "summary": "Čtyřicetiletá strategie růstu nového odvětví v Rusku, postavená na stávajících kapacitách jaderné energetiky.",
+        "detail": "Práce na strategii nového odvětví v horizontu čtyřiceti let, na základě již existujících kapacit jaderné energetiky."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Společnosti",
+    "headingLine2": "a instituce",
+    "lead": "V průběhu let vedla tato práce přes mezinárodní korporace, velké soukromé firmy a státní instituce.",
+    "marqueeLabel": "Společnosti a instituce",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Supreme Court of Kazakhstan"
+    }
+  },
+  "Education": {
+    "heading": "Vzdělání",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Moskevská státní univerzita M. V. Lomonosova",
+        "degree": "Fakulta psychologie"
+      },
+      "e2": {
+        "school": "Vyšší vojensko-politická škola pohraniční stráže KGB SSSR",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Články",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Esej]",
+        "meta": "Růst firmy",
+        "title": "Z malé firmy do střední. Ze střední do velké",
+        "excerpt": "V určitém okamžiku firmu nejvíc omezuje způsob, jakým je řízena."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Esej",
+    "back": "Zpět na úvod",
+    "growth": {
+      "title": "Z malé firmy do střední. Ze střední do velké",
+      "lead": "Řadu let pozoruji firmy ve všech fázích vývoje, od podniků řízených zakladatelem po největší korporace. A čím víc jich vidím, tím častěji se vracím k jedné poměrně jednoduché myšlence.",
+      "p1": "V zásadě není nic nepředstavitelně těžkého na tom udělat z malé firmy střední a ze střední velkou. Samozřejmě potřebujete produkt, trh, peníze, lidi a trochu štěstí.",
+      "p2": "Hlavní bariéra růstu ale bývá jinde. V určitém okamžiku firmu nejvíc omezuje způsob, jakým je řízena.",
+      "h1": "Malá firma roste díky svému majiteli",
+      "p3": "Zná zákazníky. Klíčová rozhodnutí přijímá sám. Ví, komu se dá věřit. Cítí peníze. Kvalitu kontroluje osobně. Za pár minut dokáže změnit rozhodnutí, na které by velká firma potřebovala týdny.",
+      "p4": "A právě proto byznys roste. Přichází ale chvíle, kdy to, co bylo kdysi jeho největší výhodou, začne další růst omezovat.",
+      "p5": "Firma se stává příliš velkou na to, aby se dál vešla do hlavy jednoho člověka. To je podle mě první skutečná křižovatka.",
+      "h2": "Aby se firma stala střední, musí majitel část byznysu pustit",
+      "p6": "Je to mnohem těžší, než to zní. Musíte přestat sami přijímat stovky rozhodnutí. Najít lidi, kteří budou některým věcem rozumět lépe než vy. Předat jim nejen úkoly, ale i právo se mýlit.",
+      "p7": "Objevuje se struktura, odpovědnost, ukazatele, pravidla, pravidelný management. A tady se ukazuje paradox: aby si majitel udržel kontrolu nad rostoucím byznysem, musí se části své přímé kontroly vzdát.",
+      "p8": "Ti, kdo to nikdy neudělají, často léta zůstávají velmi dobrou malou firmou. Ti, kdo to zvládnou, se stanou střední firmou.",
+      "h3": "Přechod od střední firmy k velké funguje jinak",
+      "p9": "Tady už nestačí najmout dobré manažery a delegovat na ně provozní práci. Firma se musí naučit fungovat jako systém.",
+      "p10": "Strategie přestává žít jen v hlavě majitele. Rozhodnutí přestávají stát jen na osobních vztazích. Firma musí umět nacházet, vychovávat a udržet si silné vedoucí. Vzniká firemní kultura – ať už ji někdo budoval záměrně, nebo ne.",
+      "p11": "A objevuje se potřeba přemýšlet nejen o tom, jak zítra vydělat víc, ale i o tom, jakou firmou je třeba se za pět nebo deset let stát.",
+      "h4": "A tady se musí majitel změnit znovu",
+      "p12": "Zdá se mi, že příběh růstu firmy je do velké míry příběhem toho, jak se mění role jejího majitele. Nejprve je podnikatel. Pak se stává manažerem. Potom se musí stát architektem organizace. A v určitém okamžiku člověkem, který určuje směr, staví tým a přijímá několik opravdu důležitých rozhodnutí místo stovek každodenních.",
+      "p13": "Ne každý podnikatel chce projít celou tu cestu. A to je v pořádku. Nelze ale postavit velký byznys a přitom ho dál řídit jako malý.",
+      "h5": "Otázky, kterými začínám",
+      "p14": "Růst firmy pro mě proto nezačíná otázkou „jak zvýšit prodeje?“. Nejdřív bych se ptal na jiné věci.",
+      "q1": "Jakou firmou se chcete stát?",
+      "q2": "Co vám dnes brání vyrůst dvakrát nebo třikrát?",
+      "q3": "Co by se s firmou stalo, kdybyste od zítřka tři měsíce nebyl v kanceláři?",
+      "q4": "Která rozhodnutí se stále nedají přijmout bez vás?",
+      "q5": "Jsou kolem vás lidé, kterým byste byznys opravdu svěřil?",
+      "q6": "Dokázal by dnešní tým řídit firmu dvakrát větší, než je tahle?",
+      "q7": "A především: jste vy sám připraven řídit firmu jinak, než ji řídíte dnes?",
+      "p15": "Odpovědi na tyto otázky někdy vypovídají o vyhlídkách byznysu mnohem víc než jeho finanční model.",
+      "p16": "Nemyslím si, že se velký byznys staví podle nějakého tajného receptu. V určitém okamžiku prostě musíte postupně změnit: strategii → obchodní model → systém řízení → tým → roli majitele. A každá další úroveň firmy vyžaduje od každé z těch věcí jinou kvalitu.",
+      "p17": "Proto je pro mě nejzajímavější práce s firmou přesně ve chvíli přechodu. Když starý způsob řízení ještě vydělává, ale už začal omezovat budoucnost. Když majitel vidí, že firma je schopná víc, ale zatím není jasné, co přesně se musí změnit, aby udělala další krok.",
+      "p18": "Zdá se mi, že skutečný růst začíná právě touto otázkou."
+    }
+  },
+  "Footer": {
+    "cta": "Majitel někdy nepotřebuje projekt. Potřebuje někoho, s kým situaci probere a dojde k rozhodnutí.",
+    "ctaButton": "Napsat mi →",
+    "colMenu": "Menu",
+    "colCases": "Projekty",
+    "colBlog": "Články",
+    "colContact": "Kontakt",
+    "appearance": "Vzhled",
+    "designBy": "Ne každá úloha vyžaduje konzultanta",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazachstán"
+  },
+  "ThemeSwitch": {
+    "label": "Vzhled",
+    "light": "Světlý",
+    "dark": "Tmavý",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Jazyk",
+    "more": "Všechna vydání"
+  },
+  "AuthorCard": {
+    "role": "Strategie • Transformace • Lidé",
+    "location": "Almaty, Kazachstán",
+    "bio": "Pracuji s majiteli, generálními řediteli a manažerskými týmy ve chvíli, kdy firma přechází do další fáze růstu.",
+    "sinceLabel": "V oboru od"
+  },
+  "ContactForm": {
+    "title": "Zůstaňme v kontaktu",
+    "description": "Nechte adresu a napíšu, až tu bude něco, co stojí za přečtení.",
+    "emailLabel": "E-mailová adresa",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Odebírat",
+    "submitting": "Odesílám…",
+    "success": "Hotovo. Zkontrolujte poštu.",
+    "unexpectedError": "Něco se pokazilo. Zkuste to prosím znovu.",
+    "validation": {
+      "emailRequired": "Zadejte e-mailovou adresu",
+      "emailInvalid": "Tohle nevypadá jako e-mailová adresa",
+      "emailTooLong": "Tato adresa je příliš dlouhá"
+    }
+  },
+  "StatusBadge": {
+    "label": "Stav služby",
+    "healthy": "Funguje",
+    "unhealthy": "Nedostupné",
+    "checking": "Ověřuji…",
+    "uptime": "Dostupnost {value}"
+  },
+  "About": {
+    "title": "O mně",
+    "lead": "Tato stránka existuje proto, aby prověřila druhou lokalizovanou větev směrování.",
+    "body": "Skutečný obsah přijde později. Všechno ostatní tu už funguje: směrování podle jazyků, metadata, vzhled a přístupnost."
+  },
+  "NotFound": {
+    "title": "Stránka nenalezena",
+    "description": "Odkaz může být zastaralý, nebo je v adrese překlep.",
+    "backHome": "Zpět na úvod"
+  },
+  "ErrorBoundary": {
+    "title": "Něco se rozbilo",
+    "description": "Chyba byla zaznamenána. Můžete to zkusit znovu.",
+    "retry": "Zkusit znovu",
+    "digest": "Kód chyby: {digest}"
+  }
+}

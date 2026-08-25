@@ -1,0 +1,285 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov – strateegia, transformatsioon, inimesed",
+      "description": "Töötan omanike, tegevjuhtide ja juhtmeeskondadega olukordades, kus ettevõtte ees seisab järgmine arenguetapp."
+    },
+    "about": {
+      "title": "Minust",
+      "description": "Lühidalt Vladimir Shikovist ja sellest, millega ta tegeleb."
+    },
+    "notFound": {
+      "title": "Lehte ei leitud",
+      "description": "Sellist lehte siin ei ole."
+    }
+  },
+  "Common": {
+    "skipToContent": "Liigu põhisisu juurde",
+    "loading": "Laadin…",
+    "retry": "Proovi uuesti",
+    "close": "Sulge"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Peamine navigatsioon",
+    "openMenu": "Ava menüü",
+    "closeMenu": "Sulge menüü",
+    "contact": "Võtke ühendust →",
+    "nav": {
+      "home": "Avaleht",
+      "about": "Minust",
+      "services": "Mida ma teen",
+      "cases": "Projektid",
+      "blog": "Artiklid"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner",
+    "roleB": "TEAM LEAD",
+    "placeA": "Asukoht",
+    "placeB": "Almatõ, Kasahstan",
+    "scopeA": "Töötab",
+    "scopeB": "omanike ja tegevjuhtidega",
+    "statement": "Töötan omanike, tegevjuhtide ja juhtmeeskondadega olukordades, kus ettevõtte ees seisab järgmine arenguetapp."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Minust ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partner ettevõttes TEAM LEAD",
+    "placeLine": "Strateegia • Transformatsioon • Inimesed",
+    "lead": "Aitan näha seda, mida ettevõtte seest on raske näha. Strateegilise küsimuse taga on harva ainult strateegia.",
+    "body": "Kasv muudab seda, mida ärimudel peab suutma. Uus ärimudel muudab seda, milline peab olema meeskond. Uus meeskond muudab omaniku enda rolli. Seetõttu vaatan ettevõtet korraga kolme optika kaudu – strateegia, organisatsioon, inimesed – ja aitan omanikul välja selgitada, millised otsused suudavad ettevõtte trajektoori tegelikult muuta.",
+    "experience": "Minu töine tee on läbinud kolm väga erinevat keskkonda: rahvusvaheline nõustamine, suurettevõtlus ja riigiasutused. Juhtisin juhtide hindamisega tegeleva rahvusvahelise ettevõtte Venemaa üksust, olin üle 12 aasta Moskvas ettevõtte PDP Group CIS juht ja vastutasin seejärel kontserni Samruk-Kazyna ühe võtmetähtsusega transformatsioonisuuna eest. Täna olen partner ettevõttes TEAM LEAD, kus tegelen strateegia, äriarenduse, juhtmeeskondade transformatsiooni ja tippjuhtidega tehtava individuaalse tööga. Olen ka Kasahstani Vabariigi Kõrgema Kohtunõukogu kvalifikatsioonikomisjoni liige ning hindan kandidaate kohtunikuametisse.",
+    "statValue1": "25+",
+    "statLabel1": "aastat tööd ettevõtete ja nende juhtidega",
+    "statValue2": "320 000+",
+    "statLabel2": "töötajat suurimas transformatsiooniprogrammis",
+    "statValue3": "C-level",
+    "statLabel3": "tippjuhtide hindamine, arendamine ja toetamine"
+  },
+  "Questions": {
+    "heading": "Millal olen kõige kasulikum",
+    "lead": "Mitte siis, kui ettevõte vajab veel üht konsultanti. Vaid siis, kui omaniku või tegevjuhi ette kerkib küsimus, millele ettevõttes endas enam ilmset vastust ei ole.",
+    "closing": "Sellistes olukordades on minu ülesanne luua ruumi faktide kaineks vaatamiseks ja aidata muuta keerukus mõneks otsuseks, mille saab tegelikult vastu võtta.",
+    "items": {
+      "q1": "Kuhu me siit edasi liigume?",
+      "q2": "Milline ärimudel kannab välja järgmise kasvuetapi?",
+      "q3": "Kas praegune meeskond suudab uue strateegia ellu viia?",
+      "q4": "Kes võiks saada järgmiseks tegevjuhiks?",
+      "q5": "Mis peab ettevõttes muutuma – ja mis peab muutuma omaniku enda rollis?"
+    }
+  },
+  "Services": {
+    "heading": "Mida ma teen",
+    "lead": "Neli suunda, mis praktikas osutuvad peaaegu alati üheks ja samaks ülesandeks, vaadatuna eri külgedelt.",
+    "items": {
+      "s1": {
+        "title": "Strateegia",
+        "description": "Strateegiasessioonid ja kasvustrateegia väljatöötamine. Ma ei alusta tööriistadest ja mallidest, vaid turust, ettevõtte majandusest, omaniku ambitsioonist, piirangutest ja avanevatest võimalustest. Strateegia ei alga algatuste nimekirjast, vaid vastusest ühele küsimusele: millest oleme valmis loobuma selle nimel, mis on tõeliselt oluline?"
+      },
+      "s2": {
+        "title": "Transformatsioon",
+        "description": "Tee tänaselt juhtimismudelilt selleni, mida on vaja homme: struktuur, kultuur, juhtimissüsteem, juhtide rollid, otsuste vastuvõtmise kord, inimesed. See kogemus hõlmab nii eraomanduses ettevõtteid kui ka suurimaid kontserne ja riigistruktuure."
+      },
+      "s3": {
+        "title": "Omanik ja tegevjuht",
+        "description": "Tippjuhil on alati küsimusi, mida ei saa lõpuni delegeerida: strateegia, meeskond, järglane, kriis, uus äri, oma roll ettevõttes. Ma ei tee otsust omaniku eest – aitan tal näha olukorda sellelt kõrguselt, kust otsus muutub ilmseks."
+      },
+      "s4": {
+        "title": "Meeskond ja järelkasv",
+        "description": "Strateegia määrab, milliseks ettevõte peab saama, ellu viivad selle aga konkreetsed inimesed. Aitan välja selgitada, kes suudab ettevõtet edasi viia, kus on juhi tegelik potentsiaal, kellele saab usaldada rohkem ja kes võiks ühel päeval asuda esimese juhi kohale."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Mastaap loeb",
+    "lead": "Kolm programmi, millest on näha, kui suuri ülesandeid see töö on pidanud kandma.",
+    "viewCase": "Ava projekt: {name}",
+    "meta": "Projekt",
+    "back": "Tagasi avalehele",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Ettevõttekultuuri transformatsioon",
+        "tag": "12 ettevõtet · 320 000+ töötajat",
+        "summary": "Ettevõttekultuuri transformatsioon kontsernis Samruk-Kazyna – 12 riiklikku ettevõtet ja üle 320 000 töötaja.",
+        "detail": "Loodi ühtne metoodika ettevõttekultuuri diagnoosimiseks ja juhtimiseks, määrati sihtkäitumised ning koostati igale ettevõttele transformatsiooni teekaart."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Tootmisjuhtide arendamine",
+        "tag": "Tunnistati parimaks praktikaks",
+        "summary": "Ettevõtte Philip Morris Ukraine tootmisjuhtide arenguprogramm.",
+        "detail": "Kolme aastaga jõudsid juhtide kompetentsid sihttasemele, mille järel vähendati edasise koolituse eelarve nullini. Programm tunnistati parimaks praktikaks ja seda soovitati ettevõtte teistele kontoritele."
+      },
+      "atom": {
+        "name": "Tuumatööstus",
+        "caption": "Uue tööstusharu neljakümne aasta strateegia",
+        "tag": "Venemaa",
+        "summary": "Uue tööstusharu neljakümne aasta arengustrateegia Venemaal, mis tugineb olemasolevale tuumaenergeetika võimsusele.",
+        "detail": "Töö uue tööstusharu strateegia kallal neljakümne aasta horisondis – olemasoleva tuumaenergeetika võimsuse baasil."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Ettevõtted",
+    "headingLine2": "ja asutused",
+    "lead": "Eri aastatel olen töötanud rahvusvaheliste korporatsioonide, suure eraäri ja riigiasutustega.",
+    "marqueeLabel": "Ettevõtted ja asutused",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Kasahstani Ülemkohus"
+    }
+  },
+  "Education": {
+    "heading": "Haridus",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "M. V. Lomonossovi nimeline Moskva Riiklik Ülikool",
+        "degree": "Psühholoogiateaduskond"
+      },
+      "e2": {
+        "school": "NSV Liidu KGB piirivalve kõrgem sõjaväelis-poliitiline kool",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Artiklid",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Essee]",
+        "meta": "Ettevõtte kasv",
+        "title": "Väikesest keskmiseks. Keskmisest suureks",
+        "excerpt": "Teatud hetkel saab ettevõtte peamiseks piiranguks viis, kuidas seda juhitakse."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Essee",
+    "back": "Tagasi avalehele",
+    "growth": {
+      "title": "Väikesest keskmiseks. Keskmisest suureks",
+      "lead": "Olen palju aastaid jälginud ettevõtteid arengu kõige erinevamates etappides – asutaja juhitud ärist kuni suurimate korporatsioonideni. Ja mida rohkem neid näen, seda sagedamini pöördun tagasi ühe üsna lihtsa mõtte juurde.",
+      "p1": "Põhimõtteliselt ei ole väikesest ärist keskmise tegemises ega keskmisest suure tegemises midagi uskumatult keerulist. Muidugi on vaja toodet, turgu, raha, inimesi ja veidi õnne.",
+      "p2": "Kuid peamine kasvubarjäär asub tavaliselt mujal. Teatud hetkel saab ettevõtte peamiseks piiranguks viis, kuidas seda juhitakse.",
+      "h1": "Väikeäri kasvab tänu oma omanikule",
+      "p3": "Ta tunneb kliente. Võtab võtmeotsused ise vastu. Teab, keda saab usaldada. Tunnetab raha. Kontrollib kvaliteeti isiklikult. Suudab mõne minutiga muuta otsust, milleks suur ettevõte vajaks nädalaid.",
+      "p4": "Ja just seepärast äri kasvabki. Kuid saabub hetk, mil see, mis kunagi oli tema suurim eelis, hakkab edasist kasvu piirama.",
+      "p5": "Ettevõte muutub liiga suureks, et mahtuda edasi ühe inimese pähe. Ja see on minu meelest esimene tõeline teelahkme koht.",
+      "h2": "Keskmiseks saamiseks peab omanik osa ärist käest laskma",
+      "p6": "See on tunduvalt raskem, kui kõlab. Tuleb lõpetada sadade otsuste isiklik vastuvõtmine. Leida inimesed, kes mõnes asjas orienteeruvad paremini kui sina ise. Anda neile üle mitte ainult ülesanded, vaid ka õigus eksida.",
+      "p7": "Tekivad struktuur, vastutus, mõõdikud, reeglid, regulaarne juhtimine. Ja siin ilmneb paradoks: kasvava äri üle kontrolli säilitamiseks peab omanik loobuma osast vahetust kontrollist.",
+      "p8": "Need, kes seda kunagi ei tee, jäävad sageli aastateks väga heaks väikeäriks. Need, kes suudavad, saavad keskmiseks.",
+      "h3": "Üleminek keskmisest suureks on teisiti üles ehitatud",
+      "p9": "Siin ei piisa enam heade juhtide palkamisest ja operatiivtöö neile delegeerimisest. Ettevõte peab õppima töötama süsteemina.",
+      "p10": "Strateegia lakkab olemast ainult omaniku peas. Otsused ei toetu enam üksnes isiklikele suhetele. Ettevõte peab oskama tugevaid juhte leida, kasvatada ja hoida. Tekib ettevõttekultuur – sõltumata sellest, kas keegi seda teadlikult kujundas või mitte.",
+      "p11": "Ja tekib vajadus mõelda mitte ainult sellele, kuidas homme rohkem teenida, vaid ka sellele, milliseks ettevõtteks tuleb saada viie või kümne aasta pärast.",
+      "h4": "Ja siin peab omanik taas muutuma",
+      "p12": "Mulle tundub, et ettevõtte kasvu lugu on suuresti lugu sellest, kuidas muutub tema omaniku roll. Alguses on ta ettevõtja. Siis saab temast juht. Seejärel peab ta saama organisatsiooni arhitektiks. Ja mingil hetkel inimeseks, kes määrab suuna, kujundab meeskonna ja võtab vastu mõne tõeliselt olulise otsuse sadade igapäevaste asemel.",
+      "p13": "Mitte iga ettevõtja ei taha seda teed lõpuni käia. Ja see on normaalne. Kuid suurt äri ei ole võimalik üles ehitada, juhtides seda edasi nagu väikest.",
+      "h5": "Küsimused, millest ma alustan",
+      "p14": "Seepärast ei alga ettevõtte kasv minu jaoks küsimusest „kuidas müüki suurendada?“. Ma küsiksin kõigepealt teisi küsimusi.",
+      "q1": "Milliseks ettevõtteks te saada tahate?",
+      "q2": "Mis takistab teil täna kaks või kolm korda kasvamast?",
+      "q3": "Mis juhtuks ettevõttega, kui teid homsest kolm kuud kontoris ei oleks?",
+      "q4": "Milliseid otsuseid ei ole ikka veel võimalik ilma teieta vastu võtta?",
+      "q5": "Kas teie kõrval on inimesi, kellele te oleksite tõesti valmis äri usaldama?",
+      "q6": "Kas tänane meeskond suudaks juhtida praegusest kaks korda suuremat ettevõtet?",
+      "q7": "Ja ennekõike: kas te ise olete valmis juhtima ettevõtet teisiti, kui te seda täna juhite?",
+      "p15": "Vastused nendele küsimustele räägivad äri väljavaadetest mõnikord palju rohkem kui finantsmudel.",
+      "p16": "Ma ei arva, et suurt äri ehitatakse mingi salajase retsepti järgi. Teatud etapil tuleb lihtsalt järjest muuta: strateegiat → ärimudelit → juhtimissüsteemi → meeskonda → omaniku rolli. Ja ettevõtte iga järgmine tase nõuab neist igaühelt teistsugust kvaliteeti.",
+      "p17": "Seepärast on mulle kõige huvitavam töötada ettevõttega just ülemineku hetkel. Kui vana juhtimisviis toob veel raha sisse, kuid on juba hakanud tulevikku piirama. Kui omanik näeb, et ettevõte on võimeline enamaks, aga veel ei ole selge, mis täpselt peab muutuma, et järgmine samm astuda.",
+      "p18": "Mulle tundub, et tõeline kasv algabki just sellest küsimusest."
+    }
+  },
+  "Footer": {
+    "cta": "Mõnikord ei vaja omanik projekti. Ta vajab inimest, kellega olukord läbi mõelda ja otsuseni jõuda.",
+    "ctaButton": "Kirjutage mulle →",
+    "colMenu": "Menüü",
+    "colCases": "Projektid",
+    "colBlog": "Artiklid",
+    "colContact": "Kontakt",
+    "appearance": "Välimus",
+    "designBy": "Iga ülesanne ei vaja konsultanti",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almatõ, Kasahstan"
+  },
+  "ThemeSwitch": {
+    "label": "Välimus",
+    "light": "Hele",
+    "dark": "Tume",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Keel",
+    "more": "Kõik väljaanded"
+  },
+  "AuthorCard": {
+    "role": "Strateegia • Transformatsioon • Inimesed",
+    "location": "Almatõ, Kasahstan",
+    "bio": "Töötan omanike, tegevjuhtide ja juhtmeeskondadega hetkel, mil ettevõte liigub järgmisse arenguetappi.",
+    "sinceLabel": "Ametis alates"
+  },
+  "ContactForm": {
+    "title": "Hoiame ühendust",
+    "description": "Jätke aadress ja ma kirjutan, kui siia tekib midagi lugemisväärset.",
+    "emailLabel": "E-posti aadress",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Telli",
+    "submitting": "Saadan…",
+    "success": "Valmis. Vaadake postkasti.",
+    "unexpectedError": "Midagi läks valesti. Proovige uuesti.",
+    "validation": {
+      "emailRequired": "Sisestage e-posti aadress",
+      "emailInvalid": "See ei näi olevat e-posti aadress",
+      "emailTooLong": "See aadress on liiga pikk"
+    }
+  },
+  "StatusBadge": {
+    "label": "Teenuse olek",
+    "healthy": "Töötab",
+    "unhealthy": "Pole kättesaadav",
+    "checking": "Kontrollin…",
+    "uptime": "Tööaeg {value}"
+  },
+  "About": {
+    "title": "Minust",
+    "lead": "See leht on olemas selleks, et katsetada marsruutimise teist lokaliseeritud haru.",
+    "body": "Päris sisu tuleb hiljem. Kõik muu siin juba töötab: keeleversioonide marsruutimine, metaandmed, kujundusteema ja ligipääsetavus."
+  },
+  "NotFound": {
+    "title": "Lehte ei leitud",
+    "description": "Võib-olla on link aegunud või on aadressis trükiviga.",
+    "backHome": "Tagasi avalehele"
+  },
+  "ErrorBoundary": {
+    "title": "Midagi läks katki",
+    "description": "Viga on logisse kirjutatud. Võite uuesti proovida.",
+    "retry": "Proovi uuesti",
+    "digest": "Vea kood: {digest}"
+  }
+}

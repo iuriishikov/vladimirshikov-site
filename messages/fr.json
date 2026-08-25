@@ -1,0 +1,285 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov — stratégie, transformation, humain",
+      "description": "Je travaille avec les propriétaires, les CEO et les équipes de direction quand l'entreprise aborde la prochaine étape de son développement."
+    },
+    "about": {
+      "title": "À propos",
+      "description": "Brève présentation de Vladimir Shikov et de ce dont il s'occupe."
+    },
+    "notFound": {
+      "title": "Page introuvable",
+      "description": "Cette page n'existe pas ici."
+    }
+  },
+  "Common": {
+    "skipToContent": "Aller au contenu principal",
+    "loading": "Chargement…",
+    "retry": "Réessayer",
+    "close": "Fermer"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Navigation principale",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "contact": "Me contacter →",
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "services": "Ce que je fais",
+      "cases": "Projets",
+      "blog": "Articles"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Associé chez",
+    "roleB": "TEAM LEAD",
+    "placeA": "Basé à",
+    "placeB": "Almaty, Kazakhstan",
+    "scopeA": "Travaille avec",
+    "scopeB": "propriétaires et CEO",
+    "statement": "Je travaille avec les propriétaires, les CEO et les équipes de direction quand l'entreprise aborde la prochaine étape de son développement."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ À propos ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Associé chez TEAM LEAD",
+    "placeLine": "Stratégie • Transformation • Humain",
+    "lead": "J'aide à voir ce qui, de l'intérieur de l'entreprise, se voit mal. Une question stratégique ne relève que rarement de la seule stratégie.",
+    "body": "La croissance change ce que l'on attend du modèle économique. Un nouveau modèle économique change ce que l'on attend de l'équipe. Une nouvelle équipe change le rôle du propriétaire lui-même. Je regarde donc l'entreprise à travers trois optiques à la fois — la stratégie, l'organisation, l'humain — et j'aide le propriétaire à déterminer quelles décisions peuvent réellement changer la trajectoire de l'entreprise.",
+    "experience": "Mon parcours professionnel a traversé trois environnements très différents : le conseil international, la grande entreprise et les institutions de l'État. J'ai dirigé la filiale russe d'une société internationale spécialisée dans l'évaluation des dirigeants, j'ai été plus de 12 ans à la tête de PDP Group CIS à Moscou, puis j'ai porté l'un des axes clés de la transformation du groupe Samruk-Kazyna. Aujourd'hui, je suis associé chez TEAM LEAD, où je m'occupe de stratégie, de développement, de la transformation des équipes de direction et du travail individuel avec les premiers dirigeants. Je suis également membre de la commission de qualification du Conseil supérieur judiciaire de la République du Kazakhstan, où je participe à l'évaluation des candidats aux fonctions judiciaires.",
+    "statValue1": "25+",
+    "statLabel1": "ans de travail avec des entreprises et leurs dirigeants",
+    "statValue2": "320 000+",
+    "statLabel2": "collaborateurs dans le plus grand projet de transformation",
+    "statValue3": "C-level",
+    "statLabel3": "évaluation, développement et accompagnement des premiers dirigeants"
+  },
+  "Questions": {
+    "heading": "Quand je suis le plus utile",
+    "lead": "Pas quand l'entreprise a besoin d'un consultant de plus. Mais quand le propriétaire ou le premier dirigeant se trouve devant une question à laquelle l'entreprise n'a plus de réponse évidente.",
+    "closing": "Dans ces situations, ma tâche est de créer l'espace d'une analyse lucide et d'aider à transformer la complexité en quelques décisions de gestion claires.",
+    "items": {
+      "q1": "Dans quelle direction avancer ?",
+      "q2": "Quel modèle économique portera la prochaine étape de croissance ?",
+      "q3": "L'équipe actuelle est-elle capable de mettre en œuvre la nouvelle stratégie ?",
+      "q4": "Qui pourrait devenir le prochain premier dirigeant ?",
+      "q5": "Que faut-il changer dans l'entreprise — et que le propriétaire doit-il changer dans son propre rôle ?"
+    }
+  },
+  "Services": {
+    "heading": "Ce que je fais",
+    "lead": "Quatre domaines qui, en pratique, se révèlent presque toujours n'être qu'une seule et même question, vue sous des angles différents.",
+    "items": {
+      "s1": {
+        "title": "Stratégie",
+        "description": "Sessions stratégiques et élaboration d'une stratégie de développement. Je ne pars pas des outils et des modèles, mais du marché, de l'économie de l'entreprise, de l'ambition du propriétaire, des contraintes et des opportunités. Une stratégie ne commence pas par une liste d'initiatives, mais par la réponse à une question : à quoi sommes-nous prêts à renoncer pour ce qui compte vraiment ?"
+      },
+      "s2": {
+        "title": "Transformation",
+        "description": "Le chemin qui mène du modèle de management d'aujourd'hui à celui qu'exigera demain : la structure, la culture d'entreprise, le système de management, le rôle des dirigeants, les mécanismes de décision, l'humain. Cette expérience porte aussi bien sur des entreprises privées que sur les plus grandes structures corporatives et publiques."
+      },
+      "s3": {
+        "title": "Propriétaire et CEO",
+        "description": "Le premier dirigeant porte toujours des questions qu'il est impossible de déléguer entièrement : la stratégie, l'équipe, le successeur, la crise, une nouvelle activité, son propre rôle dans l'entreprise. Je ne prends pas la décision à la place du propriétaire — je l'aide à voir la situation depuis la hauteur d'où la décision devient plus évidente."
+      },
+      "s4": {
+        "title": "Équipe et succession",
+        "description": "La stratégie définit ce que l'entreprise doit devenir, mais ce sont des personnes bien réelles qui la mettent en œuvre. J'aide à comprendre qui est capable de porter l'entreprise plus loin, où se situe le potentiel réel des dirigeants, à qui l'on peut confier davantage de responsabilité et qui, un jour, pourra prendre la première place."
+      }
+    }
+  },
+  "Works": {
+    "heading": "L'échelle compte",
+    "lead": "Trois projets qui montrent l'ampleur des tâches sur lesquelles j'ai eu à travailler.",
+    "viewCase": "Ouvrir le projet : {name}",
+    "meta": "Projet",
+    "back": "Retour à l'accueil",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformation de la culture d'entreprise",
+        "tag": "12 entreprises · 320 000+ collaborateurs",
+        "summary": "Transformation de la culture d'entreprise du groupe Samruk-Kazyna — 12 sociétés nationales et plus de 320 000 collaborateurs.",
+        "detail": "Une méthodologie unique de diagnostic et de pilotage de la culture d'entreprise a été créée, les comportements cibles ont été définis et des feuilles de route de transformation ont été élaborées pour chaque société."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Développement des cadres de production",
+        "tag": "Reconnu comme meilleure pratique",
+        "summary": "Programme de développement des cadres de production de Philip Morris Ukraine.",
+        "detail": "En trois ans, les compétences des cadres ont atteint le niveau cible, après quoi le budget de formation a été ramené à zéro. Le projet a été reconnu comme meilleure pratique et recommandé aux autres bureaux de l'entreprise."
+      },
+      "atom": {
+        "name": "Industrie nucléaire",
+        "caption": "Une stratégie à quarante ans pour une nouvelle filière",
+        "tag": "Russie",
+        "summary": "Élaboration d'une stratégie de développement à quarante ans pour une nouvelle filière en Russie, à partir des capacités de l'énergie nucléaire.",
+        "detail": "Participation à l'élaboration de la stratégie de développement d'une nouvelle filière à l'horizon de quarante ans — sur la base des capacités existantes de l'énergie nucléaire."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Entreprises",
+    "headingLine2": "et institutions",
+    "lead": "Au fil des années, j'ai travaillé avec des groupes internationaux, de grandes entreprises privées et des institutions de l'État.",
+    "marqueeLabel": "Entreprises et institutions",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Cour suprême du Kazakhstan"
+    }
+  },
+  "Education": {
+    "heading": "Formation",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Université d'État de Moscou Lomonossov",
+        "degree": "Faculté de psychologie"
+      },
+      "e2": {
+        "school": "École supérieure militaro-politique des gardes-frontières du KGB de l'URSS",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Articles",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Essai]",
+        "meta": "Croissance de l'entreprise",
+        "title": "De la petite entreprise à la moyenne. De la moyenne à la grande",
+        "excerpt": "À un certain moment, la principale limite d'une entreprise devient la manière dont on la dirige."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Essai",
+    "back": "Retour à l'accueil",
+    "growth": {
+      "title": "De la petite entreprise à la moyenne. De la moyenne à la grande",
+      "lead": "Depuis de nombreuses années, j'observe des entreprises à des stades de développement très différents — de l'affaire entrepreneuriale aux plus grands groupes. Et plus j'en vois, plus je reviens souvent à une idée assez simple.",
+      "p1": "En principe, il n'y a rien d'extraordinairement difficile à faire d'une petite entreprise une entreprise moyenne. Et d'une moyenne, une grande. Bien sûr, il faut un produit, un marché, de l'argent, des gens, un peu de chance.",
+      "p2": "Mais le principal obstacle à la croissance se trouve le plus souvent ailleurs. À un certain moment, la principale limite d'une entreprise devient la manière dont on la dirige.",
+      "h1": "La petite entreprise grandit grâce à son propriétaire",
+      "p3": "Il connaît les clients. Il prend lui-même les décisions clés. Il sait à qui l'on peut faire confiance. Il a le sens de l'argent. Il contrôle personnellement la qualité. En quelques minutes, il peut changer une décision qui prendrait des semaines à une grande entreprise.",
+      "p4": "Et c'est précisément pour cela que l'entreprise grandit. Mais vient un moment où ce qui était autrefois son principal avantage commence à limiter sa croissance.",
+      "p5": "L'entreprise devient trop grande pour continuer à tenir dans la tête d'une seule personne. C'est là, à mon sens, la première véritable bifurcation.",
+      "h2": "Pour passer à la taille moyenne, le propriétaire doit lâcher une partie de l'entreprise",
+      "p6": "C'est nettement plus difficile qu'il n'y paraît. Il faut cesser de prendre soi-même des centaines de décisions. Trouver des gens qui, sur certains sujets, s'y connaîtront mieux que vous. Leur transmettre non seulement les tâches, mais aussi le droit de se tromper.",
+      "p7": "Apparaissent alors la structure, la responsabilité, les indicateurs, les règles, le management régulier. Et là surgit un paradoxe : pour garder le contrôle d'une entreprise qui grandit, le propriétaire doit renoncer à une partie de son contrôle direct.",
+      "p8": "Ceux qui ne le font pas restent souvent, pendant des années, une très bonne petite entreprise. Ceux qui y parviennent passent à la taille moyenne.",
+      "h3": "Le passage de moyenne à grande fonctionne autrement",
+      "p9": "Ici, il ne suffit plus d'embaucher de bons dirigeants et de leur déléguer le travail opérationnel. L'entreprise doit apprendre à fonctionner comme un système.",
+      "p10": "La stratégie cesse de vivre uniquement dans la tête du propriétaire. Les décisions cessent de reposer sur les seules relations personnelles. L'entreprise doit savoir trouver, faire grandir et retenir des dirigeants forts. Une culture d'entreprise apparaît — que l'on s'en soit occupé ou non.",
+      "p11": "Et apparaît la nécessité de penser non seulement à gagner plus demain, mais aussi à l'entreprise qu'il faut devenir dans cinq ou dix ans.",
+      "h4": "Et ici, c'est de nouveau au propriétaire de changer",
+      "p12": "Il me semble d'ailleurs que l'histoire de la croissance d'une entreprise est en grande partie l'histoire du changement de rôle de son propriétaire. Il est d'abord un entrepreneur. Puis il devient un dirigeant. Ensuite, il doit devenir l'architecte d'une organisation. Et, à un certain moment, celui qui fixe la direction, constitue l'équipe et prend quelques décisions vraiment importantes au lieu de centaines de décisions quotidiennes.",
+      "p13": "Tous les entrepreneurs ne veulent pas parcourir tout ce chemin. Et c'est normal. Mais on ne peut pas construire une grande entreprise en continuant à la diriger comme une petite.",
+      "h5": "Les questions par lesquelles je commence",
+      "p14": "C'est pourquoi, pour moi, la croissance d'une entreprise ne commence pas par la question « comment augmenter les ventes ? ». Je poserais d'abord d'autres questions.",
+      "q1": "Quelle entreprise voulez-vous devenir ?",
+      "q2": "Qu'est-ce qui vous empêche aujourd'hui de croître deux ou trois fois ?",
+      "q3": "Qu'arriverait-il à l'entreprise si, à partir de demain, vous n'étiez plus au bureau pendant trois mois ?",
+      "q4": "Quelles décisions est-il encore impossible de prendre sans vous ?",
+      "q5": "Y a-t-il autour de vous des personnes à qui vous seriez vraiment prêt à confier l'entreprise ?",
+      "q6": "L'équipe d'aujourd'hui serait-elle capable de diriger une entreprise deux fois plus grande que celle-ci ?",
+      "q7": "Et surtout : êtes-vous prêt, vous, à diriger l'entreprise autrement que vous ne le faites aujourd'hui ?",
+      "p15": "Les réponses à ces questions en disent parfois bien plus sur les perspectives d'une entreprise que son modèle financier.",
+      "p16": "Je ne crois pas que les grandes entreprises se construisent selon une recette secrète. À un certain stade, il faut simplement changer, dans l'ordre : la stratégie → le modèle économique → le système de management → l'équipe → le rôle du propriétaire. Et chaque niveau suivant de l'entreprise exige une autre qualité de chacun de ces éléments.",
+      "p17": "C'est pourquoi le travail qui m'intéresse le plus se fait avec une entreprise précisément au moment de la transition. Quand l'ancienne manière de diriger rapporte encore de l'argent, mais commence déjà à limiter l'avenir. Quand le propriétaire comprend que l'entreprise est capable de davantage, mais que l'on ne voit pas encore clairement ce qui doit changer pour faire le pas suivant.",
+      "p18": "Il me semble que la véritable croissance commence précisément par cette question."
+    }
+  },
+  "Footer": {
+    "cta": "Parfois, un propriétaire n'a pas besoin d'un projet. Il a besoin de quelqu'un avec qui démêler une situation et prendre une décision.",
+    "ctaButton": "Écrire →",
+    "colMenu": "Menu",
+    "colCases": "Projets",
+    "colBlog": "Articles",
+    "colContact": "Contact",
+    "appearance": "Apparence",
+    "designBy": "Tous les problèmes n'exigent pas un consultant",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazakhstan"
+  },
+  "ThemeSwitch": {
+    "label": "Apparence",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Langue",
+    "more": "Toutes les éditions"
+  },
+  "AuthorCard": {
+    "role": "Stratégie • Transformation • Humain",
+    "location": "Almaty, Kazakhstan",
+    "bio": "Je travaille avec les propriétaires, les CEO et les équipes de direction au moment où l'entreprise passe à l'étape suivante de son développement.",
+    "sinceLabel": "Dans le métier depuis"
+  },
+  "ContactForm": {
+    "title": "Restons en contact",
+    "description": "Laissez une adresse et je vous écrirai quand il y aura ici quelque chose qui vaut la lecture.",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "you@example.com",
+    "submit": "S'abonner",
+    "submitting": "Envoi…",
+    "success": "C'est fait. Vérifiez votre boîte mail.",
+    "unexpectedError": "Une erreur est survenue. Réessayez.",
+    "validation": {
+      "emailRequired": "Indiquez une adresse e-mail",
+      "emailInvalid": "Cela ne ressemble pas à une adresse e-mail",
+      "emailTooLong": "Cette adresse est trop longue"
+    }
+  },
+  "StatusBadge": {
+    "label": "État du service",
+    "healthy": "Opérationnel",
+    "unhealthy": "Indisponible",
+    "checking": "Vérification…",
+    "uptime": "Disponibilité {value}"
+  },
+  "About": {
+    "title": "À propos",
+    "lead": "Cette page existe pour montrer la deuxième branche localisée du routage.",
+    "body": "Le contenu viendra plus tard. Tout le reste fonctionne déjà : le routage par locale, les métadonnées, le thème et l'accessibilité."
+  },
+  "NotFound": {
+    "title": "Page introuvable",
+    "description": "Le lien est peut-être périmé, ou l'adresse contient une faute de frappe.",
+    "backHome": "Retour à l'accueil"
+  },
+  "ErrorBoundary": {
+    "title": "Quelque chose s'est cassé",
+    "description": "L'erreur a été enregistrée. Vous pouvez réessayer.",
+    "retry": "Réessayer",
+    "digest": "Code d'erreur : {digest}"
+  }
+}

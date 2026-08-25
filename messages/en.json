@@ -235,7 +235,8 @@
     "system": "Auto"
   },
   "LocaleSwitch": {
-    "label": "Language"
+    "label": "Language",
+    "more": "All editions"
   },
   "AuthorCard": {
     "role": "Strategy • Transformation • People",

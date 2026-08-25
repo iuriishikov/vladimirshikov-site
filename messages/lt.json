@@ -1,0 +1,285 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov – strategija, transformacija, žmonės",
+      "description": "Dirbu su savininkais, CEO ir vadovų komandomis tuomet, kai verslo laukia kitas augimo etapas."
+    },
+    "about": {
+      "title": "Apie mane",
+      "description": "Trumpai apie tai, kas yra Vladimir Shikov ir ką jis daro."
+    },
+    "notFound": {
+      "title": "Puslapis nerastas",
+      "description": "Tokio puslapio čia nėra."
+    }
+  },
+  "Common": {
+    "skipToContent": "Pereiti prie pagrindinio turinio",
+    "loading": "Kraunama…",
+    "retry": "Bandyti dar kartą",
+    "close": "Uždaryti"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Pagrindinė navigacija",
+    "openMenu": "Atidaryti meniu",
+    "closeMenu": "Uždaryti meniu",
+    "contact": "Susisiekti →",
+    "nav": {
+      "home": "Pradžia",
+      "about": "Apie mane",
+      "services": "Ką darau",
+      "cases": "Projektai",
+      "blog": "Straipsniai"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partneris",
+    "roleB": "TEAM LEAD",
+    "placeA": "Gyvena",
+    "placeB": "Almatoje, Kazachstane",
+    "scopeA": "Dirba su",
+    "scopeB": "savininkais ir CEO",
+    "statement": "Dirbu su savininkais, CEO ir vadovų komandomis tuomet, kai verslo laukia kitas augimo etapas."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Apie mane ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "TEAM LEAD partneris",
+    "placeLine": "Strategija • Transformacija • Žmonės",
+    "lead": "Padedu pamatyti tai, ką iš vidaus pamatyti sunku. Už strateginių klausimų retai slypi vien strategija.",
+    "body": "Įmonės augimas keičia reikalavimus verslo modeliui. Naujas verslo modelis – reikalavimus komandai. Nauja komanda – savininko vaidmeniui. Todėl į verslą žiūriu vienu metu pro tris optikas: strategija – organizacija – žmonės. Ir padedu savininkui nustatyti, kurie sprendimai iš tiesų gali pakeisti įmonės trajektoriją.",
+    "experience": "Mano profesinis kelias ėjo per tris skirtingas aplinkas: tarptautinį konsultavimą, stambų verslą ir valstybės institucijas. Vadovavau tarptautinės vadovų vertinimo bendrovės padaliniui Rusijoje, daugiau nei 12 metų vadovavau PDP Group CIS Maskvoje, o vėliau atsakiau už vieną iš pagrindinių „Samruk-Kazyna“ grupės transformacijos krypčių. Šiandien esu TEAM LEAD partneris: dirbu su strategija, verslo plėtra, vadovų komandų transformacija ir individualiai su pirmaisiais asmenimis. Taip pat esu Kazachstano Respublikos Aukščiausiosios Teisminės Tarybos kvalifikacinės komisijos narys ir vertinu kandidatus į teisėjų pareigas.",
+    "statValue1": "25+",
+    "statLabel1": "metų darbo su verslu ir jo vadovais",
+    "statValue2": "320 000+",
+    "statLabel2": "darbuotojų didžiausioje transformacijos programoje",
+    "statValue3": "C-level",
+    "statLabel3": "pirmųjų asmenų vertinimas, ugdymas ir palaikymas"
+  },
+  "Questions": {
+    "heading": "Kada esu naudingiausias",
+    "lead": "Ne tada, kai įmonei reikia dar vieno konsultanto. O tada, kai prieš savininką ar pirmąjį asmenį iškyla klausimas, į kurį viduje jau nebėra akivaizdaus atsakymo.",
+    "closing": "Tokiose situacijose mano darbas – sukurti erdvę blaiviai pažvelgti į faktus ir padėti sudėtingumą paversti keliais aiškiais valdymo sprendimais.",
+    "items": {
+      "q1": "Kur judėti toliau?",
+      "q2": "Koks verslo modelis užtikrins kitą augimo etapą?",
+      "q3": "Ar dabartinė komanda pajėgi įgyvendinti naują strategiją?",
+      "q4": "Kas galėtų tapti kitu pirmuoju asmeniu?",
+      "q5": "Ką reikia pakeisti įmonėje – ir ką savininkui reikia pakeisti savo paties vaidmenyje?"
+    }
+  },
+  "Services": {
+    "heading": "Ką darau",
+    "lead": "Keturios sritys, kurios praktikoje beveik visada pasirodo esančios viena užduotis, matoma iš skirtingų pusių.",
+    "items": {
+      "s1": {
+        "title": "Strategija",
+        "description": "Strateginės sesijos ir augimo strategijos parengimas. Pradedu ne nuo įrankių ir šablonų, o nuo rinkos, verslo ekonomikos, savininko ambicijos, apribojimų ir galimybių. Strategija prasideda ne nuo iniciatyvų sąrašo, o nuo atsakymo į vieną klausimą: ko esame pasirengę atsisakyti dėl to, kas iš tiesų svarbu?"
+      },
+      "s2": {
+        "title": "Transformacija",
+        "description": "Kelias nuo šiandieninio valdymo modelio prie to, kurio prireiks rytoj: struktūra, kultūra, valdymo sistema, vadovų vaidmenys, sprendimų priėmimo mechanizmai, žmonės. Ši patirtis apima ir privatų verslą, ir didžiausias korporacines bei valstybės struktūras."
+      },
+      "s3": {
+        "title": "Savininkas ir CEO",
+        "description": "Pirmasis asmuo visada turi klausimų, kurių neįmanoma iki galo deleguoti: strategija, komanda, įpėdinis, krizė, naujas verslas, savo paties vaidmuo įmonėje. Aš nepriimu sprendimo už savininką – padedu pamatyti situaciją iš to aukščio, iš kurio sprendimas tampa akivaizdesnis."
+      },
+      "s4": {
+        "title": "Komanda ir tęstinumas",
+        "description": "Strategija nusako, kokia įmonė turi tapti, bet ją įgyvendina konkretūs žmonės. Padedu suprasti, kas pajėgus vesti įmonę toliau, kur slypi tikrasis vadovų potencialas, kam galima patikėti didesnę atsakomybę ir kas vieną dieną gali perimti pirmojo asmens vaidmenį."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Mastas turi reikšmės",
+    "lead": "Trys projektai, iš kurių matyti, su kokio masto užduotimis teko dirbti.",
+    "viewCase": "Atverti projektą: {name}",
+    "meta": "Projektas",
+    "back": "Į pradžią",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Korporacinės kultūros transformacija",
+        "tag": "12 įmonių · 320 000+ darbuotojų",
+        "summary": "Samruk-Kazyna grupės korporacinės kultūros transformacija – 12 nacionalinių bendrovių ir daugiau nei 320 000 darbuotojų.",
+        "detail": "Buvo sukurta vieninga korporacinės kultūros diagnostikos ir valdymo metodika, apibrėžti tiksliniai elgsenos modeliai ir parengti kiekvienos bendrovės transformacijos veiksmų planai."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Gamybos vadovų ugdymas",
+        "tag": "Pripažinta geriausia praktika",
+        "summary": "Philip Morris Ukraine gamybos vadovų ugdymo programa.",
+        "detail": "Per trejus metus vadovų kompetencijos pasiekė tikslinį lygį, o biudžetas tolesniam mokymui buvo sumažintas iki nulio. Programa buvo pripažinta geriausia praktika ir rekomenduota kitiems bendrovės biurams."
+      },
+      "atom": {
+        "name": "Atominė pramonė",
+        "caption": "Keturiasdešimties metų naujos šakos strategija",
+        "tag": "Rusija",
+        "summary": "Keturiasdešimties metų naujos pramonės šakos plėtros strategija Rusijoje, parengta esamų atominės energetikos pajėgumų pagrindu.",
+        "detail": "Darbas prie naujos pramonės šakos strategijos keturiasdešimties metų horizonte – esamų atominės energetikos pajėgumų pagrindu."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Įmonės",
+    "headingLine2": "ir organizacijos",
+    "lead": "Skirtingais metais dirbau su tarptautinėmis korporacijomis, stambiu privačiu verslu ir valstybės institucijomis.",
+    "marqueeLabel": "Įmonės ir organizacijos",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Kazachstano Aukščiausiasis Teismas"
+    }
+  },
+  "Education": {
+    "heading": "Išsilavinimas",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "M. V. Lomonosovo Maskvos valstybinis universitetas",
+        "degree": "Psichologijos fakultetas"
+      },
+      "e2": {
+        "school": "SSRS KGB Aukštoji pasienio kariuomenės karinė politinė mokykla",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Straipsniai",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Esė]",
+        "meta": "Įmonės augimas",
+        "title": "Iš mažo – į vidutinį. Iš vidutinio – į didelį",
+        "excerpt": "Tam tikru momentu labiausiai įmonę riboja tai, kaip ji yra valdoma."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Esė",
+    "back": "Į pradžią",
+    "growth": {
+      "title": "Iš mažo – į vidutinį. Iš vidutinio – į didelį",
+      "lead": "Daugelį metų stebiu įmones pačiose įvairiausiose raidos stadijose – nuo verslininko valdomo verslo iki didžiausių korporacijų. Ir kuo daugiau jų matau, tuo dažniau grįžtu prie vienos gana paprastos minties.",
+      "p1": "Iš principo nėra nieko neįtikėtinai sunkaus tame, kad iš mažo verslo būtų padarytas vidutinis. O iš vidutinio – didelis. Žinoma, reikia produkto, rinkos, pinigų, žmonių ir šiek tiek sėkmės.",
+      "p2": "Bet pagrindinis augimo barjeras dažniausiai yra ne ten. Tam tikru momentu labiausiai įmonę riboja tai, kaip ji yra valdoma.",
+      "h1": "Mažas verslas auga savo savininko dėka",
+      "p3": "Jis pažįsta klientus. Pats priima esminius sprendimus. Žino, kuo galima pasitikėti. Jaučia pinigus. Asmeniškai kontroliuoja kokybę. Per kelias minutes gali pakeisti sprendimą, kuriam didelei įmonei prireiktų savaičių.",
+      "p4": "Būtent todėl verslas ir auga. Bet ateina momentas, kai tai, kas kadaise buvo didžiausias jo pranašumas, ima riboti tolesnį augimą.",
+      "p5": "Įmonė tampa per didelė, kad ir toliau tilptų vieno žmogaus galvoje. Ir tai, mano akimis, yra pirmoji tikra kryžkelė.",
+      "h2": "Kad taptų vidutiniu, savininkui tenka paleisti dalį verslo",
+      "p6": "Tai gerokai sunkiau, nei atrodo. Reikia nustoti pačiam priimti šimtus sprendimų. Rasti žmonių, kurie kai kuriuos dalykus išmanys geriau už tave. Perduoti jiems ne tik užduotis, bet ir teisę klysti.",
+      "p7": "Atsiranda struktūra, atsakomybė, rodikliai, taisyklės, reguliarus valdymas. Ir čia iškyla paradoksas: kad išlaikytų augančio verslo kontrolę, savininkui tenka atsisakyti dalies tiesioginės kontrolės.",
+      "p8": "Tie, kurie to nepadaro, dažnai metų metus lieka labai geru mažu verslu. Tie, kuriems pavyksta, tampa vidutiniais.",
+      "h3": "Perėjimas nuo vidutinio prie didelio veikia kitaip",
+      "p9": "Čia jau nebepakanka pasamdyti gerų vadovų ir deleguoti jiems operatyvinį darbą. Įmonė turi išmokti veikti kaip sistema.",
+      "p10": "Strategija nustoja gyventi vien savininko galvoje. Sprendimai nustoja remtis vien asmeniniais santykiais. Įmonė turi mokėti rasti, išugdyti ir išlaikyti stiprius vadovus. Atsiranda korporacinė kultūra – nesvarbu, ar kas nors sąmoningai ją kūrė, ar ne.",
+      "p11": "Ir atsiranda poreikis galvoti ne tik apie tai, kaip rytoj uždirbti daugiau, bet ir apie tai, kokia įmone reikia tapti po penkerių ar dešimties metų.",
+      "h4": "Ir čia savininkui vėl tenka keistis",
+      "p12": "Man apskritai atrodo, kad įmonės augimo istorija yra daugiausia jos savininko vaidmens kitimo istorija. Iš pradžių jis verslininkas. Paskui tampa vadovu. Tada turi tapti organizacijos architektu. O tam tikru momentu – žmogumi, kuris nustato judėjimo kryptį, formuoja komandą ir priima kelis iš tiesų svarbius sprendimus vietoj šimtų kasdienių.",
+      "p13": "Ne kiekvienas verslininkas nori nueiti visą tą kelią. Ir tai normalu. Bet neįmanoma pastatyti didelio verslo toliau valdant jį kaip mažą.",
+      "h5": "Nuo kokių klausimų pradedu",
+      "p14": "Todėl įmonės augimas man prasideda ne nuo klausimo „kaip padidinti pardavimus?“. Pirmiausia užduočiau kitus klausimus.",
+      "q1": "Kokia įmone norite tapti?",
+      "q2": "Kas šiandien trukdo jums išaugti du ar tris kartus?",
+      "q3": "Kas nutiktų įmonei, jei nuo rytojaus jūsų tris mėnesius nebūtų biure?",
+      "q4": "Kurių sprendimų vis dar neįmanoma priimti be jūsų?",
+      "q5": "Ar šalia yra žmonių, kuriems iš tiesų patikėtumėte verslą?",
+      "q6": "Ar šiandieninė komanda pajėgtų valdyti dukart didesnę įmonę nei ši?",
+      "q7": "Ir svarbiausia: ar jūs patys esate pasirengę valdyti įmonę kitaip, nei valdote ją šiandien?",
+      "p15": "Atsakymai į šiuos klausimus kartais apie verslo perspektyvas pasako gerokai daugiau nei finansinis modelis.",
+      "p16": "Nemanau, kad didelis verslas statomas pagal kokį nors slaptą receptą. Tam tikru etapu tiesiog tenka nuosekliai keisti: strategiją → verslo modelį → valdymo sistemą → komandą → savininko vaidmenį. Ir kiekvienas kitas įmonės lygis reikalauja kitokios kiekvieno iš šių elementų kokybės.",
+      "p17": "Todėl man įdomiausia dirbti su verslu būtent perėjimo momentu. Kai senasis valdymo būdas dar neša pinigus, bet jau ima riboti ateitį. Kai savininkas mato, kad įmonė pajėgi daugiau, tačiau dar neaišku, kas būtent turi pasikeisti, kad būtų žengtas kitas žingsnis.",
+      "p18": "Man atrodo, kad tikras augimas ir prasideda būtent nuo šio klausimo."
+    }
+  },
+  "Footer": {
+    "cta": "Kartais savininkui reikia ne projekto. Jam reikia žmogaus, su kuriuo galima išnagrinėti situaciją ir priimti sprendimą.",
+    "ctaButton": "Parašyti →",
+    "colMenu": "Meniu",
+    "colCases": "Projektai",
+    "colBlog": "Straipsniai",
+    "colContact": "Kontaktai",
+    "appearance": "Išvaizda",
+    "designBy": "Ne kiekviena užduotis reikalauja konsultanto",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almata, Kazachstanas"
+  },
+  "ThemeSwitch": {
+    "label": "Išvaizda",
+    "light": "Šviesi",
+    "dark": "Tamsi",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Kalba",
+    "more": "Visi leidimai"
+  },
+  "AuthorCard": {
+    "role": "Strategija • Transformacija • Žmonės",
+    "location": "Almata, Kazachstanas",
+    "bio": "Dirbu su savininkais, CEO ir vadovų komandomis tuo metu, kai įmonė pereina į kitą augimo etapą.",
+    "sinceLabel": "Profesijoje nuo"
+  },
+  "ContactForm": {
+    "title": "Palaikykime ryšį",
+    "description": "Palikite adresą, ir parašysiu, kai čia atsiras kas nors verto perskaityti.",
+    "emailLabel": "El. pašto adresas",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Prenumeruoti",
+    "submitting": "Siunčiama…",
+    "success": "Atlikta. Patikrinkite paštą.",
+    "unexpectedError": "Kažkas nepavyko. Bandykite dar kartą.",
+    "validation": {
+      "emailRequired": "Įveskite el. pašto adresą",
+      "emailInvalid": "Panašu, kad tai ne el. pašto adresas",
+      "emailTooLong": "Adresas per ilgas"
+    }
+  },
+  "StatusBadge": {
+    "label": "Paslaugos būsena",
+    "healthy": "Veikia",
+    "unhealthy": "Neprieinama",
+    "checking": "Tikrinama…",
+    "uptime": "Veikimo laikas {value}"
+  },
+  "About": {
+    "title": "Apie mane",
+    "lead": "Šis puslapis yra tam, kad būtų išbandyta antroji lokalizuota maršrutizavimo šaka.",
+    "body": "Tikras turinys atsiras vėliau. Visa kita čia jau veikia: maršrutizavimas pagal lokales, metaduomenys, tema ir prieinamumas."
+  },
+  "NotFound": {
+    "title": "Puslapis nerastas",
+    "description": "Galbūt nuoroda pasenusi arba adrese yra rašybos klaida.",
+    "backHome": "Į pradžią"
+  },
+  "ErrorBoundary": {
+    "title": "Kažkas sulūžo",
+    "description": "Klaida įrašyta į žurnalą. Galite bandyti dar kartą.",
+    "retry": "Bandyti dar kartą",
+    "digest": "Klaidos kodas: {digest}"
+  }
+}

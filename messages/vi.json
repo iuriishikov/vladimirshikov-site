@@ -1,0 +1,285 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov — chiến lược, chuyển đổi, con người",
+      "description": "Tôi làm việc với chủ doanh nghiệp, CEO và các đội ngũ quản lý ở thời điểm doanh nghiệp bước vào giai đoạn phát triển tiếp theo."
+    },
+    "about": {
+      "title": "Giới thiệu",
+      "description": "Đôi nét về Vladimir Shikov và công việc ông đang làm."
+    },
+    "notFound": {
+      "title": "Không tìm thấy trang",
+      "description": "Ở đây không có trang như vậy."
+    }
+  },
+  "Common": {
+    "skipToContent": "Chuyển đến nội dung chính",
+    "loading": "Đang tải…",
+    "retry": "Thử lại",
+    "close": "Đóng"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Điều hướng chính",
+    "openMenu": "Mở menu",
+    "closeMenu": "Đóng menu",
+    "contact": "Liên hệ →",
+    "nav": {
+      "home": "Trang chủ",
+      "about": "Giới thiệu",
+      "services": "Tôi làm gì",
+      "cases": "Dự án",
+      "blog": "Bài viết"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Đối tác tại",
+    "roleB": "TEAM LEAD",
+    "placeA": "Sống tại",
+    "placeB": "Almaty, Kazakhstan",
+    "scopeA": "Làm việc với",
+    "scopeB": "chủ doanh nghiệp và CEO",
+    "statement": "Tôi làm việc với chủ doanh nghiệp, CEO và các đội ngũ quản lý ở thời điểm doanh nghiệp bước vào giai đoạn phát triển tiếp theo."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Giới thiệu ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Đối tác tại TEAM LEAD",
+    "placeLine": "Chiến lược • Chuyển đổi • Con người",
+    "lead": "Tôi giúp nhìn ra những gì rất khó nhìn thấy từ bên trong công ty. Đằng sau một câu hỏi chiến lược hiếm khi chỉ có chiến lược.",
+    "body": "Tăng trưởng làm thay đổi những gì mô hình kinh doanh phải gánh được. Mô hình kinh doanh mới làm thay đổi những gì đội ngũ phải trở thành. Đội ngũ mới làm thay đổi chính vai trò của người chủ. Vì vậy tôi nhìn doanh nghiệp cùng lúc qua ba lăng kính — chiến lược, tổ chức, con người — và giúp người chủ xác định những quyết định nào thực sự có thể thay đổi quỹ đạo của công ty.",
+    "experience": "Con đường nghề nghiệp của tôi đi qua ba môi trường rất khác nhau: tư vấn quốc tế, doanh nghiệp lớn và các định chế nhà nước. Tôi từng điều hành nhánh Nga của một công ty quốc tế chuyên đánh giá lãnh đạo, hơn 12 năm đứng đầu PDP Group CIS tại Moskva, sau đó phụ trách một trong những hướng trọng yếu của chương trình chuyển đổi tại tập đoàn Samruk-Kazyna. Hiện tôi là đối tác tại TEAM LEAD, làm việc về chiến lược, phát triển kinh doanh, chuyển đổi các đội ngũ quản lý và làm việc trực tiếp với những người đứng đầu doanh nghiệp. Tôi cũng là thành viên ủy ban thẩm định năng lực của Hội đồng Tư pháp Tối cao Cộng hòa Kazakhstan, tham gia đánh giá các ứng viên cho chức danh thẩm phán.",
+    "statValue1": "25+",
+    "statLabel1": "năm làm việc với doanh nghiệp và những người lãnh đạo",
+    "statValue2": "320.000+",
+    "statLabel2": "nhân viên trong chương trình chuyển đổi lớn nhất",
+    "statValue3": "C-level",
+    "statLabel3": "đánh giá, phát triển và đồng hành cùng những người đứng đầu"
+  },
+  "Questions": {
+    "heading": "Khi nào tôi hữu ích nhất",
+    "lead": "Không phải khi công ty cần thêm một nhà tư vấn nữa. Mà khi người chủ hoặc người đứng đầu đối diện một câu hỏi mà bên trong doanh nghiệp không còn câu trả lời hiển nhiên.",
+    "closing": "Trong những tình huống ấy, việc của tôi là tạo ra không gian cho một cái nhìn tỉnh táo vào thực tế, và giúp biến sự phức tạp thành vài quyết định thực sự có thể đưa ra được.",
+    "items": {
+      "q1": "Từ đây đi tiếp về đâu?",
+      "q2": "Mô hình kinh doanh nào sẽ gánh được giai đoạn tăng trưởng tiếp theo?",
+      "q3": "Đội ngũ hiện tại có thực thi được chiến lược mới không?",
+      "q4": "Ai có thể trở thành người đứng đầu tiếp theo?",
+      "q5": "Điều gì phải thay đổi trong công ty — và điều gì phải thay đổi trong chính vai trò của người chủ?"
+    }
+  },
+  "Services": {
+    "heading": "Tôi làm gì",
+    "lead": "Bốn hướng công việc mà trên thực tế gần như luôn hóa ra là một bài toán, nhìn từ những phía khác nhau.",
+    "items": {
+      "s1": {
+        "title": "Chiến lược",
+        "description": "Các phiên làm việc chiến lược và xây dựng chiến lược phát triển. Tôi không bắt đầu từ công cụ và mẫu biểu, mà từ thị trường, kinh tế của doanh nghiệp, tham vọng của người chủ, các giới hạn và các cơ hội. Chiến lược không bắt đầu bằng một danh sách sáng kiến; nó bắt đầu bằng câu trả lời cho một câu hỏi — chúng ta sẵn sàng từ bỏ điều gì vì điều thực sự quan trọng?"
+      },
+      "s2": {
+        "title": "Chuyển đổi",
+        "description": "Con đường từ mô hình quản trị hôm nay đến mô hình mà ngày mai sẽ đòi hỏi: cấu trúc, văn hóa doanh nghiệp, hệ thống quản trị, vai trò của những người lãnh đạo, cách các quyết định được đưa ra, con người. Kinh nghiệm ấy trải qua cả doanh nghiệp tư nhân lẫn những cấu trúc tập đoàn và nhà nước lớn nhất."
+      },
+      "s3": {
+        "title": "Người chủ và CEO",
+        "description": "Người đứng đầu luôn mang những câu hỏi không thể ủy quyền hoàn toàn: chiến lược, đội ngũ, người kế nhiệm, khủng hoảng, một mảng kinh doanh mới, vai trò của chính mình trong công ty. Tôi không quyết định thay người chủ — tôi giúp họ nhìn tình huống từ độ cao mà ở đó quyết định trở nên rõ ràng."
+      },
+      "s4": {
+        "title": "Đội ngũ và kế nhiệm",
+        "description": "Chiến lược xác định công ty phải trở thành gì, nhưng người thực hiện nó là những con người cụ thể. Tôi giúp xác định ai có thể dẫn công ty đi tiếp, tiềm năng thật của một người lãnh đạo nằm ở đâu, ai có thể được giao trách nhiệm lớn hơn, và ai một ngày nào đó có thể thay thế người đứng đầu."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Quy mô có ý nghĩa",
+    "lead": "Ba dự án cho thấy tôi đã phải làm việc với những bài toán có quy mô ra sao.",
+    "viewCase": "Mở dự án: {name}",
+    "meta": "Dự án",
+    "back": "Về trang chủ",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Chuyển đổi văn hóa doanh nghiệp",
+        "tag": "12 công ty · 320.000+ nhân viên",
+        "summary": "Chuyển đổi văn hóa doanh nghiệp của tập đoàn Samruk-Kazyna — 12 công ty quốc gia và hơn 320.000 nhân viên.",
+        "detail": "Một phương pháp luận thống nhất để chẩn đoán và điều hướng văn hóa doanh nghiệp đã được xây dựng, các hành vi mục tiêu được xác định, và lộ trình chuyển đổi được lập cho từng công ty."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Phát triển đội ngũ lãnh đạo sản xuất",
+        "tag": "Được công nhận là thực tiễn tốt nhất",
+        "summary": "Chương trình phát triển các lãnh đạo sản xuất tại Philip Morris Ukraine.",
+        "detail": "Sau ba năm, năng lực của các lãnh đạo đạt mức mục tiêu, sau đó ngân sách cho việc đào tạo tiếp theo được đưa về không. Chương trình được công nhận là thực tiễn tốt nhất và được khuyến nghị cho các văn phòng khác của công ty."
+      },
+      "atom": {
+        "name": "Ngành công nghiệp hạt nhân",
+        "caption": "Chiến lược bốn mươi năm cho một ngành mới",
+        "tag": "Nga",
+        "summary": "Chiến lược phát triển bốn mươi năm cho một ngành công nghiệp mới ở Nga, dựa trên năng lực điện hạt nhân sẵn có.",
+        "detail": "Tham gia xây dựng chiến lược phát triển một ngành mới trên tầm nhìn bốn mươi năm — dựa trên các năng lực điện hạt nhân đã có."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Công ty",
+    "headingLine2": "và tổ chức",
+    "lead": "Qua các năm, công việc đã đi qua những tập đoàn quốc tế, doanh nghiệp tư nhân lớn và các định chế nhà nước.",
+    "marqueeLabel": "Công ty và tổ chức",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Tòa án Tối cao Kazakhstan"
+    }
+  },
+  "Education": {
+    "heading": "Học vấn",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Đại học Tổng hợp Quốc gia Moskva mang tên M. V. Lomonosov",
+        "degree": "Khoa Tâm lý học"
+      },
+      "e2": {
+        "school": "Trường Quân sự – Chính trị Cao cấp Bộ đội Biên phòng thuộc KGB Liên Xô",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Bài viết",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Tiểu luận]",
+        "meta": "Tăng trưởng của công ty",
+        "title": "Từ nhỏ lên vừa. Từ vừa lên lớn",
+        "excerpt": "Đến một lúc nào đó, thứ giới hạn công ty nhiều nhất chính là cách nó đang được điều hành."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Tiểu luận",
+    "back": "Về trang chủ",
+    "growth": {
+      "title": "Từ nhỏ lên vừa. Từ vừa lên lớn",
+      "lead": "Nhiều năm nay tôi quan sát các công ty ở đủ mọi giai đoạn phát triển, từ doanh nghiệp do người sáng lập trực tiếp điều hành đến những tập đoàn lớn nhất. Và càng nhìn thấy nhiều, tôi càng thường quay lại một ý nghĩ khá đơn giản.",
+      "p1": "Về nguyên tắc, không có gì khó đến mức bất khả trong việc đưa một doanh nghiệp nhỏ thành doanh nghiệp vừa, hay một doanh nghiệp vừa thành doanh nghiệp lớn. Tất nhiên cần sản phẩm, thị trường, tiền, con người và một chút may mắn.",
+      "p2": "Nhưng rào cản chính của tăng trưởng thường nằm ở chỗ khác. Đến một lúc nào đó, thứ giới hạn công ty nhiều nhất chính là cách nó đang được điều hành.",
+      "h1": "Doanh nghiệp nhỏ lớn lên nhờ chính người chủ",
+      "p3": "Người chủ biết khách hàng. Tự mình đưa ra những quyết định then chốt. Biết ai đáng tin. Cảm nhận được dòng tiền. Đích thân kiểm tra chất lượng. Trong vài phút, người ấy có thể thay đổi một quyết định mà công ty lớn phải mất hàng tuần.",
+      "p4": "Và chính vì thế mà doanh nghiệp lớn lên. Nhưng rồi đến một lúc, thứ từng là lợi thế lớn nhất của nó bắt đầu giới hạn mọi bước tăng trưởng tiếp theo.",
+      "p5": "Công ty trở nên quá lớn để tiếp tục nằm gọn trong đầu một người. Theo tôi, đó là ngã rẽ thật sự đầu tiên.",
+      "h2": "Để thành doanh nghiệp vừa, người chủ phải buông một phần doanh nghiệp",
+      "p6": "Việc này khó hơn nhiều so với vẻ ngoài của nó. Phải thôi tự mình đưa ra hàng trăm quyết định. Phải tìm những người hiểu một số việc rõ hơn mình. Phải trao cho họ không chỉ nhiệm vụ, mà cả quyền được sai.",
+      "p7": "Cấu trúc xuất hiện, rồi trách nhiệm giải trình, chỉ số, quy tắc, quản trị chính quy. Và ở đây hiện ra một nghịch lý: để giữ được quyền kiểm soát một doanh nghiệp đang lớn lên, người chủ phải từ bỏ một phần quyền kiểm soát trực tiếp của mình.",
+      "p8": "Những người không bao giờ làm điều đó thường ở lại nhiều năm với vị thế một doanh nghiệp nhỏ rất tốt. Những người làm được thì trở thành doanh nghiệp vừa.",
+      "h3": "Bước từ vừa lên lớn vận hành theo cách khác",
+      "p9": "Ở đây, thuê được những nhà quản lý giỏi và giao cho họ phần vận hành thôi thì chưa đủ. Công ty phải học cách chạy như một hệ thống.",
+      "p10": "Chiến lược thôi không còn nằm riêng trong đầu người chủ. Các quyết định thôi không còn dựa riêng vào quan hệ cá nhân. Công ty phải biết tìm, nuôi và giữ những người lãnh đạo mạnh. Một văn hóa doanh nghiệp hình thành — dù có ai chủ ý xây dựng nó hay không.",
+      "p11": "Và xuất hiện nhu cầu nghĩ không chỉ về việc ngày mai kiếm được nhiều hơn, mà về việc công ty này phải trở thành công ty như thế nào sau năm hay mười năm nữa.",
+      "h4": "Và ở đây người chủ lại phải thay đổi lần nữa",
+      "p12": "Với tôi, câu chuyện tăng trưởng của một công ty phần lớn là câu chuyện về sự thay đổi vai trò của người chủ. Đầu tiên, đó là một người khởi nghiệp. Sau đó trở thành một nhà quản lý. Rồi phải trở thành kiến trúc sư của một tổ chức. Và đến một lúc nào đó, trở thành người xác định hướng đi, dựng đội ngũ và đưa ra vài quyết định thực sự quan trọng thay vì hàng trăm quyết định thường ngày.",
+      "p13": "Không phải người khởi nghiệp nào cũng muốn đi hết con đường ấy. Và điều đó bình thường. Nhưng không thể xây một doanh nghiệp lớn trong khi vẫn tiếp tục điều hành nó như một doanh nghiệp nhỏ.",
+      "h5": "Tôi bắt đầu từ những câu hỏi nào",
+      "p14": "Vì vậy với tôi, tăng trưởng của một công ty không bắt đầu từ câu “làm sao để tăng doanh số?”. Tôi sẽ hỏi những câu khác trước.",
+      "q1": "Bạn muốn trở thành một công ty như thế nào?",
+      "q2": "Điều gì hôm nay đang cản bạn lớn lên gấp hai hay gấp ba lần?",
+      "q3": "Chuyện gì sẽ xảy ra với công ty nếu từ ngày mai bạn vắng mặt ba tháng?",
+      "q4": "Những quyết định nào vẫn không thể đưa ra nếu thiếu bạn?",
+      "q5": "Bên cạnh bạn có những người mà bạn thực sự sẵn sàng giao doanh nghiệp cho họ không?",
+      "q6": "Đội ngũ hôm nay có điều hành nổi một công ty lớn gấp đôi công ty này không?",
+      "q7": "Và trên hết: chính bạn có sẵn sàng điều hành công ty khác với cách bạn đang điều hành hôm nay không?",
+      "p15": "Câu trả lời cho những câu hỏi đó đôi khi nói về triển vọng của một doanh nghiệp nhiều hơn hẳn mô hình tài chính của nó.",
+      "p16": "Tôi không nghĩ doanh nghiệp lớn được xây theo một công thức bí mật nào đó. Đến một lúc nhất định, đơn giản là phải thay đổi lần lượt: chiến lược → mô hình kinh doanh → hệ thống quản trị → đội ngũ → vai trò của người chủ. Và mỗi cấp độ tiếp theo của công ty đòi hỏi một chất lượng khác ở từng yếu tố đó.",
+      "p17": "Vì vậy công việc tôi thấy thú vị nhất là làm với một doanh nghiệp đúng vào lúc chuyển giai đoạn. Khi cách quản trị cũ vẫn còn ra tiền nhưng đã bắt đầu giới hạn tương lai. Khi người chủ thấy công ty còn làm được nhiều hơn, nhưng chưa rõ chính xác điều gì phải thay đổi để bước tiếp bước sau.",
+      "p18": "Tôi cho rằng tăng trưởng thật sự bắt đầu chính từ câu hỏi đó."
+    }
+  },
+  "Footer": {
+    "cta": "Đôi khi người chủ không cần một dự án. Họ cần một người để cùng mổ xẻ tình huống và đi đến một quyết định.",
+    "ctaButton": "Viết cho tôi →",
+    "colMenu": "Menu",
+    "colCases": "Dự án",
+    "colBlog": "Bài viết",
+    "colContact": "Liên hệ",
+    "appearance": "Giao diện",
+    "designBy": "Không phải bài toán nào cũng cần một nhà tư vấn",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazakhstan"
+  },
+  "ThemeSwitch": {
+    "label": "Giao diện",
+    "light": "Sáng",
+    "dark": "Tối",
+    "system": "Tự động"
+  },
+  "LocaleSwitch": {
+    "label": "Ngôn ngữ",
+    "more": "Tất cả ấn bản"
+  },
+  "AuthorCard": {
+    "role": "Chiến lược • Chuyển đổi • Con người",
+    "location": "Almaty, Kazakhstan",
+    "bio": "Tôi làm việc với chủ doanh nghiệp, CEO và các đội ngũ quản lý vào lúc công ty chuyển sang giai đoạn phát triển tiếp theo.",
+    "sinceLabel": "Làm nghề từ"
+  },
+  "ContactForm": {
+    "title": "Giữ liên lạc",
+    "description": "Để lại địa chỉ và tôi sẽ viết khi ở đây có gì đáng đọc.",
+    "emailLabel": "Địa chỉ email",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Đăng ký",
+    "submitting": "Đang gửi…",
+    "success": "Xong. Kiểm tra hộp thư của bạn.",
+    "unexpectedError": "Có gì đó không ổn. Vui lòng thử lại.",
+    "validation": {
+      "emailRequired": "Nhập địa chỉ email",
+      "emailInvalid": "Đây có vẻ không phải địa chỉ email",
+      "emailTooLong": "Địa chỉ này quá dài"
+    }
+  },
+  "StatusBadge": {
+    "label": "Trạng thái dịch vụ",
+    "healthy": "Đang hoạt động",
+    "unhealthy": "Không khả dụng",
+    "checking": "Đang kiểm tra…",
+    "uptime": "Thời gian hoạt động {value}"
+  },
+  "About": {
+    "title": "Giới thiệu",
+    "lead": "Trang này tồn tại để chạy thử nhánh định tuyến bản địa hóa thứ hai.",
+    "body": "Nội dung thật sẽ có sau. Mọi thứ khác ở đây đã chạy: định tuyến theo ngôn ngữ, metadata, giao diện và khả năng tiếp cận."
+  },
+  "NotFound": {
+    "title": "Không tìm thấy trang",
+    "description": "Có thể liên kết đã cũ, hoặc địa chỉ có lỗi chính tả.",
+    "backHome": "Về trang chủ"
+  },
+  "ErrorBoundary": {
+    "title": "Có gì đó hỏng",
+    "description": "Lỗi đã được ghi lại. Bạn có thể thử lại.",
+    "retry": "Thử lại",
+    "digest": "Mã lỗi: {digest}"
+  }
+}

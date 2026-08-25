@@ -1,0 +1,285 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov – strategie, transformare, oameni",
+      "description": "Lucrez cu proprietari, CEO și echipe de conducere în situațiile în care afacerea are în față următoarea etapă de dezvoltare."
+    },
+    "about": {
+      "title": "Despre mine",
+      "description": "Pe scurt despre Vladimir Shikov și despre ceea ce face."
+    },
+    "notFound": {
+      "title": "Pagina nu a fost găsită",
+      "description": "Aici nu există o astfel de pagină."
+    }
+  },
+  "Common": {
+    "skipToContent": "Salt la conținutul principal",
+    "loading": "Se încarcă…",
+    "retry": "Încercați din nou",
+    "close": "Închideți"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Navigație principală",
+    "openMenu": "Deschideți meniul",
+    "closeMenu": "Închideți meniul",
+    "contact": "Contactați-mă →",
+    "nav": {
+      "home": "Acasă",
+      "about": "Despre mine",
+      "services": "Ce fac",
+      "cases": "Proiecte",
+      "blog": "Articole"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partener la",
+    "roleB": "TEAM LEAD",
+    "placeA": "Locuiește în",
+    "placeB": "Almaty, Kazahstan",
+    "scopeA": "Lucrează cu",
+    "scopeB": "proprietari și CEO",
+    "statement": "Lucrez cu proprietari, CEO și echipe de conducere în situațiile în care afacerea are în față următoarea etapă de dezvoltare."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Despre mine ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partener la TEAM LEAD",
+    "placeLine": "Strategie • Transformare • Oameni",
+    "lead": "Vă ajut să vedeți ceea ce din interiorul companiei se vede greu. În spatele unei întrebări strategice stă rareori doar strategia.",
+    "body": "Creșterea schimbă ceea ce i se cere modelului de afaceri. Un model de afaceri nou schimbă ceea ce i se cere echipei. O echipă nouă schimbă rolul proprietarului. De aceea privesc afacerea prin trei lentile deodată – strategie, organizație, oameni – și îl ajut pe proprietar să stabilească ce decizii pot schimba cu adevărat traiectoria companiei.",
+    "experience": "Parcursul meu profesional a trecut prin trei medii foarte diferite: consultanța internațională, marile companii și instituțiile de stat. Am condus filiala rusă a unei companii internaționale de evaluare a liderilor, am condus mai bine de 12 ani PDP Group CIS la Moscova, iar apoi am răspuns de una dintre direcțiile-cheie ale transformării grupului Samruk-Kazyna. Astăzi sunt partener la TEAM LEAD, unde mă ocup de strategie, de dezvoltarea afacerii, de transformarea echipelor de conducere și de lucrul individual cu directorii generali. Sunt, de asemenea, membru al comisiei de calificare a Consiliului Suprem Judiciar al Republicii Kazahstan, unde evaluez candidații pentru funcțiile de judecător.",
+    "statValue1": "25+",
+    "statLabel1": "ani de lucru cu companii și cu liderii lor",
+    "statValue2": "320.000+",
+    "statLabel2": "angajați în cel mai mare program de transformare",
+    "statValue3": "C-level",
+    "statLabel3": "evaluarea, dezvoltarea și susținerea directorilor generali"
+  },
+  "Questions": {
+    "heading": "Când sunt cel mai util",
+    "lead": "Nu atunci când o companie mai are nevoie de încă un consultant. Ci atunci când în fața proprietarului sau a directorului general apare o întrebare la care afacerea nu mai are un răspuns evident.",
+    "closing": "În astfel de situații, sarcina mea este să creez spațiu pentru o privire lucidă asupra faptelor și să ajut la transformarea complexității în câteva decizii care chiar pot fi luate.",
+    "items": {
+      "q1": "Încotro mergem mai departe?",
+      "q2": "Ce model de afaceri va susține următoarea etapă de creștere?",
+      "q3": "Poate echipa actuală să ducă la capăt noua strategie?",
+      "q4": "Cine ar putea deveni următorul director general?",
+      "q5": "Ce trebuie să se schimbe în companie – și ce trebuie să se schimbe în rolul proprietarului?"
+    }
+  },
+  "Services": {
+    "heading": "Ce fac",
+    "lead": "Patru direcții care, în practică, aproape întotdeauna se dovedesc a fi una și aceeași problemă privită din unghiuri diferite.",
+    "items": {
+      "s1": {
+        "title": "Strategie",
+        "description": "Sesiuni strategice și elaborarea unei strategii de creștere. Nu pornesc de la instrumente și de la șabloane, ci de la piață, de la economia afacerii, de la ambiția proprietarului, de la constrângeri și de la oportunități. Strategia nu începe cu o listă de inițiative; începe cu răspunsul la o singură întrebare – la ce suntem dispuși să renunțăm de dragul a ceea ce contează cu adevărat?"
+      },
+      "s2": {
+        "title": "Transformare",
+        "description": "Drumul de la modelul de conducere de astăzi la cel care va fi necesar mâine: structura, cultura, sistemul de management, rolurile liderilor, felul în care se iau deciziile, oamenii. Experiența acoperă atât afaceri private, cât și cele mai mari structuri corporative și de stat."
+      },
+      "s3": {
+        "title": "Proprietar și CEO",
+        "description": "Un director general are întotdeauna întrebări care nu pot fi delegate în întregime: strategia, echipa, succesorul, o criză, o afacere nouă, propriul rol în companie. Nu iau decizia în locul proprietarului – îl ajut să vadă situația de la înălțimea de la care decizia devine evidentă."
+      },
+      "s4": {
+        "title": "Echipă și succesiune",
+        "description": "Strategia stabilește ce trebuie să devină compania, dar cei care o duc la capăt sunt oameni concreți. Ajut la stabilirea celor care pot duce compania mai departe, a locului în care se află potențialul real al unui lider, a celor cărora li se poate încredința mai mult și a celor care într-o zi ar putea prelua funcția de director general."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Anvergura contează",
+    "lead": "Trei proiecte din care se vede ce dimensiune au avut problemele cu care mi-a fost dat să lucrez.",
+    "viewCase": "Deschideți proiectul: {name}",
+    "meta": "Proiect",
+    "back": "Înapoi acasă",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformarea culturii corporative",
+        "tag": "12 companii · 320.000+ angajați",
+        "summary": "Transformarea culturii corporative în grupul Samruk-Kazyna – 12 companii naționale și peste 320.000 de angajați.",
+        "detail": "A fost creată o metodologie unică de diagnoză și de conducere a culturii corporative, au fost definite comportamentele-țintă și au fost elaborate foi de parcurs ale transformării pentru fiecare companie."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Dezvoltarea liderilor din producție",
+        "tag": "Recunoscut drept bună practică",
+        "summary": "Un program de dezvoltare pentru liderii din producție la Philip Morris Ukraine.",
+        "detail": "În trei ani, competențele liderilor au atins nivelul-țintă, după care bugetul pentru instruirea ulterioară a fost redus la zero. Programul a fost recunoscut drept bună practică și recomandat celorlalte birouri ale companiei."
+      },
+      "atom": {
+        "name": "Industria nucleară",
+        "caption": "O strategie pe patruzeci de ani pentru o industrie nouă",
+        "tag": "Rusia",
+        "summary": "O strategie de dezvoltare pe patruzeci de ani pentru o industrie nouă în Rusia, construită pe capacitățile existente de energie nucleară.",
+        "detail": "Lucrul la strategia unei industrii noi pe un orizont de patruzeci de ani, pornind de la capacitățile de energie nucleară deja existente."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Companii",
+    "headingLine2": "și instituții",
+    "lead": "De-a lungul anilor, munca a trecut prin corporații internaționale, afaceri private mari și instituții de stat.",
+    "marqueeLabel": "Companii și instituții",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Curtea Supremă a Kazahstanului"
+    }
+  },
+  "Education": {
+    "heading": "Educație",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Universitatea de Stat „M. V. Lomonosov” din Moscova",
+        "degree": "Facultatea de Psihologie"
+      },
+      "e2": {
+        "school": "Școala Superioară Militar-Politică a Trupelor de Grăniceri ale KGB-ului URSS",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Articole",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Eseu]",
+        "meta": "Creșterea companiei",
+        "title": "Din mic – în mijlociu. Din mijlociu – în mare",
+        "excerpt": "La un anumit moment, ceea ce limitează cel mai mult o companie este felul în care este condusă."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Eseu",
+    "back": "Înapoi acasă",
+    "growth": {
+      "title": "Din mic – în mijlociu. Din mijlociu – în mare",
+      "lead": "De mulți ani urmăresc companii aflate în cele mai diferite stadii de dezvoltare, de la afaceri conduse de fondator până la cele mai mari corporații. Și cu cât văd mai multe, cu atât mai des revin la un gând destul de simplu.",
+      "p1": "În principiu, nu este nimic imposibil de greu în a face dintr-o afacere mică una mijlocie, iar dintr-una mijlocie una mare. Desigur, sunt necesare un produs, o piață, bani, oameni și puțin noroc.",
+      "p2": "Dar principala barieră în calea creșterii se află de obicei în altă parte. La un anumit moment, ceea ce limitează cel mai mult o companie este felul în care este condusă.",
+      "h1": "Afacerea mică crește datorită proprietarului ei",
+      "p3": "El își cunoaște clienții. Ia singur deciziile-cheie. Știe în cine se poate avea încredere. Simte banii. Verifică personal calitatea. În câteva minute poate schimba o decizie pentru care unei companii mari i-ar trebui săptămâni.",
+      "p4": "Și tocmai de aceea afacerea crește. Dar vine un moment în care ceea ce a fost cândva cel mai mare avantaj al ei începe să limiteze creșterea de mai departe.",
+      "p5": "Compania devine prea mare ca să mai încapă în capul unui singur om. Aceasta este, după mine, prima bifurcație adevărată.",
+      "h2": "Ca să devină mijlocie, proprietarul trebuie să lase din mână o parte din afacere",
+      "p6": "Este mult mai greu decât pare. Trebuie să nu mai iei personal sute de decizii. Să găsești oameni care, în unele privințe, se vor pricepe mai bine decât tine. Să le predai nu doar sarcinile, ci și dreptul de a greși.",
+      "p7": "Apar structura, responsabilitatea, indicatorii, regulile, managementul regulat. Și aici se ivește un paradox: ca să păstreze controlul asupra unei afaceri în creștere, proprietarul trebuie să renunțe la o parte din controlul direct.",
+      "p8": "Cei care nu fac asta rămân adesea, ani la rând, o afacere mică foarte bună. Cei care reușesc devin mijlocii.",
+      "h3": "Trecerea de la mijlociu la mare este altfel",
+      "p9": "Aici nu mai este de ajuns să angajezi manageri buni și să le delegi partea operațională. Compania trebuie să învețe să funcționeze ca un sistem.",
+      "p10": "Strategia încetează să locuiască doar în capul proprietarului. Deciziile încetează să se sprijine doar pe relații personale. Compania trebuie să fie în stare să găsească, să crească și să păstreze lideri puternici. Apare o cultură corporativă – indiferent dacă cineva s-a ocupat de ea în mod deliberat sau nu.",
+      "p11": "Și apare nevoia de a te gândi nu doar la cum să câștigi mai mult mâine, ci și la ce fel de companie trebuie să devină aceasta peste cinci sau zece ani.",
+      "h4": "Și aici proprietarul trebuie să se schimbe din nou",
+      "p12": "Mi se pare că povestea creșterii unei companii este în mare măsură povestea schimbării rolului proprietarului ei. La început este antreprenor. Apoi devine manager. Apoi trebuie să devină arhitectul unei organizații. Iar la un moment dat, omul care stabilește direcția, formează echipa și ia câteva decizii cu adevărat importante în locul a sute de decizii zilnice.",
+      "p13": "Nu orice antreprenor vrea să parcurgă tot acest drum. Și este în regulă. Dar nu se poate construi o afacere mare continuând să o conduci ca pe una mică.",
+      "h5": "Întrebările de la care pornesc",
+      "p14": "De aceea, creșterea unei companii nu începe pentru mine cu întrebarea „cum creștem vânzările?”. Aș pune mai întâi alte întrebări.",
+      "q1": "Ce fel de companie vreți să deveniți?",
+      "q2": "Ce vă împiedică astăzi să creșteți de două sau de trei ori?",
+      "q3": "Ce s-ar întâmpla cu compania dacă de mâine ați lipsi trei luni din birou?",
+      "q4": "Ce decizii tot nu pot fi luate fără dumneavoastră?",
+      "q5": "Există în jurul dumneavoastră oameni cărora chiar le-ați încredința afacerea?",
+      "q6": "Ar putea echipa de astăzi să conducă o companie de două ori mai mare decât aceasta?",
+      "q7": "Și, mai presus de toate: sunteți dumneavoastră înșivă pregătit să conduceți compania altfel decât o conduceți astăzi?",
+      "p15": "Răspunsurile la aceste întrebări spun uneori mult mai multe despre perspectivele unei afaceri decât modelul ei financiar.",
+      "p16": "Nu cred că afacerile mari se construiesc după o rețetă secretă. La un anumit moment trebuie pur și simplu să schimbi, în ordine: strategia → modelul de afaceri → sistemul de management → echipa → rolul proprietarului. Și fiecare nivel următor al companiei cere o altă calitate de la fiecare dintre acestea.",
+      "p17": "De aceea, cel mai interesant mi se pare lucrul cu o afacere aflată exact în momentul trecerii. Când vechiul mod de a conduce încă aduce bani, dar a început să limiteze viitorul. Când proprietarul vede că firma este capabilă de mai mult, dar nu este încă limpede ce anume trebuie să se schimbe pentru a face pasul următor.",
+      "p18": "Mi se pare că adevărata creștere începe tocmai cu această întrebare."
+    }
+  },
+  "Footer": {
+    "cta": "Uneori, un proprietar nu are nevoie de un proiect. Are nevoie de un om cu care să analizeze situația și să ajungă la o decizie.",
+    "ctaButton": "Scrieți-mi →",
+    "colMenu": "Meniu",
+    "colCases": "Proiecte",
+    "colBlog": "Articole",
+    "colContact": "Contact",
+    "appearance": "Aspect",
+    "designBy": "Nu orice problemă cere un consultant",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazahstan"
+  },
+  "ThemeSwitch": {
+    "label": "Aspect",
+    "light": "Deschis",
+    "dark": "Închis",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Limbă",
+    "more": "Toate edițiile"
+  },
+  "AuthorCard": {
+    "role": "Strategie • Transformare • Oameni",
+    "location": "Almaty, Kazahstan",
+    "bio": "Lucrez cu proprietari, CEO și echipe de conducere în momentul în care compania trece la următoarea etapă de dezvoltare.",
+    "sinceLabel": "În profesie din"
+  },
+  "ContactForm": {
+    "title": "Rămâneți în legătură",
+    "description": "Lăsați o adresă și vă scriu când apare aici ceva ce merită citit.",
+    "emailLabel": "Adresă de e-mail",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Abonați-vă",
+    "submitting": "Se trimite…",
+    "success": "Gata. Verificați-vă e-mailul.",
+    "unexpectedError": "Ceva nu a mers bine. Încercați din nou.",
+    "validation": {
+      "emailRequired": "Indicați o adresă de e-mail",
+      "emailInvalid": "Nu pare să fie o adresă de e-mail",
+      "emailTooLong": "Adresa este prea lungă"
+    }
+  },
+  "StatusBadge": {
+    "label": "Starea serviciului",
+    "healthy": "Funcționează",
+    "unhealthy": "Indisponibil",
+    "checking": "Se verifică…",
+    "uptime": "Disponibilitate {value}"
+  },
+  "About": {
+    "title": "Despre mine",
+    "lead": "Această pagină există pentru a pune la treabă a doua ramură localizată a rutării.",
+    "body": "Conținutul real va apărea mai târziu. Tot restul funcționează deja: rutarea pe locale, metadatele, tema și accesibilitatea."
+  },
+  "NotFound": {
+    "title": "Pagina nu a fost găsită",
+    "description": "Este posibil ca linkul să fie învechit sau ca adresa să conțină o greșeală.",
+    "backHome": "Înapoi acasă"
+  },
+  "ErrorBoundary": {
+    "title": "Ceva s-a stricat",
+    "description": "Eroarea a fost înregistrată în jurnal. Puteți încerca din nou.",
+    "retry": "Încercați din nou",
+    "digest": "Cod de eroare: {digest}"
+  }
+}

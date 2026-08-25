@@ -8,6 +8,7 @@
  */
 import { describe, expect, it } from 'vitest'
 
+import { routing } from '../i18n/routing'
 import { buildPageMetadata } from './seo'
 
 /**
@@ -29,11 +30,16 @@ describe('buildPageMetadata', () => {
   })
 
   it('advertises every locale as an alternate, plus x-default', () => {
-    expect(about.alternates?.languages).toStrictEqual({
-      'en-US': 'http://localhost:3000/en/about',
-      'ru-RU': 'http://localhost:3000/ru/about',
-      'x-default': 'http://localhost:3000/en/about',
-    })
+    const languages = about.alternates?.languages ?? {}
+
+    // Asserted by shape rather than by listing forty tags: a new edition must
+    // appear here automatically, and a test that had to be edited for each one
+    // would eventually be edited wrongly.
+    expect(Object.keys(languages)).toHaveLength(routing.locales.length + 1)
+    expect(languages['en-US']).toBe('http://localhost:3000/en/about')
+    expect(languages['ru-RU']).toBe('http://localhost:3000/ru/about')
+    expect(languages.kk).toBe('http://localhost:3000/kk/about')
+    expect(languages['x-default']).toBe('http://localhost:3000/en/about')
   })
 
   it('sends x-default to the default locale, not to the current one', () => {
@@ -50,8 +56,15 @@ describe('buildPageMetadata', () => {
       description: 'Описание',
       url: 'http://localhost:3000/ru',
       locale: 'ru-RU',
-      alternateLocale: ['en-US'],
     })
+    // Every other edition, and never the current one.
+    const alternates =
+      home.openGraph && 'alternateLocale' in home.openGraph
+        ? home.openGraph.alternateLocale
+        : undefined
+    expect(alternates).toHaveLength(routing.locales.length - 1)
+    expect(alternates).toContain('en-US')
+    expect(alternates).not.toContain('ru-RU')
     expect(home.twitter).toMatchObject({ card: 'summary_large_image', title: 'Заголовок' })
   })
 

@@ -1,0 +1,285 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov — estratehiya, transpormasyon, mga tao",
+      "description": "Nakikipagtulungan ako sa mga may-ari, CEO at mga pangkat ng pamamahala sa mga sitwasyong kinakaharap na ng negosyo ang susunod nitong yugto ng paglago."
+    },
+    "about": {
+      "title": "Tungkol sa akin",
+      "description": "Maikling paglalarawan kay Vladimir Shikov at sa trabahong ginagawa niya."
+    },
+    "notFound": {
+      "title": "Hindi matagpuan ang pahina",
+      "description": "Walang ganitong pahina rito."
+    }
+  },
+  "Common": {
+    "skipToContent": "Tumuloy sa pangunahing nilalaman",
+    "loading": "Naglo-load…",
+    "retry": "Subukan muli",
+    "close": "Isara"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Pangunahing nabigasyon",
+    "openMenu": "Buksan ang menu",
+    "closeMenu": "Isara ang menu",
+    "contact": "Makipag-ugnayan →",
+    "nav": {
+      "home": "Simula",
+      "about": "Tungkol",
+      "services": "Ginagawa ko",
+      "cases": "Mga proyekto",
+      "blog": "Mga sulatin"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner sa",
+    "roleB": "TEAM LEAD",
+    "placeA": "Nakabase sa",
+    "placeB": "Almaty, Kazakhstan",
+    "scopeA": "Nakikipagtulungan sa",
+    "scopeB": "mga may-ari at CEO",
+    "statement": "Nakikipagtulungan ako sa mga may-ari, CEO at mga pangkat ng pamamahala sa mga sitwasyong kinakaharap na ng negosyo ang susunod nitong yugto ng paglago."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Tungkol sa akin ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partner sa TEAM LEAD",
+    "placeLine": "Estratehiya • Transpormasyon • Mga tao",
+    "lead": "Tumutulong ako na makita ang mahirap makita mula sa loob ng kompanya. Bihirang estratehiya lamang ang nakatayo sa likod ng isang tanong na estratehiko.",
+    "body": "Binabago ng paglago ang hinihingi sa modelo ng negosyo. Binabago ng bagong modelo ng negosyo ang hinihingi sa koponan. Binabago ng bagong koponan ang papel ng may-ari mismo. Kaya sabay kong tinitingnan ang negosyo sa tatlong lente — estratehiya, organisasyon, mga tao — at tinutulungan ang may-ari na tukuyin kung aling mga desisyon ang tunay na makapagbabago sa takbo ng kompanya.",
+    "experience": "Dumaan ang aking propesyonal na landas sa tatlong magkakaibang kapaligiran: internasyonal na konsultasyon, malaking negosyo at mga institusyon ng estado. Pinamunuan ko ang sangay sa Russia ng isang internasyonal na kompanya sa pagtatasa ng mga lider, mahigit 12 taon kong pinamunuan ang PDP Group CIS sa Moscow, at pagkatapos ay hinawakan ko ang isa sa mga pangunahing direksyon ng transpormasyon ng grupong Samruk-Kazyna. Ngayon ay partner ako sa TEAM LEAD, kung saan nakatuon ako sa estratehiya, pagpapaunlad ng negosyo, transpormasyon ng mga pangkat ng pamamahala at isa-sa-isang trabaho kasama ang mga punong ehekutibo. Miyembro rin ako ng komisyon sa kwalipikasyon ng Kataas-taasang Konseho ng Hudikatura ng Republika ng Kazakhstan, kung saan tinatasa ang mga kandidato sa mga tungkuling panghukuman.",
+    "statValue1": "25+",
+    "statLabel1": "taon ng pagtatrabaho sa mga negosyo at sa mga lider nito",
+    "statValue2": "320,000+",
+    "statLabel2": "empleyado sa pinakamalaking programa ng transpormasyon",
+    "statValue3": "C-level",
+    "statLabel3": "pagtatasa, pagpapaunlad at paggabay sa mga punong ehekutibo"
+  },
+  "Questions": {
+    "heading": "Kailan ako pinakamakakatulong",
+    "lead": "Hindi kapag kailangan ng kompanya ng isa pang konsultant. Kundi kapag may tanong na hinaharap ang may-ari o ang punong ehekutibo na wala nang halatang sagot sa loob ng negosyo.",
+    "closing": "Sa ganoong mga sitwasyon, tungkulin kong lumikha ng espasyo para sa matinong pagtingin sa mga katotohanan, at tulungang gawing ilang desisyong tunay na maipapatupad ang buong pagiging kumplikado.",
+    "items": {
+      "q1": "Saan tayo susulong mula rito?",
+      "q2": "Aling modelo ng negosyo ang magdadala sa susunod na yugto ng paglago?",
+      "q3": "Kaya ba ng kasalukuyang koponan na isakatuparan ang bagong estratehiya?",
+      "q4": "Sino ang maaaring maging susunod na punong ehekutibo?",
+      "q5": "Ano ang kailangang magbago sa kompanya — at ano ang kailangang magbago sa papel ng may-ari mismo?"
+    }
+  },
+  "Services": {
+    "heading": "Ang ginagawa ko",
+    "lead": "Apat na larangan na sa praktika ay halos palaging nagiging iisang suliranin, tiningnan lamang mula sa magkakaibang panig.",
+    "items": {
+      "s1": {
+        "title": "Estratehiya",
+        "description": "Mga sesyong estratehiko at ang pagbuo ng estratehiya ng paglago. Hindi ako nagsisimula sa mga kasangkapan at template, kundi sa merkado, sa ekonomiya ng negosyo, sa ambisyon ng may-ari, sa mga hangganan at sa mga pagkakataon. Hindi nagsisimula sa listahan ng mga inisyatiba ang estratehiya; nagsisimula ito sa sagot sa isang tanong — ano ang handa nating isuko para sa bagay na talagang mahalaga?"
+      },
+      "s2": {
+        "title": "Transpormasyon",
+        "description": "Ang daan mula sa modelo ng pamamahala ngayon patungo sa hihingin bukas: estruktura, kultura, ang sistema ng pamamahala, ang mga papel ng mga lider, kung paano naaabot ang mga desisyon, mga tao. Saklaw ng karanasang iyon ang mga pribadong negosyo pati na ang pinakamalalaking korporatibo at pang-estadong istruktura."
+      },
+      "s3": {
+        "title": "May-ari at CEO",
+        "description": "Laging may mga tanong ang punong ehekutibo na hindi kayang ipasa nang buo sa iba: estratehiya, koponan, kahalili, krisis, bagong negosyo, ang sarili niyang papel sa kompanya. Hindi ako ang pumapalit sa may-ari sa pagpapasya — tinutulungan ko siyang makita ang sitwasyon mula sa taas kung saan nagiging malinaw na ang desisyon."
+      },
+      "s4": {
+        "title": "Koponan at paghalili",
+        "description": "Tinutukoy ng estratehiya kung ano ang dapat maging kompanya, ngunit tunay na mga tao ang nagsasakatuparan nito. Tumutulong akong alamin kung sino ang kayang magdala sa kompanya nang mas malayo, nasaan ang tunay na potensyal ng isang lider, kanino maaaring ipagkatiwala ang mas malaking responsibilidad, at sino ang balang araw ay maaaring pumalit sa punong ehekutibo."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Mahalaga ang sukat",
+    "lead": "Tatlong programa kung saan makikita ang laki ng mga suliraning kinailangang hawakan ng trabahong ito.",
+    "viewCase": "Buksan ang proyekto: {name}",
+    "meta": "Proyekto",
+    "back": "Balik sa simula",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transpormasyon ng korporatibong kultura",
+        "tag": "12 kompanya · 320,000+ empleyado",
+        "summary": "Transpormasyon ng korporatibong kultura sa buong grupong Samruk-Kazyna — 12 pambansang kompanya at mahigit 320,000 empleyado.",
+        "detail": "Nabuo ang iisang metodolohiya sa pagsusuri at pamamahala ng korporatibong kultura, natukoy ang mga target na asal, at naihanda ang mga roadmap ng transpormasyon para sa bawat kompanya."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Pagpapaunlad ng mga lider sa produksyon",
+        "tag": "Kinilalang pinakamahusay na praktika",
+        "summary": "Programa ng pagpapaunlad para sa mga lider sa produksyon ng Philip Morris Ukraine.",
+        "detail": "Sa loob ng tatlong taon ay naabot ng mga kakayahan ng mga lider ang target na antas, at pagkatapos ay ibinaba sa zero ang badyet para sa karagdagang pagsasanay. Kinilala ang programa bilang pinakamahusay na praktika at inirekomenda sa ibang tanggapan ng kompanya."
+      },
+      "atom": {
+        "name": "Industriyang nukleyar",
+        "caption": "Apatnapung taong estratehiya para sa bagong industriya",
+        "tag": "Russia",
+        "summary": "Apatnapung taong estratehiya ng paglago para sa isang bagong industriya sa Russia, nakatayo sa umiiral nang kapasidad ng enerhiyang nukleyar.",
+        "detail": "Trabaho sa estratehiya ng isang bagong industriya sa abot-tanaw na apatnapung taon, batay sa mga kapasidad ng enerhiyang nukleyar na nakalatag na."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Mga kompanya",
+    "headingLine2": "at institusyon",
+    "lead": "Sa paglipas ng mga taon ay dumaan ang trabaho sa mga internasyonal na korporasyon, sa malalaking pribadong negosyo at sa mga institusyon ng estado.",
+    "marqueeLabel": "Mga kompanya at institusyon",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Supreme Court of Kazakhstan"
+    }
+  },
+  "Education": {
+    "heading": "Edukasyon",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Unibersidad ng Estado ng Moscow na Lomonosov",
+        "degree": "Fakultad ng Sikolohiya"
+      },
+      "e2": {
+        "school": "Mataas na Paaralang Militar-Pampulitika ng mga Tropang Panghangganan ng KGB ng USSR",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Mga sulatin",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Sanaysay]",
+        "meta": "Paglago ng kompanya",
+        "title": "Mula maliit tungo sa katamtaman. Mula katamtaman tungo sa malaki",
+        "excerpt": "Sa isang punto, ang pinakamalaking humahadlang sa kompanya ay ang paraan kung paano ito pinamamahalaan."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Sanaysay",
+    "back": "Balik sa simula",
+    "growth": {
+      "title": "Mula maliit tungo sa katamtaman. Mula katamtaman tungo sa malaki",
+      "lead": "Maraming taon ko nang minamasdan ang mga kompanya sa magkakaibang yugto ng pag-unlad — mula sa mga negosyong pinapatakbo ng nagtatag hanggang sa pinakamalalaking korporasyon. At habang dumarami ang nakikita ko, mas madalas akong bumabalik sa isang medyo simpleng kaisipan.",
+      "p1": "Sa prinsipyo, walang hindi kayang gawin sa paggawa ng isang maliit na negosyo tungo sa katamtaman, o ng katamtaman tungo sa malaki. Siyempre, kailangan ng produkto, merkado, pera, tao at kaunting suwerte.",
+      "p2": "Ngunit ang pangunahing hadlang sa paglago ay karaniwang nasa ibang lugar. Sa isang punto, ang pinakamalaking humahadlang sa kompanya ay ang paraan kung paano ito pinamamahalaan.",
+      "h1": "Lumalago ang maliit na negosyo dahil sa may-ari nito",
+      "p3": "Kilala niya ang mga kliyente. Siya mismo ang gumagawa ng mahahalagang desisyon. Alam niya kung sino ang mapagkakatiwalaan. Nararamdaman niya ang pera. Siya mismo ang sumusuri sa kalidad. Sa ilang minuto ay kaya niyang baguhin ang desisyong aabutin ng ilang linggo sa isang malaking kompanya.",
+      "p4": "At iyon mismo ang dahilan kung bakit lumalago ang negosyo. Ngunit dumarating ang sandaling ang dating pinakamalaking bentahe nito ay nagsisimula nang maglimita sa karagdagang paglago.",
+      "p5": "Nagiging masyadong malaki ang kompanya para patuloy na makasya sa ulo ng iisang tao. Iyon, sa palagay ko, ang unang tunay na sangandaan.",
+      "h2": "Para maging katamtaman, kailangang bitawan ng may-ari ang bahagi ng negosyo",
+      "p6": "Mas mahirap ito kaysa sa dating nito. Kailangang tumigil sa personal na pagpapasya sa daan-daang bagay. Maghanap ng mga taong sa ilang usapin ay mas nakakaunawa kaysa sa iyo. Ipasa sa kanila hindi lamang ang mga gawain, kundi pati ang karapatang magkamali.",
+      "p7": "Lumilitaw ang estruktura, ang pananagutan, ang mga sukatan, ang mga alituntunin, ang regular na pamamahala. At dito lumilitaw ang isang kabalintunaan: para mapanatili ang kontrol sa lumalagong negosyo, kailangang isuko ng may-ari ang bahagi ng kanyang tuwirang kontrol.",
+      "p8": "Ang mga hindi kailanman gumagawa nito ay madalas na nananatiling napakahusay na maliit na negosyo sa loob ng maraming taon. Ang mga nakakaya nito ay nagiging katamtaman.",
+      "h3": "Iba ang takbo ng paglipat mula katamtaman tungo sa malaki",
+      "p9": "Dito ay hindi na sapat ang pagkuha lamang ng magagaling na tagapamahala at ang pagpapasa sa kanila ng operasyonal na gawain. Kailangang matutong gumana ang kompanya bilang isang sistema.",
+      "p10": "Tumitigil ang estratehiya sa paninirahan lamang sa ulo ng may-ari. Tumitigil ang mga desisyon sa pagsandig lamang sa personal na relasyon. Kailangang kayanin ng kompanya na maghanap, magpalago at magpanatili ng malalakas na lider. Umuusbong ang korporatibong kultura — sinadya man itong buuin ng sinuman o hindi.",
+      "p11": "At lumilitaw ang pangangailangang isipin hindi lamang kung paano kikita nang mas malaki bukas, kundi kung anong klaseng kompanya ang dapat nitong maging sa loob ng lima o sampung taon.",
+      "h4": "At dito ay kailangang muling magbago ng may-ari",
+      "p12": "Para sa akin, ang kuwento ng paglago ng kompanya ay malaki ang bahaging kuwento ng pagbabago ng papel ng may-ari nito. Una siyang negosyante. Pagkatapos ay nagiging tagapamahala. Pagkatapos ay kailangan niyang maging arkitekto ng organisasyon. At sa isang punto, ang taong nagtatakda ng direksyon, bumubuo ng koponan at gumagawa ng ilang tunay na mahahalagang desisyon sa halip na daan-daang pang-araw-araw.",
+      "p13": "Hindi lahat ng negosyante ay nais tahakin ang buong daang iyon. At walang masama roon. Ngunit hindi maitatayo ang isang malaking negosyo habang patuloy itong pinamamahalaan na parang maliit.",
+      "h5": "Ang mga tanong na pinagsisimulan ko",
+      "p14": "Kaya para sa akin, hindi nagsisimula ang paglago ng kompanya sa “paano natin mapapataas ang benta?”. Ibang tanong muna ang itatanong ko.",
+      "q1": "Anong klaseng kompanya ang nais ninyong maging?",
+      "q2": "Ano ang pumipigil sa inyo ngayon na lumago nang dalawa o tatlong beses?",
+      "q3": "Ano ang mangyayari sa kompanya kung mula bukas ay tatlong buwan kayong wala sa opisina?",
+      "q4": "Aling mga desisyon ang hanggang ngayon ay hindi magagawa nang wala kayo?",
+      "q5": "May mga tao ba sa paligid ninyo na talagang mapagkakatiwalaan ninyo ng negosyo?",
+      "q6": "Kaya ba ng koponan ngayon na pamahalaan ang kompanyang doble ang laki ng kasalukuyan?",
+      "q7": "At higit sa lahat: handa ba kayo mismo na pamahalaan ang kompanya nang iba sa paraang ginagawa ninyo ngayon?",
+      "p15": "Ang mga sagot sa mga tanong na iyon ay minsan ay mas marami pang sinasabi tungkol sa kinabukasan ng isang negosyo kaysa sa modelong pinansyal nito.",
+      "p16": "Hindi ko iniisip na itinatayo ang malalaking negosyo ayon sa isang lihim na resipe. Sa isang punto ay kailangan lamang baguhin, sunod-sunod: ang estratehiya → ang modelo ng negosyo → ang sistema ng pamamahala → ang koponan → ang papel ng may-ari. At ang bawat susunod na antas ng kompanya ay humihingi ng ibang kalidad sa bawat isa sa mga iyon.",
+      "p17": "Kaya ang trabahong pinakainteresante para sa akin ay ang negosyo mismo sa sandali ng paglipat. Kapag ang lumang paraan ng pamamahala ay kumikita pa rin ngunit nagsisimula nang maglimita sa kinabukasan. Kapag nakikita ng may-ari na may kaya pang higit ang kompanya, ngunit hindi pa malinaw kung ano nga ba ang kailangang magbago para makagawa ng susunod na hakbang.",
+      "p18": "Sa palagay ko, doon mismo sa tanong na iyon nagsisimula ang tunay na paglago."
+    }
+  },
+  "Footer": {
+    "cta": "Minsan hindi proyekto ang kailangan ng may-ari. Kailangan niya ng taong makakasama sa pag-unawa sa sitwasyon at sa pagdating sa isang desisyon.",
+    "ctaButton": "Sumulat sa akin →",
+    "colMenu": "Menu",
+    "colCases": "Mga proyekto",
+    "colBlog": "Mga sulatin",
+    "colContact": "Ugnayan",
+    "appearance": "Hitsura",
+    "designBy": "Hindi lahat ng suliranin ay nangangailangan ng konsultant",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazakhstan"
+  },
+  "ThemeSwitch": {
+    "label": "Hitsura",
+    "light": "Liwanag",
+    "dark": "Dilim",
+    "system": "Awto"
+  },
+  "LocaleSwitch": {
+    "label": "Wika",
+    "more": "Lahat ng edisyon"
+  },
+  "AuthorCard": {
+    "role": "Estratehiya • Transpormasyon • Mga tao",
+    "location": "Almaty, Kazakhstan",
+    "bio": "Nakikipagtulungan ako sa mga may-ari, CEO at mga pangkat ng pamamahala sa sandaling lumilipat ang kompanya sa susunod nitong yugto ng paglago.",
+    "sinceLabel": "Nasa propesyon mula"
+  },
+  "ContactForm": {
+    "title": "Manatiling konektado",
+    "description": "Mag-iwan ng adres at susulat ako kapag may lumabas ditong sulit basahin.",
+    "emailLabel": "Adres ng email",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Mag-subscribe",
+    "submitting": "Ipinapadala…",
+    "success": "Tapos na. Tingnan ang inyong inbox.",
+    "unexpectedError": "May naging mali. Pakisubukan muli.",
+    "validation": {
+      "emailRequired": "Maglagay ng adres ng email",
+      "emailInvalid": "Mukhang hindi ito adres ng email",
+      "emailTooLong": "Masyadong mahaba ang adres na iyan"
+    }
+  },
+  "StatusBadge": {
+    "label": "Katayuan ng serbisyo",
+    "healthy": "Gumagana",
+    "unhealthy": "Hindi magamit",
+    "checking": "Sinusuri…",
+    "uptime": "Uptime {value}"
+  },
+  "About": {
+    "title": "Tungkol sa akin",
+    "lead": "Umiiral ang pahinang ito para subukin ang pangalawang lokalisadong sanga ng ruta.",
+    "body": "Susunod ang tunay na nilalaman. Gumagana na ang lahat ng iba pa rito: ruta ayon sa lokal, metadata, tema at aksesibilidad."
+  },
+  "NotFound": {
+    "title": "Hindi matagpuan ang pahina",
+    "description": "Maaaring luma na ang link, o may maling baybay sa adres.",
+    "backHome": "Balik sa simula"
+  },
+  "ErrorBoundary": {
+    "title": "May nasira",
+    "description": "Naitala na ang error. Maaari ninyong subukan muli.",
+    "retry": "Subukan muli",
+    "digest": "Code ng error: {digest}"
+  }
+}

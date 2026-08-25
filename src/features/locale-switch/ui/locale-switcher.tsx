@@ -1,36 +1,44 @@
 'use client'
 
 import { useLocale, useTranslations } from 'next-intl'
+import { useEffect, useRef } from 'react'
 
 import { Link, usePathname } from '@/shared/i18n/navigation'
-import { localeHreflang, localeLabels, routing } from '@/shared/i18n/routing'
+import {
+  LOCALE_CATALOGUE,
+  localeCodes,
+  localeHreflang,
+  localeLabels,
+  localesByScript,
+  PRIMARY_LOCALES,
+  type Locale,
+} from '@/shared/i18n/routing'
 import { cn } from '@/shared/lib/cn'
 
 /**
- * The edition mark: `[ru] en` — two codes set as type rather than built as a
- * control, with the site's own bracket around the one you are reading.
+ * The specimen letters that head each half of the index. A writing system named
+ * by a letter of itself needs no translation, and it shows the reader which of
+ * the two typefaces their edition is set in.
+ */
+const SCRIPT_SPECIMEN = { latin: 'Aa', cyrillic: 'Аа' } as const
+
+/**
+ * The edition mark, and the index behind it.
  *
- * Plain links, not a JavaScript-driven menu. Each locale gets a real, crawlable
- * URL for the *current* page, which is what a crawler follows from the
- * `hreflang` alternates, and it keeps working if the JavaScript never arrives.
- * `useLocale()` is known on the server, so unlike the theme toggle this needs no
- * mounted guard: the first HTML already marks the right edition.
+ * Two codes stay in the bar — `en [ru]` — because that is what nearly every
+ * visitor wants and forty codes is not a header. The rest live one press away,
+ * in an index that lists each edition in its own language and its own script.
+ * When the current edition is neither English nor Russian it joins the mark, so
+ * the bar always says which one you are reading.
  *
- * Nothing here is filled, bordered or rounded, and that is the point. The bar is
- * glass, so an opaque track paints a flat hole in it; the previous pill also put
- * a second black shape a few pixels from the black Contact button and repeated
- * the sliding thumb the theme toggle already uses. Dropping the box leaves the
- * button as the bar's one filled element.
- *
- * The brackets are the house ornament doing the job it already does elsewhere:
- * the services and education rows number themselves `[01]` in `text-faint
- * text-[14px] font-medium`, which is the register used here — and the same 14px
- * as the navigation on the other side of the bar.
+ * Plain links throughout, and a `<details>` for the disclosure: the index opens,
+ * closes and is reachable by keyboard with no JavaScript at all, and every one
+ * of the forty URLs is in the markup for a crawler to follow. The effects below
+ * only add Escape and click-away, which are conveniences, not the mechanism.
  *
  * Which edition is current is said by the markup, not by the stylesheet: only
- * the active option renders brackets at all, so with CSS stripped the text is
- * still `[ru] en`. Exactly one term is bracketed either way, so the pair keeps
- * its width across `/ru` and `/en` without reserving anything.
+ * the active option renders brackets, so with CSS stripped the text still reads
+ * `[ru]`.
  */
 export function LocaleSwitcher() {
   const t = useTranslations('LocaleSwitch')
@@ -38,6 +46,36 @@ export function LocaleSwitcher() {
   // next-intl returns the pathname without the locale prefix, so the same
   // value can be re-prefixed with any locale.
   const pathname = usePathname()
+  const indexRef = useRef<HTMLDetailsElement>(null)
+
+  useEffect(() => {
+    const index = indexRef.current
+    if (!index) return
+
+    const close = (): void => {
+      index.open = false
+    }
+
+    const onKeyDown = (event: KeyboardEvent): void => {
+      if (event.key === 'Escape') close()
+    }
+
+    const onPointerDown = (event: PointerEvent): void => {
+      if (event.target instanceof Node && !index.contains(event.target)) close()
+    }
+
+    document.addEventListener('keydown', onKeyDown)
+    document.addEventListener('pointerdown', onPointerDown)
+
+    return () => {
+      document.removeEventListener('keydown', onKeyDown)
+      document.removeEventListener('pointerdown', onPointerDown)
+    }
+  }, [])
+
+  const isPrimary = (PRIMARY_LOCALES as readonly Locale[]).includes(activeLocale)
+  const marked: Locale[] = isPrimary ? [...PRIMARY_LOCALES] : [...PRIMARY_LOCALES, activeLocale]
+  const hiddenCount = localeCodes.length - marked.length
 
   return (
     <nav
@@ -45,62 +83,112 @@ export function LocaleSwitcher() {
       aria-label={t('label')}
       className="flex items-center text-[14px] leading-none"
     >
-      {/* Routing order, so the default locale reads first and a third one would
-          simply add a third term — none of this is arithmetic on "half". */}
-      {routing.locales.map((locale) => {
-        const isActive = locale === activeLocale
-
-        return (
-          <Link
-            key={locale}
-            href={pathname}
-            locale={locale}
-            data-testid={`locale-option-${locale}`}
-            // The full BCP 47 tag, so the anchor agrees with the alternates
-            // `shared/lib/seo` and the sitemap already emit for these URLs
-            // rather than offering a second, looser spelling of them.
-            hrefLang={localeHreflang[locale]}
-            aria-current={isActive ? 'true' : undefined}
-            className={cn(
-              // The box is invisible but generous: this is the one control that
-              // never leaves the bar, down to 320px, and it has no border to
-              // enlarge. `rounded-sm` paints nothing — it is the radius the
-              // global focus ring traces.
-              'flex h-11 min-w-[36px] items-center justify-center rounded-sm px-1',
-              isActive
-                ? // No hover response on the current edition: it links to the
-                  // page already on screen.
-                  'text-foreground font-bold'
-                : // Hover stops one step short of full ink, so the term under
-                  // the pointer never ends up looking like the current one.
-                  'text-muted-foreground hover:text-foreground-soft font-medium',
-            )}
-          >
-            {/* Decoration, so `aria-current` keeps the announcing to itself and
-                the accessible name stays "ru — Русский". A weight below the code
-                it encloses: the bracket marks the term, it does not compete. */}
-            {isActive && (
-              <span aria-hidden="true" className="text-faint font-medium">
-                [
-              </span>
-            )}
-            {locale}
-            {isActive && (
-              <span aria-hidden="true" className="text-faint font-medium">
-                ]
-              </span>
-            )}
-            {/* Two letters are ambiguous read aloud; the name a language gives
-                itself is not. `lang` is what stops an English voice reading
-                "Русский" — `hrefLang` describes the destination, not this
-                text. */}
-            <span lang={locale} className="sr-only">
-              {' '}
-              — {localeLabels[locale]}
+      {marked.map((locale) => (
+        <Link
+          key={locale}
+          href={pathname}
+          locale={locale}
+          data-testid={`locale-option-${locale}`}
+          // The full BCP 47 tag, so the anchor agrees with the alternates
+          // `shared/lib/seo` and the sitemap already emit for these URLs.
+          hrefLang={localeHreflang[locale]}
+          aria-current={locale === activeLocale ? 'true' : undefined}
+          className={cn(
+            // The box is invisible but generous: `rounded-sm` paints nothing,
+            // it is the radius the global focus ring traces.
+            'flex h-11 min-w-[36px] items-center justify-center rounded-sm px-1',
+            locale === activeLocale
+              ? 'text-foreground font-bold'
+              : 'text-muted-foreground hover:text-foreground-soft font-medium',
+          )}
+        >
+          {locale === activeLocale && (
+            <span aria-hidden="true" className="text-faint font-medium">
+              [
             </span>
-          </Link>
-        )
-      })}
+          )}
+          {locale}
+          {locale === activeLocale && (
+            <span aria-hidden="true" className="text-faint font-medium">
+              ]
+            </span>
+          )}
+          <span lang={locale} className="sr-only">
+            {' '}
+            — {localeLabels[locale]}
+          </span>
+        </Link>
+      ))}
+
+      <details ref={indexRef} data-testid="locale-index">
+        <summary
+          data-testid="locale-index-toggle"
+          className={cn(
+            'text-muted-foreground hover:text-foreground-soft flex h-11 cursor-pointer',
+            'list-none items-center justify-center rounded-sm px-1 font-medium',
+            // Safari draws its own disclosure triangle through `::-webkit-details-marker`,
+            // which `list-none` alone does not remove.
+            '[&::-webkit-details-marker]:hidden',
+          )}
+        >
+          <span aria-hidden="true">+{hiddenCount}</span>
+          <span className="sr-only">{t('more')}</span>
+        </summary>
+
+        {/*
+         * The header is `fixed`, and therefore the containing block for this —
+         * so `absolute` here means the full width of the bar, flush underneath
+         * it, without the sheet needing to know anything about the layout.
+         */}
+        <div className="bg-background border-header-border absolute inset-x-0 top-full max-h-[calc(100dvh-68px)] overflow-y-auto border-b px-[clamp(20px,4vw,48px)] py-[clamp(24px,3vw,40px)]">
+          <ul className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,190px),1fr))] gap-x-6">
+            {localesByScript.map((group) => (
+              <li key={group.script} className="contents">
+                {/* Decoration: the list below names every language in itself,
+                    and a screen reader gains nothing from "Aa". */}
+                <p
+                  aria-hidden="true"
+                  className="text-faint col-span-full mt-6 mb-2 text-[13px] font-medium first:mt-0"
+                >
+                  {SCRIPT_SPECIMEN[group.script]} · {group.codes.length}
+                </p>
+
+                {group.codes.map((locale, index) => {
+                  const isActive = locale === activeLocale
+
+                  return (
+                    <Link
+                      key={locale}
+                      href={pathname}
+                      locale={locale}
+                      hrefLang={localeHreflang[locale]}
+                      aria-current={isActive ? 'true' : undefined}
+                      className={cn(
+                        'border-border flex items-baseline gap-3 rounded-sm border-b py-3',
+                        isActive
+                          ? 'text-foreground font-bold'
+                          : 'text-foreground-soft hover:text-foreground font-medium',
+                      )}
+                    >
+                      {/* The same bracketed ordinal the services and education
+                          ledgers number themselves with. */}
+                      <span aria-hidden="true" className="text-faint w-8 flex-none text-[12px]">
+                        [{String(index + 1).padStart(2, '0')}]
+                      </span>
+                      <span lang={locale} className="flex-1 text-[15px] tracking-[-0.01em]">
+                        {LOCALE_CATALOGUE[locale].endonym}
+                      </span>
+                      <span aria-hidden="true" className="text-faint flex-none text-[12px]">
+                        {locale}
+                      </span>
+                    </Link>
+                  )
+                })}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </details>
     </nav>
   )
 }

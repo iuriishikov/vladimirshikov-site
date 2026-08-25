@@ -1,0 +1,285 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov – strategia, transformacja, ludzie",
+      "description": "Pracuję z właścicielami, CEO i zespołami zarządzającymi w sytuacjach, gdy firma stoi przed kolejnym etapem rozwoju."
+    },
+    "about": {
+      "title": "O mnie",
+      "description": "Krótko o Vladimirze Shikovie i o tym, czym się zajmuje."
+    },
+    "notFound": {
+      "title": "Nie znaleziono strony",
+      "description": "Takiej strony tu nie ma."
+    }
+  },
+  "Common": {
+    "skipToContent": "Przejdź do treści głównej",
+    "loading": "Ładowanie…",
+    "retry": "Spróbuj ponownie",
+    "close": "Zamknij"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Nawigacja główna",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "contact": "Skontaktuj się →",
+    "nav": {
+      "home": "Start",
+      "about": "O mnie",
+      "services": "Co robię",
+      "cases": "Projekty",
+      "blog": "Teksty"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner w",
+    "roleB": "TEAM LEAD",
+    "placeA": "Mieszka w",
+    "placeB": "Ałmaty, Kazachstan",
+    "scopeA": "Pracuje z",
+    "scopeB": "właścicielami i CEO",
+    "statement": "Pracuję z właścicielami, CEO i zespołami zarządzającymi w sytuacjach, gdy firma stoi przed kolejnym etapem rozwoju."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ O mnie ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partner TEAM LEAD",
+    "placeLine": "Strategia • Transformacja • Ludzie",
+    "lead": "Pomagam zobaczyć to, co z wnętrza firmy trudno dostrzec. Za pytaniem strategicznym rzadko stoi wyłącznie strategia.",
+    "body": "Wzrost firmy zmienia wymagania wobec modelu biznesowego. Nowy model biznesowy – wobec zespołu. Nowy zespół – wobec roli właściciela. Dlatego patrzę na biznes jednocześnie przez trzy optyki: strategia – organizacja – ludzie. I pomagam właścicielowi określić, które decyzje naprawdę mogą zmienić trajektorię firmy.",
+    "experience": "Moja droga zawodowa przebiegła przez trzy bardzo różne środowiska: międzynarodowy konsulting, duży biznes i instytucje państwowe. Kierowałem rosyjskim oddziałem międzynarodowej firmy zajmującej się oceną kadry kierowniczej, przez ponad 12 lat prowadziłem PDP Group CIS w Moskwie, a następnie odpowiadałem za jeden z kluczowych kierunków transformacji grupy Samruk-Kazyna. Dziś jestem partnerem w TEAM LEAD, gdzie zajmuję się strategią, rozwojem biznesu, transformacją zespołów zarządzających i indywidualną pracą z pierwszymi osobami w firmach. Jestem również członkiem komisji kwalifikacyjnej Najwyższej Rady Sądowniczej Republiki Kazachstanu i uczestniczę w eksperckiej ocenie kandydatów na stanowiska sędziowskie.",
+    "statValue1": "25+",
+    "statLabel1": "lat pracy z biznesem i jego liderami",
+    "statValue2": "320 000+",
+    "statLabel2": "pracowników w największym projekcie transformacji",
+    "statValue3": "C-level",
+    "statLabel3": "ocena, rozwój i wsparcie pierwszych osób w firmie"
+  },
+  "Questions": {
+    "heading": "Kiedy jestem najbardziej przydatny",
+    "lead": "Nie wtedy, gdy firma potrzebuje jeszcze jednego konsultanta. Wtedy, gdy przed właścicielem lub pierwszą osobą w firmie staje pytanie, na które wewnątrz biznesu nie ma już oczywistej odpowiedzi.",
+    "closing": "W takich sytuacjach moim zadaniem jest stworzyć przestrzeń na trzeźwą analizę faktów i pomóc zamienić złożoność w kilka decyzji, które da się rzeczywiście podjąć.",
+    "items": {
+      "q1": "Dokąd iść dalej?",
+      "q2": "Który model biznesowy udźwignie kolejny etap wzrostu?",
+      "q3": "Czy obecny zespół jest w stanie zrealizować nową strategię?",
+      "q4": "Kto może zostać następną pierwszą osobą w firmie?",
+      "q5": "Co trzeba zmienić w firmie – i co właściciel musi zmienić we własnej roli?"
+    }
+  },
+  "Services": {
+    "heading": "Co robię",
+    "lead": "Cztery obszary, które w praktyce prawie zawsze okazują się jednym zadaniem, oglądanym z różnych stron.",
+    "items": {
+      "s1": {
+        "title": "Strategia",
+        "description": "Sesje strategiczne i opracowanie strategii rozwoju. Zaczynam nie od narzędzi i szablonów, lecz od rynku, ekonomiki biznesu, ambicji właściciela, ograniczeń i możliwości. Strategia zaczyna się nie od listy inicjatyw, lecz od odpowiedzi na jedno pytanie: z czego jesteśmy gotowi zrezygnować dla tego, co naprawdę ważne?"
+      },
+      "s2": {
+        "title": "Transformacja",
+        "description": "Droga od dzisiejszego modelu zarządzania do tego, którego będzie wymagać jutro: struktura, kultura organizacyjna, system zarządzania, role liderów, mechanizmy podejmowania decyzji, ludzie. To doświadczenie obejmuje zarówno biznes prywatny, jak i największe struktury korporacyjne i państwowe."
+      },
+      "s3": {
+        "title": "Właściciel i CEO",
+        "description": "Pierwsza osoba w firmie zawsze ma pytania, których nie da się w pełni delegować: strategia, zespół, następca, kryzys, nowy biznes, własna rola w firmie. Nie zastępuję właściciela w podejmowaniu decyzji – pomagam mu zobaczyć sytuację z tej wysokości, z której decyzja staje się oczywista."
+      },
+      "s4": {
+        "title": "Zespół i sukcesja",
+        "description": "Strategia określa, jaka firma ma się stać, ale realizują ją konkretni ludzie. Pomagam zrozumieć, kto jest w stanie prowadzić firmę dalej, gdzie leży rzeczywisty potencjał liderów, komu można powierzyć większą odpowiedzialność i kto kiedyś może zastąpić pierwszą osobę w firmie."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Skala ma znaczenie",
+    "lead": "Trzy programy, po których widać, z jak dużymi zadaniami przyszło mi pracować.",
+    "viewCase": "Otwórz projekt: {name}",
+    "meta": "Projekt",
+    "back": "Na stronę główną",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformacja kultury organizacyjnej",
+        "tag": "12 firm · 320 000+ pracowników",
+        "summary": "Transformacja kultury organizacyjnej grupy Samruk-Kazyna – 12 spółek narodowych i ponad 320 000 pracowników.",
+        "detail": "Powstała jednolita metodyka diagnozy kultury organizacyjnej i zarządzania nią, określono docelowe modele zachowań, a dla każdej spółki opracowano mapy drogowe transformacji."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Rozwój liderów produkcji",
+        "tag": "Uznany za najlepszą praktykę",
+        "summary": "Program rozwoju liderów produkcji w Philip Morris Ukraine.",
+        "detail": "W ciągu trzech lat kompetencje liderów osiągnęły poziom docelowy, po czym budżet na dalsze szkolenia został sprowadzony do zera. Program uznano za najlepszą praktykę i zarekomendowano innym biurom firmy."
+      },
+      "atom": {
+        "name": "Branża atomowa",
+        "caption": "Czterdziestoletnia strategia nowej branży",
+        "tag": "Rosja",
+        "summary": "Czterdziestoletnia strategia rozwoju nowej branży w Rosji, oparta na istniejących mocach energetyki jądrowej.",
+        "detail": "Praca nad strategią rozwoju nowej branży w horyzoncie czterdziestu lat – na bazie istniejących już mocy energetyki jądrowej."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Firmy",
+    "headingLine2": "i instytucje",
+    "lead": "W różnych latach pracowałem z międzynarodowymi korporacjami, dużym biznesem prywatnym i instytucjami państwowymi.",
+    "marqueeLabel": "Firmy i instytucje",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Sąd Najwyższy Kazachstanu"
+    }
+  },
+  "Education": {
+    "heading": "Wykształcenie",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Moskiewski Uniwersytet Państwowy im. M. W. Łomonosowa",
+        "degree": "Wydział Psychologii"
+      },
+      "e2": {
+        "school": "Wyższa Szkoła Wojskowo-Polityczna Wojsk Pogranicznych KGB ZSRR",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Teksty",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Esej]",
+        "meta": "Wzrost firmy",
+        "title": "Z małego biznesu – w średni. Ze średniego – w duży",
+        "excerpt": "W pewnym momencie największym ograniczeniem firmy staje się sposób, w jaki jest zarządzana."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Esej",
+    "back": "Na stronę główną",
+    "growth": {
+      "title": "Z małego biznesu – w średni. Ze średniego – w duży",
+      "lead": "Od wielu lat obserwuję firmy na zupełnie różnych etapach rozwoju – od biznesów prowadzonych przez założycieli po największe korporacje. I im więcej ich widzę, tym częściej wracam do jednej dość prostej myśli.",
+      "p1": "W zasadzie nie ma nic nadzwyczaj trudnego w tym, żeby z małego biznesu zrobić średni. A ze średniego – duży. Oczywiście potrzebne są produkt, rynek, pieniądze, ludzie i odrobina szczęścia.",
+      "p2": "Ale główna bariera wzrostu leży zwykle gdzie indziej. W pewnym momencie największym ograniczeniem firmy staje się sposób, w jaki jest zarządzana.",
+      "h1": "Mały biznes rośnie dzięki swojemu właścicielowi",
+      "p3": "Zna klientów. Sam podejmuje kluczowe decyzje. Wie, komu można ufać. Czuje pieniądze. Osobiście kontroluje jakość. W kilka minut potrafi zmienić decyzję, na którą duża firma potrzebowałaby tygodni.",
+      "p4": "I właśnie dlatego biznes rośnie. Ale przychodzi moment, w którym to, co kiedyś było jego największą przewagą, zaczyna ograniczać dalszy wzrost.",
+      "p5": "Firma staje się zbyt duża, żeby dalej mieścić się w głowie jednego człowieka. To, moim zdaniem, pierwsze prawdziwe rozwidlenie drogi.",
+      "h2": "Żeby stać się średnią firmą, właściciel musi oddać część biznesu",
+      "p6": "To znacznie trudniejsze, niż brzmi. Trzeba przestać osobiście podejmować setki decyzji. Znaleźć ludzi, którzy w pewnych sprawach będą wiedzieli więcej niż on sam. Przekazać im nie tylko zadania, ale i prawo do popełniania błędów.",
+      "p7": "Pojawiają się struktura, odpowiedzialność, wskaźniki, zasady, regularne zarządzanie. I tu ujawnia się paradoks: żeby zachować kontrolę nad rosnącym biznesem, właściciel musi zrezygnować z części kontroli bezpośredniej.",
+      "p8": "Ci, którzy tego nie robią, często latami prowadzą bardzo dobry mały biznes. Ci, którym się udało, budują średni.",
+      "h3": "Przejście od średniego do dużego działa inaczej",
+      "p9": "Tu nie wystarczy już zatrudnić dobrych menedżerów i oddać im pracę operacyjną. Firma musi nauczyć się działać jak system.",
+      "p10": "Strategia przestaje mieszkać wyłącznie w głowie właściciela. Decyzje przestają opierać się wyłącznie na osobistych relacjach. Firma musi umieć znajdować, rozwijać i zatrzymywać silnych liderów. Powstaje kultura organizacyjna – niezależnie od tego, czy ktokolwiek zajmował się nią świadomie.",
+      "p11": "Pojawia się potrzeba myślenia nie tylko o tym, jak zarobić więcej jutro, ale też o tym, jaką firmą trzeba się stać za pięć czy dziesięć lat.",
+      "h4": "I tu znowu musi zmienić się właściciel",
+      "p12": "Wydaje mi się, że historia wzrostu firmy to w dużej mierze historia zmiany roli jej właściciela. Najpierw jest przedsiębiorcą. Potem staje się menedżerem. Następnie musi stać się architektem organizacji. A w pewnym momencie – człowiekiem, który wyznacza kierunek, buduje zespół i podejmuje kilka naprawdę ważnych decyzji zamiast setek codziennych.",
+      "p13": "Nie każdy przedsiębiorca chce przejść całą tę drogę. I to jest w porządku. Ale nie da się zbudować dużego biznesu, zarządzając nim dalej jak małym.",
+      "h5": "Od jakich pytań zaczynam",
+      "p14": "Dlatego wzrost firmy zaczyna się dla mnie nie od pytania „jak zwiększyć sprzedaż?”. Najpierw zadałbym inne pytania.",
+      "q1": "Jaką firmą chcą się Państwo stać?",
+      "q2": "Co dziś przeszkadza Państwu urosnąć dwa albo trzy razy?",
+      "q3": "Co stanie się z firmą, jeśli od jutra nie będzie Państwa w biurze przez trzy miesiące?",
+      "q4": "Których decyzji wciąż nie da się podjąć bez Państwa?",
+      "q5": "Czy są obok Państwa ludzie, którym naprawdę powierzyliby Państwo biznes?",
+      "q6": "Czy dzisiejszy zespół poradziłby sobie z firmą dwa razy większą niż obecna?",
+      "q7": "I przede wszystkim: czy sami są Państwo gotowi zarządzać firmą inaczej, niż zarządzają nią dziś?",
+      "p15": "Odpowiedzi na te pytania mówią czasem o perspektywach biznesu znacznie więcej niż model finansowy.",
+      "p16": "Nie sądzę, żeby duży biznes powstawał według jakiegoś sekretnego przepisu. Na pewnym etapie trzeba po prostu zmieniać po kolei: strategię → model biznesowy → system zarządzania → zespół → rolę właściciela. A każdy kolejny poziom firmy wymaga innej jakości każdego z tych elementów.",
+      "p17": "Dlatego najbardziej interesuje mnie praca z biznesem właśnie w momencie przejścia. Kiedy stary sposób zarządzania wciąż przynosi pieniądze, ale zaczyna już ograniczać przyszłość. Kiedy właściciel widzi, że firma jest zdolna do więcej, ale nie jest jeszcze jasne, co dokładnie musi się zmienić, żeby zrobić kolejny krok.",
+      "p18": "Wydaje mi się, że właśnie od tego pytania zaczyna się prawdziwy wzrost."
+    }
+  },
+  "Footer": {
+    "cta": "Czasem właściciel nie potrzebuje projektu. Potrzebuje kogoś, z kim można przeanalizować sytuację i podjąć decyzję.",
+    "ctaButton": "Napisz do mnie →",
+    "colMenu": "Menu",
+    "colCases": "Projekty",
+    "colBlog": "Teksty",
+    "colContact": "Kontakt",
+    "appearance": "Wygląd",
+    "designBy": "Nie każde zadanie wymaga konsultanta",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Ałmaty, Kazachstan"
+  },
+  "ThemeSwitch": {
+    "label": "Wygląd",
+    "light": "Jasny",
+    "dark": "Ciemny",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Język",
+    "more": "Wszystkie wersje"
+  },
+  "AuthorCard": {
+    "role": "Strategia • Transformacja • Ludzie",
+    "location": "Ałmaty, Kazachstan",
+    "bio": "Pracuję z właścicielami, CEO i zespołami zarządzającymi w momencie przejścia firmy na kolejny etap rozwoju.",
+    "sinceLabel": "W zawodzie od"
+  },
+  "ContactForm": {
+    "title": "Zostańmy w kontakcie",
+    "description": "Wystarczy zostawić adres – napiszę, kiedy pojawi się tu coś wartego przeczytania.",
+    "emailLabel": "Adres e-mail",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Zapisz się",
+    "submitting": "Wysyłanie…",
+    "success": "Gotowe. Proszę sprawdzić skrzynkę.",
+    "unexpectedError": "Coś poszło nie tak. Proszę spróbować ponownie.",
+    "validation": {
+      "emailRequired": "Proszę podać adres e-mail",
+      "emailInvalid": "To nie wygląda na adres e-mail",
+      "emailTooLong": "Ten adres jest za długi"
+    }
+  },
+  "StatusBadge": {
+    "label": "Stan serwisu",
+    "healthy": "Działa",
+    "unhealthy": "Niedostępny",
+    "checking": "Sprawdzanie…",
+    "uptime": "Dostępność {value}"
+  },
+  "About": {
+    "title": "O mnie",
+    "lead": "Ta strona istnieje po to, żeby pokazać drugą zlokalizowaną gałąź routingu.",
+    "body": "Treść pojawi się później. Na razie działa tu wszystko inne: routing po lokalizacjach, metadane, motyw i dostępność."
+  },
+  "NotFound": {
+    "title": "Nie znaleziono strony",
+    "description": "Możliwe, że link jest nieaktualny albo w adresie jest literówka.",
+    "backHome": "Na stronę główną"
+  },
+  "ErrorBoundary": {
+    "title": "Coś się zepsuło",
+    "description": "Błąd został zapisany w dzienniku. Można spróbować ponownie.",
+    "retry": "Spróbuj ponownie",
+    "digest": "Kod błędu: {digest}"
+  }
+}
