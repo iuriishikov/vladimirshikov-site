@@ -13,11 +13,20 @@ describe('ThemeToggle', () => {
     expect(screen.getByTestId('theme-toggle')).toHaveAccessibleName('Тема оформления')
   })
 
+  it('labels both halves of the pill from the dictionary', () => {
+    renderWithProviders(<ThemeToggle />)
+
+    const toggle = screen.getByTestId('theme-toggle')
+
+    expect(toggle).toHaveTextContent('Свет')
+    expect(toggle).toHaveTextContent('Тьма')
+  })
+
   it('advertises the theme it will switch to, not the current one', async () => {
     renderWithProviders(<ThemeToggle />)
 
     await waitFor(() => {
-      expect(screen.getByTestId('theme-toggle')).toHaveAttribute('title', 'Тёмная')
+      expect(screen.getByTestId('theme-toggle')).toHaveAttribute('title', 'Тьма')
     })
   })
 
@@ -29,6 +38,7 @@ describe('ThemeToggle', () => {
     await waitFor(() => {
       expect(document.documentElement).toHaveClass('dark')
     })
+    expect(toggle).toHaveAttribute('title', 'Свет')
 
     await user.click(toggle)
     await waitFor(() => {
