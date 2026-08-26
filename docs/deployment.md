@@ -113,26 +113,31 @@ mkdir -p ~/vladimirshikov-site
 cd ~/vladimirshikov-site
 ```
 
-Then create the one file that is _not_ in git — `.env`, beside the compose file:
+That is the whole of it. `.env` is **not** written by hand either: the deploy job renders it from the
+environment's own configuration on every rollout, so it looks like this and nobody types it.
 
 ```dotenv
-# Read by scripts/deploy.sh and by compose interpolation
+# Rendered by the deploy job from vars.SITE_URL and secrets.ACME_EMAIL
 SITE_DOMAIN=vladimirshikov.com
 ACME_EMAIL=you@example.com
 
 # Read at runtime by the application (src/shared/config/env.ts)
 SITE_URL=https://vladimirshikov.com
 APP_ENV=production
-APP_VERSION=0.0.0
+APP_VERSION=v1.4.0
 API_BASE_URL=
 
-# Written by scripts/deploy.sh on every rollout — do not hand-edit
+# Written by scripts/deploy.sh on every rollout
 IMAGE=ghcr.io/iuriishikov/vladimirshikov-site:latest
 ```
 
-```bash
-chmod 600 .env
-```
+A hand-edit on the server does not survive the next deploy, which is the point: this file used to be
+the only piece of the deployment that nobody could see from GitHub, nothing could rebuild and no
+review ever covered — and it held a second copy of `SITE_URL`, which the health check already reads
+from the environment. Two fields that must agree are a field that will one day disagree.
+
+`SITE_DOMAIN` is derived from `SITE_URL` rather than stored beside it, for the same reason. The file
+is written under `umask 077` rather than chmod'ed afterwards, so it is never briefly world-readable.
 
 Three things to understand about this file:
 

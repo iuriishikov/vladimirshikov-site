@@ -188,6 +188,49 @@ jobs:
             Caddyfile
             scripts/deploy.sh
 
+      # `.env` used to be the one file a human wrote on the server by hand. That
+      # made it the only piece of this deployment nobody could see from here, nothing
+      # could rebuild, and no review ever covered — and it held a second copy of
+      # SITE_URL, which the health check already reads from this environment. Two
+      # fields that must agree are a field that will one day disagree.
+      #
+      # It is rendered from the environment's own configuration on every rollout
+      # instead. A replaced box is now one deploy away from being configured, and
+      # a hand-edit on the server is deliberately not durable.
+      #
+      # SITE_DOMAIN is derived from SITE_URL rather than stored beside it, for
+      # the same reason. `umask 077` is set before the write, not chmod'ed after,
+      # so the file is never briefly world-readable.
+      - name: Render the server configuration
+        uses: appleboy/ssh-action@v1
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          ACME_EMAIL: ${{ secrets.ACME_EMAIL }}
+          APP_VERSION: ${{ needs.resolve.outputs.image_tag }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
+          envs: DEPLOY_PATH,SITE_URL,ACME_EMAIL,APP_ENV,APP_VERSION
+          script: |
+            set -euo pipefail
+            cd "$DEPLOY_PATH"
+            [ -n "$ACME_EMAIL" ] || { echo "::error::ACME_EMAIL is not set for this environment."; exit 1; }
+            domain="${SITE_URL#*://}"
+            domain="${domain%%/*}"
+            umask 077
+            {
+              printf 'SITE_DOMAIN=%s\n' "$domain"
+              printf 'ACME_EMAIL=%s\n' "$ACME_EMAIL"
+              printf 'SITE_URL=%s\n' "$SITE_URL"
+              printf 'APP_ENV=%s\n' "$APP_ENV"
+              printf 'APP_VERSION=%s\n' "$APP_VERSION"
+              printf 'API_BASE_URL=\n'
+            } > .env
+            echo "Wrote .env for $domain ($APP_ENV)."
+
       - name: Roll out
         uses: appleboy/ssh-action@v1
         env:
