@@ -184,12 +184,34 @@ jobs:
           set -euo pipefail
           known_hosts="$RUNNER_TEMP/known_hosts"
           printf '%s\n' "$SSH_KNOWN_HOSTS" > "$known_hosts"
-          # Prefer Ed25519; fall back to whatever key the file actually carries.
-          fingerprint="$(ssh-keygen -l -E sha256 -f "$known_hosts" \
-            | awk '$4 == "(ED25519)" { print $2; exit }')"
-          if [ -z "$fingerprint" ]; then
-            fingerprint="$(ssh-keygen -l -E sha256 -f "$known_hosts" | awk 'NR == 1 { print $2 }')"
-          fi
+
+          # Printed in full because the pin below can only ever match one of
+          # them, and when it does not, this inventory is the whole diagnosis.
+          echo "Host keys carried by SSH_KNOWN_HOSTS:"
+          ssh-keygen -l -E sha256 -f "$known_hosts"
+
+          # The type is chosen to match what the client will actually negotiate,
+          # not what is strongest. appleboy's actions verify with easyssh-proxy,
+          # whose callback compares FingerprintSHA256 of *the key the handshake
+          # settled on* against this single string, and which never constrains
+          # HostKeyAlgorithms. So golang.org/x/crypto decides, and in v0.37.0
+          # its default order runs ECDSA, then RSA, and puts Ed25519 last.
+          #
+          # This server offers all three, so the handshake settles on ECDSA
+          # every time. Pinning the Ed25519 key — the obvious choice, and the
+          # one that was here — produced `ssh: handshake failed: ssh: host key
+          # fingerprint mismatch` on a key that was demonstrably the server's
+          # own, which is about as misleading as an error message gets.
+          #
+          # The order below mirrors x/crypto's. If a future version promotes
+          # Ed25519, this pins the wrong key again and fails loudly rather than
+          # silently, and the inventory above says what was available.
+          fingerprint=""
+          for type in ECDSA RSA ED25519; do
+            fingerprint="$(ssh-keygen -l -E sha256 -f "$known_hosts" \
+              | awk -v t="($type)" '$4 == t { print $2; exit }')"
+            [ -n "$fingerprint" ] && break
+          done
           if [ -z "$fingerprint" ]; then
             echo "::error::SSH_KNOWN_HOSTS does not contain a usable host key."
             exit 1
@@ -200,10 +222,16 @@ jobs:
       # Read before anything changes, so a failed health check has somewhere to
       # go back to. scripts/deploy.sh records the reference it activated in
       # `.deployed-image` under DEPLOY_PATH.
+      # No `continue-on-error` here. It was added so that a missing
+      # `.deployed-image` — normal on a first rollout — would not fail the job,
+      # but the remote command already tolerates that with `|| true`. All the
+      # flag actually did was swallow a failure to reach the server at all, and
+      # report the step as a success: two rollouts were diagnosed on the false
+      # premise that SSH had worked, when this step had died in the handshake.
+      # A server this job cannot reach is a server it cannot deploy to.
       - name: Capture the currently deployed image
         if: ${{ steps.target.outputs.configured == 'true' }}
         id: previous
-        continue-on-error: true
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.SSH_HOST }}
