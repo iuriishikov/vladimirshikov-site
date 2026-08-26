@@ -43,6 +43,4 @@ export {
   localesByScript,
   PRIMARY_LOCALES,
   type Locale,
-  type LocaleEntry,
-  type PrimaryLocale,
 } from './locales'

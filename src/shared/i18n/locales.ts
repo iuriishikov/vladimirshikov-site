@@ -102,8 +102,6 @@ export const localeCodes = Object.keys(LOCALE_CATALOGUE) as unknown as readonly 
  */
 export const PRIMARY_LOCALES = ['en', 'ru'] as const satisfies readonly Locale[]
 
-export type PrimaryLocale = (typeof PRIMARY_LOCALES)[number]
-
 /** Display names for the locale switcher, in each locale's own language. */
 export const localeLabels: Record<Locale, string> = Object.fromEntries(
   Object.entries(LOCALE_CATALOGUE).map(([code, entry]) => [code, entry.endonym]),
