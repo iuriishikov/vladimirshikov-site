@@ -86,6 +86,10 @@ A reusable workflow (`workflow_call`) — it has no trigger of its own and is in
 - Builds the standalone Next.js image for `linux/amd64` and `linux/arm64` with Buildx.
 - Pushes to **`ghcr.io/iuriishikov/vladimirshikov-site`**, tagged with the git SHA, the branch or
   release tag, and `latest` for stable releases.
+- Starts the pushed image and waits for `/api/health` before attesting it, under the same runtime
+  restrictions `docker-compose.yml` imposes: read-only root filesystem, `/tmp` and the Next.js cache
+  on tmpfs, all capabilities dropped, no new privileges. `pnpm build` passing says nothing about any
+  of those, and without this step the first process ever to run the image is production.
 - Generates an SBOM and a build provenance attestation, both attached to the image in GHCR.
 - Builds with `SKIP_ENV_VALIDATION=1`: the image is environment-agnostic, and validation happens on
   the server at container start with the real values.
