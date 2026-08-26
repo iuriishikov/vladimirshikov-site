@@ -116,8 +116,16 @@ therefore reached deliberately, by dispatching this workflow against the publish
 gh workflow run deploy.yml --ref v1.0.0
 ```
 
-`ref_type` is then `tag` and `ref_name` the version, which is what `resolve` already reads — the
-dispatch needs no inputs. The workflow file that runs is the one committed at that tag.
+`ref_type` is then `tag` and `ref_name` the version, which is what `resolve` already reads, so the
+dispatch needs no inputs. The workflow file that runs is the one committed at that tag — which also
+means a bug in that file is frozen into the release, and the fix is a new release, not a re-run.
+
+Two inputs exist for the cases the ref cannot express. `environment` defaults to `auto`, meaning the
+ref decides; set it to `production` to roll a branch's build out, or to `staging` to hold a tag back.
+`image_tag` overrides the tag the image is published under, and follows the ref when left empty.
+They are worth knowing about because the ref-derived default is quiet about what it chose: dispatching
+against a _branch_ resolves to `staging`, which on this project rolls nothing out, so the run passes
+having deployed nothing and reads at a glance like a successful release.
 
 A push to `develop` resolves to `staging`, and staging holds no server secrets on this project. That
 deployment builds and publishes the image, reports that there was nowhere to roll it out, and passes.

@@ -21,6 +21,27 @@ on:
   # Note the file that runs is the one committed at that tag, so this trigger
   # only exists for tags cut after it was added.
   workflow_dispatch:
+    inputs:
+      environment:
+        description: >
+          Where to roll out. `auto` follows the ref, which is what a release
+          normally wants: a tag means production, a branch means staging.
+          Choose explicitly to deploy a branch's build to production, or to
+          hold a tag back to staging.
+        required: true
+        type: choice
+        default: auto
+        options:
+          - auto
+          - staging
+          - production
+      image_tag:
+        description: >
+          Human-meaningful tag for the image, e.g. `v1.0.0`. Empty follows the
+          ref, exactly as `auto` does for the environment.
+        required: false
+        type: string
+        default: ""
 
 permissions:
   contents: read
@@ -53,6 +74,8 @@ jobs:
           REF_TYPE: ${{ github.ref_type }}
           REF_NAME: ${{ github.ref_name }}
           RELEASE_TAG: ${{ github.event.release.tag_name }}
+          INPUT_ENVIRONMENT: ${{ inputs.environment }}
+          INPUT_IMAGE_TAG: ${{ inputs.image_tag }}
         run: |
           set -euo pipefail
           if [ "$EVENT_NAME" = "release" ]; then
@@ -64,6 +87,17 @@ jobs:
           else
             environment=staging
             image_tag=staging
+          fi
+          # An explicit dispatch input overrides what the ref implied. Without
+          # this, choosing a branch in the Actions UI silently resolved to
+          # staging — which on this project rolls nothing out, so the run went
+          # green having deployed nothing, and looked like a successful
+          # production release.
+          if [ -n "${INPUT_ENVIRONMENT:-}" ] && [ "$INPUT_ENVIRONMENT" != auto ]; then
+            environment="$INPUT_ENVIRONMENT"
+          fi
+          if [ -n "${INPUT_IMAGE_TAG:-}" ]; then
+            image_tag="$INPUT_IMAGE_TAG"
           fi
           echo "Deploying '$image_tag' to '$environment'."
           echo "environment=$environment" >> "$GITHUB_OUTPUT"
@@ -227,12 +261,19 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
           target: ${{ vars.DEPLOY_PATH }}
-          # Relative paths, so `scripts/deploy.sh` lands under `scripts/`.
-          source: |
-            docker-compose.yml
-            docker-compose.staging.yml
-            Caddyfile
-            scripts/deploy.sh
+          # Comma-separated, and it has to be. drone-scp declares this input as
+          # a urfave/cli StringSliceFlag, and such a flag splits an environment
+          # variable on commas alone — a YAML block scalar arrives as a single
+          # element with newlines inside it, matching no file at all. The
+          # symptom is not a missing file but `tar: Cowardly refusing to create
+          # an empty archive`, which never names the input that caused it.
+          #
+          # The neighbouring ssh-action steps take a multi-line `script`, which
+          # is split on newlines and works exactly as it looks. The two inputs
+          # are not alike, however similar they read.
+          #
+          # Paths stay relative, so `scripts/deploy.sh` lands under `scripts/`.
+          source: docker-compose.yml,docker-compose.staging.yml,Caddyfile,scripts/deploy.sh
 
       # `.env` used to be the one file a human wrote on the server by hand. That
       # made it the only piece of this deployment nobody could see from here, nothing
