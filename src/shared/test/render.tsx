@@ -7,9 +7,10 @@ import type { ReactElement, ReactNode } from 'react'
 
 import enMessages from '../../../messages/en.json'
 import ruMessages from '../../../messages/ru.json'
-import type { Locale } from '../i18n/routing'
 
 const messagesByLocale = { ru: ruMessages, en: enMessages }
+
+type TestLocale = keyof typeof messagesByLocale
 
 /**
  * A QueryClient with retries and background chatter disabled — a test that
@@ -25,7 +26,13 @@ function makeTestQueryClient(): QueryClient {
 }
 
 interface RenderWithProvidersOptions extends Omit<RenderOptions, 'wrapper'> {
-  locale?: Locale
+  /**
+   * Only the two editions a test can meaningfully assert against. The site
+   * publishes forty, but the other thirty-eight are translations of these — a
+   * unit test that asserted Kazakh copy would be testing the translator, not
+   * the component.
+   */
+  locale?: TestLocale
   queryClient?: QueryClient
 }
 
@@ -50,7 +57,11 @@ export function renderWithProviders(
     return (
       <NextIntlClientProvider locale={locale} messages={messagesByLocale[locale]} timeZone="UTC">
         <QueryClientProvider client={queryClient}>
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          {/* The same configuration the app ships, so a test cannot pass
+              against a provider the visitor never meets. `matchMedia` is
+              stubbed to report "not dark" in setup.ts, which is what makes
+              `system` resolve to light deterministically here. */}
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             {children}
           </ThemeProvider>
         </QueryClientProvider>

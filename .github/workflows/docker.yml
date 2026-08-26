@@ -146,6 +146,47 @@ jobs:
           DIGEST: ${{ steps.build.outputs.digest }}
         run: echo "image_ref=${IMAGE}@${DIGEST}" >> "$GITHUB_OUTPUT"
 
+      # Until this step existed, nothing had ever started this image. It was
+      # built, signed, published and shipped to a server, and the first process
+      # to run it was production. `pnpm build` passing in CI does not cover what
+      # breaks here: the standalone output tree, the non-root user, tini as PID
+      # 1, and above all a root filesystem that compose mounts read-only.
+      #
+      # So the flags are not decoration. They are docker-compose.yml's runtime
+      # contract restated, because a container that only works with a writable
+      # root and full capabilities is a container that only works in this step.
+      - name: Start the image and ask it whether it works
+        if: ${{ inputs.push }}
+        env:
+          IMAGE_REF: ${{ steps.ref.outputs.image_ref }}
+        run: |
+          set -uo pipefail
+          docker run -d --name smoke \
+            --read-only \
+            --tmpfs /tmp:rw,noexec,nosuid,size=64m \
+            --tmpfs /app/.next/cache:rw \
+            --cap-drop ALL \
+            --security-opt no-new-privileges:true \
+            -p 127.0.0.1:3000:3000 \
+            -e SITE_URL=http://localhost:3000 \
+            -e APP_ENV=production \
+            -e APP_VERSION=smoke \
+            "$IMAGE_REF" >/dev/null
+          for attempt in $(seq 1 30); do
+            body="$(curl -fsS --max-time 5 http://127.0.0.1:3000/api/health 2>/dev/null || true)"
+            if [ -n "$body" ] && printf '%s' "$body" | jq -e '.status == "ok"' >/dev/null 2>&1; then
+              echo "Answered after ${attempt} attempt(s):"
+              printf '%s\n' "$body" | jq .
+              docker rm -f smoke >/dev/null
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "::error::The image did not answer /api/health within 60 seconds. Container log follows."
+          docker logs smoke 2>&1 | tail -50
+          docker rm -f smoke >/dev/null 2>&1 || true
+          exit 1
+
       # Signed with a short-lived OIDC identity and pushed to the registry
       # alongside the image, so `gh attestation verify` works against the digest
       # without needing this repository's workflow run to still exist.

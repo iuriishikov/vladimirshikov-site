@@ -1,16 +1,16 @@
 {
   "Metadata": {
     "home": {
-      "title": "Vladimir Shikov",
-      "description": "The personal site of Vladimir Shikov."
+      "title": "Vladimir Shikov — strategy, transformation, people",
+      "description": "I work with owners, CEOs and management teams at the point where a business is facing its next stage of growth."
     },
     "about": {
       "title": "About",
-      "description": "A short introduction to Vladimir Shikov and his work."
+      "description": "A short note on Vladimir Shikov and the work he does."
     },
     "notFound": {
       "title": "Page not found",
-      "description": "There is nothing at this address."
+      "description": "There is no such page here."
     }
   },
   "Common": {
@@ -20,44 +20,233 @@
     "close": "Close"
   },
   "Header": {
-    "brand": "Vladimir Shikov",
+    "brand": "Shikov.V",
     "navigationLabel": "Main navigation",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
+    "contact": "Get in touch →",
     "nav": {
       "home": "Home",
-      "about": "About"
+      "about": "About",
+      "services": "What I do",
+      "cases": "Projects",
+      "blog": "Writing"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner at",
+    "roleB": "TEAM LEAD",
+    "placeA": "Based in",
+    "placeB": "Almaty, Kazakhstan",
+    "scopeA": "Works with",
+    "scopeB": "owners and CEOs",
+    "statement": "I work with owners, CEOs and management teams at the point where a business is facing its next stage of growth."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ About ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partner at TEAM LEAD",
+    "placeLine": "Strategy • Transformation • People",
+    "lead": "I help you see what is hard to see from inside the company. A strategic question is rarely only about strategy.",
+    "body": "Growth changes what the business model has to do. A new business model changes what the team has to be. A new team changes the owner's own role. So I look at a business through three lenses at once — strategy, organisation, people — and help the owner work out which decisions can actually change the company's trajectory.",
+    "experience": "My career has run through three very different environments: international consulting, large business and state institutions. I led the Russian arm of an international leadership-assessment company, spent more than 12 years heading PDP Group CIS in Moscow, and then owned one of the key transformation streams at the Samruk-Kazyna group. Today I am a partner at TEAM LEAD, working on strategy, business development, the transformation of management teams and one-to-one work with chief executives. I also serve on the qualification commission of the Supreme Judicial Council of the Republic of Kazakhstan, assessing candidates for judicial office.",
+    "statValue1": "25+",
+    "statLabel1": "years working with businesses and their leaders",
+    "statValue2": "320,000+",
+    "statLabel2": "employees in the largest transformation programme",
+    "statValue3": "C-level",
+    "statLabel3": "assessment, development and support of chief executives"
+  },
+  "Questions": {
+    "heading": "When I am most useful",
+    "lead": "Not when a company needs one more consultant. When the owner or the chief executive faces a question the business no longer has an obvious answer to.",
+    "closing": "In those situations my job is to create room for a clear-eyed look at the facts, and to help turn the complexity into a handful of decisions that can actually be made.",
+    "items": {
+      "q1": "Where do we go from here?",
+      "q2": "Which business model will carry the next stage of growth?",
+      "q3": "Can the current team deliver the new strategy?",
+      "q4": "Who could become the next chief executive?",
+      "q5": "What has to change in the company — and what has to change in the owner's own role?"
+    }
+  },
+  "Services": {
+    "heading": "What I do",
+    "lead": "Four areas that, in practice, almost always turn out to be one problem seen from different sides.",
+    "items": {
+      "s1": {
+        "title": "Strategy",
+        "description": "Strategy sessions and the design of a growth strategy. I do not start from tools and templates, but from the market, the economics of the business, the owner's ambition, the constraints and the openings. Strategy does not begin with a list of initiatives; it begins with an answer to one question — what are we prepared to give up for the thing that really matters?"
+      },
+      "s2": {
+        "title": "Transformation",
+        "description": "The road from today's operating model to the one tomorrow will require: structure, culture, the management system, the roles of leaders, how decisions get made, people. That experience covers privately held businesses as well as the largest corporate and state structures."
+      },
+      "s3": {
+        "title": "Owner and CEO",
+        "description": "A chief executive always carries questions that cannot be fully delegated: strategy, the team, a successor, a crisis, a new business, their own role in the company. I do not take the decision in the owner's place — I help them see the situation from the height at which the decision becomes obvious."
+      },
+      "s4": {
+        "title": "Team and succession",
+        "description": "Strategy defines what the company has to become, but real people are the ones who deliver it. I help work out who can carry the company forward, where a leader's real potential lies, who can be trusted with more, and who might one day step into the top job."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Scale matters",
+    "lead": "Three programmes that show the size of the problems this work has had to hold.",
+    "viewCase": "Open the project: {name}",
+    "meta": "Project",
+    "back": "Back home",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transforming the corporate culture",
+        "tag": "12 companies · 320,000+ employees",
+        "summary": "A corporate-culture transformation across the Samruk-Kazyna group — 12 national companies and more than 320,000 employees.",
+        "detail": "A single methodology for diagnosing and steering corporate culture was created, target behaviours were defined, and transformation roadmaps were drawn up for each company."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Developing production leaders",
+        "tag": "Recognised as best practice",
+        "summary": "A development programme for production leaders at Philip Morris Ukraine.",
+        "detail": "Within three years the leaders' competencies reached the target level, after which the budget for further training was reduced to zero. The programme was recognised as best practice and recommended to the company's other offices."
+      },
+      "atom": {
+        "name": "Nuclear-based industry",
+        "caption": "A forty-year strategy for a new industry",
+        "tag": "Russia",
+        "summary": "A forty-year growth strategy for a new industry in Russia, built on existing nuclear-energy capacity.",
+        "detail": "Work on the strategy for a new industry over a forty-year horizon, based on the nuclear-energy capacity already in place."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Companies",
+    "headingLine2": "and institutions",
+    "lead": "Over the years the work has run through international corporations, large privately held businesses and state institutions.",
+    "marqueeLabel": "Companies and institutions",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Supreme Court of Kazakhstan"
+    }
+  },
+  "Education": {
+    "heading": "Education",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Lomonosov Moscow State University",
+        "degree": "Faculty of Psychology"
+      },
+      "e2": {
+        "school": "Higher Border Guard Military-Political School of the KGB of the USSR",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Writing",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Essay]",
+        "meta": "Company growth",
+        "title": "From small to mid-size. From mid-size to large",
+        "excerpt": "At a certain point, the thing that limits a company most is the way it is being run."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Essay",
+    "back": "Back home",
+    "growth": {
+      "title": "From small to mid-size. From mid-size to large",
+      "lead": "For many years I have watched companies at every stage of development, from founder-run businesses to the largest corporations. And the more of them I see, the more often I come back to one fairly simple thought.",
+      "p1": "In principle there is nothing impossibly hard about turning a small business into a mid-size one, or a mid-size one into a large one. Of course you need a product, a market, money, people and a little luck.",
+      "p2": "But the main barrier to growth is usually somewhere else. At a certain point, the thing that limits a company most is the way it is being run.",
+      "h1": "A small business grows because of its owner",
+      "p3": "They know the customers. They take the key decisions themselves. They know who can be trusted. They have a feel for the money. They check the quality personally. In a few minutes they can change a decision that would take a large company weeks.",
+      "p4": "And that is exactly why the business grows. But a moment arrives when what was once its greatest advantage starts to limit any further growth.",
+      "p5": "The company becomes too big to keep fitting inside one person's head. That, to my mind, is the first real fork in the road.",
+      "h2": "To become mid-size, the owner has to let part of the business go",
+      "p6": "This is far harder than it sounds. You have to stop taking hundreds of decisions yourself. Find people who will understand some things better than you do. Hand them not only the tasks, but the right to get things wrong.",
+      "p7": "Structure appears, and accountability, metrics, rules, regular management. And here a paradox shows up: to keep control of a growing business, the owner has to give up part of their direct control.",
+      "p8": "Those who never do it often stay a very good small business for years. Those who manage it become mid-size.",
+      "h3": "The move from mid-size to large works differently",
+      "p9": "Here it is no longer enough to hire good managers and delegate the operational work to them. The company has to learn to run as a system.",
+      "p10": "Strategy stops living only in the owner's head. Decisions stop resting only on personal relationships. The company has to be able to find, grow and keep strong leaders. A corporate culture emerges — whether or not anyone set out to build one.",
+      "p11": "And a need appears to think not only about earning more tomorrow, but about what kind of company this has to become in five or ten years.",
+      "h4": "And here the owner has to change again",
+      "p12": "It seems to me that the story of a company's growth is largely the story of how its owner's role changes. First they are an entrepreneur. Then they become a manager. Then they have to become the architect of an organisation. And at some point, the person who sets the direction, builds the team and takes a few genuinely important decisions instead of hundreds of daily ones.",
+      "p13": "Not every entrepreneur wants to walk that whole road. And that is fine. But you cannot build a large business while continuing to run it like a small one.",
+      "h5": "The questions I start from",
+      "p14": "So for me a company's growth does not begin with \"how do we increase sales?\". I would ask other questions first.",
+      "q1": "What kind of company do you want to become?",
+      "q2": "What is stopping you from growing two or three times over today?",
+      "q3": "What would happen to the company if you were out of the office for three months starting tomorrow?",
+      "q4": "Which decisions still cannot be taken without you?",
+      "q5": "Are there people around you that you would genuinely trust with the business?",
+      "q6": "Could today's team run a company twice the size of this one?",
+      "q7": "And, above all: are you yourself ready to run the company differently from the way you run it today?",
+      "p15": "The answers to those questions sometimes say far more about a business's prospects than its financial model does.",
+      "p16": "I do not think large businesses are built to some secret recipe. At a certain point you simply have to change, in order: the strategy → the business model → the management system → the team → the owner's role. And each next level of the company demands a different quality from every one of those.",
+      "p17": "That is why the work I find most interesting is with a business exactly at the moment of transition. When the old way of managing still makes money but has started to limit the future. When the owner can see the company is capable of more, but what exactly has to change to take the next step is not yet clear.",
+      "p18": "It seems to me that real growth starts precisely with that question."
     }
   },
   "Footer": {
-    "rights": "© {year} Vladimir Shikov",
-    "builtWith": "Built with Next.js"
+    "cta": "Sometimes an owner does not need a project. They need someone to think a situation through with, and reach a decision.",
+    "ctaButton": "Write to me →",
+    "colMenu": "Menu",
+    "colCases": "Projects",
+    "colBlog": "Writing",
+    "colContact": "Contact",
+    "appearance": "Appearance",
+    "designBy": "Not every problem needs a consultant",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazakhstan"
   },
   "ThemeSwitch": {
-    "label": "Colour theme",
+    "label": "Appearance",
     "light": "Light",
     "dark": "Dark",
-    "system": "System"
+    "system": "Auto"
   },
   "LocaleSwitch": {
-    "label": "Language"
-  },
-  "Hero": {
-    "eyebrow": "Project scaffold",
-    "title": "The foundation is ready",
-    "subtitle": "Architecture, quality gates and deployment are already in place. All that is missing is the content.",
-    "cta": "About me",
-    "secondaryCta": "Source code"
+    "label": "Language",
+    "more": "All editions"
   },
   "AuthorCard": {
-    "role": "Software engineer",
-    "location": "Russia",
-    "bio": "I build products worth shipping — from the architecture down to production.",
+    "role": "Strategy • Transformation • People",
+    "location": "Almaty, Kazakhstan",
+    "bio": "I work with owners, CEOs and management teams at the moment a company moves to its next stage of growth.",
     "sinceLabel": "Working since"
   },
   "ContactForm": {
     "title": "Stay in touch",
-    "description": "Leave your address and I will write when there is something worth reading here.",
+    "description": "Leave an address and I will write when there is something here worth reading.",
     "emailLabel": "Email address",
     "emailPlaceholder": "you@example.com",
     "submit": "Subscribe",
@@ -75,22 +264,28 @@
     "healthy": "Operational",
     "unhealthy": "Unavailable",
     "checking": "Checking…",
-    "uptime": "Up {value}"
+    "uptime": "Uptime {value}"
   },
   "About": {
     "title": "About",
-    "lead": "This page exists to exercise the second localised branch of the router.",
-    "body": "The content will follow. Everything around it already works: locale routing, metadata, theming and accessibility."
+    "lead": "This page exists to exercise the second localised branch of the routing.",
+    "body": "Real content will follow. Everything else here already works: locale routing, metadata, the theme and accessibility."
   },
   "NotFound": {
     "title": "Page not found",
-    "description": "The link may be out of date, or the address may have a typo.",
-    "backHome": "Back to the home page"
+    "description": "The link may be out of date, or the address may have a typo in it.",
+    "backHome": "Back home",
+    "record": {
+      "section": "Section",
+      "entry": "Entry",
+      "status": "Status",
+      "none": "none"
+    }
   },
   "ErrorBoundary": {
     "title": "Something broke",
     "description": "The error has been logged. You can try again.",
     "retry": "Try again",
-    "digest": "Error reference: {digest}"
+    "digest": "Error code: {digest}"
   }
 }

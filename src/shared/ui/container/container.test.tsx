@@ -21,7 +21,7 @@ describe('Container', () => {
   it('keeps the shared max width and gutter', () => {
     renderWithProviders(<Container data-testid="box">content</Container>)
 
-    expect(screen.getByTestId('box')).toHaveClass('mx-auto', 'max-w-5xl')
+    expect(screen.getByTestId('box')).toHaveClass('mx-auto', 'max-w-[1440px]')
   })
 
   it('lets a caller override the width', () => {
@@ -33,6 +33,6 @@ describe('Container', () => {
 
     const box = screen.getByTestId('box')
     expect(box).toHaveClass('max-w-2xl')
-    expect(box).not.toHaveClass('max-w-5xl')
+    expect(box).not.toHaveClass('max-w-[1440px]')
   })
 })

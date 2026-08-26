@@ -22,6 +22,11 @@ jobs:
     permissions:
       contents: read
       pull-requests: read
+      # v6 reports its verdict as a commit status rather than only as a job
+      # result, so the token needs to be able to write one. Without this the
+      # title is validated correctly and the action then dies posting the
+      # answer, which fails the job whatever the title says.
+      statuses: write
 
     steps:
       - uses: amannn/action-semantic-pull-request@v6

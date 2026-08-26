@@ -6,6 +6,21 @@ on:
     tags: ["v*"]
   release:
     types: [published]
+  # The only trigger that actually reaches production, and the reason is worth
+  # stating: semantic-release creates the tag and the release with GITHUB_TOKEN,
+  # and GitHub deliberately starts no workflow run from an event that token
+  # raised. So neither `tags: ["v*"]` above nor `release: published` fires for a
+  # routine release — v1.0.0-rc.1 was published without starting a single
+  # deployment, which is the proof rather than the theory.
+  #
+  # Dispatching this workflow *against the tag* needs no inputs: `ref_type` is
+  # then `tag` and `ref_name` is the version, which is exactly what `resolve`
+  # below already reads. `gh workflow run deploy.yml --ref v1.0.0`, or the
+  # branch/tag picker in the Actions UI.
+  #
+  # Note the file that runs is the one committed at that tag, so this trigger
+  # only exists for tags cut after it was added.
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -91,11 +106,43 @@ jobs:
       HEALTH_URL: ${{ vars.SITE_URL }}/api/health
 
     steps:
+      # A staging server is optional; a production one is not. This project runs
+      # on a single box, and pushes to `develop` exist to prove the image builds
+      # and publishes, not to roll anything out. An environment with no SSH_HOST
+      # has nowhere to deploy to, and for staging that is a fact to report.
+      #
+      # Production is the opposite case, and is kept loud: a rollout that cannot
+      # reach its server is the failure, not a step to skip. The two are told
+      # apart by name here rather than by whether a secret happens to be
+      # missing, because "no secret" must never quietly mean "no deployment" in
+      # production.
+      - name: Check that this environment has a server
+        id: target
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+        run: |
+          set -euo pipefail
+          if [ -n "$SSH_HOST" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$APP_ENV" = production ]; then
+            echo "::error::The production environment defines no SSH_HOST, so there is no server to deploy to."
+            exit 1
+          fi
+          echo "::notice::No server is configured for ${APP_ENV}. The image was built and published; nothing was rolled out."
+          echo "configured=false" >> "$GITHUB_OUTPUT"
+
+      # The four files the server needs from this repository. Everything else it
+      # runs comes from the image.
+      - uses: actions/checkout@v7
+
       # StrictHostKeyChecking is never disabled. SSH_KNOWN_HOSTS holds the
       # server's public host key; its SHA256 fingerprint is what the SSH client
       # is pinned to, so a swapped or spoofed host aborts the deploy instead of
       # silently accepting a new key.
       - name: Pin the server host key
+        if: ${{ steps.target.outputs.configured == 'true' }}
         id: hostkey
         env:
           SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
@@ -120,6 +167,7 @@ jobs:
       # go back to. scripts/deploy.sh records the reference it activated in
       # `.deployed-image` under DEPLOY_PATH.
       - name: Capture the currently deployed image
+        if: ${{ steps.target.outputs.configured == 'true' }}
         id: previous
         continue-on-error: true
         uses: appleboy/ssh-action@v1
@@ -143,6 +191,7 @@ jobs:
       # .deployed-image would look like a valid rollback target and the banner
       # text itself would be passed to deploy.sh as an image reference.
       - name: Resolve the rollback target
+        if: ${{ steps.target.outputs.configured == 'true' }}
         id: rollback_target
         env:
           RAW_CAPTURE: ${{ steps.previous.outputs.stdout }}
@@ -159,7 +208,78 @@ jobs:
           fi
           echo "image_ref=$ref" >> "$GITHUB_OUTPUT"
 
+      # The server used to be expected to hold a git checkout of this
+      # repository, bootstrapped by hand — which meant a manual first-time
+      # clone, and, for a private repository, a second credential on the box
+      # just to read it. The runner already has the repository; shipping the
+      # four files it needs is strictly less machinery.
+      #
+      # `docker-compose.override.yml` is deliberately absent: it is the local
+      # development layer, and deploy.sh names its compose files explicitly so a
+      # stray one could not be picked up anyway.
+      - name: Ship the deployment assets
+        if: ${{ steps.target.outputs.configured == 'true' }}
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
+          target: ${{ vars.DEPLOY_PATH }}
+          # Relative paths, so `scripts/deploy.sh` lands under `scripts/`.
+          source: |
+            docker-compose.yml
+            docker-compose.staging.yml
+            Caddyfile
+            scripts/deploy.sh
+
+      # `.env` used to be the one file a human wrote on the server by hand. That
+      # made it the only piece of this deployment nobody could see from here, nothing
+      # could rebuild, and no review ever covered — and it held a second copy of
+      # SITE_URL, which the health check already reads from this environment. Two
+      # fields that must agree are a field that will one day disagree.
+      #
+      # It is rendered from the environment's own configuration on every rollout
+      # instead. A replaced box is now one deploy away from being configured, and
+      # a hand-edit on the server is deliberately not durable.
+      #
+      # SITE_DOMAIN is derived from SITE_URL rather than stored beside it, for
+      # the same reason. `umask 077` is set before the write, not chmod'ed after,
+      # so the file is never briefly world-readable.
+      - name: Render the server configuration
+        if: ${{ steps.target.outputs.configured == 'true' }}
+        uses: appleboy/ssh-action@v1
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          ACME_EMAIL: ${{ secrets.ACME_EMAIL }}
+          APP_VERSION: ${{ needs.resolve.outputs.image_tag }}
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
+          envs: DEPLOY_PATH,SITE_URL,ACME_EMAIL,APP_ENV,APP_VERSION
+          script: |
+            set -euo pipefail
+            cd "$DEPLOY_PATH"
+            [ -n "$ACME_EMAIL" ] || { echo "::error::ACME_EMAIL is not set for this environment."; exit 1; }
+            domain="${SITE_URL#*://}"
+            domain="${domain%%/*}"
+            umask 077
+            {
+              printf 'SITE_DOMAIN=%s\n' "$domain"
+              printf 'ACME_EMAIL=%s\n' "$ACME_EMAIL"
+              printf 'SITE_URL=%s\n' "$SITE_URL"
+              printf 'APP_ENV=%s\n' "$APP_ENV"
+              printf 'APP_VERSION=%s\n' "$APP_VERSION"
+              printf 'API_BASE_URL=\n'
+            } > .env
+            echo "Wrote .env for $domain ($APP_ENV)."
+
       - name: Roll out
+        if: ${{ steps.target.outputs.configured == 'true' }}
         uses: appleboy/ssh-action@v1
         env:
           REGISTRY: ghcr.io
@@ -180,11 +300,14 @@ jobs:
           script: |
             set -euo pipefail
             cd "$DEPLOY_PATH"
+            # scp does not carry the executable bit.
+            chmod +x scripts/deploy.sh
             ./scripts/deploy.sh "$IMAGE_REF"
 
       # Deploying is not the same as working. The site is only considered live
       # once it answers on its public URL, through Caddy, with a healthy body.
       - name: Health check
+        if: ${{ steps.target.outputs.configured == 'true' }}
         id: health
         run: |
           set -uo pipefail
@@ -234,6 +357,8 @@ jobs:
 
       - name: Summarise
         if: ${{ always() }}
+        env:
+          CONFIGURED: ${{ steps.target.outputs.configured }}
         run: |
           {
             echo "### Deployment"
@@ -243,5 +368,11 @@ jobs:
             echo "| Environment | \`${APP_ENV}\` |"
             echo "| Tag | \`${IMAGE_TAG}\` |"
             echo "| Image | \`${IMAGE_REF}\` |"
-            echo "| Health | \`${HEALTH_URL}\` |"
+            if [ "$CONFIGURED" = true ]; then
+              echo "| Health | \`${HEALTH_URL}\` |"
+            else
+              # Saying "Health: /api/health" here would describe a check that
+              # never ran against a server that does not exist.
+              echo "| Rollout | none — \`${APP_ENV}\` has no server configured |"
+            fi
           } >> "$GITHUB_STEP_SUMMARY"

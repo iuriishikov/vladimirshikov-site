@@ -8,6 +8,7 @@
  */
 import { describe, expect, it } from 'vitest'
 
+import { routing } from '../i18n/routing'
 import { buildPageMetadata } from './seo'
 
 /**
@@ -29,16 +30,23 @@ describe('buildPageMetadata', () => {
   })
 
   it('advertises every locale as an alternate, plus x-default', () => {
-    expect(about.alternates?.languages).toStrictEqual({
-      'ru-RU': 'http://localhost:3000/ru/about',
-      'en-US': 'http://localhost:3000/en/about',
-      'x-default': 'http://localhost:3000/ru/about',
-    })
+    const languages = about.alternates?.languages ?? {}
+
+    // Asserted by shape rather than by listing forty tags: a new edition must
+    // appear here automatically, and a test that had to be edited for each one
+    // would eventually be edited wrongly.
+    expect(Object.keys(languages)).toHaveLength(routing.locales.length + 1)
+    expect(languages.en).toBe('http://localhost:3000/en/about')
+    expect(languages.ru).toBe('http://localhost:3000/ru/about')
+    expect(languages.kk).toBe('http://localhost:3000/kk/about')
+    expect(languages['x-default']).toBe('http://localhost:3000/en/about')
   })
 
   it('sends x-default to the default locale, not to the current one', () => {
+    // English is the default, so it is what a crawler serves a visitor whose
+    // language the site does not match.
     const languages = about.alternates?.languages
-    expect(languages?.['x-default']).toBe(languages?.['ru-RU'])
+    expect(languages?.['x-default']).toBe(languages?.en)
   })
 
   it('mirrors the title and description into the OpenGraph and Twitter cards', () => {
@@ -47,9 +55,16 @@ describe('buildPageMetadata', () => {
       title: 'Заголовок',
       description: 'Описание',
       url: 'http://localhost:3000/ru',
-      locale: 'ru-RU',
-      alternateLocale: ['en-US'],
+      locale: 'ru_RU',
     })
+    // Every other edition, and never the current one.
+    const alternates =
+      home.openGraph && 'alternateLocale' in home.openGraph
+        ? home.openGraph.alternateLocale
+        : undefined
+    expect(alternates).toHaveLength(routing.locales.length - 1)
+    expect(alternates).toContain('en_US')
+    expect(alternates).not.toContain('ru_RU')
     expect(home.twitter).toMatchObject({ card: 'summary_large_image', title: 'Заголовок' })
   })
 

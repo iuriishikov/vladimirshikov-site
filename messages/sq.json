@@ -1,0 +1,291 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov — strategji, transformim, njerëz",
+      "description": "Punoj me pronarë, CEO dhe ekipe drejtuese në situata kur biznesit i pret faza tjetër e zhvillimit."
+    },
+    "about": {
+      "title": "Rreth meje",
+      "description": "Shkurt për Vladimir Shikov dhe punën që bën."
+    },
+    "notFound": {
+      "title": "Faqja nuk u gjet",
+      "description": "Nuk ka faqe të tillë këtu."
+    }
+  },
+  "Common": {
+    "skipToContent": "Kalo te përmbajtja kryesore",
+    "loading": "Po ngarkohet…",
+    "retry": "Provo sërish",
+    "close": "Mbyll"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Navigimi kryesor",
+    "openMenu": "Hap menynë",
+    "closeMenu": "Mbyll menynë",
+    "contact": "Kontaktoni →",
+    "nav": {
+      "home": "Ballina",
+      "about": "Rreth meje",
+      "services": "Çfarë bëj",
+      "cases": "Projekte",
+      "blog": "Shkrime"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner në",
+    "roleB": "TEAM LEAD",
+    "placeA": "Jeton në",
+    "placeB": "Almaty, Kazakistan",
+    "scopeA": "Punon me",
+    "scopeB": "pronarë dhe CEO",
+    "statement": "Punoj me pronarë, CEO dhe ekipe drejtuese në situata kur biznesit i pret faza tjetër e zhvillimit."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Rreth meje ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partner në TEAM LEAD",
+    "placeLine": "Strategji • Transformim • Njerëz",
+    "lead": "Ju ndihmoj të shihni atë që nga brenda kompanisë është e vështirë të shihet. Pas një pyetjeje strategjike rrallë qëndron vetëm strategjia.",
+    "body": "Rritja e kompanisë ndryshon kërkesat ndaj modelit të biznesit. Një model i ri biznesi ndryshon kërkesat ndaj ekipit. Një ekip i ri ndryshon rolin e vetë pronarit. Prandaj e shoh biznesin njëkohësisht përmes tri optikave — strategji, organizatë, njerëz — dhe e ndihmoj pronarin të kuptojë cilat vendime janë vërtet në gjendje ta ndryshojnë trajektoren e kompanisë.",
+    "experience": "Rruga ime profesionale ka kaluar nëpër tri mjedise krejt të ndryshme: konsulencë ndërkombëtare, biznes i madh dhe institucione shtetërore. Kam drejtuar degën ruse të një kompanie ndërkombëtare në fushën e vlerësimit të drejtuesve, për më shumë se 12 vjet kam qenë në krye të PDP Group CIS në Moskë, e më pas kam mbajtur mbi vete një nga drejtimet kryesore të transformimit të grupit Samruk-Kazyna. Sot jam partner në TEAM LEAD, ku merrem me strategji, zhvillim biznesi, transformim të ekipeve drejtuese dhe punë individuale me drejtuesit e parë. Jam gjithashtu anëtar i komisionit të kualifikimit të Këshillit të Lartë Gjyqësor të Republikës së Kazakistanit dhe marr pjesë në vlerësimin e kandidatëve për poste gjyqësore.",
+    "statValue1": "25+",
+    "statLabel1": "vjet punë me biznese dhe drejtuesit e tyre",
+    "statValue2": "320.000+",
+    "statLabel2": "punonjës në programin më të madh të transformimit",
+    "statValue3": "C-level",
+    "statLabel3": "vlerësim, zhvillim dhe mbështetje e drejtuesve të parë"
+  },
+  "Questions": {
+    "heading": "Kur jam më i dobishëm",
+    "lead": "Jo atëherë kur kompanisë i duhet edhe një konsulent. Por kur para pronarit ose drejtuesit të parë del një pyetje për të cilën brenda biznesit nuk ka më përgjigje të qartë.",
+    "closing": "Në situata të tilla detyra ime është të krijoj hapësirë për një vështrim të matur mbi faktet dhe të ndihmoj që ndërlikimi të kthehet në disa vendime që vërtet mund të merren.",
+    "items": {
+      "q1": "Ku të shkojmë më tej?",
+      "q2": "Cili model biznesi do ta mbajë fazën tjetër të rritjes?",
+      "q3": "A është ekipi i sotëm në gjendje ta realizojë strategjinë e re?",
+      "q4": "Kush mund të bëhet drejtuesi i ardhshëm i kompanisë?",
+      "q5": "Çfarë duhet të ndryshojë në kompani — dhe çfarë duhet të ndryshojë vetë pronari në rolin e tij?"
+    }
+  },
+  "Services": {
+    "heading": "Çfarë bëj",
+    "lead": "Katër drejtime që në praktikë pothuajse gjithmonë dalin të jenë një detyrë e vetme, parë nga anë të ndryshme.",
+    "items": {
+      "s1": {
+        "title": "Strategjia",
+        "description": "Sesione strategjike dhe hartim i strategjisë së zhvillimit. Nuk nisem nga mjetet dhe shabllonet, por nga tregu, ekonomia e biznesit, ambicia e pronarit, kufizimet dhe mundësitë. Strategjia nuk fillon me një listë nismash; ajo fillon me përgjigjen e një pyetjeje — nga çfarë jemi gati të heqim dorë për hir të asaj që vërtet ka rëndësi?"
+      },
+      "s2": {
+        "title": "Transformimi",
+        "description": "Rruga nga modeli i sotëm i drejtimit te ai që do të kërkohet nesër: struktura, kultura e korporatës, sistemi i menaxhimit, rolet e drejtuesve, mënyra si merren vendimet, njerëzit. Kjo përvojë përfshin si bizneset private, ashtu edhe strukturat më të mëdha korporative e shtetërore."
+      },
+      "s3": {
+        "title": "Pronari dhe CEO",
+        "description": "Drejtuesi i parë ka gjithmonë pyetje që nuk delegohen dot plotësisht: strategjia, ekipi, pasardhësi, kriza, një biznes i ri, roli i tij në kompani. Unë nuk e marr vendimin në vend të pronarit — e ndihmoj ta shohë situatën nga ajo lartësi ku vendimi bëhet i qartë."
+      },
+      "s4": {
+        "title": "Ekipi dhe pasardhësia",
+        "description": "Strategjia përcakton çfarë duhet të bëhet kompania, por atë e realizojnë njerëz konkretë. Ndihmoj të kuptohet kush është në gjendje ta çojë kompaninë përpara, ku qëndron potenciali i vërtetë i drejtuesve, kujt mund t'i besohet më shumë përgjegjësi dhe kush një ditë mund të zërë vendin e drejtuesit të parë."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Shkalla ka rëndësi",
+    "lead": "Tri programe që tregojnë me çfarë përmase detyrash është dashur të punohet.",
+    "viewCase": "Hap projektin: {name}",
+    "meta": "Projekt",
+    "back": "Kthehu në ballinë",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformimi i kulturës së korporatës",
+        "tag": "12 kompani · 320.000+ punonjës",
+        "summary": "Transformimi i kulturës së korporatës në grupin Samruk-Kazyna — 12 kompani kombëtare dhe mbi 320.000 punonjës.",
+        "detail": "U krijua një metodologji e vetme për diagnostikimin dhe drejtimin e kulturës së korporatës, u përcaktuan modelet e synuara të sjelljes dhe u hartuan harta rrugore të transformimit për secilën kompani."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Zhvillimi i drejtuesve të prodhimit",
+        "tag": "Njohur si praktika më e mirë",
+        "summary": "Program zhvillimi për drejtuesit e prodhimit në Philip Morris Ukrainë.",
+        "detail": "Brenda tri vjetësh kompetencat e drejtuesve arritën nivelin e synuar, pas së cilës buxheti për trajnime të mëtejshme u zbrit në zero. Programi u njoh si praktika më e mirë dhe u rekomandua për zyrat e tjera të kompanisë."
+      },
+      "atom": {
+        "name": "Industria bërthamore",
+        "caption": "Një strategji dyzetvjeçare për një industri të re",
+        "tag": "Rusi",
+        "summary": "Strategji dyzetvjeçare zhvillimi për një industri të re në Rusi, e ndërtuar mbi kapacitetet ekzistuese të energjisë bërthamore.",
+        "detail": "Punë mbi strategjinë e një industrie të re në një horizont prej dyzet vjetësh, mbi bazën e kapaciteteve të energjisë bërthamore që ekzistojnë tashmë."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Kompani",
+    "headingLine2": "dhe institucione",
+    "lead": "Ndër vite puna ka kaluar nëpër korporata ndërkombëtare, biznese të mëdha private dhe institucione shtetërore.",
+    "marqueeLabel": "Kompani dhe institucione",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Gjykata Supreme e Kazakistanit"
+    }
+  },
+  "Education": {
+    "heading": "Arsimi",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Universiteti Shtetëror i Moskës M. V. Lomonosov",
+        "degree": "Fakulteti i Psikologjisë"
+      },
+      "e2": {
+        "school": "Shkolla e Lartë Ushtarako-Politike e Trupave Kufitare të KGB-së së BRSS-së",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Shkrime",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Ese]",
+        "meta": "Rritja e kompanisë",
+        "title": "Nga i vogli te i mesmi. Nga i mesmi te i madhi",
+        "excerpt": "Në një çast të caktuar, ajo që e kufizon më shumë kompaninë është mënyra si drejtohet."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Ese",
+    "back": "Kthehu në ballinë",
+    "growth": {
+      "title": "Nga i vogli te i mesmi. Nga i mesmi te i madhi",
+      "lead": "Prej shumë vjetësh vëzhgoj kompani në faza krejt të ndryshme zhvillimi — nga bizneset e drejtuara nga themeluesi deri te korporatat më të mëdha. Dhe sa më shumë prej tyre shoh, aq më shpesh kthehem te një mendim mjaft i thjeshtë.",
+      "p1": "Në parim, nuk ka asgjë tejet të vështirë në kthimin e një biznesi të vogël në një biznes të mesëm. Ose të një të mesmi në një të madh. Sigurisht, duhen produkt, treg, para, njerëz dhe pak fat.",
+      "p2": "Por pengesa kryesore e rritjes zakonisht qëndron diku tjetër. Në një çast të caktuar, ajo që e kufizon më shumë kompaninë është mënyra si drejtohet.",
+      "h1": "Biznesi i vogël rritet falë pronarit të vet",
+      "p3": "Ai i njeh klientët. I merr vetë vendimet kryesore. E di se kujt mund t'i besojë. I ndien paratë. E kontrollon personalisht cilësinë. Për pak minuta mund të ndryshojë një vendim për të cilin një kompanie të madhe do t'i duheshin javë të tëra.",
+      "p4": "Dhe pikërisht prandaj biznesi rritet. Por vjen një çast kur ajo që dikur ishte përparësia e tij më e madhe fillon të kufizojë rritjen e mëtejshme.",
+      "p5": "Kompania bëhet shumë e madhe për të vazhduar të hyjë në kokën e një njeriu të vetëm. Dhe kjo, për mendimin tim, është udhëkryqi i parë i vërtetë.",
+      "h2": "Për t'u bërë i mesëm, pronarit i duhet të lëshojë një pjesë të biznesit",
+      "p6": "Kjo është shumë më e vështirë nga sa duket. Duhet të pushosh së marri vetë qindra vendime. Të gjesh njerëz që në disa gjëra do t'i kuptojnë më mirë se ti. T'u japësh jo vetëm detyrat, por edhe të drejtën për të gabuar.",
+      "p7": "Shfaqen struktura, përgjegjësia, treguesit, rregullat, menaxhimi i rregullt. Dhe këtu del një paradoks: për të ruajtur kontrollin mbi një biznes në rritje, pronarit i duhet të heqë dorë nga një pjesë e kontrollit të drejtpërdrejtë.",
+      "p8": "Ata që nuk e bëjnë kurrë, shpesh mbeten me vite një biznes i vogël shumë i mirë. Ata që ia dalin, bëhen të mesëm.",
+      "h3": "Kalimi nga i mesmi te i madhi është ndërtuar ndryshe",
+      "p9": "Këtu nuk mjafton më të punësosh drejtues të mirë dhe t'u delegosh punën operative. Kompania duhet të mësojë të funksionojë si sistem.",
+      "p10": "Strategjia pushon së qëndruari vetëm në kokën e pronarit. Vendimet pushojnë së mbështeturi vetëm në marrëdhëniet personale. Kompania duhet të dijë të gjejë, të rrisë dhe të mbajë drejtues të fortë. Lind një kulturë korporative — pavarësisht nëse dikush u mor posaçërisht me të apo jo.",
+      "p11": "Dhe shfaqet nevoja për të menduar jo vetëm si të fitohet më shumë nesër, por edhe se çfarë kompanie duhet të bëhesh brenda pesë a dhjetë vjetësh.",
+      "h4": "Dhe këtu pronarit i duhet të ndryshojë sërish",
+      "p12": "Më duket se historia e rritjes së një kompanie është në masë të madhe historia e ndryshimit të rolit të pronarit të saj. Në fillim ai është sipërmarrës. Pastaj bëhet drejtues. Më tej duhet të bëhet arkitekt i organizatës. Dhe në një çast — njeriu që përcakton drejtimin, formon ekipin dhe merr disa vendime vërtet të rëndësishme në vend të qindra vendimeve të përditshme.",
+      "p13": "Jo çdo sipërmarrës dëshiron ta bëjë gjithë këtë rrugë. Dhe kjo është normale. Por nuk mund të ndërtosh një biznes të madh duke vazhduar ta drejtosh si të vogël.",
+      "h5": "Pyetjet nga të cilat nisem",
+      "p14": "Prandaj rritja e një kompanie për mua nuk fillon me pyetjen „si t'i rrisim shitjet?“. Unë do të bëja fillimisht pyetje të tjera.",
+      "q1": "Çfarë kompanie doni të bëheni?",
+      "q2": "Çfarë ju pengon sot të rriteni dy a tri herë?",
+      "q3": "Çfarë do t'i ndodhte kompanisë nëse që nesër ju të mos ishit në zyrë për tre muaj?",
+      "q4": "Cilat vendime ende nuk merren dot pa ju?",
+      "q5": "A ka pranë jush njerëz të cilëve do t'ua besonit vërtet biznesin?",
+      "q6": "A është ekipi i sotëm në gjendje të drejtojë një kompani dy herë më të madhe se kjo?",
+      "q7": "Dhe, mbi të gjitha: a jeni gati ju vetë ta drejtoni kompaninë ndryshe nga si e drejtoni sot?",
+      "p15": "Përgjigjet e këtyre pyetjeve ndonjëherë tregojnë shumë më tepër për perspektivat e një biznesi sesa modeli i tij financiar.",
+      "p16": "Nuk mendoj se bizneset e mëdha ndërtohen sipas ndonjë recete sekrete. Në një çast të caktuar thjesht duhet të ndryshosh, me radhë: strategjinë → modelin e biznesit → sistemin e menaxhimit → ekipin → rolin e pronarit. Dhe çdo nivel i radhës i kompanisë kërkon një cilësi tjetër nga secili prej tyre.",
+      "p17": "Prandaj puna që më duket më interesante është me një biznes pikërisht në çastin e kalimit. Kur mënyra e vjetër e drejtimit ende sjell para, por ka nisur të kufizojë të ardhmen. Kur pronari e sheh se kompania është e aftë për më shumë, por ende nuk është e qartë se çfarë saktësisht duhet të ndryshojë për të hedhur hapin tjetër.",
+      "p18": "Më duket se rritja e vërtetë fillon pikërisht me atë pyetje."
+    }
+  },
+  "Footer": {
+    "cta": "Ndonjëherë pronarit nuk i duhet një projekt. I duhet një njeri me të cilin të shqyrtojë situatën dhe të marrë një vendim.",
+    "ctaButton": "Më shkruani →",
+    "colMenu": "Menyja",
+    "colCases": "Projekte",
+    "colBlog": "Shkrime",
+    "colContact": "Kontakt",
+    "appearance": "Pamja",
+    "designBy": "Jo çdo detyrë kërkon një konsulent",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazakistan"
+  },
+  "ThemeSwitch": {
+    "label": "Pamja",
+    "light": "E çelët",
+    "dark": "E errët",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Gjuha",
+    "more": "Të gjitha botimet"
+  },
+  "AuthorCard": {
+    "role": "Strategji • Transformim • Njerëz",
+    "location": "Almaty, Kazakistan",
+    "bio": "Punoj me pronarë, CEO dhe ekipe drejtuese në momentin kur kompania kalon në fazën tjetër të zhvillimit.",
+    "sinceLabel": "Në profesion që nga"
+  },
+  "ContactForm": {
+    "title": "Qëndroni në kontakt",
+    "description": "Lini një adresë dhe do t'ju shkruaj kur këtu të ketë diçka që ia vlen të lexohet.",
+    "emailLabel": "Posta elektronike",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Abonohuni",
+    "submitting": "Po dërgohet…",
+    "success": "Gati. Kontrolloni postën.",
+    "unexpectedError": "Diçka shkoi keq. Provoni sërish.",
+    "validation": {
+      "emailRequired": "Shkruani një adresë email",
+      "emailInvalid": "Kjo nuk duket si adresë email",
+      "emailTooLong": "Kjo adresë është shumë e gjatë"
+    }
+  },
+  "StatusBadge": {
+    "label": "Gjendja e shërbimit",
+    "healthy": "Funksionon",
+    "unhealthy": "I padisponueshëm",
+    "checking": "Po kontrollohet…",
+    "uptime": "Koha aktive {value}"
+  },
+  "About": {
+    "title": "Rreth meje",
+    "lead": "Kjo faqe ekziston për të provuar degën e dytë të lokalizuar të rrugëzimit.",
+    "body": "Përmbajtja e vërtetë do të vijë më vonë. Gjithçka tjetër këtu tashmë funksionon: rrugëzimi sipas gjuhëve, metadata, tema e pamjes dhe aksesueshmëria."
+  },
+  "NotFound": {
+    "title": "Faqja nuk u gjet",
+    "description": "Ndoshta lidhja ka skaduar ose ka një gabim shtypi në adresë.",
+    "backHome": "Kthehu në ballinë",
+    "record": {
+      "section": "Seksioni",
+      "entry": "Hyrja",
+      "status": "Statusi",
+      "none": "asnjë"
+    }
+  },
+  "ErrorBoundary": {
+    "title": "Diçka u prish",
+    "description": "Gabimi u regjistrua. Mund të provoni sërish.",
+    "retry": "Provo sërish",
+    "digest": "Kodi i gabimit: {digest}"
+  }
+}

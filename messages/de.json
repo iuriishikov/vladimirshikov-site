@@ -1,0 +1,291 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov – Strategie, Transformation, Menschen",
+      "description": "Ich arbeite mit Eigentümern, CEOs und Führungsteams in Situationen, in denen einem Unternehmen der nächste Entwicklungsschritt bevorsteht."
+    },
+    "about": {
+      "title": "Über mich",
+      "description": "Kurz zu Vladimir Shikov und zu dem, womit er sich beschäftigt."
+    },
+    "notFound": {
+      "title": "Seite nicht gefunden",
+      "description": "Eine solche Seite gibt es hier nicht."
+    }
+  },
+  "Common": {
+    "skipToContent": "Zum Hauptinhalt springen",
+    "loading": "Wird geladen…",
+    "retry": "Erneut versuchen",
+    "close": "Schließen"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Hauptnavigation",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "contact": "Kontakt →",
+    "nav": {
+      "home": "Start",
+      "about": "Über mich",
+      "services": "Was ich tue",
+      "cases": "Projekte",
+      "blog": "Artikel"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner bei",
+    "roleB": "TEAM LEAD",
+    "placeA": "Lebt in",
+    "placeB": "Almaty, Kasachstan",
+    "scopeA": "Arbeitet mit",
+    "scopeB": "Eigentümern und CEOs",
+    "statement": "Ich arbeite mit Eigentümern, CEOs und Führungsteams in Situationen, in denen einem Unternehmen der nächste Entwicklungsschritt bevorsteht."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Über mich ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partner bei TEAM LEAD",
+    "placeLine": "Strategie • Transformation • Menschen",
+    "lead": "Ich helfe zu sehen, was aus dem Unternehmen heraus schwer zu sehen ist. Hinter strategischen Fragen steht selten nur die Strategie.",
+    "body": "Wachstum verändert die Anforderungen an das Geschäftsmodell. Ein neues Geschäftsmodell verändert die Anforderungen an das Team. Ein neues Team verändert die Rolle des Eigentümers. Deshalb betrachte ich ein Unternehmen aus drei Blickwinkeln zugleich – Strategie, Organisation, Menschen – und helfe dem Eigentümer zu bestimmen, welche Entscheidungen den Kurs des Unternehmens tatsächlich verändern können.",
+    "experience": "Mein beruflicher Weg führte durch drei sehr unterschiedliche Umfelder: internationale Beratung, Großunternehmen und staatliche Institutionen. Ich habe die russische Niederlassung eines internationalen Unternehmens für die Beurteilung von Führungskräften geleitet, mehr als 12 Jahre lang PDP Group CIS in Moskau geführt und anschließend eines der zentralen Transformationsfelder der Gruppe Samruk-Kazyna verantwortet. Heute bin ich Partner bei TEAM LEAD und arbeite an Strategie, Geschäftsentwicklung, der Transformation von Führungsteams und in der Einzelarbeit mit obersten Führungskräften. Zudem gehöre ich der Qualifikationskommission des Obersten Justizrats der Republik Kasachstan an und beurteile Kandidaten für Richterämter.",
+    "statValue1": "25+",
+    "statLabel1": "Jahre Arbeit mit Unternehmen und ihren Führungskräften",
+    "statValue2": "320.000+",
+    "statLabel2": "Mitarbeitende im größten Transformationsprogramm",
+    "statValue3": "C-level",
+    "statLabel3": "Beurteilung, Entwicklung und Begleitung oberster Führungskräfte"
+  },
+  "Questions": {
+    "heading": "Wann ich am nützlichsten bin",
+    "lead": "Nicht dann, wenn ein Unternehmen noch einen Berater braucht. Sondern dann, wenn sich dem Eigentümer oder dem CEO eine Frage stellt, auf die es im Unternehmen keine offensichtliche Antwort mehr gibt.",
+    "closing": "In solchen Situationen ist es meine Aufgabe, Raum für einen nüchternen Blick auf die Fakten zu schaffen und zu helfen, die Komplexität in einige wenige Entscheidungen zu übersetzen, die sich tatsächlich treffen lassen.",
+    "items": {
+      "q1": "Wohin bewegen wir uns als Nächstes?",
+      "q2": "Welches Geschäftsmodell trägt die nächste Wachstumsstufe?",
+      "q3": "Kann das heutige Team die neue Strategie umsetzen?",
+      "q4": "Wer könnte der nächste CEO werden?",
+      "q5": "Was muss sich im Unternehmen ändern – und was muss der Eigentümer an seiner eigenen Rolle ändern?"
+    }
+  },
+  "Services": {
+    "heading": "Was ich tue",
+    "lead": "Vier Felder, die sich in der Praxis fast immer als eine Aufgabe erweisen, betrachtet von verschiedenen Seiten.",
+    "items": {
+      "s1": {
+        "title": "Strategie",
+        "description": "Strategiesitzungen und die Entwicklung einer Wachstumsstrategie. Ich beginne nicht mit Werkzeugen und Vorlagen, sondern mit dem Markt, der Ökonomie des Geschäfts, der Ambition des Eigentümers, den Grenzen und den Möglichkeiten. Eine Strategie beginnt nicht mit einer Liste von Initiativen, sondern mit der Antwort auf eine Frage: Worauf sind wir bereit zu verzichten für das, was wirklich zählt?"
+      },
+      "s2": {
+        "title": "Transformation",
+        "description": "Der Weg vom heutigen Führungsmodell zu jenem, das morgen nötig sein wird: Struktur, Unternehmenskultur, Managementsystem, die Rollen der Führungskräfte, die Art, wie Entscheidungen zustande kommen, Menschen. Diese Erfahrung umfasst inhabergeführte Unternehmen ebenso wie die größten Konzern- und Staatsstrukturen."
+      },
+      "s3": {
+        "title": "Eigentümer und CEO",
+        "description": "Ein CEO trägt immer Fragen, die sich nicht vollständig delegieren lassen: Strategie, Team, Nachfolge, Krise, ein neues Geschäft, die eigene Rolle im Unternehmen. Ich nehme dem Eigentümer die Entscheidung nicht ab – ich helfe ihm, die Lage aus der Höhe zu sehen, aus der die Entscheidung offensichtlich wird."
+      },
+      "s4": {
+        "title": "Team und Nachfolge",
+        "description": "Die Strategie bestimmt, was das Unternehmen werden muss, umgesetzt wird sie von konkreten Menschen. Ich helfe zu verstehen, wer das Unternehmen weitertragen kann, wo das tatsächliche Potenzial einer Führungskraft liegt, wem sich mehr Verantwortung übergeben lässt und wer eines Tages an die Spitze treten kann."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Größenordnung zählt",
+    "lead": "Drei Programme, an denen sichtbar wird, mit welcher Größe von Aufgaben diese Arbeit umzugehen hatte.",
+    "viewCase": "Projekt öffnen: {name}",
+    "meta": "Projekt",
+    "back": "Zur Startseite",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformation der Unternehmenskultur",
+        "tag": "12 Unternehmen · 320.000+ Mitarbeitende",
+        "summary": "Transformation der Unternehmenskultur in der Gruppe Samruk-Kazyna – 12 nationale Unternehmen und mehr als 320.000 Mitarbeitende.",
+        "detail": "Es entstand eine einheitliche Methodik zur Diagnose und Steuerung der Unternehmenskultur, Zielverhalten wurde definiert, und für jedes Unternehmen wurden Fahrpläne der Transformation erarbeitet."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Entwicklung von Führungskräften in der Produktion",
+        "tag": "Als beste Praxis anerkannt",
+        "summary": "Ein Entwicklungsprogramm für Führungskräfte in der Produktion bei Philip Morris Ukraine.",
+        "detail": "Innerhalb von drei Jahren erreichten die Kompetenzen der Führungskräfte das Zielniveau, danach wurde das Budget für weitere Schulungen auf null gesetzt. Das Programm wurde als beste Praxis anerkannt und den übrigen Standorten des Unternehmens empfohlen."
+      },
+      "atom": {
+        "name": "Atomindustrie",
+        "caption": "Vierzigjahresstrategie einer neuen Branche",
+        "tag": "Russland",
+        "summary": "Eine Wachstumsstrategie über vierzig Jahre für eine neue Branche in Russland, aufgebaut auf vorhandenen Kapazitäten der Kernenergie.",
+        "detail": "Arbeit an der Strategie einer neuen Branche über einen Horizont von vierzig Jahren – auf Basis der bereits vorhandenen Kapazitäten der Kernenergie."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Unternehmen",
+    "headingLine2": "und Institutionen",
+    "lead": "Über die Jahre führte die Arbeit durch internationale Konzerne, große inhabergeführte Unternehmen und staatliche Institutionen.",
+    "marqueeLabel": "Unternehmen und Institutionen",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Supreme Court of Kazakhstan"
+    }
+  },
+  "Education": {
+    "heading": "Ausbildung",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Staatliche Lomonossow-Universität Moskau",
+        "degree": "Fakultät für Psychologie"
+      },
+      "e2": {
+        "school": "Höhere Militärpolitische Schule der Grenztruppen des KGB der UdSSR",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Artikel",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Essay]",
+        "meta": "Unternehmenswachstum",
+        "title": "Vom kleinen zum mittleren Unternehmen. Vom mittleren zum großen",
+        "excerpt": "Ab einem bestimmten Punkt begrenzt ein Unternehmen vor allem die Art, wie es geführt wird."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Essay",
+    "back": "Zur Startseite",
+    "growth": {
+      "title": "Vom kleinen zum mittleren Unternehmen. Vom mittleren zum großen",
+      "lead": "Ich beobachte seit vielen Jahren Unternehmen in ganz unterschiedlichen Entwicklungsstadien – vom inhabergeführten Betrieb bis zum größten Konzern. Und je mehr davon ich sehe, desto häufiger komme ich auf einen recht einfachen Gedanken zurück.",
+      "p1": "Im Prinzip ist nichts unglaublich Schwieriges daran, aus einem kleinen Unternehmen ein mittleres zu machen. Und aus einem mittleren ein großes. Natürlich braucht es ein Produkt, einen Markt, Geld, Menschen und ein wenig Glück.",
+      "p2": "Doch die größte Barriere für Wachstum liegt meist woanders. Ab einem bestimmten Punkt begrenzt ein Unternehmen vor allem die Art, wie es geführt wird.",
+      "h1": "Ein kleines Unternehmen wächst dank seines Eigentümers",
+      "p3": "Er kennt die Kunden. Er trifft die zentralen Entscheidungen selbst. Er weiß, wem man vertrauen kann. Er hat ein Gefühl für Geld. Er prüft die Qualität persönlich. In wenigen Minuten kann er eine Entscheidung ändern, für die ein großes Unternehmen Wochen brauchen würde.",
+      "p4": "Und genau deshalb wächst das Geschäft. Doch es kommt der Moment, in dem das, was einmal sein größter Vorteil war, das weitere Wachstum zu begrenzen beginnt.",
+      "p5": "Das Unternehmen wird zu groß, um weiterhin in den Kopf eines einzelnen Menschen zu passen. Und das ist aus meiner Sicht die erste echte Weggabelung.",
+      "h2": "Um mittelgroß zu werden, muss der Eigentümer einen Teil des Geschäfts loslassen",
+      "p6": "Das ist deutlich schwerer, als es klingt. Man muss aufhören, Hunderte Entscheidungen selbst zu treffen. Man muss Menschen finden, die manche Dinge besser verstehen als man selbst. Und ihnen nicht nur Aufgaben übergeben, sondern auch das Recht, Fehler zu machen.",
+      "p7": "Es entstehen Struktur, Verantwortung, Kennzahlen, Regeln, regelmäßige Führung. Und hier zeigt sich ein Paradox: Um die Kontrolle über ein wachsendes Geschäft zu behalten, muss der Eigentümer einen Teil seiner unmittelbaren Kontrolle abgeben.",
+      "p8": "Wer das nie tut, bleibt oft über Jahre ein sehr gutes kleines Unternehmen. Wer es schafft, wird mittelgroß.",
+      "h3": "Der Übergang vom mittleren zum großen Unternehmen funktioniert anders",
+      "p9": "Hier genügt es nicht mehr, gute Führungskräfte einzustellen und ihnen das operative Geschäft zu übergeben. Das Unternehmen muss lernen, als System zu arbeiten.",
+      "p10": "Die Strategie liegt nicht mehr nur im Kopf des Eigentümers. Entscheidungen beruhen nicht mehr allein auf persönlichen Beziehungen. Das Unternehmen muss starke Führungskräfte finden, entwickeln und halten können. Es entsteht eine Unternehmenskultur – unabhängig davon, ob man sich um sie gekümmert hat oder nicht.",
+      "p11": "Und es entsteht die Notwendigkeit, nicht nur darüber nachzudenken, wie man morgen mehr verdient, sondern auch darüber, welches Unternehmen man in fünf oder zehn Jahren sein muss.",
+      "h4": "Und hier muss sich der Eigentümer erneut ändern",
+      "p12": "Mir scheint überhaupt, dass die Geschichte des Wachstums eines Unternehmens weitgehend die Geschichte der sich verändernden Rolle seines Eigentümers ist. Zuerst ist er Unternehmer. Dann wird er Führungskraft. Danach muss er zum Architekten einer Organisation werden. Und irgendwann zu dem Menschen, der die Richtung bestimmt, das Team formt und einige wirklich wichtige Entscheidungen trifft statt Hunderter alltäglicher Entscheidungen.",
+      "p13": "Nicht jeder Unternehmer will diesen ganzen Weg gehen. Und das ist in Ordnung. Aber man kann kein großes Unternehmen aufbauen und es dabei weiter wie ein kleines führen.",
+      "h5": "Mit welchen Fragen ich beginne",
+      "p14": "Deshalb beginnt das Wachstum eines Unternehmens für mich nicht mit der Frage „Wie steigern wir den Umsatz?“. Ich würde zuerst andere Fragen stellen.",
+      "q1": "Welches Unternehmen wollen Sie werden?",
+      "q2": "Was hindert Sie heute daran, zwei- oder dreimal so groß zu werden?",
+      "q3": "Was geschähe mit dem Unternehmen, wenn Sie ab morgen drei Monate nicht im Büro wären?",
+      "q4": "Welche Entscheidungen lassen sich immer noch nicht ohne Sie treffen?",
+      "q5": "Gibt es Menschen um Sie herum, denen Sie das Geschäft wirklich anvertrauen würden?",
+      "q6": "Könnte das heutige Team ein Unternehmen führen, das doppelt so groß ist wie dieses?",
+      "q7": "Und vor allem: Sind Sie selbst bereit, das Unternehmen anders zu führen, als Sie es heute führen?",
+      "p15": "Die Antworten auf diese Fragen sagen über die Aussichten eines Geschäfts manchmal deutlich mehr aus als sein Finanzmodell.",
+      "p16": "Ich glaube nicht, dass große Unternehmen nach einem geheimen Rezept gebaut werden. Ab einem bestimmten Punkt muss man schlicht der Reihe nach ändern: die Strategie → das Geschäftsmodell → das Managementsystem → das Team → die Rolle des Eigentümers. Und jede nächste Stufe des Unternehmens verlangt von jedem dieser Elemente eine andere Qualität.",
+      "p17": "Deshalb arbeite ich am liebsten mit einem Unternehmen genau im Moment des Übergangs. Wenn die alte Art zu führen noch Geld bringt, die Zukunft aber schon zu begrenzen beginnt. Wenn der Eigentümer sieht, dass das Unternehmen zu mehr fähig ist, aber noch nicht klar ist, was genau sich ändern muss, um den nächsten Schritt zu gehen.",
+      "p18": "Mir scheint, genau mit dieser Frage beginnt echtes Wachstum."
+    }
+  },
+  "Footer": {
+    "cta": "Manchmal braucht ein Eigentümer kein Projekt. Er braucht einen Menschen, mit dem er eine Lage durchdenken und zu einer Entscheidung kommen kann.",
+    "ctaButton": "Schreiben Sie mir →",
+    "colMenu": "Menü",
+    "colCases": "Projekte",
+    "colBlog": "Artikel",
+    "colContact": "Kontakt",
+    "appearance": "Erscheinungsbild",
+    "designBy": "Nicht jede Aufgabe braucht einen Berater",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kasachstan"
+  },
+  "ThemeSwitch": {
+    "label": "Erscheinungsbild",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Sprache",
+    "more": "Alle Ausgaben"
+  },
+  "AuthorCard": {
+    "role": "Strategie • Transformation • Menschen",
+    "location": "Almaty, Kasachstan",
+    "bio": "Ich arbeite mit Eigentümern, CEOs und Führungsteams in dem Moment, in dem ein Unternehmen zum nächsten Entwicklungsschritt übergeht.",
+    "sinceLabel": "Im Beruf seit"
+  },
+  "ContactForm": {
+    "title": "Bleiben Sie in Kontakt",
+    "description": "Hinterlassen Sie eine Adresse, und ich schreibe, sobald es hier etwas Lesenswertes gibt.",
+    "emailLabel": "E-Mail-Adresse",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Abonnieren",
+    "submitting": "Wird gesendet…",
+    "success": "Fertig. Schauen Sie in Ihr Postfach.",
+    "unexpectedError": "Etwas ist schiefgegangen. Bitte versuchen Sie es erneut.",
+    "validation": {
+      "emailRequired": "Geben Sie eine E-Mail-Adresse an",
+      "emailInvalid": "Das sieht nicht nach einer E-Mail-Adresse aus",
+      "emailTooLong": "Diese Adresse ist zu lang"
+    }
+  },
+  "StatusBadge": {
+    "label": "Status des Dienstes",
+    "healthy": "In Betrieb",
+    "unhealthy": "Nicht verfügbar",
+    "checking": "Wird geprüft…",
+    "uptime": "Uptime {value}"
+  },
+  "About": {
+    "title": "Über mich",
+    "lead": "Diese Seite existiert, um den zweiten lokalisierten Zweig des Routings zu zeigen.",
+    "body": "Echte Inhalte folgen später. Alles andere funktioniert hier bereits: das Routing nach Sprachen, die Metadaten, das Erscheinungsbild und die Barrierefreiheit."
+  },
+  "NotFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Vielleicht ist der Link veraltet, oder in der Adresse steckt ein Tippfehler.",
+    "backHome": "Zur Startseite",
+    "record": {
+      "section": "Bereich",
+      "entry": "Eintrag",
+      "status": "Status",
+      "none": "keine"
+    }
+  },
+  "ErrorBoundary": {
+    "title": "Etwas ist kaputtgegangen",
+    "description": "Der Fehler wurde protokolliert. Sie können es erneut versuchen.",
+    "retry": "Erneut versuchen",
+    "digest": "Fehlercode: {digest}"
+  }
+}

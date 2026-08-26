@@ -221,7 +221,7 @@ report secret SSH_PORT 'SSH port (22 unless changed)'
 report secret SSH_USER 'deploy user on the VPS'
 report secret SSH_PRIVATE_KEY 'private key for that user, no passphrase'
 report secret SSH_KNOWN_HOSTS 'output of ssh-keyscan -p <port> <host>'
-report variable DEPLOY_PATH 'e.g. /opt/vladimirshikov-site — set per environment'
+report variable DEPLOY_PATH 'e.g. /home/deploy/vladimirshikov-site — set per environment'
 report variable SITE_URL 'public origin — read at runtime, so one image serves every environment'
 
 printf '\n  Optional:\n'

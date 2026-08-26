@@ -1,0 +1,291 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov – stefna, umbreyting, fólk",
+      "description": "Ég vinn með eigendum, forstjórum og stjórnendateymum þegar fyrirtæki stendur frammi fyrir næsta vaxtarskeiði sínu."
+    },
+    "about": {
+      "title": "Um mig",
+      "description": "Stutt um Vladimir Shikov og það sem hann fæst við."
+    },
+    "notFound": {
+      "title": "Síðan fannst ekki",
+      "description": "Þessi síða er ekki til hér."
+    }
+  },
+  "Common": {
+    "skipToContent": "Fara í meginmál",
+    "loading": "Hleð…",
+    "retry": "Reyna aftur",
+    "close": "Loka"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Aðalvalmynd",
+    "openMenu": "Opna valmynd",
+    "closeMenu": "Loka valmynd",
+    "contact": "Hafa samband →",
+    "nav": {
+      "home": "Forsíða",
+      "about": "Um mig",
+      "services": "Hvað ég geri",
+      "cases": "Verkefni",
+      "blog": "Greinar"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Meðeigandi hjá",
+    "roleB": "TEAM LEAD",
+    "placeA": "Búsettur í",
+    "placeB": "Almaty, Kasakstan",
+    "scopeA": "Vinnur með",
+    "scopeB": "eigendum og forstjórum",
+    "statement": "Ég vinn með eigendum, forstjórum og stjórnendateymum þegar fyrirtæki stendur frammi fyrir næsta vaxtarskeiði sínu."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Um mig ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Meðeigandi hjá TEAM LEAD",
+    "placeLine": "Stefna • Umbreyting • Fólk",
+    "lead": "Ég hjálpa þér að sjá það sem erfitt er að sjá innan úr fyrirtækinu. Á bak við stefnumótandi spurningar liggur sjaldnast stefnan ein.",
+    "body": "Vöxtur breytir kröfunum sem gerðar eru til viðskiptalíkansins. Nýtt viðskiptalíkan breytir kröfunum til teymisins. Nýtt teymi breytir hlutverki eigandans sjálfs. Þess vegna horfi ég á fyrirtækið gegnum þrjár linsur í senn – stefnu, skipulag, fólk – og hjálpa eigandanum að greina hvaða ákvarðanir geta raunverulega breytt braut fyrirtækisins.",
+    "experience": "Starfsferill minn hefur legið um þrjú ólík umhverfi: alþjóðlega ráðgjöf, stór fyrirtæki og opinberar stofnanir. Ég stýrði rússneskri starfsemi alþjóðlegs fyrirtækis á sviði mats á stjórnendum, veitti PDP Group CIS í Moskvu forstöðu í meira en 12 ár og bar síðan ábyrgð á einu af lykilsviðum umbreytingar hjá samstæðunni Samruk-Kazyna. Í dag er ég meðeigandi hjá TEAM LEAD, þar sem ég vinn að stefnumótun, viðskiptaþróun, umbreytingu stjórnendateyma og einstaklingsvinnu með æðstu stjórnendum. Ég sit einnig í hæfnisnefnd Æðsta dómstólaráðs Lýðveldisins Kasakstan og met umsækjendur um embætti dómara.",
+    "statValue1": "25+",
+    "statLabel1": "ára reynsla af vinnu með fyrirtækjum og stjórnendum þeirra",
+    "statValue2": "320.000+",
+    "statLabel2": "starfsmenn í stærsta umbreytingarverkefninu",
+    "statValue3": "C-level",
+    "statLabel3": "mat, þróun og stuðningur við æðstu stjórnendur"
+  },
+  "Questions": {
+    "heading": "Þegar ég kem að mestu gagni",
+    "lead": "Ekki þegar fyrirtæki vantar einn ráðgjafa til viðbótar. Heldur þegar eigandi eða forstjóri stendur frammi fyrir spurningu sem fyrirtækið á ekki lengur augljóst svar við.",
+    "closing": "Í þeim aðstæðum er mitt hlutverk að skapa rými fyrir yfirvegaða skoðun á staðreyndunum og hjálpa til við að breyta flækjunni í fáeinar ákvarðanir sem raunverulega er hægt að taka.",
+    "items": {
+      "q1": "Hvert höldum við héðan?",
+      "q2": "Hvaða viðskiptalíkan ber næsta vaxtarskeið?",
+      "q3": "Getur núverandi teymi komið nýju stefnunni í framkvæmd?",
+      "q4": "Hver gæti orðið næsti forstjóri?",
+      "q5": "Hverju þarf að breyta í fyrirtækinu – og hverju þarf eigandinn að breyta í eigin hlutverki?"
+    }
+  },
+  "Services": {
+    "heading": "Hvað ég geri",
+    "lead": "Fjögur svið sem í reynd reynast nánast alltaf vera eitt og sama viðfangsefnið, séð frá ólíkum hliðum.",
+    "items": {
+      "s1": {
+        "title": "Stefnumótun",
+        "description": "Stefnumótunarfundir og gerð vaxtarstefnu. Ég byrja ekki á verkfærum og sniðmátum, heldur á markaðnum, rekstrarhagfræði fyrirtækisins, metnaði eigandans, hömlunum og tækifærunum. Stefna byrjar ekki á lista yfir verkefni; hún byrjar á svari við einni spurningu: hverju erum við tilbúin að sleppa fyrir það sem raunverulega skiptir máli?"
+      },
+      "s2": {
+        "title": "Umbreyting",
+        "description": "Leiðin frá rekstrarlíkani dagsins í dag yfir í það sem morgundagurinn krefst: skipulag, menning, stjórnkerfið, hlutverk stjórnenda, hvernig ákvarðanir eru teknar, fólk. Sú reynsla nær bæði til fyrirtækja í einkaeigu og til stærstu fyrirtækja- og ríkisstofnana."
+      },
+      "s3": {
+        "title": "Eigandi og forstjóri",
+        "description": "Æðsti stjórnandi ber alltaf spurningar sem ekki er hægt að framselja að fullu: stefnu, teymið, eftirmann, kreppu, nýjan rekstur, eigið hlutverk í fyrirtækinu. Ég tek ekki ákvörðunina í stað eigandans – ég hjálpa honum að sjá stöðuna úr þeirri hæð þar sem ákvörðunin verður augljós."
+      },
+      "s4": {
+        "title": "Teymi og eftirmenn",
+        "description": "Stefnan skilgreinir hvað fyrirtækið á að verða, en það eru raunverulegir einstaklingar sem koma henni í framkvæmd. Ég hjálpa til við að greina hverjir geta leitt fyrirtækið áfram, hvar raunverulegir hæfileikar stjórnenda liggja, hverjum má fela meiri ábyrgð og hver gæti einn daginn tekið við æðsta starfinu."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Umfang skiptir máli",
+    "lead": "Þrjú verkefni sem sýna hversu umfangsmikil þau viðfangsefni hafa verið sem ég hef unnið með.",
+    "viewCase": "Opna verkefnið: {name}",
+    "meta": "Verkefni",
+    "back": "Aftur á forsíðu",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Umbreyting fyrirtækjamenningar",
+        "tag": "12 fyrirtæki · 320.000+ starfsmenn",
+        "summary": "Umbreyting fyrirtækjamenningar innan samstæðunnar Samruk-Kazyna – 12 þjóðarfyrirtæki og meira en 320.000 starfsmenn.",
+        "detail": "Búin var til ein aðferðafræði til að greina og stýra fyrirtækjamenningu, markhegðun var skilgreind og umbreytingaráætlanir gerðar fyrir hvert fyrirtæki."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Þróun framleiðslustjórnenda",
+        "tag": "Viðurkennt sem besta framkvæmd",
+        "summary": "Þróunaráætlun fyrir framleiðslustjórnendur hjá Philip Morris Ukraine.",
+        "detail": "Á þremur árum náði hæfni stjórnendanna markstigi og í kjölfarið var fjárveiting til frekari þjálfunar felld niður. Verkefnið var viðurkennt sem besta framkvæmd og mælt með því við aðrar skrifstofur fyrirtækisins."
+      },
+      "atom": {
+        "name": "Kjarnorkuiðnaður",
+        "caption": "Fjörutíu ára stefna fyrir nýja atvinnugrein",
+        "tag": "Rússland",
+        "summary": "Fjörutíu ára vaxtarstefna fyrir nýja atvinnugrein í Rússlandi, byggð á þeirri getu sem kjarnorkuverin búa þegar yfir.",
+        "detail": "Vinna við stefnu fyrir nýja atvinnugrein á fjörutíu ára sjóndeildarhring, á grunni þeirrar kjarnorkugetu sem þegar er til staðar."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Fyrirtæki",
+    "headingLine2": "og stofnanir",
+    "lead": "Í gegnum árin hefur vinnan legið um alþjóðleg stórfyrirtæki, stór fyrirtæki í einkaeigu og opinberar stofnanir.",
+    "marqueeLabel": "Fyrirtæki og stofnanir",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Supreme Court of Kazakhstan"
+    }
+  },
+  "Education": {
+    "heading": "Menntun",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Lomonosov-ríkisháskólinn í Moskvu",
+        "degree": "Sálfræðideild"
+      },
+      "e2": {
+        "school": "Æðri hernaðar- og stjórnmálaskóli landamæravarða KGB Sovétríkjanna",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Greinar",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Ritgerð]",
+        "meta": "Vöxtur fyrirtækja",
+        "title": "Úr litlu í meðalstórt. Úr meðalstóru í stórt",
+        "excerpt": "Á vissum tímapunkti er það stjórnunarhátturinn sem takmarkar fyrirtækið mest."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Ritgerð",
+    "back": "Aftur á forsíðu",
+    "growth": {
+      "title": "Úr litlu í meðalstórt. Úr meðalstóru í stórt",
+      "lead": "Í mörg ár hef ég fylgst með fyrirtækjum á öllum stigum þróunar, allt frá rekstri stofnandans til stærstu samsteypa. Og því fleiri sem ég sé, því oftar sný ég aftur að einni frekar einfaldri hugsun.",
+      "p1": "Í grunninn er ekkert óyfirstíganlega erfitt við það að gera lítið fyrirtæki að meðalstóru, eða meðalstórt að stóru. Vitanlega þarf vöru, markað, peninga, fólk og örlitla heppni.",
+      "p2": "En helsta hindrun vaxtar liggur yfirleitt annars staðar. Á vissum tímapunkti er það stjórnunarhátturinn sem takmarkar fyrirtækið mest.",
+      "h1": "Lítið fyrirtæki vex vegna eiganda síns",
+      "p3": "Hann þekkir viðskiptavinina. Hann tekur lykilákvarðanirnar sjálfur. Hann veit hverjum má treysta. Hann hefur tilfinningu fyrir peningunum. Hann fylgist persónulega með gæðunum. Á fáeinum mínútum getur hann breytt ákvörðun sem tæki stórt fyrirtæki margar vikur.",
+      "p4": "Og einmitt þess vegna vex fyrirtækið. En það kemur að því að þessi mesti kostur þess fer að takmarka frekari vöxt.",
+      "p5": "Fyrirtækið verður of stórt til að rúmast áfram í höfði eins manns. Það eru, að mínu mati, fyrstu raunverulegu vegamótin.",
+      "h2": "Til að verða meðalstórt þarf eigandinn að sleppa hluta af fyrirtækinu",
+      "p6": "Þetta er miklu erfiðara en það hljómar. Maður verður að hætta að taka hundruð ákvarðana sjálfur. Finna fólk sem skilur suma hluti betur en maður sjálfur. Fela því ekki aðeins verkefnin, heldur líka réttinn til að gera mistök.",
+      "p7": "Til verða skipulag, ábyrgð, mælikvarðar, reglur og reglubundin stjórnun. Og hér birtist þversögn: til að halda stjórn á vaxandi fyrirtæki þarf eigandinn að gefa eftir hluta af beinni stjórn sinni.",
+      "p8": "Þeir sem stíga þetta skref aldrei reka oft áfram mjög gott lítið fyrirtæki árum saman. Þeir sem stíga það byggja upp meðalstórt fyrirtæki.",
+      "h3": "Skrefið frá meðalstóru í stórt er annars eðlis",
+      "p9": "Hér dugir ekki lengur að ráða góða stjórnendur og fela þeim daglegan rekstur. Fyrirtækið þarf að læra að starfa sem kerfi.",
+      "p10": "Stefnan hættir að búa eingöngu í höfði eigandans. Ákvarðanir hætta að hvíla eingöngu á persónulegum samböndum. Fyrirtækið þarf að geta fundið, ræktað og haldið í sterka stjórnendur. Fyrirtækjamenning verður til – hvort sem einhver ætlaði sér að byggja hana upp eða ekki.",
+      "p11": "Og það vaknar þörf fyrir að hugsa ekki aðeins um það hvernig megi græða meira á morgun, heldur um hvers konar fyrirtæki þetta þarf að verða eftir fimm eða tíu ár.",
+      "h4": "Og hér þarf eigandinn enn og aftur að breytast",
+      "p12": "Mér sýnist að saga vaxtar fyrirtækis sé að miklu leyti saga þess hvernig hlutverk eigandans breytist. Fyrst er hann frumkvöðull. Svo verður hann stjórnandi. Því næst þarf hann að verða arkitekt skipulagsheildarinnar. Og á einhverjum tímapunkti sá sem markar stefnuna, byggir upp teymið og tekur fáeinar raunverulega mikilvægar ákvarðanir í stað hundraða daglegra.",
+      "p13": "Ekki hver einasti frumkvöðull vill ganga þessa leið til enda. Og það er í lagi. En það er ekki hægt að byggja upp stórt fyrirtæki og stjórna því áfram eins og litlu.",
+      "h5": "Spurningarnar sem ég byrja á",
+      "p14": "Þess vegna byrjar vöxtur fyrirtækis í mínum huga ekki á spurningunni „hvernig aukum við söluna?“. Ég myndi fyrst spyrja annarra spurninga.",
+      "q1": "Hvers konar fyrirtæki viltu verða?",
+      "q2": "Hvað hindrar þig í dag í að vaxa tvisvar eða þrisvar sinnum?",
+      "q3": "Hvað yrði um fyrirtækið ef þú værir fjarverandi í þrjá mánuði frá og með morgundeginum?",
+      "q4": "Hvaða ákvarðanir er enn ekki hægt að taka án þín?",
+      "q5": "Er fólk í kringum þig sem þú myndir í raun treysta fyrir fyrirtækinu?",
+      "q6": "Gæti teymið eins og það er í dag stýrt fyrirtæki sem væri tvöfalt stærra en þetta?",
+      "q7": "Og umfram allt: ert þú sjálfur tilbúinn að stýra fyrirtækinu öðruvísi en þú gerir í dag?",
+      "p15": "Svörin við þessum spurningum segja stundum mun meira um horfur fyrirtækis en fjárhagslíkanið gerir.",
+      "p16": "Ég held ekki að stór fyrirtæki séu byggð eftir einhverri leyniuppskrift. Á vissum tímapunkti þarf einfaldlega að breyta, í þessari röð: stefnunni → viðskiptalíkaninu → stjórnkerfinu → teyminu → hlutverki eigandans. Og hvert næsta þrep fyrirtækisins krefst annarra gæða af hverjum þessara þátta.",
+      "p17": "Þess vegna finnst mér áhugaverðast að vinna með fyrirtæki einmitt á tímapunkti umskiptanna. Þegar gamla stjórnunarlagið skilar enn peningum en er farið að takmarka framtíðina. Þegar eigandinn sér að fyrirtækið getur meira, en það er enn ekki ljóst hverju nákvæmlega þarf að breyta til að taka næsta skref.",
+      "p18": "Mér sýnist að raunverulegur vöxtur byrji einmitt á þeirri spurningu."
+    }
+  },
+  "Footer": {
+    "cta": "Stundum þarf eigandi ekki verkefni. Hann þarf einhvern til að fara yfir stöðuna með og komast að niðurstöðu.",
+    "ctaButton": "Skrifa mér →",
+    "colMenu": "Valmynd",
+    "colCases": "Verkefni",
+    "colBlog": "Greinar",
+    "colContact": "Samband",
+    "appearance": "Útlit",
+    "designBy": "Ekki þarfnast öll verkefni ráðgjafa",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kasakstan"
+  },
+  "ThemeSwitch": {
+    "label": "Útlit",
+    "light": "Ljóst",
+    "dark": "Dökkt",
+    "system": "Kerfi"
+  },
+  "LocaleSwitch": {
+    "label": "Tungumál",
+    "more": "Allar útgáfur"
+  },
+  "AuthorCard": {
+    "role": "Stefna • Umbreyting • Fólk",
+    "location": "Almaty, Kasakstan",
+    "bio": "Ég vinn með eigendum, forstjórum og stjórnendateymum á því augnabliki þegar fyrirtæki færist yfir á næsta vaxtarskeið.",
+    "sinceLabel": "Að störfum frá"
+  },
+  "ContactForm": {
+    "title": "Höldum sambandi",
+    "description": "Skildu eftir netfang og ég skrifa þegar hér er eitthvað sem vert er að lesa.",
+    "emailLabel": "Netfang",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Skrá mig",
+    "submitting": "Sendi…",
+    "success": "Tilbúið. Athugaðu pósthólfið.",
+    "unexpectedError": "Eitthvað fór úrskeiðis. Reyndu aftur.",
+    "validation": {
+      "emailRequired": "Sláðu inn netfang",
+      "emailInvalid": "Þetta lítur ekki út eins og netfang",
+      "emailTooLong": "Þetta netfang er of langt"
+    }
+  },
+  "StatusBadge": {
+    "label": "Staða þjónustu",
+    "healthy": "Í gangi",
+    "unhealthy": "Ekki tiltæk",
+    "checking": "Athuga…",
+    "uptime": "Uppitími {value}"
+  },
+  "About": {
+    "title": "Um mig",
+    "lead": "Þessi síða er hér til að reyna á aðra staðfærðu grein leiðakerfisins.",
+    "body": "Raunverulegt efni kemur síðar. Allt annað hér virkar nú þegar: leiðaval eftir tungumálum, lýsigögn, útlitsþemað og aðgengi."
+  },
+  "NotFound": {
+    "title": "Síðan fannst ekki",
+    "description": "Hlekkurinn kann að vera úreltur eða innsláttarvilla í slóðinni.",
+    "backHome": "Aftur á forsíðu",
+    "record": {
+      "section": "Hluti",
+      "entry": "Færsla",
+      "status": "Staða",
+      "none": "ekkert"
+    }
+  },
+  "ErrorBoundary": {
+    "title": "Eitthvað bilaði",
+    "description": "Villan hefur verið skráð. Þú getur reynt aftur.",
+    "retry": "Reyna aftur",
+    "digest": "Villukóði: {digest}"
+  }
+}

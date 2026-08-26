@@ -1,0 +1,291 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov — strategi, transformation, människor",
+      "description": "Jag arbetar med ägare, vd:ar och ledningsgrupper i det läge då ett företag står inför nästa steg i sin utveckling."
+    },
+    "about": {
+      "title": "Om mig",
+      "description": "Kort om Vladimir Shikov och det arbete han gör."
+    },
+    "notFound": {
+      "title": "Sidan hittades inte",
+      "description": "Någon sådan sida finns inte här."
+    }
+  },
+  "Common": {
+    "skipToContent": "Gå till huvudinnehållet",
+    "loading": "Laddar…",
+    "retry": "Försök igen",
+    "close": "Stäng"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Huvudnavigering",
+    "openMenu": "Öppna menyn",
+    "closeMenu": "Stäng menyn",
+    "contact": "Ta kontakt →",
+    "nav": {
+      "home": "Start",
+      "about": "Om mig",
+      "services": "Vad jag gör",
+      "cases": "Projekt",
+      "blog": "Artiklar"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner på",
+    "roleB": "TEAM LEAD",
+    "placeA": "Bor i",
+    "placeB": "Almaty, Kazakstan",
+    "scopeA": "Arbetar med",
+    "scopeB": "ägare och vd:ar",
+    "statement": "Jag arbetar med ägare, vd:ar och ledningsgrupper i det läge då ett företag står inför nästa steg i sin utveckling."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Om mig ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partner på TEAM LEAD",
+    "placeLine": "Strategi • Transformation • Människor",
+    "lead": "Jag hjälper dig att se det som är svårt att se inifrån företaget. Bakom en strategisk fråga står sällan bara strategin.",
+    "body": "Tillväxt förändrar kraven på affärsmodellen. En ny affärsmodell förändrar kraven på teamet. Ett nytt team förändrar ägarens egen roll. Därför ser jag på ett företag genom tre linser samtidigt – strategi, organisation, människor – och hjälper ägaren att avgöra vilka beslut som verkligen kan ändra företagets bana.",
+    "experience": "Min yrkesbana har gått genom tre mycket olika miljöer: internationell konsultverksamhet, storföretag och statliga institutioner. Jag ledde den ryska delen av ett internationellt företag inom bedömning av ledare, var i mer än tolv år chef för PDP Group CIS i Moskva och ansvarade därefter för ett av de centrala transformationsområdena i gruppen Samruk-Kazyna. I dag är jag partner på TEAM LEAD, där jag arbetar med strategi, affärsutveckling, transformation av ledningsgrupper och individuellt arbete med högsta cheferna. Jag är också ledamot av kvalifikationskommissionen vid Republiken Kazakstans högsta rättsråd och deltar i bedömningen av kandidater till domarämbeten.",
+    "statValue1": "25+",
+    "statLabel1": "års arbete med företag och deras ledare",
+    "statValue2": "320 000+",
+    "statLabel2": "medarbetare i det största transformationsprogrammet",
+    "statValue3": "C-level",
+    "statLabel3": "bedömning, utveckling och stöd till högsta ledningen"
+  },
+  "Questions": {
+    "heading": "När jag gör mest nytta",
+    "lead": "Inte när ett företag behöver ännu en konsult. Utan när ägaren eller vd:n står inför en fråga som verksamheten inte längre har ett självklart svar på.",
+    "closing": "I sådana lägen är min uppgift att skapa utrymme för en nykter blick på fakta och att hjälpa till att förvandla komplexiteten till några få beslut som faktiskt går att fatta.",
+    "items": {
+      "q1": "Vart går vi härifrån?",
+      "q2": "Vilken affärsmodell bär nästa steg i tillväxten?",
+      "q3": "Klarar dagens team av att genomföra den nya strategin?",
+      "q4": "Vem kan bli nästa vd?",
+      "q5": "Vad måste förändras i företaget – och vad måste förändras i ägarens egen roll?"
+    }
+  },
+  "Services": {
+    "heading": "Vad jag gör",
+    "lead": "Fyra områden som i praktiken nästan alltid visar sig vara en och samma fråga sedd från olika håll.",
+    "items": {
+      "s1": {
+        "title": "Strategi",
+        "description": "Strategisessioner och arbetet med en tillväxtstrategi. Jag börjar inte i verktyg och mallar, utan i marknaden, affärens ekonomi, ägarens ambition, begränsningarna och möjligheterna. En strategi börjar inte med en lista på initiativ, utan med svaret på en fråga: vad är vi beredda att avstå från för det som verkligen betyder något?"
+      },
+      "s2": {
+        "title": "Transformation",
+        "description": "Vägen från dagens styrmodell till den som kommer att krävas i morgon: struktur, kultur, ledningssystem, chefernas roller, hur beslut fattas, människorna. Erfarenheten omfattar både privatägda företag och de största koncern- och statliga strukturerna."
+      },
+      "s3": {
+        "title": "Ägare och vd",
+        "description": "En vd bär alltid frågor som inte går att delegera fullt ut: strategin, teamet, en efterträdare, en kris, en ny affär, den egna rollen i företaget. Jag fattar inte beslutet i ägarens ställe – jag hjälper till att se situationen från den höjd där beslutet blir självklart."
+      },
+      "s4": {
+        "title": "Team och efterträdare",
+        "description": "Strategin avgör vad företaget ska bli, men det är konkreta människor som genomför den. Jag hjälper till att avgöra vem som kan föra företaget vidare, var en chefs verkliga potential finns, vem som kan anförtros mer ansvar och vem som en dag kan ta över den högsta posten."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Skalan har betydelse",
+    "lead": "Tre program som visar storleken på de frågor arbetet har fått rymma.",
+    "viewCase": "Öppna projektet: {name}",
+    "meta": "Projekt",
+    "back": "Till startsidan",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformation av företagskulturen",
+        "tag": "12 företag · 320 000+ medarbetare",
+        "summary": "En transformation av företagskulturen i gruppen Samruk-Kazyna – 12 nationella bolag och mer än 320 000 medarbetare.",
+        "detail": "En gemensam metodik för att kartlägga och styra företagskulturen togs fram, målbeteenden definierades och färdplaner för transformationen upprättades för varje bolag."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Utveckling av produktionschefer",
+        "tag": "Erkänt som bästa praxis",
+        "summary": "Ett utvecklingsprogram för produktionschefer på Philip Morris Ukraine.",
+        "detail": "Inom tre år nådde chefernas kompetenser målnivån, varefter budgeten för fortsatt utbildning kunde tas bort helt. Programmet erkändes som bästa praxis och rekommenderades till företagets övriga kontor."
+      },
+      "atom": {
+        "name": "Kärnkraftsbaserad industri",
+        "caption": "En fyrtioårig strategi för en ny bransch",
+        "tag": "Ryssland",
+        "summary": "En fyrtioårig tillväxtstrategi för en ny bransch i Ryssland, byggd på befintlig kärnkraftskapacitet.",
+        "detail": "Arbete med strategin för en ny bransch på fyrtio års sikt, med utgångspunkt i den kärnkraftskapacitet som redan finns."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Företag",
+    "headingLine2": "och institutioner",
+    "lead": "Genom åren har arbetet gått genom internationella koncerner, stora privatägda företag och statliga institutioner.",
+    "marqueeLabel": "Företag och institutioner",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Kazakstans högsta domstol"
+    }
+  },
+  "Education": {
+    "heading": "Utbildning",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Moskvas statliga universitet Lomonosov",
+        "degree": "Psykologiska fakulteten"
+      },
+      "e2": {
+        "school": "Högre militärpolitiska gränsbevakningsskolan vid Sovjetunionens KGB",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Artiklar",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Essä]",
+        "meta": "Företagets tillväxt",
+        "title": "Från litet till medelstort. Från medelstort till stort",
+        "excerpt": "Vid en viss punkt är det sättet företaget styrs på som begränsar det mest."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Essä",
+    "back": "Till startsidan",
+    "growth": {
+      "title": "Från litet till medelstort. Från medelstort till stort",
+      "lead": "I många år har jag följt företag i alla utvecklingsskeden, från ägarledda verksamheter till de största koncernerna. Och ju fler jag ser, desto oftare återkommer jag till en ganska enkel tanke.",
+      "p1": "I princip är det inget omöjligt svårt att göra ett litet företag medelstort, eller ett medelstort stort. Visst behövs en produkt, en marknad, pengar, människor och en aning tur.",
+      "p2": "Men det främsta hindret för tillväxt ligger oftast någon annanstans. Vid en viss punkt är det sättet företaget styrs på som begränsar det mest.",
+      "h1": "Ett litet företag växer tack vare sin ägare",
+      "p3": "Ägaren känner kunderna. Fattar de avgörande besluten själv. Vet vem som går att lita på. Har känsla för pengarna. Kontrollerar kvaliteten personligen. Kan på några minuter ändra ett beslut som ett stort företag skulle behöva veckor för.",
+      "p4": "Och just därför växer företaget. Men det kommer ett ögonblick då det som en gång var dess största fördel börjar begränsa den fortsatta tillväxten.",
+      "p5": "Företaget blir för stort för att fortsätta rymmas i huvudet på en enda människa. Det är, som jag ser det, det första verkliga vägskälet.",
+      "h2": "För att bli medelstort måste ägaren släppa en del av företaget",
+      "p6": "Det är betydligt svårare än det låter. Man måste sluta fatta hundratals beslut själv. Hitta människor som i vissa frågor kommer att förstå mer än man själv gör. Ge dem inte bara uppgifterna, utan också rätten att göra fel.",
+      "p7": "Struktur uppstår, och ansvar, nyckeltal, regler, regelbunden ledning. Och här dyker en paradox upp: för att behålla kontrollen över ett växande företag måste ägaren avstå från en del av sin direkta kontroll.",
+      "p8": "De som aldrig gör det förblir ofta ett mycket bra litet företag i åratal. De som klarar det blir medelstora.",
+      "h3": "Steget från medelstort till stort fungerar annorlunda",
+      "p9": "Här räcker det inte längre att anställa bra chefer och delegera det operativa arbetet till dem. Företaget måste lära sig att fungera som ett system.",
+      "p10": "Strategin slutar att bo enbart i ägarens huvud. Beslut vilar inte längre bara på personliga relationer. Företaget måste kunna hitta, utveckla och behålla starka ledare. En företagskultur uppstår – oavsett om någon har arbetat medvetet med den eller inte.",
+      "p11": "Och det uppstår ett behov av att tänka inte bara på hur man tjänar mer i morgon, utan på vilket slags företag det här måste bli om fem eller tio år.",
+      "h4": "Och här måste ägaren förändras på nytt",
+      "p12": "Jag tycker att berättelsen om ett företags tillväxt till stor del är berättelsen om hur ägarens roll förändras. Först är man entreprenör. Sedan blir man chef. Därefter måste man bli organisationens arkitekt. Och vid en viss punkt den människa som stakar ut riktningen, bygger teamet och fattar några få verkligt viktiga beslut i stället för hundratals dagliga.",
+      "p13": "Alla entreprenörer vill inte gå hela den vägen. Och det är i sin ordning. Men det går inte att bygga ett stort företag och samtidigt fortsätta styra det som ett litet.",
+      "h5": "De frågor jag börjar med",
+      "p14": "Därför börjar ett företags tillväxt för mig inte med frågan ”hur ökar vi försäljningen?”. Jag skulle ställa andra frågor först.",
+      "q1": "Vilket slags företag vill ni bli?",
+      "q2": "Vad hindrar er i dag från att växa två eller tre gånger?",
+      "q3": "Vad skulle hända med företaget om ni var borta från kontoret i tre månader med start i morgon?",
+      "q4": "Vilka beslut går fortfarande inte att fatta utan er?",
+      "q5": "Finns det människor omkring er som ni verkligen skulle våga anförtro företaget?",
+      "q6": "Skulle dagens team klara att leda ett företag dubbelt så stort som det här?",
+      "q7": "Och framför allt: är ni själv beredd att leda företaget på ett annat sätt än ni gör i dag?",
+      "p15": "Svaren på de frågorna säger ibland betydligt mer om ett företags utsikter än dess finansiella modell gör.",
+      "p16": "Jag tror inte att stora företag byggs efter något hemligt recept. Vid en viss punkt måste man helt enkelt förändra, i tur och ordning: strategin → affärsmodellen → ledningssystemet → teamet → ägarens roll. Och varje ny nivå i företaget kräver en annan kvalitet i vart och ett av dem.",
+      "p17": "Därför är det arbete jag finner mest intressant arbetet med ett företag just i övergångens ögonblick. När det gamla sättet att styra fortfarande tjänar pengar men har börjat begränsa framtiden. När ägaren ser att företaget klarar mer, men det ännu inte är klart vad exakt som måste förändras för att ta nästa steg.",
+      "p18": "Jag tror att verklig tillväxt börjar just med den frågan."
+    }
+  },
+  "Footer": {
+    "cta": "Ibland behöver en ägare inte ett projekt. Ägaren behöver någon att reda ut situationen tillsammans med, och komma fram till ett beslut.",
+    "ctaButton": "Skriv till mig →",
+    "colMenu": "Meny",
+    "colCases": "Projekt",
+    "colBlog": "Artiklar",
+    "colContact": "Kontakt",
+    "appearance": "Utseende",
+    "designBy": "Alla frågor kräver inte en konsult",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazakstan"
+  },
+  "ThemeSwitch": {
+    "label": "Utseende",
+    "light": "Ljust",
+    "dark": "Mörkt",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Språk",
+    "more": "Alla utgåvor"
+  },
+  "AuthorCard": {
+    "role": "Strategi • Transformation • Människor",
+    "location": "Almaty, Kazakstan",
+    "bio": "Jag arbetar med ägare, vd:ar och ledningsgrupper i det ögonblick då ett företag går vidare till nästa steg i sin utveckling.",
+    "sinceLabel": "I yrket sedan"
+  },
+  "ContactForm": {
+    "title": "Håll kontakten",
+    "description": "Lämna en adress, så skriver jag när det finns något här som är värt att läsa.",
+    "emailLabel": "E-postadress",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Prenumerera",
+    "submitting": "Skickar…",
+    "success": "Klart. Titta i inkorgen.",
+    "unexpectedError": "Något gick fel. Försök igen.",
+    "validation": {
+      "emailRequired": "Ange en e-postadress",
+      "emailInvalid": "Det ser inte ut som en e-postadress",
+      "emailTooLong": "Adressen är för lång"
+    }
+  },
+  "StatusBadge": {
+    "label": "Tjänstens status",
+    "healthy": "Fungerar",
+    "unhealthy": "Otillgänglig",
+    "checking": "Kontrollerar…",
+    "uptime": "Upptid {value}"
+  },
+  "About": {
+    "title": "Om mig",
+    "lead": "Den här sidan finns för att pröva den andra lokaliserade grenen av routningen.",
+    "body": "Riktigt innehåll kommer senare. Allt annat här fungerar redan: routning per språk, metadata, temat och tillgängligheten."
+  },
+  "NotFound": {
+    "title": "Sidan hittades inte",
+    "description": "Länken kan vara gammal, eller så finns det ett stavfel i adressen.",
+    "backHome": "Till startsidan",
+    "record": {
+      "section": "Sektion",
+      "entry": "Post",
+      "status": "Status",
+      "none": "inget"
+    }
+  },
+  "ErrorBoundary": {
+    "title": "Något gick sönder",
+    "description": "Felet har loggats. Du kan försöka igen.",
+    "retry": "Försök igen",
+    "digest": "Felkod: {digest}"
+  }
+}

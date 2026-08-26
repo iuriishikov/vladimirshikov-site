@@ -1,0 +1,291 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov — strategi, transformasi, manusia",
+      "description": "Saya bekerja dengan pemilik, CEO, dan tim manajemen dalam situasi ketika sebuah bisnis menghadapi tahap pertumbuhan berikutnya."
+    },
+    "about": {
+      "title": "Tentang saya",
+      "description": "Sekilas tentang Vladimir Shikov dan pekerjaan yang ia lakukan."
+    },
+    "notFound": {
+      "title": "Halaman tidak ditemukan",
+      "description": "Halaman seperti itu tidak ada di sini."
+    }
+  },
+  "Common": {
+    "skipToContent": "Lompat ke konten utama",
+    "loading": "Memuat…",
+    "retry": "Coba lagi",
+    "close": "Tutup"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Navigasi utama",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu",
+    "contact": "Hubungi saya →",
+    "nav": {
+      "home": "Beranda",
+      "about": "Tentang saya",
+      "services": "Layanan",
+      "cases": "Proyek",
+      "blog": "Tulisan"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner di",
+    "roleB": "TEAM LEAD",
+    "placeA": "Tinggal di",
+    "placeB": "Almaty, Kazakhstan",
+    "scopeA": "Bekerja dengan",
+    "scopeB": "pemilik dan CEO",
+    "statement": "Saya bekerja dengan pemilik, CEO, dan tim manajemen dalam situasi ketika sebuah bisnis menghadapi tahap pertumbuhan berikutnya."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Tentang saya ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partner di TEAM LEAD",
+    "placeLine": "Strategi • Transformasi • Manusia",
+    "lead": "Saya membantu Anda melihat apa yang sulit terlihat dari dalam perusahaan. Di balik pertanyaan strategis jarang hanya ada persoalan strategi.",
+    "body": "Pertumbuhan mengubah tuntutan terhadap model bisnis. Model bisnis yang baru mengubah tuntutan terhadap tim. Tim yang baru mengubah peran pemilik itu sendiri. Karena itu saya melihat sebuah bisnis melalui tiga lensa sekaligus — strategi, organisasi, manusia — dan membantu pemilik menentukan keputusan mana yang benar-benar mampu mengubah lintasan perusahaan.",
+    "experience": "Perjalanan profesional saya melewati tiga lingkungan yang sangat berbeda: konsultansi internasional, bisnis besar, dan lembaga negara. Saya memimpin cabang Rusia sebuah perusahaan internasional di bidang penilaian pemimpin, selama lebih dari 12 tahun mengepalai PDP Group CIS di Moskow, lalu memegang salah satu arus utama transformasi di grup Samruk-Kazyna. Kini saya partner di TEAM LEAD, menangani strategi, pengembangan bisnis, transformasi tim manajemen, dan pendampingan satu lawan satu dengan pimpinan puncak. Saya juga anggota komisi kualifikasi Dewan Kehakiman Tertinggi Republik Kazakhstan, yang menilai calon untuk jabatan hakim.",
+    "statValue1": "25+",
+    "statLabel1": "tahun bekerja dengan bisnis dan para pemimpinnya",
+    "statValue2": "320.000+",
+    "statLabel2": "karyawan dalam program transformasi terbesar",
+    "statValue3": "C-level",
+    "statLabel3": "penilaian, pengembangan, dan pendampingan pimpinan puncak"
+  },
+  "Questions": {
+    "heading": "Kapan saya paling berguna",
+    "lead": "Bukan ketika sebuah perusahaan membutuhkan satu konsultan lagi. Melainkan ketika pemilik atau pimpinan puncak menghadapi pertanyaan yang jawabannya sudah tidak lagi jelas di dalam bisnis itu sendiri.",
+    "closing": "Dalam situasi seperti itu, tugas saya adalah menciptakan ruang untuk menatap fakta dengan jernih, dan membantu mengubah kerumitan menjadi beberapa keputusan yang benar-benar dapat diambil.",
+    "items": {
+      "q1": "Ke mana kita melangkah dari sini?",
+      "q2": "Model bisnis mana yang akan menopang tahap pertumbuhan berikutnya?",
+      "q3": "Mampukah tim yang ada sekarang menjalankan strategi yang baru?",
+      "q4": "Siapa yang bisa menjadi pimpinan puncak berikutnya?",
+      "q5": "Apa yang harus berubah di perusahaan — dan apa yang harus berubah pada peran pemilik itu sendiri?"
+    }
+  },
+  "Services": {
+    "heading": "Yang saya lakukan",
+    "lead": "Empat bidang yang dalam praktiknya hampir selalu ternyata satu persoalan yang sama, dilihat dari sisi yang berbeda.",
+    "items": {
+      "s1": {
+        "title": "Strategi",
+        "description": "Sesi strategi dan penyusunan strategi pertumbuhan. Saya tidak mulai dari perkakas dan templat, melainkan dari pasar, ekonomi bisnis, ambisi pemilik, batasan, dan peluang. Strategi tidak dimulai dari daftar inisiatif; ia dimulai dari jawaban atas satu pertanyaan — apa yang bersedia kita lepaskan demi hal yang benar-benar penting?"
+      },
+      "s2": {
+        "title": "Transformasi",
+        "description": "Jalan dari model pengelolaan hari ini menuju model yang dibutuhkan esok: struktur, budaya, sistem manajemen, peran para pemimpin, cara keputusan diambil, manusia. Pengalaman itu mencakup bisnis swasta maupun struktur korporasi dan negara yang terbesar."
+      },
+      "s3": {
+        "title": "Pemilik dan CEO",
+        "description": "Pimpinan puncak selalu memikul pertanyaan yang tidak dapat sepenuhnya didelegasikan: strategi, tim, penerus, krisis, bisnis baru, perannya sendiri di perusahaan. Saya tidak mengambil keputusan menggantikan pemilik — saya membantunya melihat situasi dari ketinggian yang membuat keputusan itu menjadi jelas."
+      },
+      "s4": {
+        "title": "Tim dan suksesi",
+        "description": "Strategi menentukan perusahaan harus menjadi apa, tetapi yang menjalankannya adalah orang-orang nyata. Saya membantu memahami siapa yang mampu membawa perusahaan melangkah lebih jauh, di mana letak potensi sesungguhnya seorang pemimpin, kepada siapa tanggung jawab yang lebih besar dapat dipercayakan, dan siapa yang suatu hari dapat menggantikan pimpinan puncak."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Skala itu penting",
+    "lead": "Tiga program yang memperlihatkan sebesar apa persoalan yang pernah ditangani pekerjaan ini.",
+    "viewCase": "Buka proyek: {name}",
+    "meta": "Proyek",
+    "back": "Kembali ke beranda",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformasi budaya korporat",
+        "tag": "12 perusahaan · 320.000+ karyawan",
+        "summary": "Transformasi budaya korporat di grup Samruk-Kazyna — 12 perusahaan nasional dan lebih dari 320.000 karyawan.",
+        "detail": "Dibangun satu metodologi tunggal untuk mendiagnosis dan mengarahkan budaya korporat, ditetapkan perilaku sasaran, dan disusun peta jalan transformasi untuk setiap perusahaan."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Pengembangan pemimpin produksi",
+        "tag": "Diakui sebagai praktik terbaik",
+        "summary": "Program pengembangan bagi para pemimpin produksi di Philip Morris Ukraine.",
+        "detail": "Dalam tiga tahun kompetensi para pemimpin mencapai tingkat sasaran, setelah itu anggaran untuk pelatihan lanjutan diturunkan menjadi nol. Program ini diakui sebagai praktik terbaik dan direkomendasikan kepada kantor-kantor perusahaan yang lain."
+      },
+      "atom": {
+        "name": "Industri berbasis nuklir",
+        "caption": "Strategi empat puluh tahun untuk sebuah industri baru",
+        "tag": "Rusia",
+        "summary": "Strategi pertumbuhan empat puluh tahun untuk sebuah industri baru di Rusia, dibangun di atas kapasitas energi nuklir yang sudah ada.",
+        "detail": "Pengerjaan strategi bagi sebuah industri baru dengan cakrawala empat puluh tahun, berbasis kapasitas energi nuklir yang sudah tersedia."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Perusahaan",
+    "headingLine2": "dan lembaga",
+    "lead": "Selama bertahun-tahun pekerjaan ini melewati korporasi internasional, bisnis swasta besar, dan lembaga negara.",
+    "marqueeLabel": "Perusahaan dan lembaga",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Mahkamah Agung Kazakhstan"
+    }
+  },
+  "Education": {
+    "heading": "Pendidikan",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Universitas Negeri Moskow M. V. Lomonosov",
+        "degree": "Fakultas Psikologi"
+      },
+      "e2": {
+        "school": "Sekolah Tinggi Militer-Politik Pasukan Penjaga Perbatasan KGB Uni Soviet",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Tulisan",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Esai]",
+        "meta": "Pertumbuhan perusahaan",
+        "title": "Dari kecil ke menengah. Dari menengah ke besar",
+        "excerpt": "Pada satu titik, hal yang paling membatasi sebuah perusahaan adalah cara perusahaan itu dikelola."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Esai",
+    "back": "Kembali ke beranda",
+    "growth": {
+      "title": "Dari kecil ke menengah. Dari menengah ke besar",
+      "lead": "Bertahun-tahun saya mengamati perusahaan pada setiap tahap perkembangan, dari bisnis yang dijalankan pendirinya sampai korporasi terbesar. Dan semakin banyak yang saya lihat, semakin sering saya kembali pada satu pikiran yang cukup sederhana.",
+      "p1": "Pada dasarnya tidak ada yang teramat sulit dalam mengubah bisnis kecil menjadi menengah, atau bisnis menengah menjadi besar. Tentu saja diperlukan produk, pasar, uang, orang, dan sedikit keberuntungan.",
+      "p2": "Tetapi penghalang utama pertumbuhan biasanya ada di tempat lain. Pada satu titik, hal yang paling membatasi sebuah perusahaan adalah cara perusahaan itu dikelola.",
+      "h1": "Bisnis kecil tumbuh berkat pemiliknya",
+      "p3": "Ia mengenal para pelanggan. Ia mengambil sendiri keputusan-keputusan kunci. Ia tahu siapa yang bisa dipercaya. Ia punya naluri terhadap uang. Ia memeriksa mutu secara langsung. Dalam beberapa menit ia bisa mengubah keputusan yang di perusahaan besar akan memakan waktu berminggu-minggu.",
+      "p4": "Dan justru karena itulah bisnisnya tumbuh. Tetapi tiba saatnya ketika hal yang dulu menjadi keunggulan terbesarnya mulai membatasi pertumbuhan selanjutnya.",
+      "p5": "Perusahaan menjadi terlalu besar untuk terus muat di kepala satu orang. Itulah, menurut saya, persimpangan pertama yang sesungguhnya.",
+      "h2": "Untuk menjadi menengah, pemilik harus melepaskan sebagian bisnisnya",
+      "p6": "Ini jauh lebih sulit daripada kedengarannya. Anda harus berhenti mengambil sendiri ratusan keputusan. Menemukan orang-orang yang dalam beberapa hal akan lebih paham daripada Anda. Menyerahkan kepada mereka bukan hanya tugas, tetapi juga hak untuk keliru.",
+      "p7": "Muncullah struktur, akuntabilitas, ukuran kinerja, aturan, manajemen yang teratur. Dan di sini muncul sebuah paradoks: untuk tetap memegang kendali atas bisnis yang tumbuh, pemilik harus melepaskan sebagian kendali langsungnya.",
+      "p8": "Mereka yang tidak pernah melakukannya sering bertahan bertahun-tahun sebagai bisnis kecil yang sangat baik. Mereka yang berhasil melakukannya menjadi bisnis menengah.",
+      "h3": "Perpindahan dari menengah ke besar bekerja dengan cara lain",
+      "p9": "Di sini tidak lagi cukup merekrut manajer yang baik dan mendelegasikan pekerjaan operasional kepada mereka. Perusahaan harus belajar berjalan sebagai sebuah sistem.",
+      "p10": "Strategi berhenti hidup hanya di kepala pemilik. Keputusan berhenti bertumpu hanya pada hubungan pribadi. Perusahaan harus mampu menemukan, menumbuhkan, dan mempertahankan pemimpin yang kuat. Budaya korporat pun lahir — entah ada yang sengaja membangunnya atau tidak.",
+      "p11": "Lalu muncul kebutuhan untuk memikirkan bukan hanya cara memperoleh lebih banyak esok hari, tetapi juga perusahaan seperti apa yang harus terwujud dalam lima atau sepuluh tahun.",
+      "h4": "Dan di sini pemilik harus berubah lagi",
+      "p12": "Bagi saya, kisah pertumbuhan sebuah perusahaan sebagian besar adalah kisah perubahan peran pemiliknya. Mula-mula ia seorang wirausaha. Lalu ia menjadi seorang manajer. Kemudian ia harus menjadi arsitek sebuah organisasi. Dan pada satu titik, ia menjadi orang yang menetapkan arah, membentuk tim, dan mengambil beberapa keputusan yang benar-benar penting alih-alih ratusan keputusan harian.",
+      "p13": "Tidak setiap wirausaha ingin menempuh seluruh jalan itu. Dan itu tidak apa-apa. Tetapi Anda tidak bisa membangun bisnis besar sambil terus mengelolanya seperti bisnis kecil.",
+      "h5": "Dari pertanyaan apa saya mulai",
+      "p14": "Karena itu, bagi saya pertumbuhan sebuah perusahaan tidak dimulai dari \"bagaimana menaikkan penjualan?\". Saya akan mengajukan pertanyaan lain lebih dulu.",
+      "q1": "Anda ingin menjadi perusahaan seperti apa?",
+      "q2": "Apa yang hari ini menghalangi Anda tumbuh dua atau tiga kali lipat?",
+      "q3": "Apa yang akan terjadi pada perusahaan jika mulai besok Anda tidak ada di kantor selama tiga bulan?",
+      "q4": "Keputusan apa saja yang sampai sekarang tidak bisa diambil tanpa Anda?",
+      "q5": "Adakah orang di sekitar Anda yang benar-benar Anda percayai untuk memegang bisnis ini?",
+      "q6": "Mampukah tim hari ini mengelola perusahaan yang dua kali lebih besar dari sekarang?",
+      "q7": "Dan yang terpenting: siapkah Anda sendiri mengelola perusahaan dengan cara yang berbeda dari cara Anda mengelolanya hari ini?",
+      "p15": "Jawaban atas pertanyaan-pertanyaan itu kadang mengatakan jauh lebih banyak tentang prospek sebuah bisnis daripada model keuangannya.",
+      "p16": "Saya tidak menganggap bisnis besar dibangun menurut resep rahasia tertentu. Pada satu titik Anda memang harus mengubah, secara berurutan: strategi → model bisnis → sistem manajemen → tim → peran pemilik. Dan setiap tingkat perusahaan berikutnya menuntut mutu yang berbeda dari masing-masing unsur itu.",
+      "p17": "Karena itu pekerjaan yang paling menarik bagi saya adalah bekerja dengan bisnis tepat pada saat peralihan. Ketika cara pengelolaan yang lama masih menghasilkan uang tetapi sudah mulai membatasi masa depan. Ketika pemilik melihat perusahaannya mampu melakukan lebih, tetapi belum jelas apa persisnya yang harus berubah untuk melangkah ke tahap berikutnya.",
+      "p18": "Menurut saya, pertumbuhan yang sesungguhnya justru dimulai dari pertanyaan itu."
+    }
+  },
+  "Footer": {
+    "cta": "Kadang seorang pemilik tidak membutuhkan sebuah proyek. Ia membutuhkan orang yang bisa diajak menelaah situasi bersama dan sampai pada sebuah keputusan.",
+    "ctaButton": "Tulis pesan →",
+    "colMenu": "Menu",
+    "colCases": "Proyek",
+    "colBlog": "Tulisan",
+    "colContact": "Kontak",
+    "appearance": "Tampilan",
+    "designBy": "Tidak setiap persoalan membutuhkan konsultan",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazakhstan"
+  },
+  "ThemeSwitch": {
+    "label": "Tampilan",
+    "light": "Terang",
+    "dark": "Gelap",
+    "system": "Otomatis"
+  },
+  "LocaleSwitch": {
+    "label": "Bahasa",
+    "more": "Semua edisi"
+  },
+  "AuthorCard": {
+    "role": "Strategi • Transformasi • Manusia",
+    "location": "Almaty, Kazakhstan",
+    "bio": "Saya bekerja dengan pemilik, CEO, dan tim manajemen pada saat sebuah perusahaan beralih ke tahap pertumbuhan berikutnya.",
+    "sinceLabel": "Bekerja sejak"
+  },
+  "ContactForm": {
+    "title": "Tetap terhubung",
+    "description": "Tinggalkan alamat Anda dan saya akan menulis ketika ada sesuatu di sini yang layak dibaca.",
+    "emailLabel": "Alamat email",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Berlangganan",
+    "submitting": "Mengirim…",
+    "success": "Selesai. Periksa kotak masuk Anda.",
+    "unexpectedError": "Ada yang tidak beres. Silakan coba lagi.",
+    "validation": {
+      "emailRequired": "Masukkan alamat email",
+      "emailInvalid": "Sepertinya itu bukan alamat email",
+      "emailTooLong": "Alamat itu terlalu panjang"
+    }
+  },
+  "StatusBadge": {
+    "label": "Status layanan",
+    "healthy": "Berjalan",
+    "unhealthy": "Tidak tersedia",
+    "checking": "Memeriksa…",
+    "uptime": "Uptime {value}"
+  },
+  "About": {
+    "title": "Tentang saya",
+    "lead": "Halaman ini ada untuk menguji cabang perutean terlokalisasi yang kedua.",
+    "body": "Konten yang sebenarnya akan menyusul. Semua hal lain di sini sudah bekerja: perutean per lokal, metadata, tema tampilan, dan aksesibilitas."
+  },
+  "NotFound": {
+    "title": "Halaman tidak ditemukan",
+    "description": "Tautannya mungkin sudah usang, atau ada salah ketik pada alamatnya.",
+    "backHome": "Kembali ke beranda",
+    "record": {
+      "section": "Bagian",
+      "entry": "Entri",
+      "status": "Status",
+      "none": "tidak ada"
+    }
+  },
+  "ErrorBoundary": {
+    "title": "Ada yang rusak",
+    "description": "Galat ini sudah tercatat. Anda bisa mencoba lagi.",
+    "retry": "Coba lagi",
+    "digest": "Kode galat: {digest}"
+  }
+}

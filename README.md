@@ -7,11 +7,18 @@
 
 The personal website of Vladimir Shikov — **vladimirshikov.com**.
 
-This repository is currently a **scaffold**. The infrastructure around the code is finished and
-production-grade: architectural boundaries, type safety, i18n, testing at four levels, a hardened
-supply chain, a container build, CI gates and an SSH-based deployment to a VPS. What is deliberately
-missing is the site itself — there are routes, layouts and a handful of components that prove the
-plumbing works, and no real content behind them yet.
+The infrastructure is finished and production-grade: architectural boundaries, type safety, i18n,
+testing at four levels, a hardened supply chain, a container build, CI gates and an SSH-based
+deployment to a VPS.
+
+On top of it sits the **portfolio page** — a full implementation of the Portfolio design canvas:
+a bilingual single-page site with a fixed glass header, a generated pencil portrait, selected works,
+services, a partner marquee, a review carousel, an FAQ accordion and a dark footer, in a light and a
+dark theme.
+
+The copy is still placeholder. Every string already goes through the dictionaries in `messages/`,
+so replacing lorem ipsum with the real thing is an edit to two JSON files, not to the components.
+Case and note pages are stubs pending their own design.
 
 The reason for building it in this order: content is cheap to add and expensive to add _safely_.
 Every guard rail exists before the first paragraph of prose is written.
@@ -23,29 +30,29 @@ Every guard rail exists before the first paragraph of prose is written.
 Versions below are the ones declared in [`package.json`](./package.json). Exact resolutions are
 pinned in `pnpm-lock.yaml`.
 
-| Area               | Choice                                                                  | Version                        |
-| ------------------ | ----------------------------------------------------------------------- | ------------------------------ |
-| Framework          | Next.js — App Router, Turbopack dev, `output: 'standalone'`             | 16.3.2                         |
-| UI runtime         | React / react-dom, React Compiler enabled                               | 19.2.8                         |
-| Language           | TypeScript, `strict` plus the optional strictness flags                 | 6.0.3                          |
-| Runtime            | Node.js (`.nvmrc`, `.node-version`)                                     | 24                             |
-| Package manager    | pnpm via corepack, isolated node linker                                 | 11.22.0                        |
-| Styling            | Tailwind CSS — CSS-first `@theme`, no `tailwind.config.js`              | 4.3.3                          |
-| i18n               | next-intl — `ru` (default) and `en`, `localePrefix: 'always'`           | 4.13.7                         |
-| Server state       | TanStack Query                                                          | 5.102.2                        |
-| Client state       | Zustand                                                                 | 5.0.15                         |
-| Schemas            | Zod                                                                     | 4.4.3                          |
-| Forms              | react-hook-form + `@hookform/resolvers`                                 | 7.86.0 / 5.9.1                 |
-| UI primitives      | radix-ui · lucide-react · sonner · next-themes                          | 1.6.7 · 1.33.0 · 2.0.8 · 0.4.6 |
-| Lint               | ESLint flat config + typescript-eslint + eslint-plugin-boundaries       | 10.9.0 / 8.67.0 / 7.2.0        |
-| Format             | Prettier + import sorting + Tailwind class sorting                      | 3.9.6                          |
-| Unit tests         | Vitest + Testing Library                                                | 4.1.11 / 16.3.2                |
-| E2E                | Playwright + `@axe-core/playwright`                                     | 1.62.1 / 4.13.0                |
-| Component workshop | Storybook + a11y addon                                                  | 10.5.10                        |
-| Perf budgets       | Lighthouse CI — run by the CI action, configured in `lighthouserc.json` | v12 (action)                   |
-| Releases           | semantic-release + Conventional Commits                                 | 25.0.9                         |
-| Local gates        | husky · lint-staged · commitlint + cz-git                               | 9.1.7 · 17.3.0 · 21.2.2        |
-| Hygiene            | knip (dead code) · secretlint (secrets)                                 | 6.32.2 · 13.0.4                |
+| Area               | Choice                                                                  | Version                 |
+| ------------------ | ----------------------------------------------------------------------- | ----------------------- |
+| Framework          | Next.js — App Router, Turbopack dev, `output: 'standalone'`             | 16.3.2                  |
+| UI runtime         | React / react-dom, React Compiler enabled                               | 19.2.8                  |
+| Language           | TypeScript, `strict` plus the optional strictness flags                 | 6.0.3                   |
+| Runtime            | Node.js (`.nvmrc`, `.node-version`)                                     | 24                      |
+| Package manager    | pnpm via corepack, isolated node linker                                 | 11.22.0                 |
+| Styling            | Tailwind CSS — CSS-first `@theme`, no `tailwind.config.js`              | 4.3.3                   |
+| i18n               | next-intl — `ru` (default) and `en`, `localePrefix: 'always'`           | 4.13.7                  |
+| Server state       | TanStack Query                                                          | 5.102.2                 |
+| Client state       | Zustand                                                                 | 5.0.15                  |
+| Schemas            | Zod                                                                     | 4.4.3                   |
+| Forms              | react-hook-form + `@hookform/resolvers`                                 | 7.86.0 / 5.9.1          |
+| UI primitives      | radix-ui · sonner · next-themes                                         | 1.6.7 · 2.0.8 · 0.4.6   |
+| Lint               | ESLint flat config + typescript-eslint + eslint-plugin-boundaries       | 10.9.0 / 8.67.0 / 7.2.0 |
+| Format             | Prettier + import sorting + Tailwind class sorting                      | 3.9.6                   |
+| Unit tests         | Vitest + Testing Library                                                | 4.1.11 / 16.3.2         |
+| E2E                | Playwright + `@axe-core/playwright`                                     | 1.62.1 / 4.13.0         |
+| Component workshop | Storybook + a11y addon                                                  | 10.5.10                 |
+| Perf budgets       | Lighthouse CI — run by the CI action, configured in `lighthouserc.json` | v12 (action)            |
+| Releases           | semantic-release + Conventional Commits                                 | 25.0.9                  |
+| Local gates        | husky · lint-staged · commitlint + cz-git                               | 9.1.7 · 17.3.0 · 21.2.2 |
+| Hygiene            | knip (dead code) · secretlint (secrets)                                 | 6.32.2 · 13.0.4         |
 
 Why these, and not the obvious alternatives: see the [decision records](./docs/adr/).
 

@@ -1,0 +1,291 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov — mkakati, mageuzi, watu",
+      "description": "Ninafanya kazi na wamiliki, wakurugenzi wakuu na timu za uongozi pale biashara inapokabiliwa na hatua yake inayofuata ya ukuaji."
+    },
+    "about": {
+      "title": "Kuhusu mimi",
+      "description": "Kwa kifupi kuhusu Vladimir Shikov na kazi anayoifanya."
+    },
+    "notFound": {
+      "title": "Ukurasa haukupatikana",
+      "description": "Hakuna ukurasa kama huo hapa."
+    }
+  },
+  "Common": {
+    "skipToContent": "Rukia hadi maudhui makuu",
+    "loading": "Inapakia…",
+    "retry": "Jaribu tena",
+    "close": "Funga"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Urambazaji mkuu",
+    "openMenu": "Fungua menyu",
+    "closeMenu": "Funga menyu",
+    "contact": "Wasiliana →",
+    "nav": {
+      "home": "Mwanzo",
+      "about": "Kuhusu mimi",
+      "services": "Ninachofanya",
+      "cases": "Miradi",
+      "blog": "Makala"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Mbia wa",
+    "roleB": "TEAM LEAD",
+    "placeA": "Anaishi",
+    "placeB": "Almaty, Kazakhstan",
+    "scopeA": "Anafanya kazi na",
+    "scopeB": "wamiliki na CEO",
+    "statement": "Ninafanya kazi na wamiliki, wakurugenzi wakuu na timu za uongozi pale biashara inapokabiliwa na hatua yake inayofuata ya ukuaji."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Kuhusu mimi ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Mbia wa TEAM LEAD",
+    "placeLine": "Mkakati • Mageuzi • Watu",
+    "lead": "Ninasaidia kuona kile ambacho ni kigumu kukiona ukiwa ndani ya kampuni. Nyuma ya swali la kimkakati mara chache kunakuwa na mkakati peke yake.",
+    "body": "Ukuaji hubadilisha kile ambacho modeli ya biashara inapaswa kukifanya. Modeli mpya ya biashara hubadilisha kile ambacho timu inapaswa kuwa. Timu mpya hubadilisha nafasi ya mmiliki mwenyewe. Ndiyo maana ninaiangalia biashara kupitia macho matatu kwa wakati mmoja — mkakati, shirika, watu — na kumsaidia mmiliki kubaini ni maamuzi gani yanayoweza kweli kubadilisha mwelekeo wa kampuni.",
+    "experience": "Safari yangu ya kikazi imepita katika mazingira matatu tofauti kabisa: ushauri wa kimataifa, biashara kubwa na taasisi za serikali. Niliongoza tawi la Urusi la kampuni ya kimataifa inayojishughulisha na tathmini ya viongozi, nilikaa zaidi ya miaka 12 nikiongoza PDP Group CIS mjini Moscow, kisha nikasimamia mojawapo ya mikondo mikuu ya mageuzi katika kundi la Samruk-Kazyna. Leo ni mbia wa TEAM LEAD, ninapofanya kazi ya mkakati, ukuzaji wa biashara, mageuzi ya timu za uongozi na kazi ya ana kwa ana na viongozi wakuu. Pia ni mjumbe wa tume ya sifa ya Baraza Kuu la Mahakama la Jamhuri ya Kazakhstan, ninapotathmini watahiniwa wa nyadhifa za kihakimu.",
+    "statValue1": "25+",
+    "statLabel1": "miaka ya kufanya kazi na biashara na viongozi wake",
+    "statValue2": "320,000+",
+    "statLabel2": "wafanyakazi katika mradi mkubwa zaidi wa mageuzi",
+    "statValue3": "C-level",
+    "statLabel3": "tathmini, ukuzaji na usaidizi wa viongozi wakuu"
+  },
+  "Questions": {
+    "heading": "Ninapokuwa na manufaa zaidi",
+    "lead": "Si pale kampuni inapohitaji mshauri mwingine. Ni pale mmiliki au mkurugenzi mkuu anapokabiliwa na swali ambalo ndani ya biashara halina tena jibu la wazi.",
+    "closing": "Katika hali kama hizo kazi yangu ni kuunda nafasi ya kuyaangalia mambo kama yalivyo kwa utulivu, na kusaidia kuugeuza ugumu kuwa maamuzi machache yanayoweza kutekelezwa.",
+    "items": {
+      "q1": "Tuelekee wapi kutoka hapa?",
+      "q2": "Ni modeli ipi ya biashara itakayobeba hatua inayofuata ya ukuaji?",
+      "q3": "Je, timu iliyopo inaweza kutekeleza mkakati mpya?",
+      "q4": "Nani anaweza kuwa mkurugenzi mkuu ajaye?",
+      "q5": "Nini kinapaswa kubadilika ndani ya kampuni — na nini kinapaswa kubadilika katika nafasi ya mmiliki mwenyewe?"
+    }
+  },
+  "Services": {
+    "heading": "Ninachofanya",
+    "lead": "Maeneo manne ambayo, kiuhalisia, karibu daima huwa ni tatizo moja likionwa kwa pande tofauti.",
+    "items": {
+      "s1": {
+        "title": "Mkakati",
+        "description": "Vikao vya kimkakati na uandaaji wa mkakati wa ukuaji. Sianzi na zana na violezo, bali na soko, uchumi wa biashara, matarajio ya mmiliki, vikwazo na fursa. Mkakati hauanzi na orodha ya hatua; huanza na jibu la swali moja — tuko tayari kuacha nini kwa ajili ya kile chenye maana ya kweli?"
+      },
+      "s2": {
+        "title": "Mageuzi",
+        "description": "Njia kutoka modeli ya uendeshaji ya leo hadi ile itakayohitajika kesho: muundo, utamaduni, mfumo wa uongozi, nafasi za viongozi, jinsi maamuzi yanavyofikiwa, watu. Uzoefu huo unagusa biashara za watu binafsi pamoja na mashirika makubwa zaidi ya kampuni na ya serikali."
+      },
+      "s3": {
+        "title": "Mmiliki na CEO",
+        "description": "Mkurugenzi mkuu daima hubeba maswali yasiyoweza kukabidhiwa kwa mwingine kikamilifu: mkakati, timu, mrithi, mgogoro, biashara mpya, nafasi yake mwenyewe ndani ya kampuni. Siamui badala ya mmiliki — ninamsaidia kuiona hali kutoka urefu ambao kwao uamuzi unakuwa dhahiri."
+      },
+      "s4": {
+        "title": "Timu na urithi wa uongozi",
+        "description": "Mkakati hubainisha kampuni inapaswa kuwa nini, lakini wanaoutekeleza ni watu halisi. Ninasaidia kubaini ni nani anayeweza kuipeleka kampuni mbele, uwezo halisi wa kiongozi upo wapi, nani anaweza kukabidhiwa majukumu makubwa zaidi, na nani siku moja anaweza kushika nafasi ya juu kabisa."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Ukubwa una maana",
+    "lead": "Miradi mitatu inayoonyesha ukubwa wa matatizo ambayo kazi hii imepaswa kuyabeba.",
+    "viewCase": "Fungua mradi: {name}",
+    "meta": "Mradi",
+    "back": "Rudi mwanzo",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Mageuzi ya utamaduni wa shirika",
+        "tag": "Kampuni 12 · wafanyakazi 320,000+",
+        "summary": "Mageuzi ya utamaduni wa shirika katika kundi la Samruk-Kazyna — kampuni 12 za kitaifa na zaidi ya wafanyakazi 320,000.",
+        "detail": "Ilibuniwa mbinu moja ya kuchunguza na kuongoza utamaduni wa shirika, tabia zinazolengwa zilibainishwa, na ramani za mageuzi ziliandaliwa kwa kila kampuni."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Kukuza viongozi wa uzalishaji",
+        "tag": "Ilitambuliwa kama mfano bora",
+        "summary": "Programu ya kukuza viongozi wa uzalishaji katika Philip Morris Ukraine.",
+        "detail": "Ndani ya miaka mitatu umahiri wa viongozi ulifikia kiwango kilicholengwa, na baada ya hapo bajeti ya mafunzo zaidi ilipunguzwa hadi sifuri. Programu ilitambuliwa kama mfano bora na kupendekezwa kwa ofisi nyingine za kampuni."
+      },
+      "atom": {
+        "name": "Sekta ya nyuklia",
+        "caption": "Mkakati wa miaka arobaini kwa sekta mpya",
+        "tag": "Urusi",
+        "summary": "Mkakati wa ukuaji wa miaka arobaini kwa sekta mpya nchini Urusi, uliojengwa juu ya uwezo uliopo wa nishati ya nyuklia.",
+        "detail": "Kazi ya kuandaa mkakati wa sekta mpya kwa upeo wa miaka arobaini, ukitegemea uwezo wa nishati ya nyuklia uliopo tayari."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Kampuni",
+    "headingLine2": "na taasisi",
+    "lead": "Kwa miaka mingi kazi imepita katika mashirika ya kimataifa, biashara kubwa za watu binafsi na taasisi za serikali.",
+    "marqueeLabel": "Kampuni na taasisi",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Mahakama Kuu ya Kazakhstan"
+    }
+  },
+  "Education": {
+    "heading": "Elimu",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Chuo Kikuu cha Jimbo la Moscow cha Lomonosov",
+        "degree": "Kitivo cha Saikolojia"
+      },
+      "e2": {
+        "school": "Shule Kuu ya Kijeshi na Kisiasa ya Walinzi wa Mpaka ya KGB ya USSR",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Makala",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Insha]",
+        "meta": "Ukuaji wa kampuni",
+        "title": "Kutoka ndogo hadi ya kati. Kutoka ya kati hadi kubwa",
+        "excerpt": "Katika hatua fulani, kinachoizuia kampuni zaidi ni jinsi inavyoendeshwa."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Insha",
+    "back": "Rudi mwanzo",
+    "growth": {
+      "title": "Kutoka ndogo hadi ya kati. Kutoka ya kati hadi kubwa",
+      "lead": "Kwa miaka mingi nimekuwa nikizitazama kampuni katika kila hatua ya maendeleo, kuanzia biashara zinazoendeshwa na waanzilishi wake hadi mashirika makubwa kabisa. Na kadiri ninavyoziona nyingi zaidi, ndivyo ninavyorudi mara kwa mara kwenye wazo moja rahisi kiasi.",
+      "p1": "Kimsingi hakuna jambo gumu kupita kiasi katika kuigeuza biashara ndogo kuwa ya kati, au ya kati kuwa kubwa. Bila shaka unahitaji bidhaa, soko, fedha, watu na bahati kidogo.",
+      "p2": "Lakini kizuizi kikuu cha ukuaji mara nyingi kipo mahali pengine. Katika hatua fulani, kinachoizuia kampuni zaidi ni jinsi inavyoendeshwa.",
+      "h1": "Biashara ndogo hukua kwa sababu ya mmiliki wake",
+      "p3": "Anawajua wateja. Yeye mwenyewe hufanya maamuzi muhimu. Anajua nani anaweza kuaminiwa. Ana hisia ya fedha. Hukagua ubora binafsi. Kwa dakika chache anaweza kubadilisha uamuzi ambao kampuni kubwa ingehitaji wiki kadhaa kuufikia.",
+      "p4": "Na ndiyo maana biashara inakua. Lakini hufika wakati ambapo kile kilichokuwa faida yake kubwa zaidi huanza kuzuia ukuaji wowote zaidi.",
+      "p5": "Kampuni inakuwa kubwa mno kiasi cha kutoendelea kutoshea kichwani mwa mtu mmoja. Hiyo, kwa maoni yangu, ndiyo njia panda ya kwanza ya kweli.",
+      "h2": "Ili kuwa ya kati, mmiliki anapaswa kuachia sehemu ya biashara",
+      "p6": "Hili ni gumu zaidi kuliko linavyosikika. Inabidi uache kufanya mamia ya maamuzi wewe mwenyewe. Uwatafute watu watakaoelewa mambo fulani vizuri kuliko wewe. Uwakabidhi si kazi tu, bali pia haki ya kukosea.",
+      "p7": "Muundo unajitokeza, na uwajibikaji, vipimo, kanuni, uongozi wa kawaida. Na hapa kitendawili kinajitokeza: ili kuendelea kuidhibiti biashara inayokua, mmiliki anapaswa kuachana na sehemu ya udhibiti wake wa moja kwa moja.",
+      "p8": "Wale wasiofanya hivyo mara nyingi hubaki kuwa biashara ndogo nzuri sana kwa miaka mingi. Wale wanaoweza kufanya hivyo huwa za kati.",
+      "h3": "Hatua kutoka ya kati kwenda kubwa hufanya kazi kwa namna tofauti",
+      "p9": "Hapa haitoshi tena kuajiri wasimamizi wazuri na kuwakabidhi kazi ya uendeshaji. Kampuni inapaswa kujifunza kufanya kazi kama mfumo.",
+      "p10": "Mkakati unaacha kuishi kichwani mwa mmiliki peke yake. Maamuzi yanaacha kutegemea mahusiano binafsi peke yake. Kampuni inapaswa kuwa na uwezo wa kuwapata, kuwakuza na kuwabakisha viongozi imara. Utamaduni wa shirika unajitokeza — iwe mtu alikusudia kuujenga au la.",
+      "p11": "Na hitaji linajitokeza la kufikiria si tu jinsi ya kupata zaidi kesho, bali pia kampuni hii inapaswa kuwa ya aina gani baada ya miaka mitano au kumi.",
+      "h4": "Na hapa tena mmiliki anapaswa kubadilika",
+      "p12": "Inaonekana kwangu kwamba hadithi ya ukuaji wa kampuni kwa kiasi kikubwa ni hadithi ya jinsi nafasi ya mmiliki wake inavyobadilika. Mwanzoni yeye ni mfanyabiashara. Kisha anakuwa msimamizi. Kisha anapaswa kuwa mbunifu wa shirika. Na wakati fulani, anakuwa mtu anayeweka mwelekeo, anajenga timu na kufanya maamuzi machache yenye umuhimu wa kweli badala ya mamia ya maamuzi ya kila siku.",
+      "p13": "Si kila mfanyabiashara anataka kuitembea njia hiyo yote. Na hilo ni sawa. Lakini huwezi kujenga biashara kubwa huku ukiendelea kuiendesha kama ndogo.",
+      "h5": "Maswali ninayoanzia",
+      "p14": "Kwa hiyo kwangu ukuaji wa kampuni hauanzi na swali “tunaongezaje mauzo?”. Ningeuliza maswali mengine kwanza.",
+      "q1": "Unataka kuwa kampuni ya aina gani?",
+      "q2": "Ni nini kinachokuzuia kukua mara mbili au tatu leo?",
+      "q3": "Kingetokea nini kwa kampuni kama ungetoka ofisini kwa miezi mitatu kuanzia kesho?",
+      "q4": "Ni maamuzi gani ambayo bado hayawezi kufanywa bila wewe?",
+      "q5": "Je, kuna watu karibu nawe ambao ungewaamini kweli na biashara hii?",
+      "q6": "Je, timu ya leo ingeweza kuiendesha kampuni yenye ukubwa mara mbili ya hii?",
+      "q7": "Na zaidi ya yote: je, wewe mwenyewe uko tayari kuiendesha kampuni kwa namna tofauti na unavyoiendesha leo?",
+      "p15": "Majibu ya maswali hayo wakati mwingine yanasema mengi zaidi kuhusu mustakabali wa biashara kuliko modeli yake ya kifedha.",
+      "p16": "Sidhani kwamba biashara kubwa hujengwa kwa kichocheo cha siri. Katika hatua fulani unapaswa tu kubadilisha, kwa mpangilio: mkakati → modeli ya biashara → mfumo wa uongozi → timu → nafasi ya mmiliki. Na kila ngazi inayofuata ya kampuni inadai ubora tofauti kutoka kwa kila kimoja kati ya vipengele hivyo.",
+      "p17": "Ndiyo maana kazi ninayoiona ya kuvutia zaidi ni ile ya biashara iliyo hasa katika wakati wa mpito. Pale njia ya zamani ya uendeshaji bado inaleta fedha lakini imeanza kuzuia siku zijazo. Pale mmiliki anapoona kampuni ina uwezo wa zaidi, lakini bado haijawa wazi ni nini hasa kinachopaswa kubadilika ili kupiga hatua inayofuata.",
+      "p18": "Inaonekana kwangu kwamba ukuaji wa kweli huanza hasa na swali hilo."
+    }
+  },
+  "Footer": {
+    "cta": "Wakati mwingine mmiliki hahitaji mradi. Anahitaji mtu wa kuchambua naye hali na kufikia uamuzi.",
+    "ctaButton": "Niandikie →",
+    "colMenu": "Menyu",
+    "colCases": "Miradi",
+    "colBlog": "Makala",
+    "colContact": "Mawasiliano",
+    "appearance": "Mwonekano",
+    "designBy": "Si kila tatizo linahitaji mshauri",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazakhstan"
+  },
+  "ThemeSwitch": {
+    "label": "Mwonekano",
+    "light": "Mwanga",
+    "dark": "Giza",
+    "system": "Mfumo"
+  },
+  "LocaleSwitch": {
+    "label": "Lugha",
+    "more": "Matoleo yote"
+  },
+  "AuthorCard": {
+    "role": "Mkakati • Mageuzi • Watu",
+    "location": "Almaty, Kazakhstan",
+    "bio": "Ninafanya kazi na wamiliki, wakurugenzi wakuu na timu za uongozi wakati kampuni inapohamia hatua yake inayofuata ya ukuaji.",
+    "sinceLabel": "Kazini tangu"
+  },
+  "ContactForm": {
+    "title": "Tuwasiliane",
+    "description": "Acha anwani yako, nami nitaandika pale kutakapokuwa na kitu chenye thamani ya kusoma.",
+    "emailLabel": "Anwani ya barua pepe",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Jiandikishe",
+    "submitting": "Inatuma…",
+    "success": "Imekamilika. Angalia barua pepe yako.",
+    "unexpectedError": "Kuna hitilafu imetokea. Tafadhali jaribu tena.",
+    "validation": {
+      "emailRequired": "Weka anwani ya barua pepe",
+      "emailInvalid": "Hii haionekani kama anwani ya barua pepe",
+      "emailTooLong": "Anwani hiyo ni ndefu mno"
+    }
+  },
+  "StatusBadge": {
+    "label": "Hali ya huduma",
+    "healthy": "Inafanya kazi",
+    "unhealthy": "Haipatikani",
+    "checking": "Inakaguliwa…",
+    "uptime": "Upatikanaji {value}"
+  },
+  "About": {
+    "title": "Kuhusu mimi",
+    "lead": "Ukurasa huu upo ili kujaribu tawi la pili la uelekezaji lililotafsiriwa.",
+    "body": "Maudhui halisi yatafuata. Kila kitu kingine hapa tayari kinafanya kazi: uelekezaji wa lugha, metadata, mwonekano na ufikivu."
+  },
+  "NotFound": {
+    "title": "Ukurasa haukupatikana",
+    "description": "Huenda kiungo kimepitwa na wakati, au anwani ina hitilafu ya uandishi.",
+    "backHome": "Rudi mwanzo",
+    "record": {
+      "section": "Sehemu",
+      "entry": "Ingizo",
+      "status": "Hali",
+      "none": "hakuna"
+    }
+  },
+  "ErrorBoundary": {
+    "title": "Kuna kitu kimeharibika",
+    "description": "Hitilafu imeandikwa kwenye kumbukumbu. Unaweza kujaribu tena.",
+    "retry": "Jaribu tena",
+    "digest": "Msimbo wa hitilafu: {digest}"
+  }
+}

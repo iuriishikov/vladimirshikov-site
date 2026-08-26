@@ -1,26 +1,37 @@
+import { Blog } from '@/widgets/blog'
+import { Education } from '@/widgets/education'
 import { Hero } from '@/widgets/hero'
-import { ContactForm } from '@/features/contact-form'
-import { StatusBadge } from '@/features/health-status'
-import { AuthorCard } from '@/entities/author'
-import { Container } from '@/shared/ui'
+import { Partners } from '@/widgets/partners'
+import { Portrait } from '@/widgets/portrait'
+import { Profile } from '@/widgets/profile'
+import { Questions } from '@/widgets/questions'
+import { SelectedWorks } from '@/widgets/selected-works'
+import { Services } from '@/widgets/services'
 
 /**
- * The home page as a composition of lower layers. A view owns layout and
- * composition only — no business logic, no data fetching of its own.
+ * The page, in the order the source material argues it.
+ *
+ * Who this is → when he is useful → what he does → at what scale → for whom →
+ * where he trained → what he writes. That order is the argument, not the
+ * canvas's: the drawing put the work before the offer, which reads as a
+ * portfolio rather than as a case.
+ *
+ * A view owns composition and nothing else: no data fetching, no business
+ * logic, no styling beyond the order of the sections. Each section decides how
+ * it looks; this file decides what the page is.
  */
 export function HomeView() {
   return (
     <>
       <Hero />
-
-      <Container className="grid gap-6 pb-20 md:grid-cols-2">
-        <AuthorCard />
-
-        <div className="flex flex-col gap-6">
-          <StatusBadge />
-          <ContactForm />
-        </div>
-      </Container>
+      <Portrait />
+      <Profile />
+      <Questions />
+      <Services />
+      <SelectedWorks />
+      <Partners />
+      <Education />
+      <Blog />
     </>
   )
 }

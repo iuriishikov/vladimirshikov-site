@@ -1,7 +1,12 @@
 import { expect, routes, test } from './fixtures/test'
 
-/** Any locale the site does not serve — used to prove the 404 path works. */
-const UNSUPPORTED_LOCALE_PATH = '/de'
+/**
+ * A locale the site does not serve — used to prove the 404 path works.
+ *
+ * Chinese on purpose, and it will stay unserved: neither typeface the site
+ * loads has a Han glyph, so the edition could not be set even if it existed.
+ */
+const UNSUPPORTED_LOCALE_PATH = '/zh'
 
 /*
  * `localePrefix: 'always'` means there is no unprefixed page to land on, so the
@@ -35,8 +40,10 @@ test.describe('content negotiation at the root', () => {
     test.use({ locale: 'ja-JP' })
 
     test('falls back to the default locale', async ({ page }) => {
+      // English is the default: it is what an unmatched visitor gets, and what
+      // `x-default` points a crawler at.
       await page.goto(routes.root)
-      await expect(page).toHaveURL(/\/ru\/?$/)
+      await expect(page).toHaveURL(/\/en\/?$/)
     })
   })
 })
@@ -54,6 +61,69 @@ test.describe('localised routing', () => {
 
     await expect(page).toHaveURL(/\/en\/?$/)
     await expect(page.locator('html')).toHaveAttribute('lang', 'en')
+  })
+
+  test('opens the index and switches to an edition that is not in the bar', async ({ page }) => {
+    await page.goto(routes.home.ru)
+
+    const index = page.getByTestId('locale-index')
+    // Only the two primary editions are on show; the rest are behind the count.
+    await expect(page.getByTestId('locale-index-toggle')).toBeVisible()
+    await expect(index.getByRole('link')).toHaveCount(0)
+
+    await page.getByTestId('locale-index-toggle').click()
+
+    const kazakh = index.getByRole('link', { name: 'Қазақша' })
+    await expect(kazakh).toBeVisible()
+    await kazakh.click()
+
+    await expect(page).toHaveURL(/\/kk\/?$/)
+    await expect(page.locator('html')).toHaveAttribute('lang', 'kk')
+  })
+
+  test('shows the current edition in the bar when it is neither primary', async ({ page }) => {
+    // The bar has to say which edition you are reading, whichever it is.
+    await page.goto('/kk')
+
+    const bar = page.getByTestId('locale-switcher')
+    await expect(bar.getByTestId('locale-option-kk')).toHaveAttribute('aria-current', 'true')
+    await expect(bar.getByTestId('locale-option-en')).toBeVisible()
+    await expect(bar.getByTestId('locale-option-ru')).toBeVisible()
+  })
+
+  test('closes the index on Escape', async ({ page }) => {
+    await page.goto(routes.home.ru)
+
+    await page.getByTestId('locale-index-toggle').click()
+    await expect(page.getByTestId('locale-index').getByRole('link').first()).toBeVisible()
+
+    await page.keyboard.press('Escape')
+
+    await expect(page.getByTestId('locale-index').getByRole('link')).toHaveCount(0)
+  })
+
+  test('answers an unknown case or note with a 404, not a soft one', async ({ request }) => {
+    // A streaming fallback above these routes used to make every unknown slug
+    // answer 200 with a skeleton, which is exactly what Google files as a soft
+    // 404 and then indexes anyway.
+    for (const path of ['/en/cases/bogus', '/en/notes/bogus', '/en/nope']) {
+      const response = await request.get(path)
+      expect(response.status(), path).toBe(404)
+    }
+  })
+
+  test('renders the site’s own 404, not the framework’s', async ({ page }) => {
+    await page.goto(routes.notFound)
+
+    // Translated, headed, and with a way out — the stock Next screen has none
+    // of the three, and is what shows if the not-found boundary stops matching.
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('Страница не найдена')
+    await expect(page.getByTestId('site-header')).toBeVisible()
+    await expect(page.getByRole('link', { name: 'На главную' })).toHaveAttribute('href', '/ru')
+
+    // The ledger with the entry missing: two fields it cannot fill, one it can.
+    await expect(page.getByText('Раздел')).toBeVisible()
+    await expect(page.getByText('Статус')).toBeVisible()
   })
 
   test('answers an unsupported locale with a 404', async ({ page }) => {

@@ -1,0 +1,291 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov — strateji, dönüşüm, insan",
+      "description": "Şirket sahipleri, CEO'lar ve yönetim ekipleriyle, şirketin önünde yeni bir gelişim aşaması olduğu dönemlerde çalışıyorum."
+    },
+    "about": {
+      "title": "Hakkımda",
+      "description": "Vladimir Shikov ve yaptığı iş üzerine kısa bir not."
+    },
+    "notFound": {
+      "title": "Sayfa bulunamadı",
+      "description": "Burada böyle bir sayfa yok."
+    }
+  },
+  "Common": {
+    "skipToContent": "Ana içeriğe geç",
+    "loading": "Yükleniyor…",
+    "retry": "Yeniden dene",
+    "close": "Kapat"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Ana gezinme",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "contact": "İletişime geç →",
+    "nav": {
+      "home": "Ana sayfa",
+      "about": "Hakkımda",
+      "services": "Ne yapıyorum",
+      "cases": "Projeler",
+      "blog": "Yazılar"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Ortak",
+    "roleB": "TEAM LEAD",
+    "placeA": "Yaşadığı yer",
+    "placeB": "Almatı, Kazakistan",
+    "scopeA": "Çalıştığı kişiler",
+    "scopeB": "şirket sahipleri ve CEO'lar",
+    "statement": "Şirket sahipleri, CEO'lar ve yönetim ekipleriyle, şirketin önünde yeni bir gelişim aşaması olduğu dönemlerde çalışıyorum."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Hakkımda ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "TEAM LEAD ortağı",
+    "placeLine": "Strateji • Dönüşüm • İnsan",
+    "lead": "Şirketin içinden bakınca görülmesi zor olanı görmeye yardımcı oluyorum. Stratejik soruların ardında nadiren yalnızca strateji durur.",
+    "body": "Şirketin büyümesi, iş modelinden beklenenleri değiştirir. Yeni bir iş modeli, ekipten beklenenleri değiştirir. Yeni bir ekip ise şirket sahibinin kendi rolünü değiştirir. Bu yüzden işletmeye aynı anda üç mercekten bakıyorum: strateji, organizasyon, insan. Ve şirket sahibine, şirketin gidişatını gerçekten değiştirebilecek kararların hangileri olduğunu ayırt etmesinde yardımcı oluyorum.",
+    "experience": "Mesleki yolum birbirinden çok farklı üç ortamdan geçti: uluslararası danışmanlık, büyük ölçekli iş dünyası ve devlet kurumları. Yönetici değerlendirmesi alanında çalışan uluslararası bir şirketin Rusya birimini yönettim, Moskova'da on iki yılı aşkın süre PDP Group CIS'in başında bulundum, ardından Samruk-Kazyna grubunun kilit dönüşüm alanlarından birinden sorumlu oldum. Bugün TEAM LEAD ortağıyım; strateji, iş geliştirme, yönetim ekiplerinin dönüşümü ve şirketlerin en üst yöneticileriyle birebir çalışma alanlarıyla ilgileniyorum. Ayrıca Kazakistan Cumhuriyeti Yüksek Yargı Konseyi'nin yeterlilik komisyonu üyesiyim; yargıçlık görevlerine aday olanların değerlendirilmesine katılıyorum.",
+    "statValue1": "25+",
+    "statLabel1": "yıldır işletmeler ve yöneticilerle çalışıyorum",
+    "statValue2": "320.000+",
+    "statLabel2": "en büyük dönüşüm projesindeki çalışan sayısı",
+    "statValue3": "C-level",
+    "statLabel3": "en üst düzey yöneticilerin değerlendirilmesi, gelişimi ve desteklenmesi"
+  },
+  "Questions": {
+    "heading": "En çok işe yaradığım anlar",
+    "lead": "Şirketin bir danışmana daha ihtiyaç duyduğu anlar değil. Şirket sahibinin ya da en üst yöneticinin, şirketin içinde artık açık bir yanıtı kalmamış bir soruyla karşılaştığı anlar.",
+    "closing": "Böyle durumlarda benim işim, olan bitene serinkanlılıkla bakabilmek için alan açmak ve karmaşıklığı gerçekten alınabilecek birkaç net karara dönüştürmeye yardımcı olmaktır.",
+    "items": {
+      "q1": "Buradan sonra nereye gideceğiz?",
+      "q2": "Bir sonraki büyüme aşamasını hangi iş modeli taşıyacak?",
+      "q3": "Bugünkü ekip yeni stratejiyi hayata geçirebilir mi?",
+      "q4": "Şirketin bir sonraki en üst yöneticisi kim olabilir?",
+      "q5": "Şirkette neyin değişmesi gerekiyor, şirket sahibinin kendi rolünde neyin?"
+    }
+  },
+  "Services": {
+    "heading": "Ne yapıyorum",
+    "lead": "Uygulamada neredeyse her zaman tek bir sorunun farklı yüzleri olduğu ortaya çıkan dört alan.",
+    "items": {
+      "s1": {
+        "title": "Strateji",
+        "description": "Strateji oturumları ve büyüme stratejisinin tasarlanması. İşe araçlardan ve şablonlardan değil; pazardan, işin ekonomisinden, şirket sahibinin hedefinden, kısıtlardan ve fırsatlardan başlıyorum. Strateji bir girişimler listesiyle başlamaz; şu sorunun yanıtıyla başlar: gerçekten önemli olan şey uğruna nelerden vazgeçmeye hazırız?"
+      },
+      "s2": {
+        "title": "Dönüşüm",
+        "description": "Bugünkü yönetim modelinden yarın gerekecek olana giden yol: yapı, kurum kültürü, yönetim sistemi, yöneticilerin rolleri, kararların alınma biçimi, insanlar. Bu deneyim hem özel şirketleri hem de en büyük kurumsal ve devlet yapılarını kapsıyor."
+      },
+      "s3": {
+        "title": "Şirket sahibi ve CEO",
+        "description": "Bir şirketin en üst yöneticisinin tümüyle devredemeyeceği sorular her zaman vardır: strateji, ekip, halef, kriz, yeni bir iş, şirketteki kendi rolü. Kararı şirket sahibinin yerine ben vermiyorum; durumu, kararın daha açık göründüğü yükseklikten görmesine yardımcı oluyorum."
+      },
+      "s4": {
+        "title": "Ekip ve yönetim sürekliliği",
+        "description": "Strateji şirketin neye dönüşmesi gerektiğini belirler, ama onu hayata geçirenler somut insanlardır. Şirketi kimin daha ileri taşıyabileceğini, yöneticilerin gerçek potansiyelinin nerede olduğunu, kime daha büyük sorumluluk verilebileceğini ve bir gün en üst yöneticinin yerini kimin alabileceğini anlamaya yardımcı oluyorum."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Ölçek önemlidir",
+    "lead": "Ne büyüklükte işlerle çalışmak zorunda kaldığımı gösteren üç program.",
+    "viewCase": "Projeyi aç: {name}",
+    "meta": "Proje",
+    "back": "Ana sayfaya dön",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Kurum kültürünün dönüşümü",
+        "tag": "12 şirket · 320.000+ çalışan",
+        "summary": "Samruk-Kazyna grubunda kurum kültürünün dönüşümü: 12 ulusal şirket ve 320.000'den fazla çalışan.",
+        "detail": "Kurum kültürünü teşhis etmek ve yönetmek için tek bir metodoloji oluşturuldu, hedef davranış modelleri tanımlandı ve her şirket için dönüşüm yol haritaları hazırlandı."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Üretim yöneticilerinin gelişimi",
+        "tag": "En iyi uygulama seçildi",
+        "summary": "Philip Morris Ukrayna'da üretim yöneticileri için gelişim programı.",
+        "detail": "Üç yıl içinde yöneticilerin yetkinlikleri hedef düzeye ulaştı, ardından ileri eğitim bütçesi sıfıra indirildi. Program en iyi uygulama olarak kabul edildi ve şirketin diğer ofislerine önerildi."
+      },
+      "atom": {
+        "name": "Nükleer sanayi",
+        "caption": "Yeni bir sektör için kırk yıllık strateji",
+        "tag": "Rusya",
+        "summary": "Rusya'da, mevcut nükleer enerji kapasitesine dayanan yeni bir sektör için kırk yıllık gelişim stratejisi.",
+        "detail": "Hâlihazırda var olan nükleer enerji kapasitesine dayanarak, yeni bir sektörün kırk yıllık ufuktaki gelişim stratejisi üzerinde çalışma."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Şirketler",
+    "headingLine2": "ve kurumlar",
+    "lead": "Farklı yıllarda uluslararası şirketlerle, büyük özel işletmelerle ve devlet kurumlarıyla çalıştım.",
+    "marqueeLabel": "Şirketler ve kurumlar",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Kazakistan Yüksek Mahkemesi"
+    }
+  },
+  "Education": {
+    "heading": "Eğitim",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Lomonosov Moskova Devlet Üniversitesi",
+        "degree": "Psikoloji Fakültesi"
+      },
+      "e2": {
+        "school": "SSCB KGB Sınır Birlikleri Yüksek Askerî-Siyasi Okulu",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Yazılar",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Deneme]",
+        "meta": "Şirketin büyümesi",
+        "title": "Küçükten orta ölçeğe. Orta ölçekten büyüğe",
+        "excerpt": "Belirli bir noktada şirketi en çok sınırlayan şey, onun yönetilme biçimi olur."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Deneme",
+    "back": "Ana sayfaya dön",
+    "growth": {
+      "title": "Küçükten orta ölçeğe. Orta ölçekten büyüğe",
+      "lead": "Yıllardır şirketleri çok farklı gelişim aşamalarında izliyorum: kurucusunun yönettiği işletmelerden en büyük şirketlere kadar. Ve ne kadar çoğunu görürsem, oldukça basit bir düşünceye o kadar sık dönüyorum.",
+      "p1": "Aslına bakılırsa, küçük bir işletmeyi orta ölçekli, orta ölçekli bir işletmeyi büyük yapmakta imkânsız derecede zor bir şey yok. Elbette ürün, pazar, para, insan ve biraz da şans gerekiyor.",
+      "p2": "Ama büyümenin asıl engeli genellikle başka yerdedir. Belirli bir noktada şirketi en çok sınırlayan şey, onun yönetilme biçimi olur.",
+      "h1": "Küçük işletme sahibi sayesinde büyür",
+      "p3": "Müşterileri tanır. Kilit kararları kendisi alır. Kime güvenilebileceğini bilir. Parayı hisseder. Kaliteyi bizzat denetler. Büyük bir şirketin haftalarını alacak bir kararı birkaç dakikada değiştirebilir.",
+      "p4": "İşletme tam da bu yüzden büyür. Ama bir an gelir, bir zamanlar en büyük avantajı olan şey daha fazla büyümeyi sınırlamaya başlar.",
+      "p5": "Şirket, tek bir insanın kafasına sığmaya devam edemeyecek kadar büyür. Bence bu, ilk gerçek yol ayrımıdır.",
+      "h2": "Orta ölçekli olmak için sahibinin işin bir kısmını bırakması gerekir",
+      "p6": "Bu, göründüğünden çok daha zordur. Yüzlerce kararı bizzat almaktan vazgeçmek gerekir. Bazı konuları sizden daha iyi bilen insanlar bulmak gerekir. Onlara yalnızca işleri değil, yanılma hakkını da vermek gerekir.",
+      "p7": "Yapı, sorumluluk, göstergeler, kurallar ve düzenli yönetim ortaya çıkar. Ve burada bir paradoks belirir: büyüyen bir işletme üzerindeki kontrolü korumak için, sahibinin doğrudan kontrolün bir kısmından vazgeçmesi gerekir.",
+      "p8": "Bunu yapmayanlar çoğu zaman yıllarca çok iyi bir küçük işletme olarak kalır. Yapabilenler orta ölçekli olur.",
+      "h3": "Orta ölçekten büyüğe geçiş başka türlü işler",
+      "p9": "Burada artık iyi yöneticiler işe alıp operasyonel işi onlara devretmek yetmez. Şirketin bir sistem olarak çalışmayı öğrenmesi gerekir.",
+      "p10": "Strateji yalnızca şirket sahibinin kafasında durmaktan çıkar. Kararlar artık yalnızca kişisel ilişkilere dayanmaz. Şirketin güçlü yöneticiler bulmayı, yetiştirmeyi ve elde tutmayı bilmesi gerekir. Bir kurum kültürü oluşur; onunla özel olarak ilgilenmiş olsanız da olmasanız da.",
+      "p11": "Ve yalnızca yarın nasıl daha çok kazanılacağını değil, beş ya da on yıl sonra nasıl bir şirket olunması gerektiğini de düşünme ihtiyacı doğar.",
+      "h4": "Ve burada yeniden sahibinin değişmesi gerekir",
+      "p12": "Bana kalırsa bir şirketin büyüme hikâyesi, büyük ölçüde sahibinin rolünün değişme hikâyesidir. Önce girişimcidir. Sonra yönetici olur. Ardından organizasyonun mimarı olması gerekir. Ve bir noktada, yüzlerce günlük karar yerine yönü belirleyen, ekibi kuran ve gerçekten önemli birkaç kararı alan kişi olması gerekir.",
+      "p13": "Her girişimci bu yolun tamamını yürümek istemez. Bu da normaldir. Ama bir işi küçük bir işletme gibi yönetmeye devam ederek büyük bir şirket kuramazsınız.",
+      "h5": "Hangi sorularla başlıyorum",
+      "p14": "Bu yüzden bir şirketin büyümesi benim için “satışları nasıl artırırız?” sorusuyla başlamaz. Önce başka sorular sorardım.",
+      "q1": "Nasıl bir şirket olmak istiyorsunuz?",
+      "q2": "Bugün iki ya da üç kat büyümenizi ne engelliyor?",
+      "q3": "Yarından itibaren üç ay ofiste olmasanız şirkete ne olurdu?",
+      "q4": "Hangi kararlar hâlâ sizsiz alınamıyor?",
+      "q5": "Yanınızda, işi gerçekten emanet edebileceğiniz insanlar var mı?",
+      "q6": "Bugünkü ekip, bunun iki katı büyüklükte bir şirketi yönetebilir mi?",
+      "q7": "Ve hepsinden önemlisi: siz kendiniz şirketi bugün yönettiğinizden farklı biçimde yönetmeye hazır mısınız?",
+      "p15": "Bu soruların yanıtları, bir işletmenin geleceği hakkında bazen finansal modelden çok daha fazlasını anlatır.",
+      "p16": "Büyük işletmelerin gizli bir tarifle kurulduğunu düşünmüyorum. Belirli bir aşamada sırayla şunları değiştirmek gerekir: strateji → iş modeli → yönetim sistemi → ekip → şirket sahibinin rolü. Ve şirketin her yeni seviyesi bunların her birinden farklı bir nitelik ister.",
+      "p17": "Bu yüzden en çok, tam da geçiş anındaki bir işletmeyle çalışmak ilgimi çekiyor. Eski yönetim biçiminin hâlâ para kazandırdığı, ama geleceği sınırlamaya başladığı an. Sahibinin şirketin daha fazlasını yapabileceğini gördüğü, ama bir sonraki adımı atmak için tam olarak neyin değişmesi gerektiğinin henüz belli olmadığı an.",
+      "p18": "Bana kalırsa gerçek büyüme tam da bu soruyla başlıyor."
+    }
+  },
+  "Footer": {
+    "cta": "Bazen şirket sahibinin ihtiyaç duyduğu şey bir proje değildir. Durumu birlikte konuşabileceği ve bir karara varabileceği bir insana ihtiyaç duyar.",
+    "ctaButton": "Bana yazın →",
+    "colMenu": "Menü",
+    "colCases": "Projeler",
+    "colBlog": "Yazılar",
+    "colContact": "İletişim",
+    "appearance": "Görünüm",
+    "designBy": "Her sorun bir danışman gerektirmez",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almatı, Kazakistan"
+  },
+  "ThemeSwitch": {
+    "label": "Görünüm",
+    "light": "Açık",
+    "dark": "Koyu",
+    "system": "Sistem"
+  },
+  "LocaleSwitch": {
+    "label": "Dil",
+    "more": "Tüm sürümler"
+  },
+  "AuthorCard": {
+    "role": "Strateji • Dönüşüm • İnsan",
+    "location": "Almatı, Kazakistan",
+    "bio": "Şirket sahipleri, CEO'lar ve yönetim ekipleriyle, şirketin bir sonraki gelişim aşamasına geçtiği anda çalışıyorum.",
+    "sinceLabel": "Mesleğe başlangıç"
+  },
+  "ContactForm": {
+    "title": "İletişimde kalın",
+    "description": "Bir adres bırakın; burada okumaya değer bir şey olduğunda size yazayım.",
+    "emailLabel": "E-posta adresi",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Abone ol",
+    "submitting": "Gönderiliyor…",
+    "success": "Tamam. Posta kutunuzu kontrol edin.",
+    "unexpectedError": "Bir şeyler ters gitti. Lütfen yeniden deneyin.",
+    "validation": {
+      "emailRequired": "E-posta adresinizi girin",
+      "emailInvalid": "Bu bir e-posta adresine benzemiyor",
+      "emailTooLong": "Bu adres çok uzun"
+    }
+  },
+  "StatusBadge": {
+    "label": "Servis durumu",
+    "healthy": "Çalışıyor",
+    "unhealthy": "Erişilemiyor",
+    "checking": "Kontrol ediliyor…",
+    "uptime": "Çalışma süresi {value}"
+  },
+  "About": {
+    "title": "Hakkımda",
+    "lead": "Bu sayfa, yönlendirmenin ikinci yerelleştirilmiş dalını çalıştırmak için var.",
+    "body": "Gerçek içerik sonra gelecek. Buradaki her şey zaten çalışıyor: dile göre yönlendirme, meta veriler, tema ve erişilebilirlik."
+  },
+  "NotFound": {
+    "title": "Sayfa bulunamadı",
+    "description": "Bağlantı eskimiş ya da adreste bir yazım hatası olmuş olabilir.",
+    "backHome": "Ana sayfaya dön",
+    "record": {
+      "section": "Bölüm",
+      "entry": "Kayıt",
+      "status": "Durum",
+      "none": "yok"
+    }
+  },
+  "ErrorBoundary": {
+    "title": "Bir şey bozuldu",
+    "description": "Hata kaydedildi. Yeniden deneyebilirsiniz.",
+    "retry": "Yeniden dene",
+    "digest": "Hata kodu: {digest}"
+  }
+}

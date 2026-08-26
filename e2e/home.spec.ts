@@ -8,8 +8,9 @@ test.describe('home page', () => {
   test('renders the site chrome and the hero', async ({ page }) => {
     await expect(page.getByTestId('site-header')).toBeVisible()
     await expect(page.getByTestId('site-footer')).toBeVisible()
-    await expect(page.getByTestId('hero-title')).toBeVisible()
-    await expect(page.getByTestId('hero-cta')).toBeVisible()
+    // The hero name is the page's h1; asserting the role rather than a testid
+    // keeps this honest about the document outline.
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
   })
 
   test('carries exactly one first-level heading', async ({ page }) => {

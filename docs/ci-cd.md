@@ -23,7 +23,7 @@ splitting a CI job therefore never requires editing the branch protection rule.
 | `stale.yml`             | Daily schedule                                         | Marks and closes abandoned issues and PRs                           |
 | `release.yml`           | Push to `main` or `develop`                            | Runs semantic-release; tags and writes the changelog                |
 | `docker.yml`            | `workflow_call` (reusable)                             | Builds and pushes the multi-arch image, SBOM and provenance         |
-| `deploy.yml`            | Push to `develop`; tag `v*`; `release: published`      | Ships to staging or production, health-checks, rolls back           |
+| `deploy.yml`            | Push to `develop`; `workflow_dispatch` against a tag   | Ships to staging or production, health-checks, rolls back           |
 | `rollback.yml`          | `workflow_dispatch`                                    | Redeploys a previously published image tag                          |
 
 ---
@@ -86,6 +86,10 @@ A reusable workflow (`workflow_call`) — it has no trigger of its own and is in
 - Builds the standalone Next.js image for `linux/amd64` and `linux/arm64` with Buildx.
 - Pushes to **`ghcr.io/iuriishikov/vladimirshikov-site`**, tagged with the git SHA, the branch or
   release tag, and `latest` for stable releases.
+- Starts the pushed image and waits for `/api/health` before attesting it, under the same runtime
+  restrictions `docker-compose.yml` imposes: read-only root filesystem, `/tmp` and the Next.js cache
+  on tmpfs, all capabilities dropped, no new privileges. `pnpm build` passing says nothing about any
+  of those, and without this step the first process ever to run the image is production.
 - Generates an SBOM and a build provenance attestation, both attached to the image in GHCR.
 - Builds with `SKIP_ENV_VALIDATION=1`: the image is environment-agnostic, and validation happens on
   the server at container start with the real values.
@@ -97,10 +101,26 @@ is stored anywhere.
 
 ## `deploy.yml`
 
-| Trigger                          | Environment  | Approval          |
-| -------------------------------- | ------------ | ----------------- |
-| Push to `develop`                | `staging`    | None              |
-| Tag `v*` or `release: published` | `production` | Reviewer required |
+| Trigger                           | Environment  | Approval          |
+| --------------------------------- | ------------ | ----------------- |
+| Push to `develop`                 | `staging`    | None              |
+| `workflow_dispatch` against a tag | `production` | Reviewer required |
+| Tag `v*` or `release: published`  | `production` | Reviewer required |
+
+The last row is declared but does not fire for a routine release, and the distinction matters when
+you are waiting for a deployment that never starts. semantic-release creates the tag and the release
+with `GITHUB_TOKEN`, and GitHub raises no workflow run from an event that token caused. Production is
+therefore reached deliberately, by dispatching this workflow against the published tag:
+
+```bash
+gh workflow run deploy.yml --ref v1.0.0
+```
+
+`ref_type` is then `tag` and `ref_name` the version, which is what `resolve` already reads — the
+dispatch needs no inputs. The workflow file that runs is the one committed at that tag.
+
+A push to `develop` resolves to `staging`, and staging holds no server secrets on this project. That
+deployment builds and publishes the image, reports that there was nowhere to roll it out, and passes.
 
 The job calls `docker.yml` to produce the image, then connects to the VPS over SSH and runs the
 compose stack update. It polls `/api/health` and rolls back automatically if the new container does
@@ -185,6 +205,7 @@ production.
 | `SSH_USER`              | `staging`, `production` | Deploy user — a non-root account in the `docker` group       | Yes       |
 | `SSH_PRIVATE_KEY`       | `staging`, `production` | Private key for that user, deploy-only, no passphrase        | Yes       |
 | `SSH_KNOWN_HOSTS`       | `staging`, `production` | Pinned host key — prevents a man-in-the-middle on the deploy | Yes       |
+| `ACME_EMAIL`            | `staging`, `production` | Let's Encrypt contact, rendered into the server's `.env`     | Yes       |
 | `CODECOV_TOKEN`         | Repository              | Coverage upload from the `test` job                          | Optional  |
 | `LHCI_GITHUB_APP_TOKEN` | Repository              | Lighthouse CI status checks on PRs                           | Optional  |
 | `GITHUB_TOKEN`          | Provided by Actions     | GHCR push, releases, tags, PR comments                       | Automatic |
@@ -193,7 +214,7 @@ production.
 
 | Name          | Scope                   | Example                      | Purpose                                                           |
 | ------------- | ----------------------- | ---------------------------- | ----------------------------------------------------------------- |
-| `DEPLOY_PATH` | `staging`, `production` | `/opt/vladimirshikov-site`   | The checkout on the server that holds the compose stack           |
+| `DEPLOY_PATH` | `staging`, `production` | `~/vladimirshikov-site`      | The directory the rollout ships the compose stack into            |
 | `SITE_URL`    | `staging`, `production` | `https://vladimirshikov.com` | The public origin the workflow links to and health-checks against |
 
 `SITE_URL` is a **variable**, not a secret — a public URL by definition. It is a

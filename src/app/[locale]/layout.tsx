@@ -7,6 +7,7 @@ import type { ReactNode } from 'react'
 
 import { SiteFooter } from '@/widgets/site-footer'
 import { SiteHeader } from '@/widgets/site-header'
+import { fontVariables } from '@/shared/config/fonts'
 import { siteConfig } from '@/shared/config/site'
 import { routing } from '@/shared/i18n/routing'
 import { buildPageMetadata } from '@/shared/lib/seo'
@@ -69,7 +70,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   return (
     // next-themes writes `class="dark"` onto <html> before React hydrates, so
     // the server markup and the first client render legitimately differ here.
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} className={fontVariables} suppressHydrationWarning>
       <body className="flex min-h-dvh flex-col antialiased">
         <AppProviders locale={locale} messages={messages} nonce={nonce}>
           <SkipLink targetId={MAIN_CONTENT_ID}>{t('skipToContent')}</SkipLink>

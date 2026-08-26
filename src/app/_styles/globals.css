@@ -3,91 +3,168 @@
 /*
  * Tailwind CSS v4 is configured here, in CSS, rather than in a JS config file.
  *
- * Dark mode is class-driven (next-themes sets `class="dark"` on <html>) instead
- * of relying on `prefers-color-scheme`, because the user's explicit choice has
- * to win over the OS setting.
+ * Dark mode is class-driven (next-themes writes `class="dark"` on <html>)
+ * instead of relying on `prefers-color-scheme`, because the visitor's explicit
+ * choice has to win over the OS setting.
  */
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Design tokens. Colours are in oklch: it is perceptually uniform, so a
- * lightness change reads as the same step across every hue — which is what
- * makes a dark palette derivable from a light one instead of hand-tuned.
+ * Design tokens, taken from the Portfolio canvas.
+ *
+ * The design's own names (--ink, --mut, --line …) are mapped onto the semantic
+ * names the UI primitives already use, so `bg-background` and `text-muted-
+ * foreground` keep working and there is exactly one palette in the project.
  */
 :root {
   --radius: 0.625rem;
 
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.18 0.01 265);
+  /* Surfaces */
+  --background: #ffffff;
+  --foreground: #111110;
+  --foreground-soft: #3f3f3d;
+  --muted: #ebebe8;
+  /*
+   * The two quiet greys are darker than the canvas's #74746f and #8a8a86.
+   *
+   * Both are used on cards as well as on the page, and the card surface
+   * (#f2f2ef) is darker than paper, so it is the surface that decides. Measured
+   * with axe: the canvas values land at 4.18:1 and 3.48:1 there, under the
+   * 4.5:1 WCAG AA needs at 13-14px. These two clear it on the card (5.4:1 and
+   * 4.8:1) while keeping the two-step hierarchy the design relies on.
+   *
+   * Dark mode keeps the canvas values — they pass on #1a1a19 as they are.
+   */
+  --muted-foreground: #63635e;
+  --faint: #6a6a65;
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.01 265);
+  --card: #f2f2ef;
+  --card-foreground: #111110;
+  --panel: #ebebe8;
+  --tile: #f4f4f0;
+  --tile-border: #e7e7e2;
 
-  --muted: oklch(0.968 0.005 265);
-  --muted-foreground: oklch(0.52 0.015 265);
+  /* Lines and controls */
+  --border: #e6e6e2;
+  --input: #d9d9d5;
+  --control-border: #d9d9d5;
+  --ring: #111110;
 
-  --primary: oklch(0.48 0.16 265);
-  --primary-foreground: oklch(0.985 0.002 265);
+  /* Header glass */
+  --header-bg: rgba(255, 255, 255, 0.6);
+  --header-solid: rgba(255, 255, 255, 0.96);
+  --header-border: rgba(17, 17, 16, 0.06);
 
-  --secondary: oklch(0.968 0.005 265);
-  --secondary-foreground: oklch(0.24 0.02 265);
+  /* Actions — the design's primary button is ink on paper, blue on hover. */
+  --primary: #111110;
+  --primary-foreground: #ffffff;
+  --secondary: #ebebe8;
+  --secondary-foreground: #111110;
+  --accent: #ebebe8;
+  --accent-foreground: #111110;
+  --destructive: #e23a20;
+  --destructive-foreground: #ffffff;
+  --success: #3f8f28;
+  --success-foreground: #ffffff;
 
-  --accent: oklch(0.95 0.02 265);
-  --accent-foreground: oklch(0.24 0.02 265);
+  /* The pencil-sketch widget reads this to pick its stroke colour. */
+  --sketch-ink: #2b2925;
 
-  --destructive: oklch(0.58 0.21 27);
-  --destructive-foreground: oklch(0.985 0.002 265);
-
-  --success: oklch(0.62 0.15 150);
-  --success-foreground: oklch(0.985 0.002 265);
-
-  --border: oklch(0.92 0.006 265);
-  --input: oklch(0.92 0.006 265);
-  --ring: oklch(0.48 0.16 265);
+  color-scheme: light;
 }
 
 .dark {
-  --background: oklch(0.16 0.01 265);
-  --foreground: oklch(0.96 0.003 265);
+  --background: #0f0f0e;
+  --foreground: #f2f2ee;
+  --foreground-soft: #c6c6c1;
+  --muted: #161615;
+  --muted-foreground: #9c9c96;
+  --faint: #82827d;
 
-  --card: oklch(0.2 0.012 265);
-  --card-foreground: oklch(0.96 0.003 265);
+  --card: #1a1a19;
+  --card-foreground: #f2f2ee;
+  --panel: #161615;
+  --tile: #171716;
+  --tile-border: #242422;
 
-  --muted: oklch(0.26 0.012 265);
-  --muted-foreground: oklch(0.72 0.015 265);
+  --border: #262624;
+  --input: #3a3a37;
+  --control-border: #3a3a37;
+  --ring: #f2f2ee;
 
-  --primary: oklch(0.72 0.14 265);
-  --primary-foreground: oklch(0.16 0.01 265);
+  --header-bg: rgba(15, 15, 14, 0.55);
+  --header-solid: rgba(15, 15, 14, 0.96);
+  --header-border: rgba(255, 255, 255, 0.08);
 
-  --secondary: oklch(0.26 0.012 265);
-  --secondary-foreground: oklch(0.96 0.003 265);
+  --primary: #f2f2ee;
+  --primary-foreground: #0f0f0e;
+  --secondary: #262624;
+  --secondary-foreground: #f2f2ee;
+  --accent: #262624;
+  --accent-foreground: #f2f2ee;
+  --destructive: #e2543c;
+  --destructive-foreground: #0f0f0e;
+  --success: #5ed13d;
+  --success-foreground: #0f0f0e;
 
-  --accent: oklch(0.3 0.02 265);
-  --accent-foreground: oklch(0.96 0.003 265);
+  --sketch-ink: #d8d8d2;
 
-  --destructive: oklch(0.66 0.19 27);
-  --destructive-foreground: oklch(0.16 0.01 265);
-
-  --success: oklch(0.7 0.14 150);
-  --success-foreground: oklch(0.16 0.01 265);
-
-  --border: oklch(0.3 0.015 265);
-  --input: oklch(0.32 0.015 265);
-  --ring: oklch(0.72 0.14 265);
+  color-scheme: dark;
 }
 
 /*
- * `@theme inline` maps the tokens above onto Tailwind's utility namespaces, so
- * `bg-background`, `text-muted-foreground`, `ring-ring` and friends all exist
- * and follow the active theme automatically.
+ * Brand accents. They are deliberately outside the light/dark blocks: a case
+ * card's blue is the brand's blue in both themes, not a themed surface.
+ */
+:root {
+  --brand-lime: #e9ff2f;
+  --brand-blue: #2b4bff;
+  /*
+   * Darker than the canvas's #e23a20. That red carries white 12.5px labels at
+   * only 3.5:1 — and even at full opacity white reaches just 4.34:1 on it, so
+   * no amount of alpha tuning saves the card. This shade is the nearest one
+   * that puts white over the 4.5:1 line (5.5:1), and side by side the
+   * difference reads as the same red.
+   */
+  --brand-red: #c62f16;
+  --brand-lavender: #cbbcf6;
+  --brand-green: #5ed13d;
+  --brand-black: #141414;
+  --footer-bg: #0d0d0c;
+  --footer-foreground: #ffffff;
+  --footer-muted: #a8a8a3;
+  --footer-faint: #9a9a95;
+  --footer-line: rgba(255, 255, 255, 0.14);
+}
+
+/*
+ * `@theme inline` maps the tokens onto Tailwind's utility namespaces, so
+ * `bg-background`, `text-faint`, `border-tile-border` and friends all exist and
+ * follow the active theme automatically.
  */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
+  --color-foreground-soft: var(--foreground-soft);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-faint: var(--faint);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-panel: var(--panel);
+  --color-tile: var(--tile);
+  --color-tile-border: var(--tile-border);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-control-border: var(--control-border);
+  --color-ring: var(--ring);
+
+  --color-header-bg: var(--header-bg);
+  --color-header-solid: var(--header-solid);
+  --color-header-border: var(--header-border);
+
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
@@ -98,9 +175,18 @@
   --color-destructive-foreground: var(--destructive-foreground);
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
+
+  --color-brand-lime: var(--brand-lime);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-red: var(--brand-red);
+  --color-brand-lavender: var(--brand-lavender);
+  --color-brand-green: var(--brand-green);
+  --color-brand-black: var(--brand-black);
+  --color-footer-bg: var(--footer-bg);
+  --color-footer-foreground: var(--footer-foreground);
+  --color-footer-muted: var(--footer-muted);
+  --color-footer-faint: var(--footer-faint);
+  --color-footer-line: var(--footer-line);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -108,13 +194,26 @@
   --radius-xl: calc(var(--radius) + 4px);
 
   /*
-   * A system font stack: zero network requests, zero layout shift, and no
-   * build-time dependency on a font CDN. Swap in `next/font` here when the
-   * design calls for a specific typeface.
+   * Archivo first, Golos Text behind it: Archivo carries no Cyrillic, so
+   * Russian text falls through to the face that was drawn for it.
    */
   --font-sans:
-    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    var(--font-archivo), var(--font-golos), Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  /*
+   * The marquee track renders its list three times and shifts by exactly one
+   * copy, so the loop has no visible seam. `--marquee-duration` is set from the
+   * measured width at runtime, which keeps the configured speed in px/s true
+   * regardless of how wide the text turns out to be.
+   */
+  --animate-marquee: marquee var(--marquee-duration, 30s) linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(calc(-100% / 3));
+    }
+  }
 }
 
 @layer base {
@@ -124,7 +223,8 @@
 
   html {
     scroll-behavior: smooth;
-    /* Stop layout from shifting sideways when a page gains a scrollbar. */
+    /* The header is fixed; an anchor must not land underneath it. */
+    scroll-padding-top: 88px;
     scrollbar-gutter: stable;
     -webkit-text-size-adjust: 100%;
   }
@@ -135,21 +235,37 @@
     font-family: var(--font-sans);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    /* The hero name is deliberately wider than the viewport on small screens. */
+    overflow-x: hidden;
+  }
+
+  /* Theme changes cross-fade rather than snapping. */
+  body,
+  body * {
+    transition:
+      background-color 0.35s ease,
+      color 0.35s ease,
+      border-color 0.35s ease;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: var(--brand-lime);
+    color: #111110;
   }
 
   /*
    * A visible focus ring for keyboard users only. Removing focus styles is the
-   * single most common accessibility regression in a design system, so it is
-   * defined once, here, rather than per component.
+   * most common accessibility regression in a design system, so it is defined
+   * once, here, rather than per component.
    */
   :focus-visible {
     outline: 2px solid var(--color-ring);
     outline-offset: 2px;
-  }
-
-  ::selection {
-    background-color: var(--color-primary);
-    color: var(--color-primary-foreground);
   }
 
   /* Respect the OS-level request to stop moving things. */
@@ -158,12 +274,23 @@
       scroll-behavior: auto;
     }
 
-    *,
+    body,
+    body *,
     *::before,
     *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }

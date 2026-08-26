@@ -1,8 +1,14 @@
 # ADR 0009: Use next-intl for internationalisation
 
-- **Status**: Accepted
+- **Status**: Accepted; the locale set and the default locale are amended by
+  [ADR 0010](./0010-editions-bounded-by-the-typeface.md)
 - **Date**: 2026-08-24
 - **Related**: [ADR 0003](./0003-nextjs-app-router-and-rsc.md), [ADR 0002](./0002-feature-sliced-design.md)
+
+> **Amended.** The choice of next-intl, `localePrefix: 'always'` and everything below about routing,
+> plural rules and the request pipeline still stands. Two statements no longer do: the site publishes
+> forty locales rather than two, and English is the default rather than Russian. See
+> [ADR 0010](./0010-editions-bounded-by-the-typeface.md).
 
 ## Context
 

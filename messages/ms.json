@@ -1,0 +1,291 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov — strategi, transformasi, manusia",
+      "description": "Saya bekerja dengan pemilik, CEO dan pasukan pengurusan dalam situasi apabila perniagaan menghadapi tahap perkembangan seterusnya."
+    },
+    "about": {
+      "title": "Tentang saya",
+      "description": "Nota ringkas tentang Vladimir Shikov dan kerja yang dilakukannya."
+    },
+    "notFound": {
+      "title": "Halaman tidak ditemui",
+      "description": "Tiada halaman sebegitu di sini."
+    }
+  },
+  "Common": {
+    "skipToContent": "Langkau ke kandungan utama",
+    "loading": "Memuatkan…",
+    "retry": "Cuba lagi",
+    "close": "Tutup"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Navigasi utama",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu",
+    "contact": "Hubungi saya →",
+    "nav": {
+      "home": "Utama",
+      "about": "Tentang saya",
+      "services": "Kerja saya",
+      "cases": "Projek",
+      "blog": "Tulisan"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Rakan kongsi di",
+    "roleB": "TEAM LEAD",
+    "placeA": "Berpangkalan di",
+    "placeB": "Almaty, Kazakhstan",
+    "scopeA": "Bekerja dengan",
+    "scopeB": "pemilik dan CEO",
+    "statement": "Saya bekerja dengan pemilik, CEO dan pasukan pengurusan dalam situasi apabila perniagaan menghadapi tahap perkembangan seterusnya."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Tentang saya ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Rakan kongsi TEAM LEAD",
+    "placeLine": "Strategi • Transformasi • Manusia",
+    "lead": "Saya membantu melihat apa yang sukar dilihat dari dalam syarikat. Di sebalik soalan strategik, jarang sekali hanya ada strategi.",
+    "body": "Pertumbuhan mengubah tuntutan terhadap model perniagaan. Model perniagaan yang baharu mengubah tuntutan terhadap pasukan. Pasukan yang baharu mengubah peranan pemilik itu sendiri. Kerana itu saya melihat perniagaan melalui tiga lensa serentak — strategi, organisasi, manusia — dan membantu pemilik menentukan keputusan mana yang benar-benar mampu mengubah trajektori syarikat.",
+    "experience": "Kerjaya saya merentasi tiga persekitaran yang sangat berbeza: perundingan antarabangsa, perniagaan besar dan institusi negara. Saya mengetuai bahagian Rusia sebuah syarikat antarabangsa dalam bidang penilaian pemimpin, lebih 12 tahun mengetuai PDP Group CIS di Moscow, dan kemudian memegang salah satu aliran utama transformasi kumpulan Samruk-Kazyna. Hari ini saya rakan kongsi di TEAM LEAD, menangani strategi, pembangunan perniagaan, transformasi pasukan pengurusan dan kerja individu bersama ketua eksekutif. Saya juga anggota suruhanjaya kelayakan Majlis Kehakiman Tertinggi Republik Kazakhstan, menilai calon bagi jawatan kehakiman.",
+    "statValue1": "25+",
+    "statLabel1": "tahun bekerja dengan perniagaan dan pemimpinnya",
+    "statValue2": "320,000+",
+    "statLabel2": "pekerja dalam program transformasi yang terbesar",
+    "statValue3": "C-level",
+    "statLabel3": "penilaian, pembangunan dan sokongan ketua eksekutif"
+  },
+  "Questions": {
+    "heading": "Bila saya paling berguna",
+    "lead": "Bukan apabila sebuah syarikat memerlukan seorang lagi perunding. Tetapi apabila pemilik atau ketua eksekutif berdepan soalan yang jawapannya tidak lagi jelas di dalam perniagaan itu sendiri.",
+    "closing": "Dalam keadaan begitu, tugas saya ialah membuka ruang untuk melihat fakta dengan jernih, dan membantu menukar kerumitan itu kepada beberapa keputusan yang benar-benar boleh diambil.",
+    "items": {
+      "q1": "Ke mana kita bergerak selepas ini?",
+      "q2": "Model perniagaan yang mana akan menampung tahap pertumbuhan seterusnya?",
+      "q3": "Mampukah pasukan sedia ada melaksanakan strategi yang baharu?",
+      "q4": "Siapa yang boleh menjadi ketua eksekutif seterusnya?",
+      "q5": "Apa yang perlu berubah dalam syarikat — dan apa yang perlu berubah dalam peranan pemilik sendiri?"
+    }
+  },
+  "Services": {
+    "heading": "Apa yang saya lakukan",
+    "lead": "Empat bidang yang, dalam amalan, hampir selalu ternyata satu masalah yang sama dilihat dari sisi yang berbeza.",
+    "items": {
+      "s1": {
+        "title": "Strategi",
+        "description": "Sesi strategi dan penyusunan strategi pertumbuhan. Saya tidak bermula daripada alat dan templat, tetapi daripada pasaran, ekonomi perniagaan, ambisi pemilik, kekangan dan peluang. Strategi tidak bermula dengan senarai inisiatif; ia bermula dengan jawapan kepada satu soalan — apa yang sanggup kita lepaskan demi perkara yang benar-benar penting?"
+      },
+      "s2": {
+        "title": "Transformasi",
+        "description": "Perjalanan daripada model pengurusan hari ini kepada model yang diperlukan esok: struktur, budaya korporat, sistem pengurusan, peranan pemimpin, cara keputusan diambil, manusia. Pengalaman itu merangkumi perniagaan milik persendirian serta struktur korporat dan negara yang terbesar."
+      },
+      "s3": {
+        "title": "Pemilik dan CEO",
+        "description": "Seorang ketua eksekutif sentiasa memikul persoalan yang tidak dapat diserahkan sepenuhnya kepada orang lain: strategi, pasukan, pengganti, krisis, perniagaan baharu, peranannya sendiri dalam syarikat. Saya tidak mengambil keputusan itu bagi pihak pemilik — saya membantunya melihat keadaan dari ketinggian yang menjadikan keputusan itu jelas."
+      },
+      "s4": {
+        "title": "Pasukan dan penggantian",
+        "description": "Strategi menentukan syarikat perlu menjadi apa, tetapi yang melaksanakannya ialah orang yang sebenar. Saya membantu menentukan siapa yang mampu membawa syarikat ke hadapan, di mana letaknya potensi sebenar seorang pemimpin, siapa yang boleh diberi tanggungjawab lebih besar, dan siapa yang suatu hari nanti mampu mengambil alih jawatan tertinggi."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Skala itu penting",
+    "lead": "Tiga program yang menunjukkan sebesar mana tugas yang pernah dipikul dalam kerja ini.",
+    "viewCase": "Buka projek: {name}",
+    "meta": "Projek",
+    "back": "Ke laman utama",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformasi budaya korporat",
+        "tag": "12 syarikat · 320,000+ pekerja",
+        "summary": "Transformasi budaya korporat di seluruh kumpulan Samruk-Kazyna — 12 syarikat nasional dan lebih 320,000 pekerja.",
+        "detail": "Satu metodologi bersama untuk mendiagnosis dan mengurus budaya korporat dibangunkan, tingkah laku sasaran ditetapkan, dan peta jalan transformasi disediakan untuk setiap syarikat."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Pembangunan pemimpin pengeluaran",
+        "tag": "Diiktiraf sebagai amalan terbaik",
+        "summary": "Program pembangunan pemimpin pengeluaran di Philip Morris Ukraine.",
+        "detail": "Dalam tempoh tiga tahun kompetensi para pemimpin mencapai tahap sasaran, selepas itu bajet untuk latihan lanjutan dikurangkan kepada sifar. Program ini diiktiraf sebagai amalan terbaik dan disyorkan kepada pejabat syarikat yang lain."
+      },
+      "atom": {
+        "name": "Industri nuklear",
+        "caption": "Strategi empat puluh tahun bagi industri yang baharu",
+        "tag": "Rusia",
+        "summary": "Strategi pertumbuhan empat puluh tahun bagi sebuah industri baharu di Rusia, dibina atas kapasiti tenaga nuklear yang sedia ada.",
+        "detail": "Kerja menyusun strategi bagi industri baharu pada ufuk empat puluh tahun, berasaskan kapasiti tenaga nuklear yang sudah ada."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Syarikat",
+    "headingLine2": "dan institusi",
+    "lead": "Selama bertahun-tahun kerja ini merentasi korporasi antarabangsa, perniagaan persendirian yang besar dan institusi negara.",
+    "marqueeLabel": "Syarikat dan institusi",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Mahkamah Agung Kazakhstan"
+    }
+  },
+  "Education": {
+    "heading": "Pendidikan",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Universiti Negeri Moscow M. V. Lomonosov",
+        "degree": "Fakulti Psikologi"
+      },
+      "e2": {
+        "school": "Sekolah Tinggi Tentera-Politik Pengawal Sempadan KGB USSR",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Tulisan",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Esei]",
+        "meta": "Pertumbuhan syarikat",
+        "title": "Daripada kecil kepada sederhana. Daripada sederhana kepada besar",
+        "excerpt": "Pada satu ketika, perkara yang paling mengehadkan sebuah syarikat ialah cara ia diurus."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Esei",
+    "back": "Ke laman utama",
+    "growth": {
+      "title": "Daripada kecil kepada sederhana. Daripada sederhana kepada besar",
+      "lead": "Selama bertahun-tahun saya memerhatikan syarikat pada setiap tahap perkembangan, daripada perniagaan yang diurus sendiri oleh pengasasnya sehinggalah kepada korporasi yang terbesar. Dan semakin banyak yang saya lihat, semakin kerap saya kembali kepada satu fikiran yang agak mudah.",
+      "p1": "Pada dasarnya, tidak ada apa-apa yang terlalu sukar untuk menjadikan perniagaan kecil sebagai perniagaan sederhana, atau perniagaan sederhana sebagai perniagaan besar. Sudah tentu anda memerlukan produk, pasaran, wang, manusia dan sedikit nasib.",
+      "p2": "Tetapi halangan utama kepada pertumbuhan biasanya berada di tempat lain. Pada satu ketika, perkara yang paling mengehadkan sebuah syarikat ialah cara ia diurus.",
+      "h1": "Perniagaan kecil tumbuh kerana pemiliknya",
+      "p3": "Dia mengenali pelanggan. Dia sendiri yang mengambil keputusan utama. Dia tahu siapa yang boleh dipercayai. Dia mempunyai naluri terhadap wang. Dia memeriksa mutu secara peribadi. Dalam beberapa minit dia boleh menukar keputusan yang memerlukan berminggu-minggu di sebuah syarikat besar.",
+      "p4": "Dan justeru itulah sebabnya perniagaan itu tumbuh. Tetapi tiba satu ketika apabila apa yang dahulunya kelebihan terbesarnya mula mengehadkan pertumbuhan seterusnya.",
+      "p5": "Syarikat menjadi terlalu besar untuk terus muat di dalam kepala seorang manusia. Itulah, pada pandangan saya, persimpangan sebenar yang pertama.",
+      "h2": "Untuk menjadi sederhana, pemilik terpaksa melepaskan sebahagian perniagaannya",
+      "p6": "Ini jauh lebih sukar daripada bunyinya. Anda perlu berhenti mengambil ratusan keputusan sendiri. Mencari orang yang akan memahami sesetengah perkara lebih baik daripada anda. Menyerahkan kepada mereka bukan sahaja tugas, tetapi juga hak untuk melakukan kesilapan.",
+      "p7": "Muncullah struktur, akauntabiliti, petunjuk, peraturan, pengurusan yang teratur. Dan di sini timbul satu paradoks: untuk mengekalkan kawalan ke atas perniagaan yang sedang tumbuh, pemilik terpaksa melepaskan sebahagian kawalan langsungnya.",
+      "p8": "Mereka yang tidak pernah melakukannya sering kekal sebagai perniagaan kecil yang sangat baik selama bertahun-tahun. Mereka yang berjaya melakukannya menjadi sederhana.",
+      "h3": "Peralihan daripada sederhana kepada besar berjalan secara berbeza",
+      "p9": "Di sini tidak lagi memadai sekadar mengambil pengurus yang baik dan menyerahkan kerja operasi kepada mereka. Syarikat perlu belajar berfungsi sebagai satu sistem.",
+      "p10": "Strategi berhenti hidup hanya di dalam kepala pemilik. Keputusan berhenti bersandar hanya pada hubungan peribadi. Syarikat perlu mampu mencari, membesarkan dan mengekalkan pemimpin yang kuat. Budaya korporat muncul — sama ada sesiapa merancangnya atau tidak.",
+      "p11": "Dan muncul keperluan untuk memikirkan bukan sahaja cara memperoleh lebih banyak esok, tetapi juga syarikat seperti apa yang perlu dibentuk dalam lima atau sepuluh tahun.",
+      "h4": "Dan di sini pemilik terpaksa berubah sekali lagi",
+      "p12": "Pada hemat saya, kisah pertumbuhan sebuah syarikat sebahagian besarnya ialah kisah bagaimana peranan pemiliknya berubah. Mula-mula dia seorang usahawan. Kemudian dia menjadi pengurus. Selepas itu dia perlu menjadi arkitek sebuah organisasi. Dan pada satu ketika, menjadi orang yang menetapkan arah, membina pasukan dan mengambil beberapa keputusan yang benar-benar penting, bukannya ratusan keputusan harian.",
+      "p13": "Tidak setiap usahawan mahu menempuh keseluruhan jalan itu. Dan itu tidak mengapa. Tetapi anda tidak boleh membina perniagaan besar sambil terus mengurusnya seperti perniagaan kecil.",
+      "h5": "Soalan yang saya tanya lebih dahulu",
+      "p14": "Jadi bagi saya pertumbuhan sebuah syarikat tidak bermula dengan “bagaimana hendak menaikkan jualan?”. Saya akan bertanya soalan lain terlebih dahulu.",
+      "q1": "Anda mahu menjadi syarikat yang seperti apa?",
+      "q2": "Apa yang menghalang anda daripada tumbuh dua atau tiga kali ganda hari ini?",
+      "q3": "Apa yang akan berlaku kepada syarikat jika anda tiada di pejabat selama tiga bulan mulai esok?",
+      "q4": "Keputusan mana yang masih tidak boleh diambil tanpa anda?",
+      "q5": "Adakah ada orang di sekeliling anda yang benar-benar anda percayai untuk memegang perniagaan ini?",
+      "q6": "Mampukah pasukan hari ini menguruskan syarikat yang dua kali lebih besar daripada yang ada sekarang?",
+      "q7": "Dan yang paling utama: adakah anda sendiri bersedia mengurus syarikat dengan cara yang berbeza daripada cara anda mengurusnya hari ini?",
+      "p15": "Jawapan kepada soalan-soalan itu kadangkala mengatakan jauh lebih banyak tentang prospek sesebuah perniagaan berbanding model kewangannya.",
+      "p16": "Saya tidak fikir perniagaan besar dibina mengikut resipi rahsia. Pada satu ketika anda hanya perlu mengubah, mengikut urutan: strategi → model perniagaan → sistem pengurusan → pasukan → peranan pemilik. Dan setiap peringkat syarikat yang seterusnya menuntut mutu yang berbeza daripada setiap satu daripadanya.",
+      "p17": "Sebab itulah kerja yang paling menarik bagi saya ialah bersama perniagaan tepat pada saat peralihan. Apabila cara pengurusan yang lama masih menghasilkan wang tetapi sudah mula mengehadkan masa depan. Apabila pemilik nampak syarikatnya mampu berbuat lebih daripada itu, tetapi belum jelas apa sebenarnya yang perlu berubah untuk melangkah ke hadapan.",
+      "p18": "Pada saya, pertumbuhan yang sebenar bermula tepat dengan soalan itu."
+    }
+  },
+  "Footer": {
+    "cta": "Kadangkala pemilik tidak memerlukan sebuah projek. Dia memerlukan seseorang untuk memikirkan keadaannya bersama-sama, dan sampai kepada satu keputusan.",
+    "ctaButton": "Tulis kepada saya →",
+    "colMenu": "Menu",
+    "colCases": "Projek",
+    "colBlog": "Tulisan",
+    "colContact": "Hubungi",
+    "appearance": "Penampilan",
+    "designBy": "Tidak setiap masalah memerlukan perunding",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazakhstan"
+  },
+  "ThemeSwitch": {
+    "label": "Penampilan",
+    "light": "Cerah",
+    "dark": "Gelap",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Bahasa",
+    "more": "Semua edisi"
+  },
+  "AuthorCard": {
+    "role": "Strategi • Transformasi • Manusia",
+    "location": "Almaty, Kazakhstan",
+    "bio": "Saya bekerja dengan pemilik, CEO dan pasukan pengurusan pada saat sebuah syarikat beralih ke tahap perkembangan seterusnya.",
+    "sinceLabel": "Bekerja sejak"
+  },
+  "ContactForm": {
+    "title": "Kekal berhubung",
+    "description": "Tinggalkan alamat dan saya akan menulis apabila ada sesuatu di sini yang berbaloi dibaca.",
+    "emailLabel": "Alamat e-mel",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Langgan",
+    "submitting": "Menghantar…",
+    "success": "Selesai. Semak peti masuk anda.",
+    "unexpectedError": "Ada sesuatu yang tidak kena. Sila cuba lagi.",
+    "validation": {
+      "emailRequired": "Masukkan alamat e-mel",
+      "emailInvalid": "Itu tidak kelihatan seperti alamat e-mel",
+      "emailTooLong": "Alamat itu terlalu panjang"
+    }
+  },
+  "StatusBadge": {
+    "label": "Status perkhidmatan",
+    "healthy": "Beroperasi",
+    "unhealthy": "Tidak tersedia",
+    "checking": "Menyemak…",
+    "uptime": "Masa aktif {value}"
+  },
+  "About": {
+    "title": "Tentang saya",
+    "lead": "Halaman ini wujud untuk menguji cabang kedua penghalaan berbilang bahasa.",
+    "body": "Kandungan sebenar akan menyusul. Selain itu, semuanya di sini sudah berfungsi: penghalaan mengikut bahasa, metadata, tema dan kebolehaksesan."
+  },
+  "NotFound": {
+    "title": "Halaman tidak ditemui",
+    "description": "Pautan itu mungkin sudah lapuk, atau alamatnya mungkin tersalah taip.",
+    "backHome": "Ke laman utama",
+    "record": {
+      "section": "Bahagian",
+      "entry": "Entri",
+      "status": "Status",
+      "none": "tiada"
+    }
+  },
+  "ErrorBoundary": {
+    "title": "Ada sesuatu yang rosak",
+    "description": "Ralat itu telah direkodkan. Anda boleh cuba lagi.",
+    "retry": "Cuba lagi",
+    "digest": "Kod ralat: {digest}"
+  }
+}

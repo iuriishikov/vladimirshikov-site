@@ -1,0 +1,291 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov – strategija, transformacija, ljudi",
+      "description": "Radim s vlasnicima, glavnim direktorima i upravljačkim timovima u trenucima kada tvrtku čeka sljedeća faza razvoja."
+    },
+    "about": {
+      "title": "O meni",
+      "description": "Ukratko o Vladimiru Shikovu i o tome čime se bavi."
+    },
+    "notFound": {
+      "title": "Stranica nije pronađena",
+      "description": "Takve stranice ovdje nema."
+    }
+  },
+  "Common": {
+    "skipToContent": "Prijeđi na glavni sadržaj",
+    "loading": "Učitavanje…",
+    "retry": "Pokušajte ponovno",
+    "close": "Zatvori"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Glavna navigacija",
+    "openMenu": "Otvori izbornik",
+    "closeMenu": "Zatvori izbornik",
+    "contact": "Javite se →",
+    "nav": {
+      "home": "Početna",
+      "about": "O meni",
+      "services": "Što radim",
+      "cases": "Projekti",
+      "blog": "Članci"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner u",
+    "roleB": "TEAM LEAD",
+    "placeA": "Živi u",
+    "placeB": "Almaty, Kazahstan",
+    "scopeA": "Radi s",
+    "scopeB": "vlasnicima i direktorima",
+    "statement": "Radim s vlasnicima, glavnim direktorima i upravljačkim timovima u trenucima kada tvrtku čeka sljedeća faza razvoja."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ O meni ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partner u TEAM LEAD",
+    "placeLine": "Strategija • Transformacija • Ljudi",
+    "lead": "Pomažem vidjeti ono što je iznutra, iz same tvrtke, teško vidjeti. Iza strateškog pitanja rijetko stoji samo strategija.",
+    "body": "Rast mijenja ono što se traži od poslovnog modela. Novi poslovni model mijenja ono što se traži od tima. Novi tim mijenja ulogu samoga vlasnika. Zato na posao gledam kroz tri optike istodobno – strategija, organizacija, ljudi – i pomažem vlasniku odrediti koje odluke doista mogu promijeniti putanju tvrtke.",
+    "experience": "Moj je profesionalni put prošao kroz tri vrlo različite sredine: međunarodni konzalting, veliki posao i državne institucije. Vodio sam rusko predstavništvo međunarodne tvrtke za procjenu rukovodećih ljudi, više od 12 godina bio na čelu PDP Group CIS u Moskvi, a zatim odgovarao za jedan od ključnih smjerova transformacije grupe Samruk-Kazyna. Danas sam partner u TEAM LEAD, gdje se bavim strategijom, razvojem poslovanja, transformacijom upravljačkih timova i individualnim radom s prvim ljudima tvrtki. Također sam član kvalifikacijske komisije Vrhovnog sudbenog vijeća Republike Kazahstan i sudjelujem u procjeni kandidata za sudačke dužnosti.",
+    "statValue1": "25+",
+    "statLabel1": "godina rada s tvrtkama i njihovim voditeljima",
+    "statValue2": "320.000+",
+    "statLabel2": "zaposlenih u najvećem programu transformacije",
+    "statValue3": "C-level",
+    "statLabel3": "procjena, razvoj i podrška prvim ljudima tvrtki"
+  },
+  "Questions": {
+    "heading": "Kada sam najkorisniji",
+    "lead": "Ne onda kada tvrtki treba još jedan konzultant. Nego kada pred vlasnika ili prvog čovjeka dođe pitanje na koje unutar tvrtke više nema očitog odgovora.",
+    "closing": "U takvim je situacijama moj posao stvoriti prostor za trijezan pogled na činjenice i pomoći da se složenost pretvori u nekoliko odluka koje se doista mogu donijeti.",
+    "items": {
+      "q1": "Kamo dalje?",
+      "q2": "Koji će poslovni model iznijeti sljedeću fazu rasta?",
+      "q3": "Može li sadašnji tim provesti novu strategiju?",
+      "q4": "Tko može postati sljedeći prvi čovjek tvrtke?",
+      "q5": "Što se mora promijeniti u tvrtki – i što se mora promijeniti u ulozi samoga vlasnika?"
+    }
+  },
+  "Services": {
+    "heading": "Što radim",
+    "lead": "Četiri područja koja se u praksi gotovo uvijek pokažu kao jedan te isti problem viđen s različitih strana.",
+    "items": {
+      "s1": {
+        "title": "Strategija",
+        "description": "Strateške sesije i izrada strategije razvoja. Ne krećem od alata i predložaka, nego od tržišta, ekonomike posla, ambicije vlasnika, ograničenja i prilika. Strategija ne počinje popisom inicijativa, nego odgovorom na jedno pitanje: čega smo se spremni odreći zbog onoga što je doista važno?"
+      },
+      "s2": {
+        "title": "Transformacija",
+        "description": "Put od današnjeg modela upravljanja do onoga koji će biti potreban sutra: struktura, kultura, sustav upravljanja, uloge voditelja, način na koji se donose odluke, ljudi. To iskustvo obuhvaća privatne tvrtke jednako kao i najveće korporativne i državne strukture."
+      },
+      "s3": {
+        "title": "Vlasnik i glavni direktor",
+        "description": "Prvi čovjek tvrtke uvijek nosi pitanja koja se ne mogu do kraja delegirati: strategija, tim, nasljednik, kriza, novi posao, vlastita uloga u tvrtki. Ne donosim odluku umjesto vlasnika – pomažem mu vidjeti situaciju s one visine s koje odluka postaje očita."
+      },
+      "s4": {
+        "title": "Tim i nasljeđivanje",
+        "description": "Strategija određuje kakva tvrtka mora postati, ali provode je konkretni ljudi. Pomažem razumjeti tko može voditi tvrtku dalje, gdje je stvarni potencijal voditelja, kome se može povjeriti veća odgovornost i tko bi jednoga dana mogao preuzeti prvo mjesto."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Razmjer je važan",
+    "lead": "Tri programa po kojima se vidi koliko su velika bila pitanja koja je ovaj posao morao nositi.",
+    "viewCase": "Otvori projekt: {name}",
+    "meta": "Projekt",
+    "back": "Natrag na početnu",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformacija korporativne kulture",
+        "tag": "12 tvrtki · 320.000+ zaposlenih",
+        "summary": "Transformacija korporativne kulture u grupi Samruk-Kazyna – 12 nacionalnih tvrtki i više od 320.000 zaposlenih.",
+        "detail": "Stvorena je jedinstvena metodologija dijagnostike i upravljanja korporativnom kulturom, određeni su ciljni obrasci ponašanja i za svaku je tvrtku izrađena mapa puta transformacije."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Razvoj proizvodnih voditelja",
+        "tag": "Prepoznat kao najbolja praksa",
+        "summary": "Program razvoja proizvodnih voditelja u Philip Morris Ukraine.",
+        "detail": "Unutar tri godine kompetencije voditelja dosegle su ciljnu razinu, nakon čega je proračun za daljnju izobrazbu sveden na nulu. Program je prepoznat kao najbolja praksa i preporučen ostalim uredima tvrtke."
+      },
+      "atom": {
+        "name": "Nuklearna industrija",
+        "caption": "Četrdesetogodišnja strategija nove industrije",
+        "tag": "Rusija",
+        "summary": "Četrdesetogodišnja strategija razvoja nove industrije u Rusiji, izgrađena na postojećim kapacitetima nuklearne energetike.",
+        "detail": "Rad na strategiji nove industrije na horizontu od četrdeset godina, na temelju već postojećih kapaciteta nuklearne energetike."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Tvrtke",
+    "headingLine2": "i institucije",
+    "lead": "Kroz godine je taj posao prošao kroz međunarodne korporacije, velike privatne tvrtke i državne institucije.",
+    "marqueeLabel": "Tvrtke i institucije",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Vrhovni sud Kazahstana"
+    }
+  },
+  "Education": {
+    "heading": "Obrazovanje",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Moskovsko državno sveučilište M. V. Lomonosova",
+        "degree": "Fakultet psihologije"
+      },
+      "e2": {
+        "school": "Viša vojno-politička škola graničnih postrojbi KGB-a SSSR-a",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Članci",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Esej]",
+        "meta": "Rast tvrtke",
+        "title": "Od male tvrtke do srednje. Od srednje do velike",
+        "excerpt": "U jednom trenutku tvrtku najviše ograničava način na koji se njome upravlja."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Esej",
+    "back": "Natrag na početnu",
+    "growth": {
+      "title": "Od male tvrtke do srednje. Od srednje do velike",
+      "lead": "Mnogo godina promatram tvrtke u svim fazama razvoja, od onih koje vodi osnivač do najvećih korporacija. I što ih više vidim, to se češće vraćam jednoj prilično jednostavnoj misli.",
+      "p1": "Načelno, nema ničega nesavladivo teškog u tome da se od male tvrtke napravi srednja, a od srednje velika. Naravno, potrebni su proizvod, tržište, novac, ljudi i malo sreće.",
+      "p2": "No glavna je prepreka rastu obično negdje drugdje. U jednom trenutku tvrtku najviše ograničava način na koji se njome upravlja.",
+      "h1": "Mala tvrtka raste zahvaljujući svom vlasniku",
+      "p3": "On poznaje kupce. Ključne odluke donosi sam. Zna kome se može vjerovati. Ima osjećaj za novac. Kvalitetu provjerava osobno. U nekoliko minuta može promijeniti odluku za koju bi velikoj tvrtki trebali tjedni.",
+      "p4": "I upravo zato posao raste. No dolazi trenutak kada ono što je nekoć bilo najveća prednost počinje ograničavati daljnji rast.",
+      "p5": "Tvrtka postaje prevelika da bi i dalje stajala u glavi jednog čovjeka. To je, po mome sudu, prvo pravo raskrižje.",
+      "h2": "Da bi postala srednja, vlasnik mora pustiti dio posla iz ruku",
+      "p6": "To je mnogo teže nego što zvuči. Treba prestati sam donositi stotine odluka. Naći ljude koji će neke stvari razumjeti bolje od vas. Predati im ne samo zadatke, nego i pravo na pogrešku.",
+      "p7": "Pojavljuju se struktura, odgovornost, pokazatelji, pravila, redovito upravljanje. I tu se javlja paradoks: da bi zadržao kontrolu nad tvrtkom koja raste, vlasnik se mora odreći dijela izravne kontrole.",
+      "p8": "Oni koji to nikada ne učine često godinama ostaju vrlo dobra mala tvrtka. Oni kojima to uspije postaju srednji.",
+      "h3": "Prijelaz iz srednje u veliku ustrojen je drukčije",
+      "p9": "Ovdje više nije dovoljno zaposliti dobre menadžere i prepustiti im operativu. Tvrtka mora naučiti raditi kao sustav.",
+      "p10": "Strategija prestaje živjeti samo u vlasnikovoj glavi. Odluke se prestaju oslanjati samo na osobne odnose. Tvrtka mora znati pronaći, izgraditi i zadržati snažne voditelje. Nastaje korporativna kultura – bez obzira na to je li je itko namjerno gradio.",
+      "p11": "I javlja se potreba da se misli ne samo o tome kako sutra zaraditi više, nego i o tome kakva tvrtka ovo mora postati za pet ili deset godina.",
+      "h4": "I ovdje se vlasnik ponovno mora promijeniti",
+      "p12": "Čini mi se da je priča o rastu tvrtke uvelike priča o tome kako se mijenja uloga njezina vlasnika. Najprije je poduzetnik. Zatim postaje voditelj. Onda mora postati arhitekt organizacije. A u jednom trenutku i čovjek koji određuje smjer, gradi tim i donosi nekoliko doista važnih odluka umjesto stotina svakodnevnih.",
+      "p13": "Ne želi svaki poduzetnik prijeći cijeli taj put. I to je u redu. No ne može se izgraditi velika tvrtka ako se njome i dalje upravlja kao malom.",
+      "h5": "Pitanja od kojih krećem",
+      "p14": "Zato rast tvrtke za mene ne počinje pitanjem „kako povećati prodaju?”. Prvo bih postavio druga pitanja.",
+      "q1": "Kakva tvrtka želite postati?",
+      "q2": "Što vas danas sprječava da narastete dva ili tri puta?",
+      "q3": "Što bi se dogodilo s tvrtkom kada vas od sutra tri mjeseca ne bi bilo u uredu?",
+      "q4": "Koje se odluke još uvijek ne mogu donijeti bez vas?",
+      "q5": "Ima li oko vas ljudi kojima biste doista povjerili posao?",
+      "q6": "Može li današnji tim voditi tvrtku dvostruko veću od ove?",
+      "q7": "I prije svega: jeste li sami spremni tvrtkom upravljati drukčije nego što njome upravljate danas?",
+      "p15": "Odgovori na ta pitanja katkad govore mnogo više o izgledima posla nego njegov financijski model.",
+      "p16": "Ne mislim da se veliki posao gradi po nekom tajnom receptu. U jednom se trenutku jednostavno mora mijenjati, redom: strategija → poslovni model → sustav upravljanja → tim → uloga vlasnika. I svaka sljedeća razina tvrtke traži drukčiju kvalitetu od svakog od tih elemenata.",
+      "p17": "Zato mi je najzanimljivije raditi s tvrtkom upravo u trenutku prijelaza. Kada stari način upravljanja još donosi novac, ali je već počeo ograničavati budućnost. Kada vlasnik vidi da tvrtka može više, ali još nije jasno što se točno mora promijeniti da bi se napravio sljedeći korak.",
+      "p18": "Čini mi se da pravi rast počinje upravo tim pitanjem."
+    }
+  },
+  "Footer": {
+    "cta": "Vlasniku ponekad ne treba projekt. Treba mu čovjek s kojim će promisliti situaciju i donijeti odluku.",
+    "ctaButton": "Pišite mi →",
+    "colMenu": "Izbornik",
+    "colCases": "Projekti",
+    "colBlog": "Članci",
+    "colContact": "Kontakt",
+    "appearance": "Izgled",
+    "designBy": "Ne traži svaki problem konzultanta",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazahstan"
+  },
+  "ThemeSwitch": {
+    "label": "Izgled",
+    "light": "Svijetlo",
+    "dark": "Tamno",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Jezik",
+    "more": "Sva izdanja"
+  },
+  "AuthorCard": {
+    "role": "Strategija • Transformacija • Ljudi",
+    "location": "Almaty, Kazahstan",
+    "bio": "Radim s vlasnicima, glavnim direktorima i upravljačkim timovima u trenutku kada tvrtka prelazi u sljedeću fazu razvoja.",
+    "sinceLabel": "U struci od"
+  },
+  "ContactForm": {
+    "title": "Ostanimo u vezi",
+    "description": "Ostavite adresu i javit ću se kada ovdje bude nešto vrijedno čitanja.",
+    "emailLabel": "Adresa e-pošte",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Pretplatite se",
+    "submitting": "Šaljemo…",
+    "success": "Gotovo. Provjerite poštu.",
+    "unexpectedError": "Nešto je pošlo po zlu. Pokušajte ponovno.",
+    "validation": {
+      "emailRequired": "Unesite adresu e-pošte",
+      "emailInvalid": "Ovo ne izgleda kao adresa e-pošte",
+      "emailTooLong": "Ta je adresa predugačka"
+    }
+  },
+  "StatusBadge": {
+    "label": "Stanje usluge",
+    "healthy": "Radi",
+    "unhealthy": "Nedostupno",
+    "checking": "Provjeravamo…",
+    "uptime": "Dostupnost {value}"
+  },
+  "About": {
+    "title": "O meni",
+    "lead": "Ova stranica postoji da bi se iskušala druga lokalizirana grana usmjeravanja.",
+    "body": "Pravi sadržaj slijedi. Sve ostalo ovdje već radi: usmjeravanje po jezičnim verzijama, metapodaci, tema i pristupačnost."
+  },
+  "NotFound": {
+    "title": "Stranica nije pronađena",
+    "description": "Poveznica je možda zastarjela ili je u adresi tipfeler.",
+    "backHome": "Natrag na početnu",
+    "record": {
+      "section": "Odjeljak",
+      "entry": "Unos",
+      "status": "Status",
+      "none": "nema"
+    }
+  },
+  "ErrorBoundary": {
+    "title": "Nešto se pokvarilo",
+    "description": "Pogreška je zabilježena. Možete pokušati ponovno.",
+    "retry": "Pokušajte ponovno",
+    "digest": "Kod pogreške: {digest}"
+  }
+}

@@ -94,37 +94,50 @@ In GitHub, once:
 
 ## First-time setup
 
-`DEPLOY_PATH` (default `/opt/vladimirshikov-site`) is a checkout of this repository. The deploy job
-runs `./scripts/deploy.sh` from it, so the compose files and the `Caddyfile` come from git.
+`DEPLOY_PATH` is a plain directory owned by the deploy user. It is **not** a checkout: the deploy job
+ships the four files the server needs — `docker-compose.yml`, `docker-compose.staging.yml`,
+`Caddyfile` and `scripts/deploy.sh` — from the runner on every rollout, and everything else the
+server runs comes out of the image.
+
+That is deliberate. A checkout would mean bootstrapping a clone by hand before the first deploy, and,
+for a private repository, giving the box a second credential purely so it could read its own source.
+It would also let the server drift from the commit being deployed.
+
+The directory lives under the deploy user's home rather than in `/opt` for the same reason: `/opt`
+needs root to create, and nothing else here needs root at all. Nothing depends on the location — the
+only bind mount in the compose file is `./Caddyfile`, which is relative to it.
 
 ```bash
-# as the deploy user, on the VPS
-sudo mkdir -p /opt/vladimirshikov-site
-sudo chown "$USER":"$USER" /opt/vladimirshikov-site
-git clone https://github.com/iuriishikov/vladimirshikov-site.git /opt/vladimirshikov-site
-cd /opt/vladimirshikov-site
+# as the deploy user, on the VPS — no sudo, and nothing to clone
+mkdir -p ~/vladimirshikov-site
+cd ~/vladimirshikov-site
 ```
 
-Then create the one file that is _not_ in git — `.env`, beside the compose file:
+That is the whole of it. `.env` is **not** written by hand either: the deploy job renders it from the
+environment's own configuration on every rollout, so it looks like this and nobody types it.
 
 ```dotenv
-# Read by scripts/deploy.sh and by compose interpolation
+# Rendered by the deploy job from vars.SITE_URL and secrets.ACME_EMAIL
 SITE_DOMAIN=vladimirshikov.com
 ACME_EMAIL=you@example.com
 
 # Read at runtime by the application (src/shared/config/env.ts)
 SITE_URL=https://vladimirshikov.com
 APP_ENV=production
-APP_VERSION=0.0.0
+APP_VERSION=v1.4.0
 API_BASE_URL=
 
-# Written by scripts/deploy.sh on every rollout — do not hand-edit
+# Written by scripts/deploy.sh on every rollout
 IMAGE=ghcr.io/iuriishikov/vladimirshikov-site:latest
 ```
 
-```bash
-chmod 600 .env
-```
+A hand-edit on the server does not survive the next deploy, which is the point: this file used to be
+the only piece of the deployment that nobody could see from GitHub, nothing could rebuild and no
+review ever covered — and it held a second copy of `SITE_URL`, which the health check already reads
+from the environment. Two fields that must agree are a field that will one day disagree.
+
+`SITE_DOMAIN` is derived from `SITE_URL` rather than stored beside it, for the same reason. The file
+is written under `umask 077` rather than chmod'ed afterwards, so it is never briefly world-readable.
 
 Three things to understand about this file:
 
@@ -155,9 +168,13 @@ up; never `docker volume prune` it away.
 
 ## How a deploy runs
 
-`deploy.yml` fires on a push to `develop` (staging) or on a `v*` tag / published release (production,
-gated on reviewer approval). Its `resolve` job decides the environment and image tag in one place, so
-no later job has to branch on the event shape.
+`deploy.yml` fires on a push to `develop` (staging) and on a `workflow_dispatch` against a `v*` tag
+(production, gated on reviewer approval). Its `resolve` job decides the environment and image tag in
+one place, so no later job has to branch on the event shape.
+
+The tag and `release: published` triggers are declared too, but a release cut by semantic-release
+starts neither: GitHub raises no workflow run from an event caused by `GITHUB_TOKEN`. Going to
+production is `gh workflow run deploy.yml --ref v1.0.0`, or the same choice in the Actions UI.
 
 Then, in order:
 
@@ -286,7 +303,7 @@ gh api "/users/iuriishikov/packages/container/vladimirshikov-site/versions" \
 ### Last resort, on the box
 
 ```bash
-cd /opt/vladimirshikov-site
+cd ~/vladimirshikov-site
 make deploy-prod DEPLOY_IMAGE=ghcr.io/iuriishikov/vladimirshikov-site:v1.3.2
 # staging: make deploy-staging DEPLOY_IMAGE=…:develop
 ```
@@ -328,7 +345,7 @@ is not worth the extra moving parts.
 ## Logs and observability
 
 ```bash
-cd /opt/vladimirshikov-site
+cd ~/vladimirshikov-site
 
 docker compose -f docker-compose.yml ps                       # what runs, and whether it is healthy
 docker compose -f docker-compose.yml logs -f --tail=200 web   # application logs

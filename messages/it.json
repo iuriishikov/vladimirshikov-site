@@ -1,0 +1,291 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov — strategia, trasformazione, persone",
+      "description": "Lavoro con proprietari, CEO e gruppi dirigenti nelle situazioni in cui l'azienda si prepara alla fase successiva di sviluppo."
+    },
+    "about": {
+      "title": "Chi sono",
+      "description": "Breve nota su Vladimir Shikov e sul lavoro che fa."
+    },
+    "notFound": {
+      "title": "Pagina non trovata",
+      "description": "Qui una pagina del genere non c'è."
+    }
+  },
+  "Common": {
+    "skipToContent": "Vai al contenuto principale",
+    "loading": "Caricamento…",
+    "retry": "Riprova",
+    "close": "Chiudi"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Navigazione principale",
+    "openMenu": "Apri il menu",
+    "closeMenu": "Chiudi il menu",
+    "contact": "Contatti →",
+    "nav": {
+      "home": "Home",
+      "about": "Chi sono",
+      "services": "Cosa faccio",
+      "cases": "Progetti",
+      "blog": "Articoli"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner di",
+    "roleB": "TEAM LEAD",
+    "placeA": "Vive a",
+    "placeB": "Almaty, Kazakistan",
+    "scopeA": "Lavora con",
+    "scopeB": "proprietari e CEO",
+    "statement": "Lavoro con proprietari, CEO e gruppi dirigenti nelle situazioni in cui l'azienda si prepara alla fase successiva di sviluppo."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Chi sono ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partner di TEAM LEAD",
+    "placeLine": "Strategia • Trasformazione • Persone",
+    "lead": "Aiuto a vedere ciò che dall'interno dell'azienda è difficile vedere. Dietro le domande strategiche raramente c'è soltanto la strategia.",
+    "body": "La crescita cambia ciò che si chiede al modello di business. Un nuovo modello di business cambia ciò che si chiede alla squadra. Una nuova squadra cambia il ruolo stesso del proprietario. Per questo guardo l'azienda attraverso tre lenti insieme – strategia, organizzazione, persone – e aiuto il proprietario a capire quali decisioni possono davvero cambiare la traiettoria dell'azienda.",
+    "experience": "Il mio percorso professionale è passato attraverso tre ambienti molto diversi: la consulenza internazionale, la grande impresa e le istituzioni statali. Ho guidato la divisione russa di una società internazionale specializzata nella valutazione dei dirigenti, per oltre 12 anni sono stato a capo di PDP Group CIS a Mosca e poi ho seguito una delle direzioni chiave della trasformazione del gruppo Samruk-Kazyna. Oggi sono partner di TEAM LEAD, dove mi occupo di strategia, sviluppo del business, trasformazione dei gruppi dirigenti e lavoro individuale con i vertici aziendali. Sono inoltre membro della commissione di qualificazione del Consiglio Supremo Giudiziario della Repubblica del Kazakistan e partecipo alla valutazione dei candidati alle cariche giudiziarie.",
+    "statValue1": "25+",
+    "statLabel1": "anni di lavoro con le imprese e i loro dirigenti",
+    "statValue2": "320.000+",
+    "statLabel2": "dipendenti nel più grande progetto di trasformazione",
+    "statValue3": "C-level",
+    "statLabel3": "valutazione, sviluppo e accompagnamento dei vertici aziendali"
+  },
+  "Questions": {
+    "heading": "Quando sono più utile",
+    "lead": "Non quando a un'azienda serve un consulente in più. Ma quando davanti al proprietario o all'amministratore delegato si presenta una domanda a cui dentro l'azienda non c'è più una risposta ovvia.",
+    "closing": "In queste situazioni il mio compito è creare lo spazio per guardare i fatti con lucidità e aiutare a trasformare la complessità in poche decisioni chiare, che si possano davvero prendere.",
+    "items": {
+      "q1": "In che direzione muoversi adesso?",
+      "q2": "Quale modello di business reggerà la fase successiva di crescita?",
+      "q3": "La squadra attuale è in grado di realizzare la nuova strategia?",
+      "q4": "Chi può diventare il prossimo amministratore delegato?",
+      "q5": "Che cosa deve cambiare nell'azienda – e che cosa deve cambiare nel ruolo stesso del proprietario?"
+    }
+  },
+  "Services": {
+    "heading": "Cosa faccio",
+    "lead": "Quattro ambiti che, nella pratica, quasi sempre si rivelano un unico problema visto da lati diversi.",
+    "items": {
+      "s1": {
+        "title": "Strategia",
+        "description": "Sessioni strategiche e costruzione di una strategia di crescita. Non parto da strumenti e modelli standard, ma dal mercato, dall'economia dell'azienda, dall'ambizione del proprietario, dai vincoli e dalle possibilità. La strategia non comincia con un elenco di iniziative: comincia dalla risposta a una domanda – a che cosa siamo disposti a rinunciare per ciò che conta davvero?"
+      },
+      "s2": {
+        "title": "Trasformazione",
+        "description": "Il percorso dal modello di gestione di oggi a quello che servirà domani: struttura, cultura aziendale, sistema di governo, ruoli dei dirigenti, modo in cui si prendono le decisioni, persone. Questa esperienza comprende sia le imprese private sia le più grandi strutture corporate e statali."
+      },
+      "s3": {
+        "title": "Proprietario e CEO",
+        "description": "Chi guida un'azienda ha sempre domande che non si possono delegare del tutto: la strategia, la squadra, il successore, una crisi, un nuovo business, il proprio ruolo nell'azienda. Non prendo la decisione al posto del proprietario: lo aiuto a vedere la situazione dall'altezza da cui la decisione diventa evidente."
+      },
+      "s4": {
+        "title": "Squadra e successione",
+        "description": "La strategia definisce che cosa l'azienda deve diventare, ma a realizzarla sono persone concrete. Aiuto a capire chi è in grado di portare avanti l'azienda, dove sta il potenziale reale dei dirigenti, a chi si può affidare una responsabilità maggiore e chi un giorno potrà prendere il posto di chi la guida oggi."
+      }
+    }
+  },
+  "Works": {
+    "heading": "La scala conta",
+    "lead": "Tre progetti da cui si vede la dimensione dei compiti con cui mi è capitato di lavorare.",
+    "viewCase": "Apri il progetto: {name}",
+    "meta": "Progetto",
+    "back": "Torna alla home",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Trasformazione della cultura aziendale",
+        "tag": "12 aziende · 320.000+ dipendenti",
+        "summary": "Trasformazione della cultura aziendale del gruppo Samruk-Kazyna – 12 società nazionali e più di 320.000 dipendenti.",
+        "detail": "È stata creata una metodologia unica per la diagnosi e la gestione della cultura aziendale, sono stati definiti i comportamenti attesi e sono state elaborate le tabelle di marcia della trasformazione per ciascuna società."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Sviluppo dei responsabili di produzione",
+        "tag": "Riconosciuto come best practice",
+        "summary": "Programma di sviluppo dei responsabili di produzione di Philip Morris Ucraina.",
+        "detail": "In tre anni le competenze dei responsabili hanno raggiunto il livello obiettivo e il budget per la formazione successiva è stato azzerato. Il programma è stato riconosciuto come best practice e raccomandato agli altri uffici dell'azienda."
+      },
+      "atom": {
+        "name": "Industria nucleare",
+        "caption": "Una strategia a quarant'anni per un settore nuovo",
+        "tag": "Russia",
+        "summary": "Strategia di sviluppo a quarant'anni per un nuovo settore in Russia, costruita sulle capacità esistenti dell'energia nucleare.",
+        "detail": "Lavoro sulla strategia di sviluppo di un nuovo settore su un orizzonte di quarant'anni, sulla base delle capacità già esistenti dell'energia nucleare."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Aziende",
+    "headingLine2": "e istituzioni",
+    "lead": "Negli anni il lavoro è passato attraverso multinazionali, grandi imprese private e istituzioni statali.",
+    "marqueeLabel": "Aziende e istituzioni",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Corte Suprema del Kazakistan"
+    }
+  },
+  "Education": {
+    "heading": "Formazione",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Università statale di Mosca M. V. Lomonosov",
+        "degree": "Facoltà di Psicologia"
+      },
+      "e2": {
+        "school": "Scuola superiore militare-politica delle truppe di frontiera del KGB dell'URSS",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Articoli",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Saggio]",
+        "meta": "Crescita dell'azienda",
+        "title": "Da piccola a media impresa. Da media a grande",
+        "excerpt": "A un certo punto il limite principale di un'azienda diventa il modo in cui viene gestita."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Saggio",
+    "back": "Torna alla home",
+    "growth": {
+      "title": "Da piccola a media impresa. Da media a grande",
+      "lead": "Da molti anni osservo aziende in stadi di sviluppo molto diversi: dall'impresa guidata dal fondatore ai gruppi più grandi. E più ne vedo, più spesso torno a un pensiero piuttosto semplice.",
+      "p1": "In linea di principio non c'è nulla di incredibilmente difficile nel fare di una piccola impresa un'impresa media. E di una media una grande. Servono naturalmente un prodotto, un mercato, denaro, persone e un po' di fortuna.",
+      "p2": "Ma la barriera principale alla crescita di solito sta altrove. A un certo punto il limite principale di un'azienda diventa il modo in cui viene gestita.",
+      "h1": "La piccola impresa cresce grazie al suo proprietario",
+      "p3": "Conosce i clienti. Prende personalmente le decisioni chiave. Sa di chi ci si può fidare. Ha il senso del denaro. Controlla di persona la qualità. In pochi minuti può cambiare una decisione per la quale a una grande azienda servirebbero settimane.",
+      "p4": "Ed è proprio per questo che l'impresa cresce. Ma arriva il momento in cui ciò che un tempo era il suo vantaggio principale comincia a limitare la crescita successiva.",
+      "p5": "L'azienda diventa troppo grande per continuare a stare nella testa di una sola persona. E questo, a mio avviso, è il primo vero bivio.",
+      "h2": "Per diventare media, il proprietario deve lasciare andare una parte dell'azienda",
+      "p6": "È molto più difficile di quanto sembri. Bisogna smettere di prendere personalmente centinaia di decisioni. Trovare persone che in certi ambiti capiranno le cose meglio di lui. Affidare loro non solo i compiti, ma anche il diritto di sbagliare.",
+      "p7": "Compaiono la struttura, la responsabilità, gli indicatori, le regole, la gestione regolare. E qui emerge un paradosso: per mantenere il controllo su un'azienda che cresce, il proprietario deve rinunciare a una parte del controllo diretto.",
+      "p8": "Chi non lo fa resta spesso per anni una piccola impresa molto valida. Chi ci riesce diventa un'impresa media.",
+      "h3": "Il passaggio da media a grande funziona in modo diverso",
+      "p9": "Qui non basta più assumere buoni dirigenti e delegare loro il lavoro operativo. L'azienda deve imparare a funzionare come un sistema.",
+      "p10": "La strategia smette di vivere solo nella testa del proprietario. Le decisioni smettono di reggersi soltanto sui rapporti personali. L'azienda deve saper trovare, far crescere e trattenere dirigenti forti. Nasce una cultura aziendale – che qualcuno se ne sia occupato di proposito oppure no.",
+      "p11": "E compare la necessità di pensare non solo a come guadagnare di più domani, ma anche a che azienda si debba diventare fra cinque o dieci anni.",
+      "h4": "E qui il proprietario deve cambiare di nuovo",
+      "p12": "Mi sembra, in generale, che la storia della crescita di un'azienda sia in gran parte la storia di come cambia il ruolo del suo proprietario. All'inizio è un imprenditore. Poi diventa un dirigente. Poi deve diventare l'architetto di un'organizzazione. E a un certo punto la persona che indica la direzione, forma la squadra e prende alcune decisioni davvero importanti al posto di centinaia di decisioni quotidiane.",
+      "p13": "Non ogni imprenditore vuole percorrere tutta questa strada. Ed è normale. Ma non si può costruire una grande impresa continuando a gestirla come una piccola.",
+      "h5": "Le domande da cui parto",
+      "p14": "Per questo la crescita di un'azienda, per me, non comincia dalla domanda «come aumentare le vendite?». Prima porrei altre domande.",
+      "q1": "Che azienda vuole diventare?",
+      "q2": "Che cosa le impedisce oggi di crescere di due o tre volte?",
+      "q3": "Che cosa succederebbe all'azienda se da domani lei non fosse in ufficio per tre mesi?",
+      "q4": "Quali decisioni non si possono ancora prendere senza di lei?",
+      "q5": "Ci sono accanto a lei persone a cui affiderebbe davvero l'azienda?",
+      "q6": "La squadra di oggi saprebbe guidare un'azienda grande il doppio di questa?",
+      "q7": "E lei stesso, è pronto a guidare l'azienda in modo diverso da come la guida oggi?",
+      "p15": "Le risposte a queste domande a volte dicono sulle prospettive di un'impresa molto più di quanto dica il suo modello finanziario.",
+      "p16": "Non credo che le grandi imprese si costruiscano seguendo una ricetta segreta. A un certo punto bisogna semplicemente cambiare, nell'ordine: la strategia → il modello di business → il sistema di gestione → la squadra → il ruolo del proprietario. E ogni livello successivo dell'azienda richiede una qualità diversa da ciascuno di questi elementi.",
+      "p17": "Per questo il lavoro che trovo più interessante è quello con un'impresa proprio nel momento del passaggio. Quando il vecchio modo di gestire porta ancora denaro, ma ha già iniziato a limitare il futuro. Quando il proprietario vede che l'azienda è capace di più, ma non è ancora chiaro che cosa esattamente debba cambiare per fare il passo successivo.",
+      "p18": "Mi sembra che la crescita vera cominci proprio da questa domanda."
+    }
+  },
+  "Footer": {
+    "cta": "A volte al proprietario non serve un progetto. Gli serve una persona con cui esaminare la situazione e arrivare a una decisione.",
+    "ctaButton": "Mi scriva →",
+    "colMenu": "Menu",
+    "colCases": "Progetti",
+    "colBlog": "Articoli",
+    "colContact": "Contatti",
+    "appearance": "Aspetto",
+    "designBy": "Non ogni problema richiede un consulente",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazakistan"
+  },
+  "ThemeSwitch": {
+    "label": "Aspetto",
+    "light": "Chiaro",
+    "dark": "Scuro",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Lingua",
+    "more": "Tutte le edizioni"
+  },
+  "AuthorCard": {
+    "role": "Strategia • Trasformazione • Persone",
+    "location": "Almaty, Kazakistan",
+    "bio": "Lavoro con proprietari, CEO e gruppi dirigenti nel momento in cui l'azienda passa alla fase successiva di sviluppo.",
+    "sinceLabel": "In attività dal"
+  },
+  "ContactForm": {
+    "title": "Restiamo in contatto",
+    "description": "Lasci un indirizzo e le scriverò quando qui ci sarà qualcosa che vale la pena leggere.",
+    "emailLabel": "Indirizzo email",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Si iscriva",
+    "submitting": "Invio in corso…",
+    "success": "Fatto. Controlli la posta.",
+    "unexpectedError": "Qualcosa è andato storto. Provi di nuovo.",
+    "validation": {
+      "emailRequired": "Inserire un indirizzo email",
+      "emailInvalid": "Questo non sembra un indirizzo email",
+      "emailTooLong": "Questo indirizzo è troppo lungo"
+    }
+  },
+  "StatusBadge": {
+    "label": "Stato del servizio",
+    "healthy": "Attivo",
+    "unhealthy": "Non disponibile",
+    "checking": "Verifica in corso…",
+    "uptime": "Uptime {value}"
+  },
+  "About": {
+    "title": "Chi sono",
+    "lead": "Questa pagina esiste per mostrare il secondo ramo localizzato del routing.",
+    "body": "Il contenuto vero arriverà più avanti. Tutto il resto qui funziona già: il routing per lingua, i metadati, il tema e l'accessibilità."
+  },
+  "NotFound": {
+    "title": "Pagina non trovata",
+    "description": "Forse il link non è più valido, oppure c'è un refuso nell'indirizzo.",
+    "backHome": "Torna alla home",
+    "record": {
+      "section": "Sezione",
+      "entry": "Voce",
+      "status": "Stato",
+      "none": "nessuno"
+    }
+  },
+  "ErrorBoundary": {
+    "title": "Qualcosa si è rotto",
+    "description": "L'errore è stato registrato. Si può riprovare.",
+    "retry": "Riprova",
+    "digest": "Codice errore: {digest}"
+  }
+}

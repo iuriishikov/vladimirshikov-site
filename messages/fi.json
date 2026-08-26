@@ -1,0 +1,291 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov – strategia, muutos, ihmiset",
+      "description": "Työskentelen omistajien, toimitusjohtajien ja johtoryhmien kanssa tilanteissa, joissa yritys on siirtymässä seuraavaan kehitysvaiheeseen."
+    },
+    "about": {
+      "title": "Minusta",
+      "description": "Lyhyesti Vladimir Shikovista ja siitä, mitä hän tekee."
+    },
+    "notFound": {
+      "title": "Sivua ei löydy",
+      "description": "Tällaista sivua ei täällä ole."
+    }
+  },
+  "Common": {
+    "skipToContent": "Siirry pääsisältöön",
+    "loading": "Ladataan…",
+    "retry": "Yritä uudelleen",
+    "close": "Sulje"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Päänavigaatio",
+    "openMenu": "Avaa valikko",
+    "closeMenu": "Sulje valikko",
+    "contact": "Ota yhteyttä →",
+    "nav": {
+      "home": "Etusivu",
+      "about": "Minusta",
+      "services": "Mitä teen",
+      "cases": "Projektit",
+      "blog": "Kirjoitukset"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partneri",
+    "roleB": "TEAM LEAD",
+    "placeA": "Asuu",
+    "placeB": "Almatyssa, Kazakstanissa",
+    "scopeA": "Työskentelee",
+    "scopeB": "omistajien ja toimitusjohtajien kanssa",
+    "statement": "Työskentelen omistajien, toimitusjohtajien ja johtoryhmien kanssa tilanteissa, joissa yritys on siirtymässä seuraavaan kehitysvaiheeseen."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Minusta ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partneri, TEAM LEAD",
+    "placeLine": "Strategia • Muutos • Ihmiset",
+    "lead": "Autan näkemään sen, mikä yrityksen sisältä on vaikea nähdä. Strategisten kysymysten takana on harvoin pelkkä strategia.",
+    "body": "Yrityksen kasvu muuttaa sitä, mitä liiketoimintamallilta vaaditaan. Uusi liiketoimintamalli muuttaa sitä, millainen tiimin on oltava. Uusi tiimi muuttaa omistajan omaa roolia. Siksi katson liiketoimintaa yhtä aikaa kolmen linssin läpi: strategia – organisaatio – ihmiset. Ja autan omistajaa määrittämään, mitkä päätökset todella pystyvät muuttamaan yrityksen suunnan.",
+    "experience": "Urani on kulkenut kolmen hyvin erilaisen ympäristön läpi: kansainvälinen konsultointi, suuri liiketoiminta ja valtion instituutiot. Johdin johtajien arviointiin erikoistuneen kansainvälisen yhtiön Venäjän-yksikköä, vedin yli 12 vuoden ajan PDP Group CIS -yhtiötä Moskovassa ja vastasin sen jälkeen yhdestä Samruk-Kazyna -konsernin keskeisistä muutoshankkeista. Nykyään olen partneri yhtiössä TEAM LEAD, jossa työskentelen strategian, liiketoiminnan kehittämisen, johtoryhmien muutoksen ja toimitusjohtajien henkilökohtaisen tukemisen parissa. Olen myös Kazakstanin tasavallan korkeimman oikeusneuvoston pätevyyslautakunnan jäsen ja arvioin tuomarinvirkojen hakijoita.",
+    "statValue1": "25+",
+    "statLabel1": "vuotta työtä yritysten ja niiden johtajien kanssa",
+    "statValue2": "320 000+",
+    "statLabel2": "työntekijää suurimmassa muutoshankkeessa",
+    "statValue3": "C-level",
+    "statLabel3": "toimitusjohtajien arviointi, kehittäminen ja tukeminen"
+  },
+  "Questions": {
+    "heading": "Milloin minusta on eniten hyötyä",
+    "lead": "Ei silloin, kun yritys tarvitsee yhden konsultin lisää. Vaan silloin, kun omistaja tai toimitusjohtaja kohtaa kysymyksen, johon yrityksen sisältä ei enää löydy ilmeistä vastausta.",
+    "closing": "Näissä tilanteissa tehtäväni on luoda tilaa tosiasioiden selväpäiselle tarkastelulle ja auttaa muuttamaan monimutkaisuus muutamaksi selkeäksi johtamispäätökseksi.",
+    "items": {
+      "q1": "Mihin suuntaan tästä eteenpäin?",
+      "q2": "Mikä liiketoimintamalli kantaa seuraavan kasvuvaiheen?",
+      "q3": "Pystyykö nykyinen tiimi toteuttamaan uuden strategian?",
+      "q4": "Kuka voisi olla seuraava toimitusjohtaja?",
+      "q5": "Mitä yrityksessä on muututtava – ja mitä omistajan on muutettava omassa roolissaan?"
+    }
+  },
+  "Services": {
+    "heading": "Mitä teen",
+    "lead": "Neljä aluetta, jotka käytännössä osoittautuvat lähes aina samaksi kysymykseksi eri suunnista katsottuna.",
+    "items": {
+      "s1": {
+        "title": "Strategia",
+        "description": "Strategiaistunnot ja kasvustrategian rakentaminen. En aloita työkaluista ja malleista vaan markkinasta, liiketoiminnan taloudesta, omistajan kunnianhimosta, rajoitteista ja mahdollisuuksista. Strategia ei ala hankelistasta vaan vastauksesta yhteen kysymykseen: mistä olemme valmiit luopumaan sen vuoksi, mikä on todella tärkeää?"
+      },
+      "s2": {
+        "title": "Muutos",
+        "description": "Tie tämän päivän johtamismallista siihen, jota huominen vaatii: rakenne, kulttuuri, johtamisjärjestelmä, johtajien roolit, päätöksenteon tavat, ihmiset. Kokemus kattaa sekä yksityiset yritykset että suurimmat yritys- ja valtiorakenteet."
+      },
+      "s3": {
+        "title": "Omistaja ja toimitusjohtaja",
+        "description": "Yrityksen ylimmällä johtajalla on aina kysymyksiä, joita ei voi täysin delegoida: strategia, tiimi, seuraaja, kriisi, uusi liiketoiminta, oma rooli yrityksessä. En tee päätöstä omistajan puolesta – autan häntä näkemään tilanteen siltä korkeudelta, jolta päätös muuttuu selkeäksi."
+      },
+      "s4": {
+        "title": "Tiimi ja seuraajat",
+        "description": "Strategia määrittää, millaiseksi yrityksen on tultava, mutta sen toteuttavat konkreettiset ihmiset. Autan ymmärtämään, kuka pystyy viemään yritystä eteenpäin, missä johtajien todellinen potentiaali on, kenelle voi antaa enemmän vastuuta ja kuka voi jonakin päivänä ottaa ylimmän johtajan paikan."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Mittakaavalla on merkitystä",
+    "lead": "Kolme hanketta, joista näkee, minkä kokoisia tehtäviä tämä työ on joutunut kantamaan.",
+    "viewCase": "Avaa projekti: {name}",
+    "meta": "Projekti",
+    "back": "Takaisin etusivulle",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Yrityskulttuurin muutos",
+        "tag": "12 yritystä · 320 000+ työntekijää",
+        "summary": "Samruk-Kazyna -konsernin yrityskulttuurin muutos – 12 kansallista yhtiötä ja yli 320 000 työntekijää.",
+        "detail": "Työssä luotiin yhtenäinen menetelmä yrityskulttuurin arviointiin ja ohjaamiseen, määriteltiin tavoitellut toimintatavat ja laadittiin jokaiselle yhtiölle oma muutoksen tiekartta."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Tuotannon johtajien kehittäminen",
+        "tag": "Tunnustettiin parhaaksi käytännöksi",
+        "summary": "Philip Morris Ukraine -yhtiön tuotannon johtajien kehitysohjelma.",
+        "detail": "Kolmessa vuodessa johtajien osaaminen saavutti tavoitetason, minkä jälkeen jatkokoulutuksen budjetti laskettiin nollaan. Ohjelma tunnustettiin parhaaksi käytännöksi ja sitä suositeltiin yhtiön muille toimistoille."
+      },
+      "atom": {
+        "name": "Ydinenergia-ala",
+        "caption": "Uuden toimialan neljänkymmenen vuoden strategia",
+        "tag": "Venäjä",
+        "summary": "Neljänkymmenen vuoden kasvustrategia uudelle toimialalle Venäjällä, olemassa olevan ydinenergiakapasiteetin varaan rakennettuna.",
+        "detail": "Työtä uuden toimialan strategian parissa neljänkymmenen vuoden aikajänteellä – jo olemassa olevan ydinenergiakapasiteetin pohjalta."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Yritykset",
+    "headingLine2": "ja instituutiot",
+    "lead": "Vuosien varrella työ on kulkenut kansainvälisten konsernien, suurten yksityisten yritysten ja valtion instituutioiden kautta.",
+    "marqueeLabel": "Yritykset ja instituutiot",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Supreme Court of Kazakhstan"
+    }
+  },
+  "Education": {
+    "heading": "Koulutus",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Lomonosovin Moskovan valtionyliopisto",
+        "degree": "Psykologian tiedekunta"
+      },
+      "e2": {
+        "school": "Neuvostoliiton KGB:n rajavartiojoukkojen ylempi sotilaspoliittinen koulu",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Kirjoitukset",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Essee]",
+        "meta": "Yrityksen kasvu",
+        "title": "Pienestä keskisuureksi. Keskisuuresta suureksi",
+        "excerpt": "Tietyssä vaiheessa yritystä rajoittaa eniten tapa, jolla sitä johdetaan."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Essee",
+    "back": "Takaisin etusivulle",
+    "growth": {
+      "title": "Pienestä keskisuureksi. Keskisuuresta suureksi",
+      "lead": "Olen seurannut vuosien ajan yrityksiä hyvin eri kehitysvaiheissa – perustajavetoisista yrityksistä suurimpiin konserneihin. Ja mitä enemmän niitä näen, sitä useammin palaan yhteen melko yksinkertaiseen ajatukseen.",
+      "p1": "Periaatteessa pienen yrityksen kasvattamisessa keskisuureksi ei ole mitään mahdottoman vaikeaa. Eikä keskisuuren kasvattamisessa suureksi. Tarvitaan tietysti tuote, markkina, rahaa, ihmisiä ja hieman onnea.",
+      "p2": "Mutta kasvun tärkein este on yleensä muualla. Tietyssä vaiheessa yritystä rajoittaa eniten tapa, jolla sitä johdetaan.",
+      "h1": "Pieni yritys kasvaa omistajansa ansiosta",
+      "p3": "Hän tuntee asiakkaat. Hän tekee keskeiset päätökset itse. Hän tietää, keneen voi luottaa. Hänellä on tuntuma rahaan. Hän valvoo laadun henkilökohtaisesti. Muutamassa minuutissa hän voi muuttaa päätöksen, johon suurelta yritykseltä kuluisi viikkoja.",
+      "p4": "Ja juuri siksi liiketoiminta kasvaa. Mutta tulee hetki, jolloin se, mikä ennen oli sen suurin vahvuus, alkaa rajoittaa kasvua.",
+      "p5": "Yrityksestä tulee liian suuri mahtuakseen enää yhden ihmisen päähän. Se on mielestäni ensimmäinen todellinen tienhaara.",
+      "h2": "Keskisuureksi tullakseen omistajan on päästettävä osasta liiketoimintaa irti",
+      "p6": "Tämä on paljon vaikeampaa kuin miltä kuulostaa. On lakattava tekemästä satoja päätöksiä itse. On löydettävä ihmisiä, jotka ymmärtävät joistakin asioista enemmän kuin te itse. Heille on annettava tehtävien lisäksi oikeus erehtyä.",
+      "p7": "Syntyvät rakenne, vastuut, mittarit, säännöt ja säännöllinen johtaminen. Ja tässä tulee vastaan paradoksi: säilyttääkseen otteen kasvavasta liiketoiminnasta omistajan on luovuttava osasta suoraa kontrollia.",
+      "p8": "Ne, jotka eivät sitä koskaan tee, pysyvät usein vuosikausia erittäin hyvänä pienenä yrityksenä. Ne, jotka onnistuvat, kasvavat keskisuuriksi.",
+      "h3": "Siirtymä keskisuuresta suureksi toimii toisin",
+      "p9": "Enää ei riitä, että palkkaa hyviä johtajia ja delegoi heille operatiivisen työn. Yrityksen on opittava toimimaan järjestelmänä.",
+      "p10": "Strategia lakkaa asumasta pelkästään omistajan päässä. Päätökset eivät enää nojaa vain henkilökohtaisiin suhteisiin. Yrityksen on osattava löytää, kasvattaa ja pitää vahvoja johtajia. Syntyy yrityskulttuuri – riippumatta siitä, rakensiko sitä kukaan tarkoituksella.",
+      "p11": "Ja syntyy tarve ajatella paitsi sitä, miten huomenna ansaitaan enemmän, myös sitä, millainen yrityksen on oltava viiden tai kymmenen vuoden kuluttua.",
+      "h4": "Ja tässä omistajan on jälleen muututtava",
+      "p12": "Minusta yrityksen kasvun tarina on suurelta osin tarina siitä, miten sen omistajan rooli muuttuu. Ensin hän on yrittäjä. Sitten hänestä tulee johtaja. Sitten hänen on tultava organisaation arkkitehdiksi. Ja jossakin vaiheessa ihmiseksi, joka määrittää suunnan, rakentaa tiimin ja tekee muutaman todella tärkeän päätöksen satojen päivittäisten sijaan.",
+      "p13": "Kaikki yrittäjät eivät halua kulkea koko tuota matkaa. Ja se on ihan hyvä niin. Mutta suurta liiketoimintaa ei voi rakentaa johtamalla sitä edelleen kuin pientä.",
+      "h5": "Kysymykset, joista aloitan",
+      "p14": "Siksi yrityksen kasvu ei minulle ala kysymyksestä ”miten kasvatamme myyntiä?”. Kysyisin ensin muuta.",
+      "q1": "Millaiseksi yritykseksi haluatte tulla?",
+      "q2": "Mikä estää teitä tänään kasvamasta kaksin- tai kolminkertaiseksi?",
+      "q3": "Mitä yritykselle tapahtuisi, jos ette olisi huomisesta alkaen kolmeen kuukauteen toimistolla?",
+      "q4": "Mitä päätöksiä on yhä mahdotonta tehdä ilman teitä?",
+      "q5": "Onko ympärillänne ihmisiä, joille todella uskoisitte liiketoiminnan?",
+      "q6": "Pystyisikö nykyinen tiimi johtamaan kaksi kertaa suurempaa yritystä?",
+      "q7": "Ja ennen kaikkea: oletteko itse valmis johtamaan yritystä toisin kuin johdatte sitä tänään?",
+      "p15": "Vastaukset näihin kysymyksiin kertovat liiketoiminnan näkymistä toisinaan paljon enemmän kuin talousmalli.",
+      "p16": "En usko, että suurta liiketoimintaa rakennetaan jonkin salaisen reseptin mukaan. Tietyssä vaiheessa on yksinkertaisesti muutettava järjestyksessä: strategia → liiketoimintamalli → johtamisjärjestelmä → tiimi → omistajan rooli. Ja jokainen yrityksen seuraava taso vaatii jokaiselta näistä toisenlaista laatua.",
+      "p17": "Siksi minua kiinnostaa eniten työ yrityksen kanssa juuri siirtymän hetkellä. Kun vanha johtamistapa tuo yhä rahaa, mutta on jo alkanut rajoittaa tulevaisuutta. Kun omistaja näkee, että yritys pystyy parempaan, mutta ei vielä ole selvää, minkä täsmälleen on muututtava, jotta seuraava askel voidaan ottaa.",
+      "p18": "Minusta todellinen kasvu alkaa juuri tuosta kysymyksestä."
+    }
+  },
+  "Footer": {
+    "cta": "Joskus omistaja ei tarvitse projektia. Hän tarvitsee ihmisen, jonka kanssa käydä tilanne läpi ja tehdä päätös.",
+    "ctaButton": "Kirjoita minulle →",
+    "colMenu": "Valikko",
+    "colCases": "Projektit",
+    "colBlog": "Kirjoitukset",
+    "colContact": "Yhteystiedot",
+    "appearance": "Ulkoasu",
+    "designBy": "Kaikki ongelmat eivät vaadi konsulttia",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kazakstan"
+  },
+  "ThemeSwitch": {
+    "label": "Ulkoasu",
+    "light": "Vaalea",
+    "dark": "Tumma",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Kieli",
+    "more": "Kaikki kieliversiot"
+  },
+  "AuthorCard": {
+    "role": "Strategia • Muutos • Ihmiset",
+    "location": "Almaty, Kazakstan",
+    "bio": "Työskentelen omistajien, toimitusjohtajien ja johtoryhmien kanssa hetkellä, jolloin yritys siirtyy seuraavaan kehitysvaiheeseen.",
+    "sinceLabel": "Alalla vuodesta"
+  },
+  "ContactForm": {
+    "title": "Pidetään yhteyttä",
+    "description": "Jättäkää osoitteenne, niin kirjoitan, kun täällä on jotain lukemisen arvoista.",
+    "emailLabel": "Sähköpostiosoite",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Tilaa",
+    "submitting": "Lähetetään…",
+    "success": "Valmis. Tarkistakaa sähköpostinne.",
+    "unexpectedError": "Jokin meni pieleen. Yritä uudelleen.",
+    "validation": {
+      "emailRequired": "Anna sähköpostiosoite",
+      "emailInvalid": "Tämä ei näytä sähköpostiosoitteelta",
+      "emailTooLong": "Osoite on liian pitkä"
+    }
+  },
+  "StatusBadge": {
+    "label": "Palvelun tila",
+    "healthy": "Toiminnassa",
+    "unhealthy": "Ei saatavilla",
+    "checking": "Tarkistetaan…",
+    "uptime": "Käytettävyys {value}"
+  },
+  "About": {
+    "title": "Minusta",
+    "lead": "Tämä sivu on olemassa, jotta reitityksen toinen lokalisoitu haara tulee käytetyksi.",
+    "body": "Varsinainen sisältö tulee myöhemmin. Kaikki muu täällä toimii jo: lokaalien reititys, metatiedot, teema ja saavutettavuus."
+  },
+  "NotFound": {
+    "title": "Sivua ei löydy",
+    "description": "Linkki voi olla vanhentunut tai osoitteessa on kirjoitusvirhe.",
+    "backHome": "Takaisin etusivulle",
+    "record": {
+      "section": "Osio",
+      "entry": "Merkintä",
+      "status": "Tila",
+      "none": "ei ole"
+    }
+  },
+  "ErrorBoundary": {
+    "title": "Jokin meni rikki",
+    "description": "Virhe on kirjattu lokiin. Voit yrittää uudelleen.",
+    "retry": "Yritä uudelleen",
+    "digest": "Virhekoodi: {digest}"
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Vladimir Shikov – strategi, transformasjon, mennesker",
+      "description": "Jeg jobber med eiere, toppledere og ledergrupper i situasjoner der virksomheten står foran neste steg i utviklingen."
+    },
+    "about": {
+      "title": "Om meg",
+      "description": "Kort om Vladimir Shikov og det han arbeider med."
+    },
+    "notFound": {
+      "title": "Siden finnes ikke",
+      "description": "Det finnes ingen slik side her."
+    }
+  },
+  "Common": {
+    "skipToContent": "Gå til hovedinnholdet",
+    "loading": "Laster…",
+    "retry": "Prøv igjen",
+    "close": "Lukk"
+  },
+  "Header": {
+    "brand": "Shikov.V",
+    "navigationLabel": "Hovednavigasjon",
+    "openMenu": "Åpne menyen",
+    "closeMenu": "Lukk menyen",
+    "contact": "Ta kontakt →",
+    "nav": {
+      "home": "Hjem",
+      "about": "Om meg",
+      "services": "Det jeg gjør",
+      "cases": "Prosjekter",
+      "blog": "Artikler"
+    }
+  },
+  "Hero": {
+    "name": "Vladimir Shikov",
+    "roleA": "Partner i",
+    "roleB": "TEAM LEAD",
+    "placeA": "Bor i",
+    "placeB": "Almaty, Kasakhstan",
+    "scopeA": "Jobber med",
+    "scopeB": "eiere og toppledere",
+    "statement": "Jeg jobber med eiere, toppledere og ledergrupper i situasjoner der virksomheten står foran neste steg i utviklingen."
+  },
+  "Portrait": {
+    "alt": "Vladimir Shikov"
+  },
+  "Profile": {
+    "tag": "[ Om meg ]",
+    "nameLine1": "Vladimir",
+    "nameLine2": "Shikov",
+    "roleLine": "Partner i TEAM LEAD",
+    "placeLine": "Strategi • Transformasjon • Mennesker",
+    "lead": "Jeg hjelper deg å se det som er vanskelig å se innenfra selskapet. Bak et strategisk spørsmål ligger sjelden bare strategi.",
+    "body": "Vekst endrer kravene til forretningsmodellen. En ny forretningsmodell endrer kravene til teamet. Et nytt team endrer eierens egen rolle. Derfor ser jeg på virksomheten gjennom tre linser samtidig – strategi, organisasjon, mennesker – og hjelper eieren med å avgjøre hvilke beslutninger som faktisk kan endre selskapets bane.",
+    "experience": "Yrkesveien min har gått gjennom tre svært ulike miljøer: internasjonal rådgivning, stort næringsliv og statlige institusjoner. Jeg ledet den russiske delen av et internasjonalt selskap innen lederevaluering, ledet PDP Group CIS i Moskva i mer enn 12 år og hadde deretter ansvaret for et av de sentrale transformasjonsområdene i Samruk-Kazyna-konsernet. I dag er jeg partner i TEAM LEAD, der jeg arbeider med strategi, forretningsutvikling, transformasjon av ledergrupper og individuelt arbeid med toppledere. Jeg er også medlem av kvalifikasjonskommisjonen i Det høyeste rettsrådet i Republikken Kasakhstan og vurderer kandidater til dommerembeter.",
+    "statValue1": "25+",
+    "statLabel1": "år med arbeid for virksomheter og deres ledere",
+    "statValue2": "320 000+",
+    "statLabel2": "ansatte i det største transformasjonsprogrammet",
+    "statValue3": "C-level",
+    "statLabel3": "vurdering, utvikling og oppfølging av toppledere"
+  },
+  "Questions": {
+    "heading": "Når jeg er til størst nytte",
+    "lead": "Ikke når et selskap trenger enda en konsulent. Men når eieren eller topplederen står overfor et spørsmål virksomheten ikke lenger har et opplagt svar på.",
+    "closing": "I slike situasjoner er min oppgave å skape rom for et nøkternt blikk på fakta, og å hjelpe med å gjøre kompleksiteten om til noen få beslutninger som faktisk lar seg ta.",
+    "items": {
+      "q1": "Hvor går vi videre herfra?",
+      "q2": "Hvilken forretningsmodell bærer neste steg i veksten?",
+      "q3": "Kan dagens team levere den nye strategien?",
+      "q4": "Hvem kan bli neste toppleder?",
+      "q5": "Hva må endres i selskapet – og hva må endres i eierens egen rolle?"
+    }
+  },
+  "Services": {
+    "heading": "Det jeg gjør",
+    "lead": "Fire områder som i praksis nesten alltid viser seg å være én og samme oppgave, sett fra ulike sider.",
+    "items": {
+      "s1": {
+        "title": "Strategi",
+        "description": "Strategisamlinger og utforming av en vekststrategi. Jeg begynner ikke med verktøy og maler, men med markedet, økonomien i virksomheten, eierens ambisjon, begrensningene og mulighetene. Strategi begynner ikke med en liste over initiativer, men med svaret på ett spørsmål: hva er vi villige til å gi avkall på for det som virkelig betyr noe?"
+      },
+      "s2": {
+        "title": "Transformasjon",
+        "description": "Veien fra dagens driftsmodell til den morgendagen krever: struktur, kultur, styringssystemet, ledernes roller, måten beslutninger tas på, menneskene. Erfaringen omfatter både privateide virksomheter og de største konsern- og statsstrukturene."
+      },
+      "s3": {
+        "title": "Eier og toppleder",
+        "description": "En toppleder bærer alltid på spørsmål som ikke kan delegeres fullt ut: strategien, teamet, en etterfølger, en krise, en ny virksomhet, sin egen rolle i selskapet. Jeg tar ikke beslutningen på eierens vegne – jeg hjelper eieren med å se situasjonen fra den høyden der beslutningen blir opplagt."
+      },
+      "s4": {
+        "title": "Team og etterfølgere",
+        "description": "Strategien avgjør hva selskapet skal bli, men det er virkelige mennesker som gjennomfører den. Jeg hjelper med å finne ut hvem som kan føre selskapet videre, hvor en leders reelle potensial ligger, hvem som kan betros mer, og hvem som en dag kan overta den øverste jobben."
+      }
+    }
+  },
+  "Works": {
+    "heading": "Omfang betyr noe",
+    "lead": "Tre prosjekter som viser hvor store oppgavene i dette arbeidet har vært.",
+    "viewCase": "Åpne prosjektet: {name}",
+    "meta": "Prosjekt",
+    "back": "Til forsiden",
+    "items": {
+      "samruk": {
+        "name": "Samruk-Kazyna",
+        "caption": "Transformasjon av bedriftskulturen",
+        "tag": "12 selskaper · 320 000+ ansatte",
+        "summary": "Transformasjon av bedriftskulturen i Samruk-Kazyna-konsernet – 12 nasjonale selskaper og mer enn 320 000 ansatte.",
+        "detail": "Det ble utviklet en felles metodikk for å kartlegge og styre bedriftskulturen, ønsket atferd ble definert, og det ble utarbeidet veikart for transformasjonen i hvert enkelt selskap."
+      },
+      "philipmorris": {
+        "name": "Philip Morris",
+        "caption": "Utvikling av produksjonsledere",
+        "tag": "Anerkjent som beste praksis",
+        "summary": "Et utviklingsprogram for produksjonsledere hos Philip Morris i Ukraina.",
+        "detail": "I løpet av tre år nådde ledernes kompetanse målnivået, og budsjettet for videre opplæring ble deretter satt til null. Programmet ble anerkjent som beste praksis og anbefalt til selskapets øvrige kontorer."
+      },
+      "atom": {
+        "name": "Kjernekraftindustrien",
+        "caption": "En førtiårsstrategi for en ny industri",
+        "tag": "Russland",
+        "summary": "En vekststrategi over førti år for en ny industri i Russland, bygget på eksisterende kjernekraftkapasitet.",
+        "detail": "Arbeid med strategien for en ny industri i et førtiårsperspektiv, med utgangspunkt i den kjernekraftkapasiteten som allerede finnes."
+      }
+    }
+  },
+  "Partners": {
+    "headingLine1": "Selskaper",
+    "headingLine2": "og institusjoner",
+    "lead": "Gjennom årene har arbeidet gått gjennom internasjonale konserner, store privateide virksomheter og statlige institusjoner.",
+    "marqueeLabel": "Selskaper og institusjoner",
+    "names": {
+      "philipmorris": "Philip Morris",
+      "pfizer": "Pfizer",
+      "microsoft": "Microsoft",
+      "nestle": "Nestlé",
+      "rosnano": "RUSNANO",
+      "alfabank": "Alfa-Bank",
+      "rolf": "ROLF",
+      "bat": "British American Tobacco",
+      "bigroup": "BI Group",
+      "caterpillar": "Caterpillar",
+      "airastana": "Air Astana",
+      "samruk": "Samruk-Kazyna",
+      "kmg": "KazMunayGas",
+      "kazatomprom": "Kazatomprom",
+      "kegoc": "KEGOC",
+      "ktz": "KTZ",
+      "samrukenergy": "Samruk-Energy",
+      "supremecourt": "Kasakhstans høyesterett"
+    }
+  },
+  "Education": {
+    "heading": "Utdanning",
+    "lead": "",
+    "items": {
+      "e1": {
+        "school": "Lomonosov-universitetet i Moskva",
+        "degree": "Det psykologiske fakultet"
+      },
+      "e2": {
+        "school": "Grensetroppenes høyere militærpolitiske skole under KGB i Sovjetunionen",
+        "degree": ""
+      }
+    }
+  },
+  "Blog": {
+    "heading": "Artikler",
+    "lead": "",
+    "items": {
+      "growth": {
+        "label": "[Essay]",
+        "meta": "Selskapets vekst",
+        "title": "Fra liten til mellomstor. Fra mellomstor til stor",
+        "excerpt": "På et visst tidspunkt er det måten selskapet styres på som begrenser det mest."
+      }
+    }
+  },
+  "Note": {
+    "meta": "Essay",
+    "back": "Til forsiden",
+    "growth": {
+      "title": "Fra liten til mellomstor. Fra mellomstor til stor",
+      "lead": "I mange år har jeg fulgt selskaper på alle utviklingstrinn, fra gründerdrevne virksomheter til de største konsernene. Og jo flere jeg ser, desto oftere kommer jeg tilbake til én ganske enkel tanke.",
+      "p1": "I prinsippet er det ikke noe umulig vanskelig ved å gjøre en liten virksomhet mellomstor, eller en mellomstor stor. Selvsagt trengs det et produkt, et marked, penger, mennesker og litt flaks.",
+      "p2": "Men den viktigste barrieren mot vekst ligger som regel et annet sted. På et visst tidspunkt er det måten selskapet styres på som begrenser det mest.",
+      "h1": "En liten virksomhet vokser takket være eieren",
+      "p3": "Eieren kjenner kundene. Tar de viktige beslutningene selv. Vet hvem som kan stoles på. Har følingen med pengene. Kontrollerer kvaliteten personlig. Kan på noen minutter endre en beslutning som et stort selskap ville brukt uker på.",
+      "p4": "Og nettopp derfor vokser virksomheten. Men det kommer et øyeblikk da det som en gang var den største fordelen, begynner å begrense videre vekst.",
+      "p5": "Selskapet blir for stort til å få plass i hodet på ett menneske. Det er etter min mening det første virkelige veiskillet.",
+      "h2": "For å bli mellomstor må eieren gi slipp på deler av virksomheten",
+      "p6": "Dette er langt vanskeligere enn det høres ut. Du må slutte å ta hundrevis av beslutninger selv. Finne folk som forstår enkelte ting bedre enn deg. Gi dem ikke bare oppgavene, men også retten til å ta feil.",
+      "p7": "Det oppstår struktur, ansvar, målepunkter, regler, regelmessig ledelse. Og her dukker et paradoks opp: for å beholde kontrollen over en voksende virksomhet må eieren gi fra seg en del av sin direkte kontroll.",
+      "p8": "De som aldri gjør det, blir ofte værende en svært god liten virksomhet i årevis. De som får det til, blir mellomstore.",
+      "h3": "Overgangen fra mellomstor til stor fungerer annerledes",
+      "p9": "Her er det ikke lenger nok å ansette gode ledere og delegere den operative driften til dem. Selskapet må lære å fungere som et system.",
+      "p10": "Strategien slutter å bo bare i eierens hode. Beslutninger hviler ikke lenger bare på personlige relasjoner. Selskapet må kunne finne, utvikle og beholde sterke ledere. Det oppstår en bedriftskultur – enten noen har satt seg fore å bygge en eller ikke.",
+      "p11": "Og det oppstår et behov for å tenke ikke bare på å tjene mer i morgen, men på hva slags selskap dette må bli om fem eller ti år.",
+      "h4": "Og her må eieren endre seg igjen",
+      "p12": "Det virker på meg som om historien om et selskaps vekst i stor grad er historien om hvordan eierens rolle endrer seg. Først er man gründer. Så blir man leder. Deretter må man bli organisasjonens arkitekt. Og på et tidspunkt den som setter retningen, bygger teamet og tar noen få virkelig viktige beslutninger i stedet for hundrevis av daglige.",
+      "p13": "Ikke enhver gründer ønsker å gå hele den veien. Og det er helt greit. Men det er umulig å bygge en stor virksomhet mens man fortsetter å styre den som en liten.",
+      "h5": "Spørsmålene jeg begynner med",
+      "p14": "Derfor begynner ikke veksten i et selskap for meg med «hvordan øker vi salget?». Jeg ville stilt andre spørsmål først.",
+      "q1": "Hva slags selskap vil du bli?",
+      "q2": "Hva hindrer deg i dag i å bli to eller tre ganger større?",
+      "q3": "Hva ville skje med selskapet hvis du var borte fra kontoret i tre måneder fra i morgen?",
+      "q4": "Hvilke beslutninger kan fortsatt ikke tas uten deg?",
+      "q5": "Finnes det mennesker rundt deg som du virkelig ville betro virksomheten?",
+      "q6": "Kunne dagens team styre et selskap som er dobbelt så stort som dette?",
+      "q7": "Og fremfor alt: er du selv klar til å lede selskapet annerledes enn du gjør i dag?",
+      "p15": "Svarene på disse spørsmålene forteller iblant langt mer om utsiktene til en virksomhet enn den finansielle modellen gjør.",
+      "p16": "Jeg tror ikke store virksomheter bygges etter en hemmelig oppskrift. På et visst tidspunkt må man rett og slett endre, i denne rekkefølgen: strategien → forretningsmodellen → styringssystemet → teamet → eierens rolle. Og hvert nye nivå i selskapet krever en annen kvalitet av hvert eneste av dem.",
+      "p17": "Derfor er det arbeidet jeg finner mest interessant, arbeidet med en virksomhet nettopp i overgangsøyeblikket. Når den gamle måten å styre på fortsatt tjener penger, men har begynt å begrense fremtiden. Når eieren ser at selskapet kan mer, men det ennå ikke er klart hva som konkret må endres for å ta neste steg.",
+      "p18": "Det virker på meg som at virkelig vekst begynner nettopp med det spørsmålet."
+    }
+  },
+  "Footer": {
+    "cta": "Noen ganger trenger ikke en eier et prosjekt. Eieren trenger noen å tenke gjennom situasjonen sammen med, og komme fram til en beslutning.",
+    "ctaButton": "Skriv til meg →",
+    "colMenu": "Meny",
+    "colCases": "Prosjekter",
+    "colBlog": "Artikler",
+    "colContact": "Kontakt",
+    "appearance": "Utseende",
+    "designBy": "Ikke enhver oppgave krever en konsulent",
+    "copyright": "© {year} Vladimir Shikov",
+    "poweredBy": "Almaty, Kasakhstan"
+  },
+  "ThemeSwitch": {
+    "label": "Utseende",
+    "light": "Lys",
+    "dark": "Mørk",
+    "system": "Auto"
+  },
+  "LocaleSwitch": {
+    "label": "Språk",
+    "more": "Alle utgaver"
+  },
+  "AuthorCard": {
+    "role": "Strategi • Transformasjon • Mennesker",
+    "location": "Almaty, Kasakhstan",
+    "bio": "Jeg jobber med eiere, toppledere og ledergrupper i det øyeblikket et selskap går over til neste steg i utviklingen.",
+    "sinceLabel": "I yrket siden"
+  },
+  "ContactForm": {
+    "title": "Hold kontakten",
+    "description": "Legg igjen en adresse, så skriver jeg når det kommer noe her som er verdt å lese.",
+    "emailLabel": "E-postadresse",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Abonner",
+    "submitting": "Sender…",
+    "success": "Ferdig. Sjekk innboksen.",
+    "unexpectedError": "Noe gikk galt. Prøv igjen.",
+    "validation": {
+      "emailRequired": "Oppgi en e-postadresse",
+      "emailInvalid": "Dette ser ikke ut som en e-postadresse",
+      "emailTooLong": "Adressen er for lang"
+    }
+  },
+  "StatusBadge": {
+    "label": "Tjenestestatus",
+    "healthy": "I drift",
+    "unhealthy": "Utilgjengelig",
+    "checking": "Sjekker…",
+    "uptime": "Oppetid {value}"
+  },
+  "About": {
+    "title": "Om meg",
+    "lead": "Denne siden finnes for å ta i bruk den andre lokaliserte grenen av rutingen.",
+    "body": "Virkelig innhold kommer senere. Alt annet her fungerer allerede: ruting per språk, metadata, temaet og tilgjengeligheten."
+  },
+  "NotFound": {
+    "title": "Siden finnes ikke",
+    "description": "Lenken kan være utdatert, eller det kan være en skrivefeil i adressen.",
+    "backHome": "Til forsiden",
+    "record": {
+      "section": "Seksjon",
+      "entry": "Oppføring",
+      "status": "Status",
+      "none": "ingen"
+    }
+  },
+  "ErrorBoundary": {
+    "title": "Noe gikk i stykker",
+    "description": "Feilen er logget. Du kan prøve igjen.",
+    "retry": "Prøv igjen",
+    "digest": "Feilkode: {digest}"
+  }
+}

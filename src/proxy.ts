@@ -48,6 +48,23 @@ function buildContentSecurityPolicy(nonce: string): string {
   ].join('; ')
 }
 
+function isRedirect(status: number): boolean {
+  return status >= 300 && status < 400
+}
+
+/**
+ * Adds a field to `Vary` without discarding what is already there — next-intl
+ * and Next both contribute to it, and overwriting would silently undo theirs.
+ */
+function appendVary(response: Response, field: string): void {
+  const current = response.headers.get('Vary')
+  const fields = current ? current.split(',').map((entry) => entry.trim()) : []
+
+  if (fields.some((entry) => entry.toLowerCase() === field.toLowerCase())) return
+
+  response.headers.set('Vary', [...fields, field].filter(Boolean).join(', '))
+}
+
 /**
  * Next 16 renamed the `middleware` file convention to `proxy`. Same request
  * hook, same contract — only the filename and the default export's name moved.
@@ -69,6 +86,23 @@ export default function proxy(request: NextRequest) {
 
   response.headers.set('Content-Security-Policy', csp)
   response.headers.set('x-nonce', nonce)
+
+  /*
+   * The response to `/` is negotiated: next-intl reads `Accept-Language` and
+   * the `NEXT_LOCALE` cookie and redirects to one of forty editions. Without a
+   * `Vary`, any shared cache in front of this — a CDN, a corporate proxy — is
+   * entitled to store the first visitor's redirect and hand it to everybody
+   * afterwards, so one German reader would send Japanese, Kazakh and English
+   * ones all to `/de`. The bug is invisible in development, where nothing
+   * caches, and total in production.
+   *
+   * Applied only to the negotiated redirect. Locale-prefixed URLs are the same
+   * document for every visitor and must stay freely cacheable.
+   */
+  if (isRedirect(response.status)) {
+    appendVary(response, 'Accept-Language')
+    appendVary(response, 'Cookie')
+  }
 
   return response
 }
