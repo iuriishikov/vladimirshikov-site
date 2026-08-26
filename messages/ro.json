@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Pagina nu a fost găsită",
     "description": "Este posibil ca linkul să fie învechit sau ca adresa să conțină o greșeală.",
-    "backHome": "Înapoi acasă"
+    "backHome": "Înapoi acasă",
+    "record": {
+      "section": "Secțiune",
+      "entry": "Intrare",
+      "status": "Stare",
+      "none": "niciunul"
+    }
   },
   "ErrorBoundary": {
     "title": "Ceva s-a stricat",

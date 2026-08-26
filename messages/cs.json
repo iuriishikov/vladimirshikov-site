@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Stránka nenalezena",
     "description": "Odkaz může být zastaralý, nebo je v adrese překlep.",
-    "backHome": "Zpět na úvod"
+    "backHome": "Zpět na úvod",
+    "record": {
+      "section": "Sekce",
+      "entry": "Záznam",
+      "status": "Stav",
+      "none": "žádné"
+    }
   },
   "ErrorBoundary": {
     "title": "Něco se rozbilo",

@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Halaman tidak ditemui",
     "description": "Pautan itu mungkin sudah lapuk, atau alamatnya mungkin tersalah taip.",
-    "backHome": "Ke laman utama"
+    "backHome": "Ke laman utama",
+    "record": {
+      "section": "Bahagian",
+      "entry": "Entri",
+      "status": "Status",
+      "none": "tiada"
+    }
   },
   "ErrorBoundary": {
     "title": "Ada sesuatu yang rosak",

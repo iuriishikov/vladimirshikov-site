@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Page not found",
     "description": "The link may be out of date, or the address may have a typo in it.",
-    "backHome": "Back home"
+    "backHome": "Back home",
+    "record": {
+      "section": "Section",
+      "entry": "Entry",
+      "status": "Status",
+      "none": "none"
+    }
   },
   "ErrorBoundary": {
     "title": "Something broke",

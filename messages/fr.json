@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Page introuvable",
     "description": "Le lien est peut-être périmé, ou l'adresse contient une faute de frappe.",
-    "backHome": "Retour à l'accueil"
+    "backHome": "Retour à l'accueil",
+    "record": {
+      "section": "Section",
+      "entry": "Entrée",
+      "status": "Statut",
+      "none": "aucun"
+    }
   },
   "ErrorBoundary": {
     "title": "Quelque chose s'est cassé",

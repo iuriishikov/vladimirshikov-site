@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Strani ni mogoče najti",
     "description": "Povezava je morda zastarela ali pa je v naslovu tipkarska napaka.",
-    "backHome": "Nazaj na domačo stran"
+    "backHome": "Nazaj na domačo stran",
+    "record": {
+      "section": "Razdelek",
+      "entry": "Vnos",
+      "status": "Stanje",
+      "none": "brez"
+    }
   },
   "ErrorBoundary": {
     "title": "Nekaj se je pokvarilo",

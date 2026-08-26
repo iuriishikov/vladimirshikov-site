@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Nie znaleziono strony",
     "description": "Możliwe, że link jest nieaktualny albo w adresie jest literówka.",
-    "backHome": "Na stronę główną"
+    "backHome": "Na stronę główną",
+    "record": {
+      "section": "Sekcja",
+      "entry": "Wpis",
+      "status": "Status",
+      "none": "brak"
+    }
   },
   "ErrorBoundary": {
     "title": "Coś się zepsuło",

@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Lehte ei leitud",
     "description": "Võib-olla on link aegunud või on aadressis trükiviga.",
-    "backHome": "Tagasi avalehele"
+    "backHome": "Tagasi avalehele",
+    "record": {
+      "section": "Jaotis",
+      "entry": "Kirje",
+      "status": "Olek",
+      "none": "puudub"
+    }
   },
   "ErrorBoundary": {
     "title": "Midagi läks katki",

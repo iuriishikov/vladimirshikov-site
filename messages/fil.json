@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Hindi matagpuan ang pahina",
     "description": "Maaaring luma na ang link, o may maling baybay sa adres.",
-    "backHome": "Balik sa simula"
+    "backHome": "Balik sa simula",
+    "record": {
+      "section": "Seksyon",
+      "entry": "Talaan",
+      "status": "Katayuan",
+      "none": "wala"
+    }
   },
   "ErrorBoundary": {
     "title": "May nasira",

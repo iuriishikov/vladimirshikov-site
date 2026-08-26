@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Pagina non trovata",
     "description": "Forse il link non è più valido, oppure c'è un refuso nell'indirizzo.",
-    "backHome": "Torna alla home"
+    "backHome": "Torna alla home",
+    "record": {
+      "section": "Sezione",
+      "entry": "Voce",
+      "status": "Stato",
+      "none": "nessuno"
+    }
   },
   "ErrorBoundary": {
     "title": "Qualcosa si è rotto",

@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Az oldal nem található",
     "description": "Lehet, hogy a hivatkozás elavult, vagy elgépelés van a címben.",
-    "backHome": "Vissza a főoldalra"
+    "backHome": "Vissza a főoldalra",
+    "record": {
+      "section": "Szakasz",
+      "entry": "Bejegyzés",
+      "status": "Állapot",
+      "none": "nincs"
+    }
   },
   "ErrorBoundary": {
     "title": "Valami elromlott",

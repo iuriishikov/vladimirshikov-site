@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Stranica nije pronađena",
     "description": "Poveznica je možda zastarjela ili je u adresi tipfeler.",
-    "backHome": "Natrag na početnu"
+    "backHome": "Natrag na početnu",
+    "record": {
+      "section": "Odjeljak",
+      "entry": "Unos",
+      "status": "Status",
+      "none": "nema"
+    }
   },
   "ErrorBoundary": {
     "title": "Nešto se pokvarilo",

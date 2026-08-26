@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Halaman tidak ditemukan",
     "description": "Tautannya mungkin sudah usang, atau ada salah ketik pada alamatnya.",
-    "backHome": "Kembali ke beranda"
+    "backHome": "Kembali ke beranda",
+    "record": {
+      "section": "Bagian",
+      "entry": "Entri",
+      "status": "Status",
+      "none": "tidak ada"
+    }
   },
   "ErrorBoundary": {
     "title": "Ada yang rusak",

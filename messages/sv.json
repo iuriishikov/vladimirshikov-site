@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Sidan hittades inte",
     "description": "Länken kan vara gammal, eller så finns det ett stavfel i adressen.",
-    "backHome": "Till startsidan"
+    "backHome": "Till startsidan",
+    "record": {
+      "section": "Sektion",
+      "entry": "Post",
+      "status": "Status",
+      "none": "inget"
+    }
   },
   "ErrorBoundary": {
     "title": "Något gick sönder",

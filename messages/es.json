@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Página no encontrada",
     "description": "Puede que el enlace esté obsoleto o que la dirección tenga una errata.",
-    "backHome": "Volver al inicio"
+    "backHome": "Volver al inicio",
+    "record": {
+      "section": "Sección",
+      "entry": "Entrada",
+      "status": "Estado",
+      "none": "ninguno"
+    }
   },
   "ErrorBoundary": {
     "title": "Algo se ha roto",

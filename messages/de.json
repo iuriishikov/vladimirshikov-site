@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Seite nicht gefunden",
     "description": "Vielleicht ist der Link veraltet, oder in der Adresse steckt ein Tippfehler.",
-    "backHome": "Zur Startseite"
+    "backHome": "Zur Startseite",
+    "record": {
+      "section": "Bereich",
+      "entry": "Eintrag",
+      "status": "Status",
+      "none": "keine"
+    }
   },
   "ErrorBoundary": {
     "title": "Etwas ist kaputtgegangen",

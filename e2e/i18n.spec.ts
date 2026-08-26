@@ -112,6 +112,20 @@ test.describe('localised routing', () => {
     }
   })
 
+  test('renders the site’s own 404, not the framework’s', async ({ page }) => {
+    await page.goto(routes.notFound)
+
+    // Translated, headed, and with a way out — the stock Next screen has none
+    // of the three, and is what shows if the not-found boundary stops matching.
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('Страница не найдена')
+    await expect(page.getByTestId('site-header')).toBeVisible()
+    await expect(page.getByRole('link', { name: 'На главную' })).toHaveAttribute('href', '/ru')
+
+    // The ledger with the entry missing: two fields it cannot fill, one it can.
+    await expect(page.getByText('Раздел')).toBeVisible()
+    await expect(page.getByText('Статус')).toBeVisible()
+  })
+
   test('answers an unsupported locale with a 404', async ({ page }) => {
     const response = await page.goto(UNSUPPORTED_LOCALE_PATH)
 

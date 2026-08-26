@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Siden finnes ikke",
     "description": "Lenken kan være utdatert, eller det kan være en skrivefeil i adressen.",
-    "backHome": "Til forsiden"
+    "backHome": "Til forsiden",
+    "record": {
+      "section": "Seksjon",
+      "entry": "Oppføring",
+      "status": "Status",
+      "none": "ingen"
+    }
   },
   "ErrorBoundary": {
     "title": "Noe gikk i stykker",

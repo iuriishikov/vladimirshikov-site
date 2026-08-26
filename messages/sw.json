@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Ukurasa haukupatikana",
     "description": "Huenda kiungo kimepitwa na wakati, au anwani ina hitilafu ya uandishi.",
-    "backHome": "Rudi mwanzo"
+    "backHome": "Rudi mwanzo",
+    "record": {
+      "section": "Sehemu",
+      "entry": "Ingizo",
+      "status": "Hali",
+      "none": "hakuna"
+    }
   },
   "ErrorBoundary": {
     "title": "Kuna kitu kimeharibika",

@@ -52,6 +52,8 @@ export const routes = {
   contact: '/ru/about',
   caseStudy: '/ru/cases/samruk',
   note: '/ru/notes/growth',
+  /** An address that will never exist — the 404 page has to be as accessible as any other. */
+  notFound: '/ru/nope',
   health: '/api/health',
   robots: '/robots.txt',
   sitemap: '/sitemap.xml',

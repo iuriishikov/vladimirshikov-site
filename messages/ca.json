@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Pàgina no trobada",
     "description": "Pot ser que l'enllaç hagi quedat obsolet o que l'adreça tingui una errada.",
-    "backHome": "Torna a l'inici"
+    "backHome": "Torna a l'inici",
+    "record": {
+      "section": "Secció",
+      "entry": "Entrada",
+      "status": "Estat",
+      "none": "cap"
+    }
   },
   "ErrorBoundary": {
     "title": "Alguna cosa s'ha trencat",

@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Página não encontrada",
     "description": "A ligação pode estar desatualizada ou o endereço pode ter uma gralha.",
-    "backHome": "Voltar ao início"
+    "backHome": "Voltar ao início",
+    "record": {
+      "section": "Secção",
+      "entry": "Entrada",
+      "status": "Estado",
+      "none": "nenhum"
+    }
   },
   "ErrorBoundary": {
     "title": "Alguma coisa avariou",

@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Pagina niet gevonden",
     "description": "Misschien is de link verouderd, of staat er een typefout in het adres.",
-    "backHome": "Terug naar start"
+    "backHome": "Terug naar start",
+    "record": {
+      "section": "Sectie",
+      "entry": "Item",
+      "status": "Status",
+      "none": "geen"
+    }
   },
   "ErrorBoundary": {
     "title": "Er is iets stukgegaan",

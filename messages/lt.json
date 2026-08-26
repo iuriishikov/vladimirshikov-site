@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Puslapis nerastas",
     "description": "Galbūt nuoroda pasenusi arba adrese yra rašybos klaida.",
-    "backHome": "Į pradžią"
+    "backHome": "Į pradžią",
+    "record": {
+      "section": "Skyrius",
+      "entry": "Įrašas",
+      "status": "Būsena",
+      "none": "nėra"
+    }
   },
   "ErrorBoundary": {
     "title": "Kažkas sulūžo",

@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Siden blev ikke fundet",
     "description": "Linket kan være forældet, eller der kan være en tastefejl i adressen.",
-    "backHome": "Tilbage til forsiden"
+    "backHome": "Tilbage til forsiden",
+    "record": {
+      "section": "Sektion",
+      "entry": "Post",
+      "status": "Status",
+      "none": "ingen"
+    }
   },
   "ErrorBoundary": {
     "title": "Noget gik i stykker",

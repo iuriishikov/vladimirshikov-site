@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Lapa nav atrasta",
     "description": "Iespējams, saite ir novecojusi vai adresē ir drukas kļūda.",
-    "backHome": "Uz sākumlapu"
+    "backHome": "Uz sākumlapu",
+    "record": {
+      "section": "Sadaļa",
+      "entry": "Ieraksts",
+      "status": "Statuss",
+      "none": "nav"
+    }
   },
   "ErrorBoundary": {
     "title": "Kaut kas saplīsa",

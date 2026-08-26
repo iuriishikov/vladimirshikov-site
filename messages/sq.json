@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Faqja nuk u gjet",
     "description": "Ndoshta lidhja ka skaduar ose ka një gabim shtypi në adresë.",
-    "backHome": "Kthehu në ballinë"
+    "backHome": "Kthehu në ballinë",
+    "record": {
+      "section": "Seksioni",
+      "entry": "Hyrja",
+      "status": "Statusi",
+      "none": "asnjë"
+    }
   },
   "ErrorBoundary": {
     "title": "Diçka u prish",

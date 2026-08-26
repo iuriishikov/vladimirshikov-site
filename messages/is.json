@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Síðan fannst ekki",
     "description": "Hlekkurinn kann að vera úreltur eða innsláttarvilla í slóðinni.",
-    "backHome": "Aftur á forsíðu"
+    "backHome": "Aftur á forsíðu",
+    "record": {
+      "section": "Hluti",
+      "entry": "Færsla",
+      "status": "Staða",
+      "none": "ekkert"
+    }
   },
   "ErrorBoundary": {
     "title": "Eitthvað bilaði",

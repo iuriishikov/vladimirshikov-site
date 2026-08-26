@@ -11,6 +11,7 @@ const SCANNED_ROUTES = [
   routes.about.ru,
   routes.caseStudy,
   routes.note,
+  routes.notFound,
 ]
 
 test.describe('accessibility', () => {

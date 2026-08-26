@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Sayfa bulunamadı",
     "description": "Bağlantı eskimiş ya da adreste bir yazım hatası olmuş olabilir.",
-    "backHome": "Ana sayfaya dön"
+    "backHome": "Ana sayfaya dön",
+    "record": {
+      "section": "Bölüm",
+      "entry": "Kayıt",
+      "status": "Durum",
+      "none": "yok"
+    }
   },
   "ErrorBoundary": {
     "title": "Bir şey bozuldu",

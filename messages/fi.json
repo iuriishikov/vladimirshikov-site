@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Sivua ei löydy",
     "description": "Linkki voi olla vanhentunut tai osoitteessa on kirjoitusvirhe.",
-    "backHome": "Takaisin etusivulle"
+    "backHome": "Takaisin etusivulle",
+    "record": {
+      "section": "Osio",
+      "entry": "Merkintä",
+      "status": "Tila",
+      "none": "ei ole"
+    }
   },
   "ErrorBoundary": {
     "title": "Jokin meni rikki",

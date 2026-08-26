@@ -274,7 +274,13 @@
   "NotFound": {
     "title": "Không tìm thấy trang",
     "description": "Có thể liên kết đã cũ, hoặc địa chỉ có lỗi chính tả.",
-    "backHome": "Về trang chủ"
+    "backHome": "Về trang chủ",
+    "record": {
+      "section": "Mục",
+      "entry": "Bản ghi",
+      "status": "Trạng thái",
+      "none": "không có"
+    }
   },
   "ErrorBoundary": {
     "title": "Có gì đó hỏng",
