@@ -91,6 +91,10 @@ jobs:
       HEALTH_URL: ${{ vars.SITE_URL }}/api/health
 
     steps:
+      # The four files the server needs from this repository. Everything else it
+      # runs comes from the image.
+      - uses: actions/checkout@v7
+
       # StrictHostKeyChecking is never disabled. SSH_KNOWN_HOSTS holds the
       # server's public host key; its SHA256 fingerprint is what the SSH client
       # is pinned to, so a swapped or spoofed host aborts the deploy instead of
@@ -159,6 +163,31 @@ jobs:
           fi
           echo "image_ref=$ref" >> "$GITHUB_OUTPUT"
 
+      # The server used to be expected to hold a git checkout of this
+      # repository, bootstrapped by hand — which meant a manual first-time
+      # clone, and, for a private repository, a second credential on the box
+      # just to read it. The runner already has the repository; shipping the
+      # four files it needs is strictly less machinery.
+      #
+      # `docker-compose.override.yml` is deliberately absent: it is the local
+      # development layer, and deploy.sh names its compose files explicitly so a
+      # stray one could not be picked up anyway.
+      - name: Ship the deployment assets
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
+          target: ${{ vars.DEPLOY_PATH }}
+          # Relative paths, so `scripts/deploy.sh` lands under `scripts/`.
+          source: |
+            docker-compose.yml
+            docker-compose.staging.yml
+            Caddyfile
+            scripts/deploy.sh
+
       - name: Roll out
         uses: appleboy/ssh-action@v1
         env:
@@ -180,6 +209,8 @@ jobs:
           script: |
             set -euo pipefail
             cd "$DEPLOY_PATH"
+            # scp does not carry the executable bit.
+            chmod +x scripts/deploy.sh
             ./scripts/deploy.sh "$IMAGE_REF"
 
       # Deploying is not the same as working. The site is only considered live

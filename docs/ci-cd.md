@@ -193,7 +193,7 @@ production.
 
 | Name          | Scope                   | Example                      | Purpose                                                           |
 | ------------- | ----------------------- | ---------------------------- | ----------------------------------------------------------------- |
-| `DEPLOY_PATH` | `staging`, `production` | `/opt/vladimirshikov-site`   | The checkout on the server that holds the compose stack           |
+| `DEPLOY_PATH` | `staging`, `production` | `~/vladimirshikov-site`      | The directory the rollout ships the compose stack into            |
 | `SITE_URL`    | `staging`, `production` | `https://vladimirshikov.com` | The public origin the workflow links to and health-checks against |
 
 `SITE_URL` is a **variable**, not a secret — a public URL by definition. It is a
