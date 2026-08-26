@@ -6,6 +6,21 @@ on:
     tags: ["v*"]
   release:
     types: [published]
+  # The only trigger that actually reaches production, and the reason is worth
+  # stating: semantic-release creates the tag and the release with GITHUB_TOKEN,
+  # and GitHub deliberately starts no workflow run from an event that token
+  # raised. So neither `tags: ["v*"]` above nor `release: published` fires for a
+  # routine release — v1.0.0-rc.1 was published without starting a single
+  # deployment, which is the proof rather than the theory.
+  #
+  # Dispatching this workflow *against the tag* needs no inputs: `ref_type` is
+  # then `tag` and `ref_name` is the version, which is exactly what `resolve`
+  # below already reads. `gh workflow run deploy.yml --ref v1.0.0`, or the
+  # branch/tag picker in the Actions UI.
+  #
+  # Note the file that runs is the one committed at that tag, so this trigger
+  # only exists for tags cut after it was added.
+  workflow_dispatch:
 
 permissions:
   contents: read

@@ -66,9 +66,12 @@ jobs:
       #
       # Note: a tag or release created with GITHUB_TOKEN does not start another
       # workflow run. Deploy.yml therefore fires on the *release published*
-      # event only when a human (or an app token) publishes it; a routine
-      # semantic-release run reaches production by re-running deploy.yml for the
-      # tag, or by dispatching rollback.yml with the freshly published tag.
+      # event only when a human (or an app token) publishes it, and a routine
+      # semantic-release run publishes a version that nothing has deployed.
+      #
+      # Reaching production is a deliberate act: dispatch deploy.yml against the
+      # published tag. It cannot be a re-run, as this note once said — no run
+      # ever existed for that tag to re-run.
       - name: Run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

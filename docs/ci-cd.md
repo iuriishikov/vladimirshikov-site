@@ -23,7 +23,7 @@ splitting a CI job therefore never requires editing the branch protection rule.
 | `stale.yml`             | Daily schedule                                         | Marks and closes abandoned issues and PRs                           |
 | `release.yml`           | Push to `main` or `develop`                            | Runs semantic-release; tags and writes the changelog                |
 | `docker.yml`            | `workflow_call` (reusable)                             | Builds and pushes the multi-arch image, SBOM and provenance         |
-| `deploy.yml`            | Push to `develop`; tag `v*`; `release: published`      | Ships to staging or production, health-checks, rolls back           |
+| `deploy.yml`            | Push to `develop`; `workflow_dispatch` against a tag   | Ships to staging or production, health-checks, rolls back           |
 | `rollback.yml`          | `workflow_dispatch`                                    | Redeploys a previously published image tag                          |
 
 ---
@@ -97,10 +97,26 @@ is stored anywhere.
 
 ## `deploy.yml`
 
-| Trigger                          | Environment  | Approval          |
-| -------------------------------- | ------------ | ----------------- |
-| Push to `develop`                | `staging`    | None              |
-| Tag `v*` or `release: published` | `production` | Reviewer required |
+| Trigger                           | Environment  | Approval          |
+| --------------------------------- | ------------ | ----------------- |
+| Push to `develop`                 | `staging`    | None              |
+| `workflow_dispatch` against a tag | `production` | Reviewer required |
+| Tag `v*` or `release: published`  | `production` | Reviewer required |
+
+The last row is declared but does not fire for a routine release, and the distinction matters when
+you are waiting for a deployment that never starts. semantic-release creates the tag and the release
+with `GITHUB_TOKEN`, and GitHub raises no workflow run from an event that token caused. Production is
+therefore reached deliberately, by dispatching this workflow against the published tag:
+
+```bash
+gh workflow run deploy.yml --ref v1.0.0
+```
+
+`ref_type` is then `tag` and `ref_name` the version, which is what `resolve` already reads — the
+dispatch needs no inputs. The workflow file that runs is the one committed at that tag.
+
+A push to `develop` resolves to `staging`, and staging holds no server secrets on this project. That
+deployment builds and publishes the image, reports that there was nowhere to roll it out, and passes.
 
 The job calls `docker.yml` to produce the image, then connects to the VPS over SSH and runs the
 compose stack update. It polls `/api/health` and rolls back automatically if the new container does
