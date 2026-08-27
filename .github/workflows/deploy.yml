@@ -114,7 +114,6 @@ jobs:
     with:
       image_tag: ${{ needs.resolve.outputs.image_tag }}
       environment: ${{ needs.resolve.outputs.environment }}
-      push: true
     permissions:
       contents: read
       packages: write

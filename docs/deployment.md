@@ -187,7 +187,8 @@ dispatched run to appear instead of assuming it did. Going to production by hand
 
 Then, in order:
 
-1. **`docker.yml`** builds the multi-arch image, pushes it to GHCR with an SBOM and a provenance
+1. **`docker.yml`** builds `linux/amd64` and `linux/arm64` natively on a runner each, joins them into
+   one index, pushes it to GHCR with an SBOM and a provenance
    attestation, and outputs the resolved reference.
 2. **Capture the current state.** Over SSH, it reads `$DEPLOY_PATH/.deployed-image` — the reference
    the last successful rollout activated. This is the rollback target, read _before_ anything
