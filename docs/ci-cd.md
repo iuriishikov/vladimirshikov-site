@@ -11,20 +11,20 @@ splitting a CI job therefore never requires editing the branch protection rule.
 
 ## Workflows at a glance
 
-| Workflow                | Triggers                                               | Gates                                                                  |
-| ----------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------- |
-| `ci.yml`                | PR to `main`/`develop`, push to `main`/`develop`       | Formatting, lint, types, unit tests, build, e2e, dead code, secrets    |
-| `codeql.yml`            | PR, push to `main`/`develop`, weekly schedule          | Static security analysis of JS/TS                                      |
-| `dependency-review.yml` | `pull_request`                                         | New dependencies with known vulnerabilities or bad licences            |
-| `scorecard.yml`         | Weekly schedule, push to `main`                        | Supply-chain posture score (reporting)                                 |
-| `lighthouse.yml`        | `pull_request`                                         | Performance, a11y, best-practices and SEO budgets                      |
-| `pr-lint.yml`           | `pull_request` (opened, edited, synchronize, reopened) | Title is a Conventional Commit, branch name matches, no CI-skip marker |
-| `labeler.yml`           | `pull_request_target`                                  | Applies path-based labels (reporting)                                  |
-| `stale.yml`             | Daily schedule                                         | Marks and closes abandoned issues and PRs                              |
-| `release.yml`           | Push to `main` or `develop`                            | Runs semantic-release; tags and writes the changelog                   |
-| `docker.yml`            | `workflow_call` (reusable)                             | Builds and pushes the multi-arch image, SBOM and provenance            |
-| `deploy.yml`            | Dispatched by `release.yml`; tag `v*`                  | Ships to production, health-checks, rolls back                         |
-| `rollback.yml`          | `workflow_dispatch`                                    | Redeploys a previously published image tag                             |
+| Workflow                | Triggers                                               | Gates                                                                      |
+| ----------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------- |
+| `ci.yml`                | PR to `main`/`develop`, push to `main`/`develop`       | Formatting, lint, types, unit tests, build, e2e, dead code, secrets        |
+| `codeql.yml`            | PR, push to `main`/`develop`, weekly schedule          | Static security analysis of JS/TS                                          |
+| `dependency-review.yml` | `pull_request`                                         | New dependencies with known vulnerabilities or bad licences                |
+| `scorecard.yml`         | Weekly schedule, push to `main`                        | Supply-chain posture score (reporting)                                     |
+| `lighthouse.yml`        | `pull_request`                                         | Performance, a11y, best-practices and SEO budgets                          |
+| `pr-lint.yml`           | `pull_request` (opened, edited, synchronize, reopened) | Title is a Conventional Commit, branch name matches, no CI-skip marker     |
+| `labeler.yml`           | `pull_request_target`                                  | Applies path-based labels (reporting)                                      |
+| `stale.yml`             | Daily schedule                                         | Marks and closes abandoned issues and PRs                                  |
+| `release.yml`           | Push to `main`; `workflow_dispatch`                    | semantic-release tags and writes the changelog, then dispatches the deploy |
+| `docker.yml`            | `workflow_call` (reusable)                             | Builds and pushes the multi-arch image, SBOM and provenance                |
+| `deploy.yml`            | Dispatched by `release.yml`; tag `v*`                  | Ships to production, health-checks, rolls back                             |
+| `rollback.yml`          | `workflow_dispatch`                                    | Redeploys a previously published image tag                                 |
 
 ---
 
