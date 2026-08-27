@@ -197,6 +197,13 @@ jobs:
       - name: Derive tags and annotations
         id: meta
         uses: docker/metadata-action@v6
+        env:
+          # Index level, not the default. `imagetools create` annotates the
+          # index it is building and the descriptors in it; it cannot reach
+          # inside the per-architecture manifests, and refuses the attempt with
+          # `"manifest" annotations are not supported yet` — which reads like a
+          # missing feature rather than the wrong level being asked for.
+          DOCKER_METADATA_ANNOTATIONS_LEVELS: index
         with:
           images: ${{ steps.names.outputs.image }}
           tags: |
