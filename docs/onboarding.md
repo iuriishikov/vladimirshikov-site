@@ -152,8 +152,8 @@ You will hit the hooks along the way. Each one is doing something specific:
 Open the PR **into `develop`** with a Conventional Commit title — squash-merge means the title
 becomes the commit message. Wait for `ci-ok`. When it is green and reviewed, squash-merge.
 
-Your change then flows automatically: an `rc` prerelease, an image in GHCR, a deploy to staging. See
-[ci-cd.md](./ci-cd.md).
+Nothing is released or deployed by that merge. `develop` accumulates work; production happens when
+`develop` is promoted into `main`, and then it happens on its own. See [ci-cd.md](./ci-cd.md).
 
 ---
 

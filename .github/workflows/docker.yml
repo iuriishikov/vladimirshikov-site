@@ -47,9 +47,10 @@ jobs:
     timeout-minutes: 60
     # NEXT_PUBLIC_* values are inlined into the client bundle by `next build`,
     # so the image is environment-specific and the build must be able to read
-    # that environment's variables. On `production` this means the reviewer
-    # approves the build and, separately, the rollout in deploy.yml — the two
-    # are independently revocable.
+    # that environment's variables. The binding is for those variables, not for
+    # a gate: if the environment carries a protection rule, this job inherits it
+    # and asks for approval a second time, once for the build and once for the
+    # rollout in deploy.yml.
     environment: ${{ inputs.environment }}
     permissions:
       contents: read

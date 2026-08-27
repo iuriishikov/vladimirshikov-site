@@ -2,7 +2,11 @@ name: Deploy
 
 on:
   push:
-    branches: [develop]
+    # No `branches:` entry. A push to `develop` used to resolve to staging,
+    # which on this project has no server: it spent ten minutes building a
+    # multi-architecture image in order to report that there was nowhere to
+    # roll it out. Staging remains reachable by dispatching this workflow with
+    # `environment: staging` on the day a second machine exists.
     tags: ["v*"]
   release:
     types: [published]
@@ -346,6 +350,14 @@ jobs:
               printf 'API_BASE_URL=\n'
             } > .env
             echo "Wrote .env for $domain ($APP_ENV)."
+
+            # Reported every rollout because compose files make claims about the
+            # machine and this is the only place those claims can be checked.
+            # A `cpus: 1.50` limit met a single-core server here and failed the
+            # release; one line of output would have shown it in advance.
+            printf 'Server: %s, %s CPU(s), %s MB RAM\n' \
+              "$(uname -m)" "$(nproc)" \
+              "$(awk '/MemTotal/ { printf "%d", $2 / 1024 }' /proc/meminfo)"
 
       - name: Roll out
         if: ${{ steps.target.outputs.configured == 'true' }}
