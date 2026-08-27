@@ -22,7 +22,7 @@ splitting a CI job therefore never requires editing the branch protection rule.
 | `labeler.yml`           | `pull_request_target`                                  | Applies path-based labels (reporting)                                      |
 | `stale.yml`             | Daily schedule                                         | Marks and closes abandoned issues and PRs                                  |
 | `release.yml`           | Push to `main`; `workflow_dispatch`                    | semantic-release tags and writes the changelog, then dispatches the deploy |
-| `docker.yml`            | `workflow_call` (reusable)                             | Builds and pushes the multi-arch image, SBOM and provenance                |
+| `docker.yml`            | `workflow_call` (reusable)                             | Builds both architectures natively, joins, probes, attests                 |
 | `deploy.yml`            | Dispatched by `release.yml`; tag `v*`                  | Ships to production, health-checks, rolls back                             |
 | `rollback.yml`          | `workflow_dispatch`                                    | Redeploys a previously published image tag                                 |
 
@@ -96,8 +96,17 @@ is recovered, without pushing an empty commit to `main` to wake it up.
 ## `docker.yml`
 
 A reusable workflow (`workflow_call`) — it has no trigger of its own and is invoked by `deploy.yml`.
+It runs in two jobs: `build`, once per architecture, and `publish`, which joins the results.
 
-- Builds the standalone Next.js image for `linux/amd64` and `linux/arm64` with Buildx.
+- Builds the standalone Next.js image for `linux/amd64` and `linux/arm64` **natively, one runner
+  each, in parallel**. Both were previously built on the same x86 runner with the arm64 half emulated
+  under QEMU, which cost roughly six of every ten minutes and could not be cached away: the
+  application source changes on every release, so `next build` re-runs every time, and it re-ran
+  twice. GitHub's arm64 runners are free to public repositories, so the emulation bought nothing.
+  The wall clock is now the slower of the two builds rather than their sum.
+- Each architecture is pushed **by digest and untagged** — a tag pointing at one half would be wrong
+  the moment the other finished, and the two race. `publish` then joins the digests into one index
+  with `docker buildx imagetools create` and tags that.
 - Pushes to **`ghcr.io/iuriishikov/vladimirshikov-site`**, tagged with the git SHA, the branch or
   release tag, and `latest` for stable releases.
 - Starts the pushed image and waits for `/api/health` before attesting it, under the same runtime

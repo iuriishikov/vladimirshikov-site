@@ -18,53 +18,60 @@ on:
           runtime (SITE_URL, APP_ENV), so the same artefact is valid everywhere.
         required: true
         type: string
-      push:
-        description: Push to GHCR. Set false to build-only, e.g. to validate a Dockerfile change.
-        required: false
-        type: boolean
-        default: true
     outputs:
       image:
         description: Image repository without a tag, e.g. ghcr.io/iuriishikov/vladimirshikov-site.
-        value: ${{ jobs.build.outputs.image }}
+        value: ${{ jobs.publish.outputs.image }}
       digest:
         description: Immutable digest of the pushed multi-arch image index.
-        value: ${{ jobs.build.outputs.digest }}
+        value: ${{ jobs.publish.outputs.digest }}
       version:
         description: Primary tag chosen by docker/metadata-action.
-        value: ${{ jobs.build.outputs.version }}
+        value: ${{ jobs.publish.outputs.version }}
       image_ref:
         description: Fully qualified, digest-pinned reference to deploy.
-        value: ${{ jobs.build.outputs.image_ref }}
+        value: ${{ jobs.publish.outputs.image_ref }}
 
 permissions:
   contents: read
 
 jobs:
+  # One runner per architecture, each building natively.
+  #
+  # Both used to be built on the same x86 runner, with the arm64 half executed
+  # instruction-by-instruction under QEMU. That cost roughly six of every ten
+  # minutes, and no cache could recover it: the application source changes on
+  # every release, so `next build` re-runs every time, and it re-ran twice —
+  # once at native speed and once emulated.
+  #
+  # GitHub's arm64 runners are free to public repositories, so the emulation
+  # bought nothing whatsoever. The two builds now run side by side on their own
+  # hardware, and the wall clock is the slower of the pair rather than the sum.
   build:
-    name: build and push
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
+    name: build ${{ matrix.key }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 45
+    strategy:
+      # Both legs run to completion even when one fails: knowing whether a
+      # failure is architecture-specific is most of the diagnosis.
+      fail-fast: false
+      matrix:
+        include:
+          - key: amd64
+            platform: linux/amd64
+            runner: ubuntu-latest
+          - key: arm64
+            platform: linux/arm64
+            runner: ubuntu-24.04-arm
     # NEXT_PUBLIC_* values are inlined into the client bundle by `next build`,
     # so the image is environment-specific and the build must be able to read
     # that environment's variables. The binding is for those variables, not for
-    # a gate: if the environment carries a protection rule, this job inherits it
-    # and asks for approval a second time, once for the build and once for the
-    # rollout in deploy.yml.
+    # a gate.
     environment: ${{ inputs.environment }}
     permissions:
       contents: read
       # Push to GHCR.
       packages: write
-      # Sigstore keyless signing for the build provenance attestation.
-      id-token: write
-      attestations: write
-
-    outputs:
-      image: ${{ steps.names.outputs.image }}
-      digest: ${{ steps.build.outputs.digest }}
-      version: ${{ steps.meta.outputs.version }}
-      image_ref: ${{ steps.ref.outputs.image_ref }}
 
     steps:
       - uses: actions/checkout@v7
@@ -77,25 +84,117 @@ jobs:
         id: names
         run: echo "image=ghcr.io/${GITHUB_REPOSITORY,,}" >> "$GITHUB_OUTPUT"
 
-      # linux/arm64 is emulated on the amd64 runner; without QEMU the arm64 leg
-      # cannot execute the build stage at all.
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v4
-        with:
-          platforms: arm64
-
+      # No QEMU step. That is the point of this job existing twice.
       - name: Set up Buildx
         uses: docker/setup-buildx-action@v4
 
       - name: Log in to GHCR
-        if: ${{ inputs.push }}
         uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Derive tags and labels
+      # Labels only. Tags belong to the index that `publish` assembles, not to
+      # either half of it.
+      - name: Derive labels
+        id: meta
+        uses: docker/metadata-action@v6
+        with:
+          images: ${{ steps.names.outputs.image }}
+          labels: |
+            org.opencontainers.image.title=vladimirshikov-site
+            org.opencontainers.image.description=Personal site of Vladimir Shikov
+            org.opencontainers.image.vendor=Vladimir Shikov
+            org.opencontainers.image.licenses=MIT
+
+      # Pushed by digest and deliberately untagged: a tag pointing at one
+      # architecture would be wrong the moment the other finished, and the two
+      # legs race. `publish` gives the finished index its tags.
+      - name: Build and push by digest
+        id: build
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          platforms: ${{ matrix.platform }}
+          labels: ${{ steps.meta.outputs.labels }}
+          outputs: type=image,name=${{ steps.names.outputs.image }},push-by-digest=true,name-canonical=true,push=true
+          # Scoped per environment and per architecture: two architectures share
+          # no layers, so one scope would have them evicting each other.
+          cache-from: type=gha,scope=${{ inputs.environment }}-${{ matrix.key }}
+          cache-to: type=gha,mode=max,scope=${{ inputs.environment }}-${{ matrix.key }}
+          # In-toto provenance and an SPDX SBOM, attached per architecture and
+          # carried into the index by `imagetools create`.
+          provenance: mode=max
+          sbom: true
+          # Only genuinely build-time values belong here. Anything that differs
+          # between staging and production is read from the environment at
+          # runtime instead, which is what keeps one image valid for both.
+          build-args: |
+            NEXT_PUBLIC_ANALYTICS_DOMAIN=${{ vars.NEXT_PUBLIC_ANALYTICS_DOMAIN }}
+            SKIP_ENV_VALIDATION=1
+
+      # The digest is the only thing the next job needs, and an empty file named
+      # after it is the smallest way to carry one.
+      - name: Export the digest
+        env:
+          DIGEST: ${{ steps.build.outputs.digest }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/digests"
+          touch "$RUNNER_TEMP/digests/${DIGEST#sha256:}"
+
+      - name: Upload the digest
+        uses: actions/upload-artifact@v7
+        with:
+          name: digest-${{ matrix.key }}
+          path: ${{ runner.temp }}/digests/*
+          if-no-files-found: error
+          retention-days: 1
+
+  # Joins the two architecture-specific images into one multi-architecture
+  # index, and only then tags, probes and attests it.
+  publish:
+    name: publish and probe
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      packages: write
+      # Sigstore keyless signing for the build provenance attestation.
+      id-token: write
+      attestations: write
+
+    outputs:
+      image: ${{ steps.names.outputs.image }}
+      digest: ${{ steps.index.outputs.digest }}
+      version: ${{ steps.meta.outputs.version }}
+      image_ref: ${{ steps.ref.outputs.image_ref }}
+
+    steps:
+      - name: Derive the image name
+        id: names
+        run: echo "image=ghcr.io/${GITHUB_REPOSITORY,,}" >> "$GITHUB_OUTPUT"
+
+      - name: Collect the digests
+        uses: actions/download-artifact@v8
+        with:
+          path: ${{ runner.temp }}/digests
+          pattern: digest-*
+          merge-multiple: true
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Derive tags and annotations
         id: meta
         uses: docker/metadata-action@v6
         with:
@@ -113,30 +212,53 @@ jobs:
             org.opencontainers.image.vendor=Vladimir Shikov
             org.opencontainers.image.licenses=MIT
 
-      - name: Build and push
-        id: build
-        uses: docker/build-push-action@v7
-        with:
-          context: .
-          platforms: linux/amd64,linux/arm64
-          push: ${{ inputs.push }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          annotations: ${{ steps.meta.outputs.annotations }}
-          # Scoped per environment so a staging build cannot poison the
-          # production cache, and vice versa.
-          cache-from: type=gha,scope=${{ inputs.environment }}
-          cache-to: type=gha,mode=max,scope=${{ inputs.environment }}
-          # In-toto provenance and an SPDX SBOM, both attached to the image
-          # index in the registry.
-          provenance: mode=max
-          sbom: true
-          # Only genuinely build-time values belong here. Anything that differs
-          # between staging and production is read from the environment at
-          # runtime instead, which is what keeps one image valid for both.
-          build-args: |
-            NEXT_PUBLIC_ANALYTICS_DOMAIN=${{ vars.NEXT_PUBLIC_ANALYTICS_DOMAIN }}
-            SKIP_ENV_VALIDATION=1
+      # Arguments are assembled into an array rather than interpolated into one
+      # string. Annotation values contain spaces, and word-splitting a `$(...)`
+      # of them — the form this is usually copied in — silently breaks each one
+      # into several arguments.
+      - name: Create the image index
+        working-directory: ${{ runner.temp }}/digests
+        env:
+          IMAGE: ${{ steps.names.outputs.image }}
+        run: |
+          set -euo pipefail
+          args=()
+          while IFS= read -r tag; do
+            [ -n "$tag" ] && args+=(--tag "$tag")
+          done < <(jq -r '.tags[]' <<<"$DOCKER_METADATA_OUTPUT_JSON")
+          while IFS= read -r annotation; do
+            [ -n "$annotation" ] && args+=(--annotation "$annotation")
+          done < <(jq -r '.annotations // [] | .[]' <<<"$DOCKER_METADATA_OUTPUT_JSON")
+
+          sources=()
+          for file in *; do
+            [ -e "$file" ] || continue
+            sources+=("${IMAGE}@sha256:${file}")
+          done
+          if [ "${#sources[@]}" -eq 0 ]; then
+            echo "::error::No per-architecture digests were collected."
+            exit 1
+          fi
+          echo "Joining ${#sources[@]} architecture(s) into one index:"
+          printf '  %s\n' "${sources[@]}"
+
+          docker buildx imagetools create "${args[@]}" "${sources[@]}"
+
+      - name: Read the index digest
+        id: index
+        env:
+          IMAGE: ${{ steps.names.outputs.image }}
+          VERSION: ${{ steps.meta.outputs.version }}
+        run: |
+          set -euo pipefail
+          digest="$(docker buildx imagetools inspect "${IMAGE}:${VERSION}" \
+            --format '{{json .Manifest}}' | jq -r '.digest')"
+          if [ -z "$digest" ] || [ "$digest" = "null" ]; then
+            echo "::error::Could not read the digest of ${IMAGE}:${VERSION}."
+            exit 1
+          fi
+          echo "Index digest: ${digest}"
+          echo "digest=${digest}" >> "$GITHUB_OUTPUT"
 
       # A digest-pinned reference is what deploy.yml ships: a tag can be moved,
       # a digest cannot.
@@ -144,7 +266,7 @@ jobs:
         id: ref
         env:
           IMAGE: ${{ steps.names.outputs.image }}
-          DIGEST: ${{ steps.build.outputs.digest }}
+          DIGEST: ${{ steps.index.outputs.digest }}
         run: echo "image_ref=${IMAGE}@${DIGEST}" >> "$GITHUB_OUTPUT"
 
       # Until this step existed, nothing had ever started this image. It was
@@ -156,8 +278,10 @@ jobs:
       # So the flags are not decoration. They are docker-compose.yml's runtime
       # contract restated, because a container that only works with a writable
       # root and full capabilities is a container that only works in this step.
+      #
+      # It runs on an x86 runner and so probes the amd64 half of the index,
+      # which is the half the server runs.
       - name: Start the image and ask it whether it works
-        if: ${{ inputs.push }}
         env:
           IMAGE_REF: ${{ steps.ref.outputs.image_ref }}
         run: |
@@ -192,11 +316,10 @@ jobs:
       # alongside the image, so `gh attestation verify` works against the digest
       # without needing this repository's workflow run to still exist.
       - name: Attest build provenance
-        if: ${{ inputs.push }}
         uses: actions/attest-build-provenance@v4
         with:
           subject-name: ${{ steps.names.outputs.image }}
-          subject-digest: ${{ steps.build.outputs.digest }}
+          subject-digest: ${{ steps.index.outputs.digest }}
           push-to-registry: true
 
       - name: Summarise
@@ -210,6 +333,13 @@ jobs:
             echo
             echo '```'
             echo "$IMAGE_REF"
+            echo '```'
+            echo
+            echo "**Architectures** — built natively, one runner each"
+            echo
+            echo '```'
+            echo "linux/amd64"
+            echo "linux/arm64"
             echo '```'
             echo
             echo "**Tags**"
