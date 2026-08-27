@@ -11,20 +11,20 @@ splitting a CI job therefore never requires editing the branch protection rule.
 
 ## Workflows at a glance
 
-| Workflow                | Triggers                                               | Gates                                                               |
-| ----------------------- | ------------------------------------------------------ | ------------------------------------------------------------------- |
-| `ci.yml`                | PR to `main`/`develop`, push to `main`/`develop`       | Formatting, lint, types, unit tests, build, e2e, dead code, secrets |
-| `codeql.yml`            | PR, push to `main`/`develop`, weekly schedule          | Static security analysis of JS/TS                                   |
-| `dependency-review.yml` | `pull_request`                                         | New dependencies with known vulnerabilities or bad licences         |
-| `scorecard.yml`         | Weekly schedule, push to `main`                        | Supply-chain posture score (reporting)                              |
-| `lighthouse.yml`        | `pull_request`                                         | Performance, a11y, best-practices and SEO budgets                   |
-| `pr-lint.yml`           | `pull_request` (opened, edited, synchronize, reopened) | PR title is a Conventional Commit; branch name matches the pattern  |
-| `labeler.yml`           | `pull_request_target`                                  | Applies path-based labels (reporting)                               |
-| `stale.yml`             | Daily schedule                                         | Marks and closes abandoned issues and PRs                           |
-| `release.yml`           | Push to `main` or `develop`                            | Runs semantic-release; tags and writes the changelog                |
-| `docker.yml`            | `workflow_call` (reusable)                             | Builds and pushes the multi-arch image, SBOM and provenance         |
-| `deploy.yml`            | Dispatched by `release.yml`; tag `v*`                  | Ships to production, health-checks, rolls back                      |
-| `rollback.yml`          | `workflow_dispatch`                                    | Redeploys a previously published image tag                          |
+| Workflow                | Triggers                                               | Gates                                                                      |
+| ----------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------- |
+| `ci.yml`                | PR to `main`/`develop`, push to `main`/`develop`       | Formatting, lint, types, unit tests, build, e2e, dead code, secrets        |
+| `codeql.yml`            | PR, push to `main`/`develop`, weekly schedule          | Static security analysis of JS/TS                                          |
+| `dependency-review.yml` | `pull_request`                                         | New dependencies with known vulnerabilities or bad licences                |
+| `scorecard.yml`         | Weekly schedule, push to `main`                        | Supply-chain posture score (reporting)                                     |
+| `lighthouse.yml`        | `pull_request`                                         | Performance, a11y, best-practices and SEO budgets                          |
+| `pr-lint.yml`           | `pull_request` (opened, edited, synchronize, reopened) | Title is a Conventional Commit, branch name matches, no CI-skip marker     |
+| `labeler.yml`           | `pull_request_target`                                  | Applies path-based labels (reporting)                                      |
+| `stale.yml`             | Daily schedule                                         | Marks and closes abandoned issues and PRs                                  |
+| `release.yml`           | Push to `main`; `workflow_dispatch`                    | semantic-release tags and writes the changelog, then dispatches the deploy |
+| `docker.yml`            | `workflow_call` (reusable)                             | Builds and pushes the multi-arch image, SBOM and provenance                |
+| `deploy.yml`            | Dispatched by `release.yml`; tag `v*`                  | Ships to production, health-checks, rolls back                             |
+| `rollback.yml`          | `workflow_dispatch`                                    | Redeploys a previously published image tag                                 |
 
 ---
 
@@ -81,6 +81,13 @@ checks on every pull request opened from it. A skipped check is indistinguishabl
 When a release is published, this workflow dispatches `deploy.yml` against the new tag and waits for
 that run to appear, failing if it does not. A version that is published and undeployed is the one
 outcome this chain exists to make impossible, and it is invisible unless something checks.
+
+It can also be run by hand. That exists for the one way this chain can still be broken from outside:
+GitHub skips every push-triggered workflow when the head commit message carries a CI-skip marker
+anywhere in it, and a squash commit inherits the pull request's description, so a marker merely
+quoted in prose silences the release exactly as one meant seriously would. `pr-lint.yml` rejects such
+a description before it can be merged; running this workflow is how a release that was already missed
+is recovered, without pushing an empty commit to `main` to wake it up.
 
 `CHANGELOG.md` is generated. Editing it by hand guarantees a conflict on the next release.
 
@@ -195,6 +202,12 @@ PR status.
 **`pr-lint.yml`** — validates the PR title against the Conventional Commits type and scope lists,
 and the head branch name against the `validate-branch-name` pattern. Because merges are squashes,
 the title becomes the commit message and hence a changelog line.
+
+It also rejects a CI-skip marker in the title or the description, in any spelling GitHub honours. The
+description becomes the squash commit's body, and GitHub reads the whole message: a marker there
+skips every workflow on the target branch, which on `main` means no release and so no deployment,
+reported as a perfectly green merge. The check exists because that happened twice here — the second
+time from a description that was explaining the first.
 
 **`labeler.yml`** — applies labels from [`.github/labeler.yml`](../.github/labeler.yml) based on the
 paths a PR touches (`docs`, `ci`, `deps`, `e2e`, and the FSD layers). Labels drive nothing

@@ -79,6 +79,50 @@ jobs:
           wip: true
           validateSingleCommit: false
 
+  # The squash commit takes its title and body from this pull request, and
+  # GitHub reads that whole message looking for a marker that means "run no
+  # workflows" — anywhere in it, quoted or not, prose or intent.
+  #
+  # A merge carrying one silently skips every workflow on the target branch. On
+  # `main` that means no release, so no deployment, and a green merge that
+  # changed nothing. It has happened twice on this repository: once from a
+  # commit semantic-release wrote, and once from a description explaining the
+  # first. The second is why this check exists rather than a note asking people
+  # to be careful.
+  skip-marker:
+    name: no CI-skip marker
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Reject a CI-skip marker in the title or description
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+          BODY: ${{ github.event.pull_request.body }}
+        run: |
+          set -euo pipefail
+          # Every spelling GitHub honours, built rather than written out, so
+          # that this file does not itself carry one into its own merge commit.
+          o='['
+          c=']'
+          pattern="\\${o}(skip[ -]ci|ci[ -]skip|no[ -]ci|skip[ -]actions|actions[ -]skip)\\${c}"
+          found=0
+          for field in TITLE BODY; do
+            value="${!field:-}"
+            if printf '%s' "$value" | grep -Eiq "$pattern"; then
+              echo "::error::The pull request $(printf '%s' "$field" | tr '[:upper:]' '[:lower:]') contains a CI-skip marker."
+              printf '%s\n' "$value" | grep -Ein "$pattern" || true
+              found=1
+            fi
+          done
+          if [ "$found" -eq 1 ]; then
+            echo "Squash-merging copies this text into the commit message, and GitHub would then run"
+            echo "no workflows on the target branch: no release, no deployment, and nothing to say so."
+            echo "Rephrase it — naming the marker without writing it is enough."
+            exit 1
+          fi
+          echo "No CI-skip marker in the title or description."
+
   # Branch names feed the release channel and the deploy triggers, so a typo
   # here is a deployment bug, not a style issue.
   branch:

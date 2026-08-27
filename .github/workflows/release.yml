@@ -11,6 +11,19 @@ on:
       # checks on every pull request opened from it.
       - main
 
+  # A release that does not start has no other way back. GitHub skips every
+  # push-triggered workflow when the head commit message carries a CI-skip
+  # marker anywhere in it, body included, and a squash commit inherits the
+  # pull request's description — so a marker quoted in prose silences the
+  # release as effectively as one meant seriously. That happened here, to the
+  # very commit that documented it.
+  #
+  # `pr-lint.yml` now rejects such a description before it can be merged. This
+  # exists for everything that guard cannot foresee: it makes a missed release
+  # recoverable by running this workflow, rather than by pushing an empty
+  # commit to `main` to wake it up.
+  workflow_dispatch:
+
 permissions:
   contents: read
 
