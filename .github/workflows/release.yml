@@ -3,10 +3,13 @@ name: Release
 on:
   push:
     branches:
-      # main publishes stable versions; develop publishes the `rc` prerelease
-      # channel. Both are configured in .releaserc.json.
+      # `main` is the only release branch, and the only branch this needs to
+      # run on. `develop` used to publish an `rc` prerelease channel, which
+      # produced versions nothing deployed, a changelog commit that conflicted
+      # with main's on every promotion, and — because semantic-release marks
+      # its own commits `[skip ci]` — a develop tip that silently cancelled the
+      # checks on every pull request opened from it.
       - main
-      - develop
 
 permissions:
   contents: read
@@ -30,6 +33,11 @@ jobs:
       pull-requests: write
       # Provenance for anything semantic-release publishes.
       id-token: write
+      # Dispatch the deployment of what was just published.
+      actions: write
+
+    outputs:
+      version: ${{ steps.published.outputs.version }}
 
     steps:
       # semantic-release derives the next version from the full commit history
@@ -61,17 +69,23 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      # Read before, compared after: semantic-release does not report what it
+      # published in a form a later step can read, and `releases/latest` is the
+      # one fact that changes only when a release actually happens. A run that
+      # analyses the commits and decides no release is due is normal, and must
+      # not deploy anything.
+      - name: Note the current release
+        id: before
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          tag="$(gh api "repos/${GITHUB_REPOSITORY}/releases/latest" --jq .tag_name 2>/dev/null || true)"
+          echo "Latest release before this run: ${tag:-none}"
+          echo "tag=${tag}" >> "$GITHUB_OUTPUT"
+
       # The `chore(release)` commit that @semantic-release/git pushes carries
       # `[skip ci]`, which stops this workflow from triggering itself.
-      #
-      # Note: a tag or release created with GITHUB_TOKEN does not start another
-      # workflow run. Deploy.yml therefore fires on the *release published*
-      # event only when a human (or an app token) publishes it, and a routine
-      # semantic-release run publishes a version that nothing has deployed.
-      #
-      # Reaching production is a deliberate act: dispatch deploy.yml against the
-      # published tag. It cannot be a re-run, as this note once said — no run
-      # ever existed for that tag to re-run.
       - name: Run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -82,3 +96,51 @@ jobs:
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         run: pnpm release
+
+      - name: Determine what was published
+        id: published
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BEFORE: ${{ steps.before.outputs.tag }}
+        run: |
+          set -euo pipefail
+          after="$(gh api "repos/${GITHUB_REPOSITORY}/releases/latest" --jq .tag_name 2>/dev/null || true)"
+          if [ -n "$after" ] && [ "$after" != "$BEFORE" ]; then
+            echo "Published ${after}."
+            echo "version=${after}" >> "$GITHUB_OUTPUT"
+          else
+            echo "No new release was published; there is nothing to deploy."
+          fi
+
+      # The link that was missing, and the reason a version could be published
+      # while nothing reached the server. semantic-release creates the tag and
+      # the release with GITHUB_TOKEN, and GitHub raises no workflow run from an
+      # event that token caused — so `tags: ["v*"]` and `release: published` in
+      # deploy.yml are both dead for a routine release, however correct they
+      # look. `workflow_dispatch` is the documented exception, and dispatching
+      # against the tag means the rollout builds precisely what was released.
+      - name: Deploy what was published
+        if: ${{ steps.published.outputs.version != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.published.outputs.version }}
+        run: |
+          set -euo pipefail
+          gh workflow run deploy.yml --repo "$GITHUB_REPOSITORY" --ref "$VERSION"
+
+          # A dispatch that starts nothing is exactly the silence this chain
+          # exists to remove, and it looks identical to success from here. So
+          # the run is waited for rather than assumed: a release that cannot
+          # deploy itself should fail loudly, on the release, not be discovered
+          # by someone wondering why the site never changed.
+          for _ in $(seq 1 12); do
+            id="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow deploy.yml \
+              --branch "$VERSION" --limit 1 --json databaseId --jq '.[0].databaseId // empty' 2>/dev/null || true)"
+            if [ -n "$id" ]; then
+              echo "Deploying ${VERSION}: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${id}"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::Dispatched deploy.yml for ${VERSION} but no run appeared within a minute. ${VERSION} is published and undeployed."
+          exit 1

@@ -176,13 +176,14 @@ up; never `docker volume prune` it away.
 
 ## How a deploy runs
 
-`deploy.yml` fires on a push to `develop` (staging) and on a `workflow_dispatch` against a `v*` tag
-(production, gated on reviewer approval). Its `resolve` job decides the environment and image tag in
-one place, so no later job has to branch on the event shape.
+`deploy.yml` is dispatched by `release.yml` against the tag it has just published. Its `resolve` job
+decides the environment and image tag in one place, so no later job has to branch on the event shape.
 
-The tag and `release: published` triggers are declared too, but a release cut by semantic-release
-starts neither: GitHub raises no workflow run from an event caused by `GITHUB_TOKEN`. Going to
-production is `gh workflow run deploy.yml --ref v1.0.0`, or the same choice in the Actions UI.
+The tag and `release: published` triggers are declared too, and they are for a person: a release cut
+by semantic-release starts neither, because GitHub raises no workflow run from an event caused by
+`GITHUB_TOKEN`. That is the whole reason the chain is a dispatch, and why `release.yml` waits for the
+dispatched run to appear instead of assuming it did. Going to production by hand is
+`gh workflow run deploy.yml --ref v1.0.0`, or the same choice in the Actions UI.
 
 Then, in order:
 

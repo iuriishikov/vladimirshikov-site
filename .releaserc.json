@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/semantic-release.json",
-  "branches": ["main", { "name": "develop", "channel": "rc", "prerelease": "rc" }],
+  "branches": ["main"],
   "tagFormat": "v${version}",
   "plugins": [
     [

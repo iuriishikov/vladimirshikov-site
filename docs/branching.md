@@ -6,11 +6,11 @@ Two long-lived branches, short-lived branches off `develop`, squash merges, line
 
 ## The branches
 
-| Branch          | Role                                      | Protected | Deploys to | Release channel      |
-| --------------- | ----------------------------------------- | --------- | ---------- | -------------------- |
-| `main`          | Production. Always deployable.            | Yes       | production | stable — `vX.Y.Z`    |
-| `develop`       | Integration. Everything lands here first. | Yes       | staging    | `rc` — `vX.Y.Z-rc.N` |
-| `<type>/<name>` | One unit of work, hours to a few days     | No        | —          | —                    |
+| Branch          | Role                                      | Protected | Deploys to | Release channel   |
+| --------------- | ----------------------------------------- | --------- | ---------- | ----------------- |
+| `main`          | Production. Always deployable.            | Yes       | production | stable — `vX.Y.Z` |
+| `develop`       | Integration. Everything lands here first. | Yes       | —          | —                 |
+| `<type>/<name>` | One unit of work, hours to a few days     | No        | —          | —                 |
 
 Branch names must match the pattern in `package.json` under `validate-branch-name`:
 
@@ -32,13 +32,11 @@ gitGraph
    commit id: "wip: validation"
    checkout develop
    merge feat/newsletter-form id: "feat(features): newsletter form"
-   commit id: "rc build" tag: "v1.1.0-rc.1"
    branch fix/locale-switch
    checkout fix/locale-switch
    commit id: "wip: fix"
    checkout develop
    merge fix/locale-switch id: "fix(i18n): locale switch 404"
-   commit id: "rc build" tag: "v1.1.0-rc.2"
    checkout main
    merge develop id: "release" tag: "v1.1.0"
    branch hotfix/csp-nonce
@@ -121,9 +119,7 @@ Consequence: **the PR title is the commit message**, and must be a valid Convent
 3. `pnpm validate` before pushing (the pre-push hook runs the same checks).
 4. Push and open a PR **into `develop`** with a Conventional Commit title.
 5. CI runs; `ci-ok` must be green; get the review; squash-merge.
-6. `release.yml` publishes an `rc` prerelease, `docker.yml` builds the image, `deploy.yml` ships it
-   to **staging**.
-7. Verify on staging.
+6. Nothing is released or deployed. `develop` is where work accumulates until it is promoted.
 
 ## Promoting to production
 
@@ -144,14 +140,20 @@ Promotions are cheap and should be frequent. A `develop` that has drifted many f
 Configured in [`.releaserc.json`](../.releaserc.json):
 
 ```json
-"branches": ["main", { "name": "develop", "channel": "rc", "prerelease": "rc" }],
+"branches": ["main"],
 "tagFormat": "v${version}"
 ```
 
-| Branch    | Tag example   | GitHub release | npm dist-tag equivalent |
-| --------- | ------------- | -------------- | ----------------------- |
-| `main`    | `v1.4.0`      | Latest release | `latest`                |
-| `develop` | `v1.5.0-rc.1` | Pre-release    | `rc`                    |
+| Branch | Tag example | GitHub release | npm dist-tag equivalent |
+| ------ | ----------- | -------------- | ----------------------- |
+| `main` | `v1.4.0`    | Latest release | `latest`                |
+
+`develop` published an `rc` prerelease channel until it was removed. On a project with one
+environment it produced versions nothing deployed, a changelog commit that conflicted with main's on
+every promotion, and — because semantic-release marks its own commits `[skip ci]` — a develop tip that
+silently cancelled the checks on every pull request opened from it. A skipped check is
+indistinguishable from a passing one, which is the part that made it worth removing rather than
+tolerating.
 
 The package is `private: true`, so nothing is published to a registry — the "release" is the git
 tag, the GitHub release notes, the generated `CHANGELOG.md` and the container image tagged to match.

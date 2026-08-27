@@ -177,15 +177,12 @@ flowchart TD
     C --> D{"ci-ok green?"}
     D -- no --> A
     D -- yes --> E["Squash-merge into develop"]
-    E --> F["release.yml — rc prerelease, tag vX.Y.Z-rc.N"]
-    F --> G["docker.yml — multi-arch image to ghcr.io"]
-    G --> H["deploy.yml — staging environment"]
-    H --> I["Pull request: develop into main"]
+    E --> I["Pull request: develop into main"]
     I --> J["Squash-merge into main"]
     J --> K["release.yml — stable release, tag vX.Y.Z"]
-    K --> L["docker.yml — image tagged vX.Y.Z"]
-    L --> M["deploy.yml — production, reviewer approval required"]
-    M --> N["Health check GET /api/health"]
+    K --> M["release.yml dispatches deploy.yml against the tag"]
+    M --> L["docker.yml — image tagged vX.Y.Z, started and probed"]
+    L --> N["Health check GET /api/health through the public URL"]
     N -- fails --> O["Automatic rollback to the previous image tag"]
     N -- passes --> P["Live"]
 ```

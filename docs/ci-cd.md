@@ -23,7 +23,7 @@ splitting a CI job therefore never requires editing the branch protection rule.
 | `stale.yml`             | Daily schedule                                         | Marks and closes abandoned issues and PRs                           |
 | `release.yml`           | Push to `main` or `develop`                            | Runs semantic-release; tags and writes the changelog                |
 | `docker.yml`            | `workflow_call` (reusable)                             | Builds and pushes the multi-arch image, SBOM and provenance         |
-| `deploy.yml`            | Push to `develop`; `workflow_dispatch` against a tag   | Ships to staging or production, health-checks, rolls back           |
+| `deploy.yml`            | Dispatched by `release.yml`; tag `v*`                  | Ships to production, health-checks, rolls back                      |
 | `rollback.yml`          | `workflow_dispatch`                                    | Redeploys a previously published image tag                          |
 
 ---
@@ -72,8 +72,15 @@ What it does: reads the commits since the last tag, decides the next version, ge
 notes, writes `CHANGELOG.md`, creates the git tag and the GitHub release, and pushes
 `CHANGELOG.md` + `package.json` back with a `chore(release): x.y.z [skip ci]` message.
 
-- `main` → stable release, tag `vX.Y.Z`
-- `develop` → prerelease on the `rc` channel, tag `vX.Y.Z-rc.N`
+`main` is the only release branch. `develop` used to publish an `rc` prerelease channel; it was
+removed because it cost more than it was worth on a project with one environment. It produced
+versions nothing deployed, a changelog commit that conflicted with main's on every promotion, and —
+since semantic-release marks its own commits `[skip ci]` — a develop tip that silently cancelled the
+checks on every pull request opened from it. A skipped check is indistinguishable from a passing one.
+
+When a release is published, this workflow dispatches `deploy.yml` against the new tag and waits for
+that run to appear, failing if it does not. A version that is published and undeployed is the one
+outcome this chain exists to make impossible, and it is invisible unless something checks.
 
 `CHANGELOG.md` is generated. Editing it by hand guarantees a conflict on the next release.
 
@@ -101,34 +108,34 @@ is stored anywhere.
 
 ## `deploy.yml`
 
-| Trigger                           | Environment  | Approval          |
-| --------------------------------- | ------------ | ----------------- |
-| Push to `develop`                 | `staging`    | None              |
-| `workflow_dispatch` against a tag | `production` | Reviewer required |
-| Tag `v*` or `release: published`  | `production` | Reviewer required |
+| Trigger                                 | Environment  |
+| --------------------------------------- | ------------ |
+| Dispatched by `release.yml`             | `production` |
+| Tag `v*` pushed by a person             | `production` |
+| `release: published` by a person        | `production` |
+| `workflow_dispatch` with an environment | either       |
 
-The last row is declared but does not fire for a routine release, and the distinction matters when
-you are waiting for a deployment that never starts. semantic-release creates the tag and the release
-with `GITHUB_TOKEN`, and GitHub raises no workflow run from an event that token caused. Production is
-therefore reached deliberately, by dispatching this workflow against the published tag:
+Merging to `main` is the whole of it: `release.yml` decides the version and dispatches this workflow
+against the new tag. The other rows are for a human doing it by hand.
 
-```bash
-gh workflow run deploy.yml --ref v1.0.0
-```
+They are worth distinguishing because two of them look automatic and are not. A tag or release
+created by semantic-release runs with `GITHUB_TOKEN`, and GitHub raises no workflow run from an event
+that token caused, so `tags: ["v*"]` and `release: published` are dead for a routine release however
+correct they read. `workflow_dispatch` is the documented exception, which is why the chain is built on
+it.
 
-`ref_type` is then `tag` and `ref_name` the version, which is what `resolve` already reads, so the
-dispatch needs no inputs. The workflow file that runs is the one committed at that tag — which also
-means a bug in that file is frozen into the release, and the fix is a new release, not a re-run.
+Dispatching against the tag matters as much as dispatching at all: the workflow file that runs is the
+one committed at that ref, so the rollout executes exactly the pipeline that was released — and a bug
+in that file is frozen into the release, fixable only by a new one, never by a re-run.
 
-Two inputs exist for the cases the ref cannot express. `environment` defaults to `auto`, meaning the
-ref decides; set it to `production` to roll a branch's build out, or to `staging` to hold a tag back.
-`image_tag` overrides the tag the image is published under, and follows the ref when left empty.
-They are worth knowing about because the ref-derived default is quiet about what it chose: dispatching
-against a _branch_ resolves to `staging`, which on this project rolls nothing out, so the run passes
-having deployed nothing and reads at a glance like a successful release.
+Two inputs cover what the ref cannot express. `environment` defaults to `auto`, meaning the ref
+decides — a tag is production, a branch is staging; set it explicitly to roll a branch out or to hold
+a tag back. `image_tag` overrides the tag the image is published under, and follows the ref when
+empty.
 
-A push to `develop` resolves to `staging`, and staging holds no server secrets on this project. That
-deployment builds and publishes the image, reports that there was nowhere to roll it out, and passes.
+There is no staging server on this project. Dispatching with `environment: staging` builds and
+publishes the image, reports that there was nowhere to roll it out, and passes — the path stays open
+for the day a second machine exists.
 
 The job calls `docker.yml` to produce the image, then connects to the VPS over SSH and runs the
 compose stack update. It polls `/api/health` and rolls back automatically if the new container does
