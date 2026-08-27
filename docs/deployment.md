@@ -36,9 +36,17 @@ Two services on one private bridge network (`vladimirshikov-edge`):
 `web` has no `ports:` at all — only `expose`. The only way in is through Caddy, so TLS cannot be
 bypassed by accident.
 
-Both containers run read-only with `cap_drop: ALL` and `no-new-privileges`, each with a CPU and
-memory limit, and each logging to the `json-file` driver capped at 3 × 10 MB. Nothing about log
-rotation or resource ceilings is left to the host's defaults.
+Both containers run read-only with `cap_drop: ALL` and `no-new-privileges`, each with a memory limit,
+and each logging to the `json-file` driver capped at 3 × 10 MB. Nothing about log rotation is left to
+the host's defaults.
+
+There is deliberately no CPU limit. Docker rejects a stack outright when a `cpus` limit exceeds the
+host's core count, so any hard number is a claim about a machine the compose file cannot see — a
+`1.50` here failed the first rollout that reached the server, which has one core. On a single-core
+host the cap also protects nothing, since it cannot reserve capacity for Caddy and only throttles the
+application under the load it was meant to survive. Memory is the opposite case: a limit above the
+host's RAM is accepted rather than rejected, so it cannot block a deploy, and it stops a leak from
+taking the whole box down with it.
 
 ---
 

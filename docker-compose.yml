@@ -79,9 +79,25 @@ services:
         max-file: "3"
     deploy:
       resources:
+        # No `cpus` limit, and that is deliberate rather than an omission.
+        # Docker refuses to create a container whose cpus limit exceeds the
+        # host's core count — not by clamping it, but by rejecting the whole
+        # stack: `range of CPUs is from 0.01 to 1.00, as there are only 1 CPUs
+        # available` is what a 1.50 here did to the first rollout that got this
+        # far. Any hard number is a claim about a machine this file cannot see,
+        # so it will be wrong on some machine eventually.
+        #
+        # Nothing is lost by dropping it. On a single-core host a cap on the
+        # application cannot reserve capacity for Caddy — both are scheduled by
+        # weight regardless, so the cap can only make the site slower under the
+        # load it was supposed to protect against.
         limits:
-          cpus: "1.50"
-          memory: 1g
+          # Memory is a different matter: a limit above the host's RAM is
+          # accepted rather than rejected, so it cannot block a deploy, and
+          # without one a leak takes the whole box down instead of one
+          # container. 768m fits a 1 GB server with room for Caddy and the
+          # operating system, and is several times what this app idles at.
+          memory: 768m
         reservations:
           memory: 256m
 
@@ -141,7 +157,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
+          # Dropped for the same reason as the application's, and with less to
+          # argue about: half a core for TLS termination is a throttle on the
+          # one thing that must stay responsive when the box is busy.
           memory: 256m
 
 networks:
