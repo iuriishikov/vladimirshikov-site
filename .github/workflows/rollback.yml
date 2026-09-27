@@ -74,28 +74,6 @@ jobs:
           echo "Rolling back to ${ref}"
           echo "image_ref=$ref" >> "$GITHUB_OUTPUT"
 
-      # Same host-key pinning as deploy.yml: StrictHostKeyChecking is never
-      # relaxed, not even in an incident.
-      - name: Pin the server host key
-        id: hostkey
-        env:
-          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
-        run: |
-          set -euo pipefail
-          known_hosts="$RUNNER_TEMP/known_hosts"
-          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$known_hosts"
-          fingerprint="$(ssh-keygen -l -E sha256 -f "$known_hosts" \
-            | awk '$4 == "(ED25519)" { print $2; exit }')"
-          if [ -z "$fingerprint" ]; then
-            fingerprint="$(ssh-keygen -l -E sha256 -f "$known_hosts" | awk 'NR == 1 { print $2 }')"
-          fi
-          if [ -z "$fingerprint" ]; then
-            echo "::error::SSH_KNOWN_HOSTS does not contain a usable host key."
-            exit 1
-          fi
-          echo "Pinned host key fingerprint: $fingerprint"
-          echo "fingerprint=$fingerprint" >> "$GITHUB_OUTPUT"
-
       - name: Redeploy the requested image
         uses: appleboy/ssh-action@v1
         env:
@@ -110,7 +88,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
           command_timeout: 15m
           envs: DEPLOY_PATH,IMAGE_REF,IMAGE_TAG,APP_ENV,REGISTRY,REGISTRY_USERNAME,REGISTRY_TOKEN
           script: |

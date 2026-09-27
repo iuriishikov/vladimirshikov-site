@@ -31,8 +31,8 @@ We deploy a container image to a **single VPS** running a two-service Docker Com
   **`ghcr.io/iuriishikov/vladimirshikov-site`** with an SBOM and a build provenance attestation.
 - **Registry**: GHCR — same account, same permissions model, authenticated with the workflow's own
   `GITHUB_TOKEN`. No third-party registry credential exists to leak.
-- **Deploy**: `deploy.yml` connects over SSH with a deploy-only key, verifying the host against a
-  pinned `SSH_KNOWN_HOSTS`. It records the running image, writes the new `IMAGE=` line into the
+- **Deploy**: `deploy.yml` connects over SSH with a deploy-only key (the host key is not verified).
+  It records the running image, writes the new `IMAGE=` line into the
   server's `.env` and the activated reference into `.deployed-image`, runs
   `docker compose pull && up -d`, then polls `/api/health`.
 - **Environments**: `develop` → `staging` automatically; a `v*` tag or a published release →

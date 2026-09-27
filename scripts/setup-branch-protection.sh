@@ -220,7 +220,6 @@ report secret SSH_HOST 'VPS hostname or IP'
 report secret SSH_PORT 'SSH port (22 unless changed)'
 report secret SSH_USER 'deploy user on the VPS'
 report secret SSH_PRIVATE_KEY 'private key for that user, no passphrase'
-report secret SSH_KNOWN_HOSTS 'output of ssh-keyscan -p <port> <host>'
 report variable DEPLOY_PATH 'e.g. /home/deploy/vladimirshikov-site — set per environment'
 report variable SITE_URL 'public origin — read at runtime, so one image serves every environment'
 
@@ -232,7 +231,6 @@ cat <<'NEXT'
 
   Set them with (values are prompted for, never passed on the command line):
     gh secret set SSH_PRIVATE_KEY < ~/.ssh/deploy_key
-    gh secret set SSH_KNOWN_HOSTS
     gh variable set DEPLOY_PATH --env production
     gh variable set SITE_URL --env production
 

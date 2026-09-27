@@ -88,5 +88,5 @@ isolation headers and a restrictive `Permissions-Policy`.
 
 **Server.** The application runs as a non-root user in a read-only container with all Linux
 capabilities dropped and `no-new-privileges` set. It publishes no host port — the only ingress is
-Caddy terminating TLS. Deploys use a dedicated SSH key with a pinned host key, and production
+Caddy terminating TLS. Deploys use a dedicated SSH key, and production
 deploys require reviewer approval.

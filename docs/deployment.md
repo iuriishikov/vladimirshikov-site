@@ -17,7 +17,7 @@ flowchart LR
         A["deploy.yml"] --> B["docker.yml — buildx"]
         B --> C[("ghcr.io/iuriishikov/vladimirshikov-site")]
     end
-    A -->|"SSH, pinned host key"| D
+    A -->|"SSH"| D
     subgraph VPS["VPS — DEPLOY_PATH"]
         D["scripts/deploy.sh IMAGE_REF"] --> E["caddy :80 :443 :443/udp"]
         E -->|"reverse_proxy"| F["web :3000 — Next.js standalone"]
@@ -95,8 +95,7 @@ In GitHub, once:
 - Environments `staging` and `production`, with `production` requiring a reviewer.
 - The secrets and variables from [ci-cd.md](./ci-cd.md#secrets-and-variables) set on each
   environment.
-- `SSH_KNOWN_HOSTS` filled from `ssh-keyscan -p <port> <host>`. The deploy job pins the host key and
-  never disables `StrictHostKeyChecking`.
+- The server's host key is not verified by the deploy: `SSH_KNOWN_HOSTS` was dropped for simplicity.
 
 ---
 

@@ -174,54 +174,6 @@ jobs:
       # runs comes from the image.
       - uses: actions/checkout@v7
 
-      # StrictHostKeyChecking is never disabled. SSH_KNOWN_HOSTS holds the
-      # server's public host key; its SHA256 fingerprint is what the SSH client
-      # is pinned to, so a swapped or spoofed host aborts the deploy instead of
-      # silently accepting a new key.
-      - name: Pin the server host key
-        if: ${{ steps.target.outputs.configured == 'true' }}
-        id: hostkey
-        env:
-          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
-        run: |
-          set -euo pipefail
-          known_hosts="$RUNNER_TEMP/known_hosts"
-          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$known_hosts"
-
-          # Printed in full because the pin below can only ever match one of
-          # them, and when it does not, this inventory is the whole diagnosis.
-          echo "Host keys carried by SSH_KNOWN_HOSTS:"
-          ssh-keygen -l -E sha256 -f "$known_hosts"
-
-          # The type is chosen to match what the client will actually negotiate,
-          # not what is strongest. appleboy's actions verify with easyssh-proxy,
-          # whose callback compares FingerprintSHA256 of *the key the handshake
-          # settled on* against this single string, and which never constrains
-          # HostKeyAlgorithms. So golang.org/x/crypto decides, and in v0.37.0
-          # its default order runs ECDSA, then RSA, and puts Ed25519 last.
-          #
-          # This server offers all three, so the handshake settles on ECDSA
-          # every time. Pinning the Ed25519 key — the obvious choice, and the
-          # one that was here — produced `ssh: handshake failed: ssh: host key
-          # fingerprint mismatch` on a key that was demonstrably the server's
-          # own, which is about as misleading as an error message gets.
-          #
-          # The order below mirrors x/crypto's. If a future version promotes
-          # Ed25519, this pins the wrong key again and fails loudly rather than
-          # silently, and the inventory above says what was available.
-          fingerprint=""
-          for type in ECDSA RSA ED25519; do
-            fingerprint="$(ssh-keygen -l -E sha256 -f "$known_hosts" \
-              | awk -v t="($type)" '$4 == t { print $2; exit }')"
-            [ -n "$fingerprint" ] && break
-          done
-          if [ -z "$fingerprint" ]; then
-            echo "::error::SSH_KNOWN_HOSTS does not contain a usable host key."
-            exit 1
-          fi
-          echo "Pinned host key fingerprint: $fingerprint"
-          echo "fingerprint=$fingerprint" >> "$GITHUB_OUTPUT"
-
       # Read before anything changes, so a failed health check has somewhere to
       # go back to. scripts/deploy.sh records the reference it activated in
       # `.deployed-image` under DEPLOY_PATH.
@@ -241,7 +193,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
           envs: DEPLOY_PATH
           capture_stdout: true
           # Prefixed, and printed at column zero, because `capture_stdout` hands
@@ -290,7 +241,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
           target: ${{ vars.DEPLOY_PATH }}
           # Comma-separated, and it has to be. drone-scp declares this input as
           # a urfave/cli StringSliceFlag, and such a flag splits an environment
@@ -331,7 +281,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
           envs: DEPLOY_PATH,SITE_URL,ACME_EMAIL,APP_ENV,APP_VERSION
           script: |
             set -euo pipefail
@@ -370,7 +319,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
           command_timeout: 15m
           envs: DEPLOY_PATH,IMAGE_REF,IMAGE_TAG,APP_ENV,REGISTRY,REGISTRY_USERNAME,REGISTRY_TOKEN
           # scripts/deploy.sh owns the sequence on the server: registry login,
@@ -419,7 +367,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          fingerprint: ${{ steps.hostkey.outputs.fingerprint }}
           command_timeout: 15m
           envs: DEPLOY_PATH,PREVIOUS_IMAGE_REF,APP_ENV,REGISTRY,REGISTRY_USERNAME,REGISTRY_TOKEN
           script: |
