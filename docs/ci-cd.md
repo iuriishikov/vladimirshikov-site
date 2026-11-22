@@ -235,16 +235,16 @@ production.
 
 ### Secrets
 
-| Name                    | Scope                   | Purpose                                                      | Required  |
-| ----------------------- | ----------------------- | ------------------------------------------------------------ | --------- |
-| `SSH_HOST`              | `staging`, `production` | VPS hostname or IP for that environment                      | Yes       |
-| `SSH_PORT`              | `staging`, `production` | SSH port                                                     | Yes       |
-| `SSH_USER`              | `staging`, `production` | Deploy user — a non-root account in the `docker` group       | Yes       |
-| `SSH_PRIVATE_KEY`       | `staging`, `production` | Private key for that user, deploy-only, no passphrase        | Yes       |
-| `ACME_EMAIL`            | `staging`, `production` | Let's Encrypt contact, rendered into the server's `.env`     | Yes       |
-| `CODECOV_TOKEN`         | Repository              | Coverage upload from the `test` job                          | Optional  |
-| `LHCI_GITHUB_APP_TOKEN` | Repository              | Lighthouse CI status checks on PRs                           | Optional  |
-| `GITHUB_TOKEN`          | Provided by Actions     | GHCR push, releases, tags, PR comments                       | Automatic |
+| Name                    | Scope                   | Purpose                                                  | Required  |
+| ----------------------- | ----------------------- | -------------------------------------------------------- | --------- |
+| `SSH_HOST`              | `staging`, `production` | VPS hostname or IP for that environment                  | Yes       |
+| `SSH_PORT`              | `staging`, `production` | SSH port                                                 | Yes       |
+| `SSH_USER`              | `staging`, `production` | Deploy user — a non-root account in the `docker` group   | Yes       |
+| `SSH_PRIVATE_KEY`       | `staging`, `production` | Private key for that user, deploy-only, no passphrase    | Yes       |
+| `ACME_EMAIL`            | `staging`, `production` | Let's Encrypt contact, rendered into the server's `.env` | Yes       |
+| `CODECOV_TOKEN`         | Repository              | Coverage upload from the `test` job                      | Optional  |
+| `LHCI_GITHUB_APP_TOKEN` | Repository              | Lighthouse CI status checks on PRs                       | Optional  |
+| `GITHUB_TOKEN`          | Provided by Actions     | GHCR push, releases, tags, PR comments                   | Automatic |
 
 ### Variables
 
